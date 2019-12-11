@@ -1,0 +1,114 @@
+/* -----------------------------------------
+   Body styles
+----------------------------------------- */
+
+/*  IE10 and windows phone 8 fix. */
+@-webkit-viewport   { width: device-width; }
+@-moz-viewport      { width: device-width; }
+@-ms-viewport       { width: device-width; }
+@-o-viewport        { width: device-width; }
+@viewport           { width: device-width; }
+
+html,body{
+    height: 100%;
+}
+html {
+	&.ff3 {
+		min-height: 100%;
+		body {
+			min-height: 100%;
+		}
+	}
+}
+body {
+	overflow-x: hidden;
+	background: @body-bg; 
+	color: @text-color;
+	-webkit-font-smoothing: antialiased;
+	font-weight: 300;
+	position: relative;
+
+	&.ovh  {overflow: hidden;}
+
+	&.fixed-left-sidebar {
+
+		&:not(.fixed-header) {
+            
+            .page-navbar {
+                padding-left: @sidebar-width - 15px;
+            }
+
+			.navbar-brand {
+				position: fixed;
+				width: 210px;
+				top: 0;
+				left: 0;
+			}
+			.navbar-collapse {
+				padding-left: 210px;
+			}
+		}
+	}
+
+	&.fixed-right-sidebar {
+		&:not(.fixed-header) {
+
+			#right-sidebar.rstop {padding-top: 0;}
+		}
+	}
+}
+
+* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; outline: none !important; }
+#wrapper {
+	height: auto;
+	min-height: 100%;
+	position: relative;
+}
+
+/* ------------------ Login page --------------------*/
+.login-page {
+	>.login-container {
+		width: 360px;
+	}
+
+	.login-panel {
+		margin-top: 100px;
+	}
+
+	.user-avatar {
+		text-align: center;
+		background-color: @panel-footer-bg;
+		padding: 15px 0;
+		margin: 0 -15px 20px;
+		img {
+			border-radius: 50%;
+		}
+	}
+}
+
+//------------- Error pages -------------//
+.error-page {
+	>.error-container {
+		width: 480px;
+	}
+
+	.error-panel {
+		margin-top: 100px;
+	}
+
+	.error-number {
+		text-align: center;
+		font-weight: bold;
+		font-size: 148px;
+		margin-top: 0;
+	}
+
+	.btn-group {
+		width: 100%;
+	}
+
+	.btn {
+		text-align: left;
+		i {margin-right: 5px;}
+	}
+}

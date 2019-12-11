@@ -1,0 +1,36 @@
+﻿@model Cooperchip.ITDeveloper.Domain.Models.EstadoPaciente
+
+@{
+    ViewData["Title"] = "Detalhes de Estado Paciente";
+}
+
+    <vc:cabecalho titulo="Medical Management-Sys / Módulo Estado dos Pacientes" subtitulo="Módulo de Administração de Pacientes">
+
+    </vc:cabecalho>
+
+<div class="panel panel-default panel-controls">
+    <div class="panel panel-heading">
+        <h3>Detalhes de Estado Paciente</h3>
+    </div>
+
+    <div class="panel panel-body">
+
+        <div>
+            <h4>EstadoPaciente</h4>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Descricao)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Descricao)
+                </dd>
+            </dl>
+        </div>
+        <div>
+            <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+            <a asp-action="Index">Back to List</a>
+        </div>
+
+    </div>
+</div>

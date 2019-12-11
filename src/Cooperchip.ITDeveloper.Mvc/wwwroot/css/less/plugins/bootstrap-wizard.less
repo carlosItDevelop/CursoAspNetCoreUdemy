@@ -1,0 +1,95 @@
+/* -----------------------------------------
+   Bootstrap wizard
+----------------------------------------- */
+.bwizard {
+	
+	.bwizard-steps {
+		list-style: none;
+		display: inline-block;
+		padding: 0;
+		background: #fff; 
+		border-bottom: 1px solid @border-color;
+		text-align: center;
+		margin: 0 -15px;
+
+		li {
+			display: table-cell;
+			width: 1%;
+			float: none;
+			position: relative;
+			a {
+				width: 100%;
+				display: inline-block;
+				text-decoration: none;
+				color: @step-number-bg;
+				position: relative;
+				padding: 20px 0;
+
+				.step-number {
+					border-radius: 50%;
+					background-color: @step-number-bg;
+					width: 30px;
+					height: 30px;
+					display: inline-block;
+					padding: 5px 11px;
+					color: white;
+
+					&:after {
+						content: "\2192";
+						position: relative;
+						left: 18px;
+						top: -1px;
+						color: @step-number-bg;
+					}
+				}
+
+				.step-text {
+					padding-left: 20px;
+				}
+			}
+
+			&.active {
+				a {
+					color: @active-step-number-bg;
+					.step-number {
+						background-color: @active-step-number-bg;
+						&:after { color: @active-step-number-bg;}
+					}
+				}
+			}
+			&.completed {
+				a {
+					color: @completed-step-number-bg;
+					.step-number {
+						background-color: @completed-step-number-bg;
+						&:after { color: @completed-step-number-bg;}
+					}
+				}
+			}
+
+			&:first-child {
+				a {
+					.step-number {
+						padding-left: 13px;
+					}
+				}
+			}
+		}
+	}
+	
+	.wizard-progress {
+		border-bottom: 1px solid @border-color;
+		margin: -5px -15px 0;
+		padding: 15px;
+		background-color: @wizard-progress-bg;		
+	}
+
+	form {margin-top: 10px;}
+
+	.pager {
+		border-top: 1px solid @border-color;
+		margin: 0 -15px;
+		padding: 20px 15px;
+	}
+
+}

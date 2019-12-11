@@ -1,0 +1,30 @@
+﻿@model Cooperchip.ITDeveloper.Domain.Models.Paciente
+
+@{
+    ViewData["Title"] = "Exclusão de Paciente";
+}
+
+    <vc:cabecalho titulo="Medical Management-Sys / Módulo Pacientes" subtitulo="Módulo de Administração de Pacientes">
+
+    </vc:cabecalho>
+
+<div class="row">
+    <div class="panel panel-heading">
+        <h3>Tem certeza que deseja excluir este registro ?</h3>
+    </div>
+
+    <div class="panel panel-body">
+        <div>
+            <div>
+                <partial name="_delete_details"/>
+            </div>
+
+            <form asp-controller="Paciente" asp-action="Delete">
+                <input type="hidden" asp-for="Id" />
+                <input type="submit" value="Excluir Paciente" class="btn btn-danger" />
+                <a asp-controller="Paciente" asp-action="Index" class="btn btn-info">Voltar à lista</a>
+            </form>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,266 @@
+/* -----------------------------------------
+   Email app styles
+----------------------------------------- */
+#email-app-wrapper {
+	position: relative;
+    float: left;
+    width: 100%;
+    margin-bottom: @content-padding;
+    z-index: 1;
+}
+
+#email-sidebar {
+	width: @email-sidebar-width;
+	height: auto;
+	float: left;
+	border-radius: 0;
+
+	&:after {
+		content: " ";
+	    background: none repeat scroll 0 0 @email-sidebar-bg;
+	    display: block;
+	    position: absolute;
+	    top: 3px;
+	    bottom: 0;
+	    z-index: -1;
+	    left: 0;
+        width: @email-sidebar-width;
+        border: 1px solid @border-color;
+        border-right-width: 0;
+        .transition(left);
+	    .transition-duration(0.4s);
+	}
+
+	.transition(margin-left);
+	.transition-duration(0.4s);
+
+	&.email-sidebar-hide {
+		margin-left: -@email-sidebar-width*1.2;
+
+		&:after { left: -@email-sidebar-width*1.2; }
+	}
+
+	&.email-sidebar-show {
+		margin-left: 0;
+		&:after { left: 0; }
+	}
+
+	#email-nav {
+		padding: @email-nav-padding;
+		padding-top: 0;
+		li {
+			a {
+				padding: 6px 10px;
+				font-size: 14px;
+				color: @text-color;
+				.transition(background);
+				.transition-duration(0.4s);
+				background-color: transparent;
+				i {
+					margin-right: 10px;
+					margin-top: -2px;
+					.transition(color);
+					.transition-duration(0.4s);
+					font-size: 16px;
+				}
+				.label {
+					right:8px;
+					top: 5px;
+					position: absolute;
+				}
+				.circle {
+					width: 16px;
+					height: 16px;
+					border-radius: 50%;
+					border: 3px solid @gray;
+					margin-right: 10px;
+					margin-top: 1px;
+					float: left;
+					&.color-red {border-color: @red;}
+					&.color-green {border-color: @green;}
+					&.color-blue {border-color: @blue; }
+					&.color-yellow {border-color: @yellow;}
+				}
+				&:hover {
+					color: darken(@text-color, 15%);
+					i {color: @mainColor;}
+					background-color: @email-sidebar-link-hover;
+				}
+			}
+			&.nav-header {
+				display: block;
+				padding: 10px 10px 3px;
+				font-size: 12px;
+				font-weight: bold;
+				line-height: 20px;
+				color: darkne(@text-color, 10%);
+				text-transform: uppercase;
+			}
+		}
+	}
+}
+
+#email-content {
+	margin-left: @email-sidebar-width;
+	padding: @email-content-padding;
+	padding-left: 0;
+
+	.transition(margin-left);
+	.transition-duration(0.4s);
+
+	&.email-content-expand {
+		margin-left: 0;
+	}
+
+	&.email-content-contract {
+		margin-left: @email-sidebar-width;
+	}
+
+	&.email-content-offCanvas {
+		width: 100%;
+	}
+
+	.email-wrapper {
+		height: auto;
+		float: left;
+		width: 100%;
+		position: relative;
+		margin-top: -12px;
+
+		.email-toolbar {
+			background-color: @email-toollbar-bg;
+			padding: @email-content-padding;
+			border-bottom: 1px solid @border-color;
+			.clearfix();
+			.email-controls {
+				float: left;
+			}
+			.email-pager {
+				list-style: none;
+				float: right;
+				margin-bottom: 0;
+				li {
+					display: inline-block;
+					margin-right: 5px;
+					
+					&.pager-info {
+						color: lighten(@text-color, 15%);
+					}
+				}
+			}
+
+		}
+
+		.email-toggle {
+			position: relative;
+			padding: 8px 7px;
+			background-color: transparent;
+			background-image: none;
+			border: 1px solid @blue-light;
+			border-radius: @border-radius-base;
+			float: left;
+			margin-right: 10px;
+			.icon-bar {
+				display: block;
+				width: 22px;
+				height: 2px;
+				border-radius: 1px;
+				background-color: @blue;
+				margin-bottom: 2px;
+				margin-top: 2px;
+			}
+		}
+
+		.email-toolbar-search {
+			background-color: @email-toollbar-search-bg;
+			padding: @email-content-padding;
+			border-bottom: 1px solid @border-color;
+
+			.checkbox-custom {
+				float: left;
+				margin-right: 10px;
+				margin-left: 4px;
+			}
+		}
+
+		.email-list {
+			padding-left: 0;
+			padding-right: 0;
+			.list-group {margin-bottom: 0;}
+			.email-list-item {
+				padding: 10px;
+				position: relative;
+				border: none;
+				.email-list-checkbox {
+					float: left;
+					margin: 0 10px;
+
+					.checkbox-custom {padding-top: 7px;}
+				}
+				.email-inbox-avatar {
+					float: left; 
+					border-radius: @border-radius-base;
+					margin-right: 15px;
+				}
+				.email-inbox-name {
+					width: 100%;
+					font-size: 16px;
+					margin-bottom: 5px;
+				}
+				.email-inbox-info {
+					position: absolute;
+					top: 10px;
+					right: 15px;
+					.email-inbox-favorite {margin-right: 5px;}
+					.email-inbox-attachment {margin-right: 5px;}
+					.email-inbox-date {font-weight: bold;}
+				}
+				.email-txt-preview {
+					margin-bottom: 0;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+					.email-subject-preview {
+						
+					}
+				}
+			}
+		}
+
+		.email-read {
+			margin-top: 20px;
+			.clearfix();
+
+			.email-read-header {
+				float: left;
+				width: 100%;
+				.email-read-avatar {
+					border-radius: 15px;
+					float: left;
+					margin-right: 15px;
+					margin-bottom: 15px;
+				}
+			}
+
+			.email-read-title {
+				.clearfix();
+				float: left;
+				width: 100%;
+				h3 {float: left;}
+				.email-read-date {float: right; margin-top: 20px; margin-bottom: 10px;}
+			}
+
+			.email-read-attachment {
+				border-top: 1px solid @border-color;
+				padding-top: 20px;
+			}
+
+		}
+
+		.email-write {
+			.clearfix();
+			margin-top: 20px;
+		}
+
+	}
+}

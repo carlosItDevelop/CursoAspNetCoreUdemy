@@ -1,0 +1,156 @@
+/* -----------------------------------------
+   Gritter notifications
+----------------------------------------- */
+#gritter-notice-wrapper {
+	position:fixed;
+	top:20px;
+	right:20px;
+	width:301px;
+	z-index:9999;
+
+	&.top-left {
+		left: 20px;
+    	right: auto;
+	}
+	&.bottom-right {
+		top: auto;
+	    left: auto;
+	    bottom: 20px;
+	    right: 20px;
+	}
+	&.bottom-left {
+		top: auto;
+	    right: auto;
+	    bottom: 20px;
+	    left: 20px;
+	}
+
+	.gritter-item-wrapper {
+		position:relative;
+		margin:0 0 10px 0;
+
+		.gritter-item {
+			display:block;
+			background: @messenger-bg;
+			border: 1px solid @messenger-border;
+			color: @white;
+			padding:10px 11px;
+			font-size: 12px;
+			border-radius: @messenger-br;
+			.transition(all);
+			.transition-duration(.4s);
+
+			&:hover {
+				background: lighten(@messenger-bg, 5%);
+			}
+
+			p {
+				padding:0;
+				margin:0;
+				word-wrap:break-word;
+			}
+
+			.gritter-close {
+				position:absolute;
+				top:5px;
+				right:7px;
+				cursor:pointer;
+				i {
+					font-size: 16px;
+					color: @white;
+					.transition(background);
+					.transition-duration(.4s);
+				}
+				&:hover {
+					i {color: darken(@white, 3%);}
+				}
+			}
+
+			.gritter-image {
+				width:48px;
+				height:48px;
+				float:left;
+				border-radius: @messenger-image-br;
+			}
+
+			.gritter-icon {
+				margin-top: 0;
+				margin-right: 15px;
+				float:left;
+				font-size: 32px;
+				padding-bottom: 10px;
+			}
+
+			.gritter-with-image {
+				width:220px;
+				float:right;
+				padding: 0;
+			}
+			.gritter-without-image { padding:0; }
+
+			.gritter-title {
+				font-size:14px;
+				font-weight:bold;
+				padding:0;
+				display:block;
+			}
+
+		}
+
+		&.success-notice {
+			.gritter-item {
+				color: @messenger-success-color;
+				background: @messenger-success-bg;
+				border: 1px solid @messenger-success-border;
+				&:hover {
+					background: lighten(@messenger-success-bg, 5%);
+				}
+				.gritter-close {
+					i {
+						color: @messenger-success-color;
+					}
+					&:hover {
+						i {color: darken(@messenger-success-color, 3%);}
+					}
+				}
+			}
+		}
+		&.info-notice {
+			.gritter-item {
+				color: @messenger-info-color;
+				background: @messenger-info-bg;
+				border: 1px solid @messenger-info-border;
+				&:hover {
+					background: lighten(@messenger-info-bg, 5%);
+				}
+				.gritter-close {
+					i {
+						color: @messenger-info-color;
+					}
+					&:hover {
+						i {color: darken(@messenger-info-color, 3%);}
+					}
+				}
+			}
+		}
+		&.error-notice {
+			.gritter-item {
+				color: @messenger-error-color;
+				background: @messenger-error-bg;
+				border: 1px solid @messenger-error-border;
+				&:hover {
+					background: lighten(@messenger-error-bg, 5%);
+				}
+				.gritter-close {
+					i {
+						color: @messenger-error-color;
+					}
+					&:hover {
+						i {color: darken(@messenger-error-color, 3%);}
+					}
+				}
+			}
+		}
+	}
+
+}

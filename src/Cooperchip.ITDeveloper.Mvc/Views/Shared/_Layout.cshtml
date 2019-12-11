@@ -1,0 +1,84 @@
+﻿
+@await Html.PartialAsync("PartialViews/_layout_original")
+
+@* ACIMA O _LAYOUT.CSHTML ORIGINAL *@
+
+
+<!doctype html>
+
+<html class="no-js">
+
+@await Html.PartialAsync("PartialViews/_head")
+
+<body>
+
+    @await Html.PartialAsync("PartialViews/_navbar")
+
+
+    <!-- #wrapper -->
+    <div id="wrapper">
+        <!-- .page-sidebar -->
+        <aside id="sidebar" class="page-sidebar hidden-md hidden-sm hidden-xs">
+            <div class="sidebar-inner">
+                <div class="sidebar-scrollarea">
+
+
+                    @await Html.PartialAsync("PartialViews/_profile_left_sidebar")
+
+                    <div class="sidebar-panel">
+                        <h5 class="sidebar-panel-title">Navigation</h5>
+                    </div>
+
+                    <div class="side-nav">
+                        <ul class="nav">
+
+                            @* LIs com os lefts menus *@
+
+                            @await Html.PartialAsync("PartialViews/_lis_do_menu_left")
+
+                        </ul>
+                    </div>
+                    <!-- / side-nav -->
+
+                    @await Html.PartialAsync("PartialViews/_menu_inferior_left")
+
+                </div>
+            </div>
+            <!-- End .sidebar-scrollarea -->
+
+        </aside>
+        <!-- / page-sidebar -->
+
+        @await Html.PartialAsync("PartialViews/_rightsidebar")
+
+        <!-- .page-content -->
+        <div class="page-content sidebar-page right-sidebar-page clearfix">
+            <div class="page-content-wrapper">
+                <div class="page-content-inner">
+
+                    @RenderBody()
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    <!-- / #wrapper -->
+
+
+    @await Html.PartialAsync("PartialViews/_footer")
+
+
+    <!-- Back to top -->
+    <div id="back-to-top">
+        <a href="#">Voltar para o Topo</a>
+    </div>
+
+    @await Html.PartialAsync("PartialViews/_scripts")
+
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>

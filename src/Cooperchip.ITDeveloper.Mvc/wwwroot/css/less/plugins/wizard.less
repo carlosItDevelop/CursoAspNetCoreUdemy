@@ -1,0 +1,114 @@
+/* -----------------------------------------
+   Form wizard
+----------------------------------------- */
+.form-wizard {
+	position: relative;
+	.wizard-steps {
+		text-align: center;
+		&.show {
+			width: 100%;
+			height: auto;
+			padding: 0  0 15px 0;
+			margin-bottom: 20px;
+			text-align: center;
+		}
+		.hide {display: none;}
+		.wstep {
+			display: inline-block; 
+			width: 130px;
+			position: relative;
+			font-weight: bold;
+			font-size: 13px;
+			margin-right: 20px;
+
+			.txt {
+				color: @text-color;
+			}
+			&.current {
+				color: @form-wizard-step-color;
+				.donut {
+					border-color: @form-wizard-step-color;
+					i {color: @form-wizard-step-color;}
+				}
+			}
+			&.done {
+				color: @green;
+				.donut {
+					border-color: @green;
+					i {color: @green;} 
+				}
+				&:after {
+					border-top: 2px solid @green;
+				}
+			}
+			&:after {
+				content: "";
+				position: absolute;
+				top: 24px;
+				left: 110px;
+				border-top: 2px solid @form-wizard-step-color;
+				height: 2px;
+				width: 80px;
+			}
+			&:last-child:after {border: none;}
+			.donut {
+				border: 2px solid @form-wizard-step-color;
+			    border-radius: 50px;
+			    height:50px;
+			    width:50px;
+			    margin-left: 50px;
+			    position: relative;
+			    margin-bottom: 5px;
+
+			    i {color: @form-wizard-step-color;margin-top: 10px;}
+			}
+		}
+	}
+	.wizard-actions {
+		padding-left: 15px;
+		padding-right: 15px;
+		margin-top: 20px;
+		margin-bottom: 5px;
+		float: left;
+		width: 100%;
+		.ui-formwizard-button.pull-left i {margin-left: 0;}
+		.ui-formwizard-button.pull-right i {margin-right: 0;}
+	}
+
+	&.wizard-vertical {
+		.wizard-steps {
+			&.show {
+				width: 200px;
+				border-bottom: none;
+				border-right: 1px solid @border-color;
+				float: left;
+				margin-bottom: 10px;
+			}
+
+			.wstep {
+				width: 150px;margin-bottom: 30px;
+
+				.donut {
+					margin-left: 0;
+					position: relative;
+					margin-bottom: 5px;
+					float: left;
+				}
+				.txt {display: inline-block; width: 100px; margin-top: 5px;}
+
+				&:after {
+					top: 55px;
+					left: 24px;
+					border-top: none;
+					border-left: 2px solid @form-wizard-step-color;
+					height: 25px;
+					width: 2px;
+				}
+				&:last-child:after {border: none;}
+			}
+		}
+		.step {display: inline-block;float: left;width: 100%;}
+		.wrap {padding-left: 210px;}
+		.wizard-actions {clear: both; padding-left: 225px;}
+	}
+}

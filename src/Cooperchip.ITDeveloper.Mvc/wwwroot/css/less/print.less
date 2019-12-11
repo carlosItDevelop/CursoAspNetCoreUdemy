@@ -1,0 +1,23 @@
+/* -----------------------------------------
+   Print styles
+----------------------------------------- */
+@media print {
+	.row.printable {
+	  display: block !important;
+	}
+	body {
+	  background: #fff;
+	  margin: 0;
+	  padding: 0;
+	}
+	.page-content, .row {
+	  margin: 0 !important;
+	  padding: 0 !important;
+	}
+	.panel {box-shadow: none;}
+	.panel .panel-heading {background:none; border: none; box-shadow: none;}
+	.panel .content {padding-left:0;padding-right:0; border:none;}
+	#header, #right-sidebar, #sidebar, #page-header, #footer{
+	  display: none;
+	}
+}

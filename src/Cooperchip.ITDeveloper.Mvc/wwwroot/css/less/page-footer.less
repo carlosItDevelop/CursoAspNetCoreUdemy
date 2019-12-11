@@ -1,0 +1,35 @@
+/* -----------------------------------------
+   Page footer
+----------------------------------------- */
+#footer {
+	padding: 15px @content-padding;
+	border-top : 1px solid @border-color;
+	height: 51px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	p {margin-bottom: 0;}
+
+	&.sidebar-page {
+		margin-left: @sidebar-width;
+	}
+
+	&.right-sidebar-page {
+		margin-right: @right-sidebar-width;
+	}
+
+	&.collapsed-sidebar {
+		margin-left: @sidebar-collapse-width;
+	}
+
+	&.full-page {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	&.offCanvas {
+		width: 100%;
+		margin-left: @sidebar-width;
+	}
+}

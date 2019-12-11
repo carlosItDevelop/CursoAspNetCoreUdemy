@@ -1,0 +1,75 @@
+/* -----------------------------------------
+   Content
+----------------------------------------- */
+.page-content {
+	min-height: 100%;
+	padding-top: 50px;
+
+	&.sidebar-page {
+		margin-left: @sidebar-width;
+	}
+
+	&.right-sidebar-page {
+		margin-right: @right-sidebar-width;
+	}
+
+	&.collapsed-sidebar {
+		margin-left: @sidebar-collapse-width;
+	}
+
+	&.full-page {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	&.overLap {
+		margin-left: 0;
+	}
+	&.rOverLap {
+		margin-right: 0;
+	}
+
+	&.offCanvas {
+		width: 100%;
+		margin-left: @sidebar-width;
+	}
+
+	.page-content-wrapper {
+		float: left;
+		width: 100%;
+		height: auto;
+		position: relative;
+		overflow: hidden;	
+	}
+
+	.page-content-inner {
+		position: relative;
+		padding: 0 @content-padding; 
+	}
+
+	#page-header {
+		background-color: lighten(@body-bg, 4%);
+		margin-top: 1px;
+		padding: 0 @content-padding;
+		margin-right: -@content-padding;
+		margin-left: -@content-padding;
+		margin-bottom: @content-padding;
+		-webkit-box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.1);
+		-moz-box-shadow:    0px 1px 0px 0px rgba(0, 0, 0, 0.1);
+		box-shadow:         0px 1px 0px 0px rgba(0, 0, 0, 0.1);
+
+		.page-header {
+			margin-top: 0px;
+			margin-bottom: 15px;
+			border-bottom: none;
+			float: left;
+			margin-right: @content-padding;
+			h2 {margin-bottom: 5px;}
+		}
+
+		.header-stats {
+			float: right;
+			padding: @content-padding;
+		}
+	}
+}

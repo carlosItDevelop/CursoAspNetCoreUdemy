@@ -1,0 +1,30 @@
+/* -----------------------------------------
+   Morris charts
+----------------------------------------- */
+.morris-hover {
+  position: absolute;
+  z-index: @zindex-tooltip;
+
+  &.morris-default-style {
+    border-radius: @border-radius-base;
+    padding: 6px;
+    color: @tooltip-color;
+    background: @tooltip-bg;
+    font-size: 12px;
+    text-align: center;
+    max-width: @tooltip-max-width;
+    padding: 3px 8px;
+
+    .morris-hover-row-label {
+        font-weight: bold;
+        margin: 0.25em 0;
+    }
+
+    .morris-hover-point {
+        white-space: nowrap;
+        margin: 0.1em 0;
+        color: @tooltip-color !important;
+    }
+  }
+
+}

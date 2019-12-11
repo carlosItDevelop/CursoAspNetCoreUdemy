@@ -1,0 +1,262 @@
+﻿
+
+<li>
+    <a asp-controller="Home" asp-action="Index"><i class="l-basic-laptop"></i><span class="txt">Dashboard</span></a>
+</li>
+
+<li>
+    <a href="#"><i class="l-ecommerce-graph1"></i> <span class="txt">Demo - Rotas</span></a>
+    <ul class="sub">
+        <li>
+            <a asp-controller="Home" asp-action="Index"><span class="txt">Home</span></a>
+        </li>
+        <li>
+            <a asp-controller="Home" asp-action="Icones"><span class="txt">Icones</span></a>
+        </li>
+        <li>
+            <a asp-controller="Home" asp-action="Privacy"><span class="txt">Privacidade </span></a>
+        </li>
+        <li>
+            <a asp-controller="Home" asp-action="Error"><span class="txt">Erro </span></a>
+        </li>
+    </ul>
+</li>
+
+<li>
+    <a asp-controller="Carrinho" asp-action="Index"><i class="l-basic-anchor"></i><span class="txt">Carrinho</span></a>
+</li>
+
+<li>
+    <a asp-controller="Paciente" asp-action="Index"><i class="l-basic-chronometer"></i><span class="txt">Pacientes</span></a>
+</li>
+
+<li>
+    <a asp-controller="EstadoPaciente" asp-action="Index"><i class="l-basic-accelerator"></i><span class="txt">Estado Pacientes</span></a>
+</li>
+
+
+
+<li>
+    <a href="#"><i class="l-ecommerce-graph1"></i> <span class="txt">Produtos</span></a>
+    <ul class="sub">
+        <li>
+            <a asp-controller="Produto" asp-action="Index"><span class="txt">Produtos</span></a>
+        </li>
+        <li>
+            <a asp-controller="Produto" asp-action="Lista"><span class="txt">Lista de Produtos</span></a>
+        </li>
+    </ul>
+</li>
+
+<li>
+    <a asp-controller="LoggerSample" asp-action="Index"><i class="l-basic-notebook-pencil"></i><span class="txt">Auditoria</span></a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@* Links originais da template *@
+
+
+@*<li>
+        <a href="#"><i class="l-ecommerce-graph1"></i> <span class="txt">Charts</span></a>
+        <ul class="sub">
+            <li>
+                <a href="charts-flot.html"><span class="txt">Flot charts</span></a>
+            </li>
+            <li>
+                <a href="charts-morris.html"><span class="txt">Morris charts</span></a>
+            </li>
+            <li>
+                <a href="charts-chartjs.html"><span class="txt">Chartjs </span></a>
+            </li>
+            <li>
+                <a href="charts-other.html"><span class="txt">Other charts</span></a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="#"><i class="l-basic-webpage-txt"></i><span class="txt">Forms</span></a>
+        <ul class="sub">
+            <li>
+                <a href="forms-basic.html"><span class="txt">Basic forms</span></a>
+            </li>
+            <li>
+                <a href="forms-advanced.html"><span class="txt">Advanced forms</span></a>
+            </li>
+            <li>
+                <a href="forms-layouts.html"><span class="txt">Form layouts</span></a>
+            </li>
+            <li>
+                <a href="forms-wizard.html"><span class="txt">Form wizard</span></a>
+            </li>
+            <li>
+                <a href="forms-validation.html"><span class="txt">Form validation</span></a>
+            </li>
+            <li>
+                <a href="code-editor.html"><span class="txt">Code editor</span></a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="#"><i class="l-software-layout-header-3columns"></i><span class="txt">Tables</span></a>
+        <ul class="sub">
+            <li>
+                <a href="tables-basic.html"><span class="txt">Basic tables</span></a>
+            </li>
+            <li>
+                <a href="tables-data.html"><span class="txt">Data tables</span></a>
+            </li>
+            <li>
+                <a href="tables-editable.html"><span class="txt">Editable tables</span></a>
+            </li>
+            <li>
+                <a href="tables-ajax.html"><span class="txt">Ajax tables</span></a>
+            </li>
+            <li>
+                <a href="tables-pricing.html"><span class="txt">Pricing tables</span></a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="#"><i class="l-software-layers2"></i><span class="txt">UI Elements</span></a>
+        <ul class="sub">
+            <li>
+                <a asp-controller="Home" asp-action="Icones"><span class="txt">Ícones</span></a>
+            </li>
+            <li>
+                <a href="typography.html"><span class="txt">Typography</span></a>
+            </li>
+            <li>
+                <a href="tabs.html"><span class="txt">Tabs</span></a>
+            </li>
+            <li>
+                <a href="accordions.html"><span class="txt">Accordions</span></a>
+            </li>
+            <li>
+                <a href="buttons.html"><span class="txt">Buttons</span></a>
+            </li>
+            <li>
+                <a href="notifications.html"><span class="txt">Notifications</span></a>
+            </li>
+            <li>
+                <a href="modals.html"><span class="txt">Modals</span></a>
+            </li>
+            <li>
+                <a href="sliders.html"><span class="txt">Sliders</span></a>
+            </li>
+            <li>
+                <a href="progressbars.html"><span class="txt">Progressbars</span></a>
+            </li>
+            <li>
+                <a href="lists.html"><span class="txt">Lists</span></a>
+            </li>
+            <li>
+                <a href="grid.html"><span class="txt">Grid</span></a>
+            </li>
+            <li>
+                <a href="ui-other.html"><span class="txt">Other</span></a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="portlets.html"><i class="l-software-layout-header"></i><span class="txt">Portlets</span><span class="label">22</span></a>
+    </li>
+    <li>
+        <a href="#"><i class="l-basic-mail"></i> <span class="txt">Email</span></a>
+        <ul class="sub">
+            <li>
+                <a href="email-inbox.html"><span class="txt">Inbox</span></a>
+            </li>
+            <li>
+                <a href="email-read.html"><span class="txt">Read email</span></a>
+            </li>
+            <li>
+                <a href="email-write.html"><span class="txt">Write email</span></a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="#"><i class="l-basic-geolocalize-01"></i><span class="txt">Maps</span></a>
+        <ul class="sub">
+            <li>
+                <a href="maps-google.html"><span class="txt">Google maps</span></a>
+            </li>
+            <li>
+                <a href="maps-vector.html"><span class="txt">Vector maps</span></a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="#"><i class="l-basic-webpage"></i><span class="txt">Pages</span></a>
+        <ul class="sub">
+            <li>
+                <a href="login.html"><span class="txt">Login</span></a>
+            </li>
+            <li>
+                <a href="lock-screen.html"><span class="txt">Lock screen</span></a>
+            </li>
+            <li>
+                <a href="register.html"><span class="txt">Register</span></a>
+            </li>
+            <li>
+                <a href="lost-password.html"><span class="txt">Lost password</span></a>
+            </li>
+            <li>
+                <a href="profile.html"><span class="txt">User profile</span></a>
+            </li>
+            <li>
+                <a href="calendar.html"><span class="txt">Calendário</span></a>
+            </li>
+            <li>
+                <a href="timeline.html"><span class="txt">Timeline</span></a>
+            </li>
+            <li>
+                <a href="gallery.html"><span class="txt">Gallery</span></a>
+            </li>
+            <li>
+                <a href="invoice.html"><span class="txt">Invoice</span></a>
+            </li>
+            <li>
+                <a href="blank.html"><span class="txt">Blank page</span></a>
+            </li>
+            <li>
+                <a href="#"><span class="txt">Error pages</span></a>
+                <ul class="sub">
+                    <li>
+                        <a href="403.html"><span class="txt">403</span></a>
+                    </li>
+                    <li>
+                        <a href="404.html"><span class="txt">404</span></a>
+                    </li>
+                    <li>
+                        <a href="500.html"><span class="txt">500</span></a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>*@
+

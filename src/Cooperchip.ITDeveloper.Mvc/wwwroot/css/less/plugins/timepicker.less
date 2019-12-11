@@ -1,0 +1,166 @@
+/*!
+ * Timepicker Component for Twitter Bootstrap
+ *
+ * Copyright 2013 Joris de Wit
+ *
+ * Contributors https://github.com/jdewit/bootstrap-timepicker/graphs/contributors
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+.bootstrap-timepicker {
+    position: relative;
+
+    &.pull-right {
+        .bootstrap-timepicker-widget {
+            &.dropdown-menu {
+                left: auto;
+                right: 0;
+
+                &:before {
+                    left: auto;
+                    right: 12px;
+                }
+                &:after {
+                    left: auto;
+                    right: 13px;
+                }
+            }
+        }
+    }
+
+    .add-on { 
+        cursor: pointer;
+        i {
+           display: inline-block;
+           width: 16px;
+           height: 16px;
+        }
+    }
+
+    .input-group-addon {
+        border-right-width: 0;
+        border-top-left-radius: @border-radius-base !important;
+        border-bottom-left-radius: @border-radius-base !important;
+    }
+}
+.bootstrap-timepicker-widget {
+    &.dropdown-menu {
+        width: 260px;
+        padding: 5px; 
+        &.open {
+            display: inline-block;
+        }
+        &:before {
+            border-bottom: 12px solid @dropdown-border;
+            border-left: 12px solid transparent;
+            border-right: 12px solid transparent;
+            content: "";
+            display: inline-block;
+            left: 22px;
+            position: absolute;
+            top: -24px;
+        }
+        &:after {
+            border-bottom: 10px solid #FFFFFF;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            content: "";
+            display: inline-block;
+            left: 21px;
+            position: absolute;
+            top: -20px;
+        }
+    }
+
+    a.btn, input {
+        border-radius: @border-radius-base;
+    }
+
+    table {
+        width: 100%;
+        margin: 0;
+
+        td { 
+            text-align: center;
+            height: 30px;
+            margin: 0;
+            padding: 2px;
+
+            &:not(.separator) {
+                min-width: 30px;
+            }
+
+            span {
+                width: 100%;
+            }
+            a {
+                  display: inline-block;
+                  margin-bottom: 0; // For input.btn
+                  font-weight: @btn-font-weight;
+                  text-align: center;
+                  vertical-align: middle;
+                  touch-action: manipulation;
+                  cursor: pointer;
+                  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+                  border: 1px solid transparent;
+                  white-space: nowrap;
+                  .button-size(@padding-base-vertical; @padding-base-horizontal; @font-size-base; @line-height-base; @border-radius-base);
+                  .user-select(none);
+
+                  &,
+                  &:active,
+                  &.active {
+                    &:focus,
+                    &.focus {
+                      .tab-focus();
+                    }
+                  }
+
+                  &:hover,
+                  &:focus,
+                  &.focus {
+                    color: @btn-default-color;
+                    text-decoration: none;
+                  }
+                .button-variant(@text-color; @btn-default-bg; @btn-default-border);
+                width: 100%;
+
+                i {
+                    margin-top: 2px;
+                }
+            }
+            input {
+                width: 25px;
+                margin: 0;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.bootstrap-timepicker-widget .modal-content {
+    padding: 4px;
+}
+
+@media (min-width: 767px) {
+    .bootstrap-timepicker-widget.modal {
+        width: 200px; 
+        margin-left: -100px; 
+    }
+}
+
+@media (max-width: 767px) {
+    .bootstrap-timepicker {
+        width: 100%;
+
+        .dropdown-menu {
+            width: 100%;
+        }
+    }
+}
+
+
+
+
+

@@ -1,0 +1,142 @@
+/* -----------------------------------------
+   Fancy select
+----------------------------------------- */
+div.fancy-select {
+	position: relative;
+	color: @input-color;
+	width: 100%;
+}
+
+div.fancy-select.disabled {
+	opacity: 0.5;
+}
+
+div.fancy-select select:focus + div.trigger.open {
+	box-shadow: none;
+}
+
+div.fancy-select div.trigger {
+	border-radius: @input-border-radius;
+	cursor: pointer;
+	padding: 6px 12px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	position: relative;
+	background: @input-bg;
+	border: 1px solid @input-border;
+	color: @input-color;
+
+	.transition(all);
+	.transition-duration(0.4s);
+}
+
+div.fancy-select div.trigger:after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 0;
+	height: 0;
+	border: 5px solid transparent;
+	border-top-color: @input-border;
+	top: 15px;
+	right: 14px;
+}
+
+div.fancy-select div.trigger.open {
+	background: @input-bg;
+	border: 1px solid @input-border;
+	color: @input-color;
+	box-shadow: none;
+}
+
+div.fancy-select div.trigger.open:after {
+	border-top-color: @input-border;
+}
+
+div.fancy-select ul.options {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 36px;
+	left: 0;
+	visibility: hidden;
+	opacity: 0;
+	z-index: 50;
+	max-height: 200px;
+	overflow: auto;
+	background: @input-bg;
+	border-radius: @input-border-radius;
+	border: 1px solid @input-border;
+	min-width: 200px;
+	width: 100%;
+
+	.box-shadow(0 4px 10px rgba(0,0,0,.175));
+
+	transition: opacity 300ms ease-out, top 300ms ease-out, visibility 300ms ease-out;
+	-webkit-transition: opacity 300ms ease-out, top 300ms ease-out, visibility 300ms ease-out;
+	-moz-transition: opacity 300ms ease-out, top 300ms ease-out, visibility 300ms ease-out;
+	-ms-transition: opacity 300ms ease-out, top 300ms ease-out, visibility 300ms ease-out;
+	-o-transition: opacity 300ms ease-out, top 300ms ease-out, visibility 300ms ease-out;
+}
+
+div.fancy-select ul.options.open {
+	visibility: visible;
+	top: 36px;
+	opacity: 1;
+
+	/* have to use a non-visibility transition to prevent this iOS issue (bug?): */
+	/*http://stackoverflow.com/questions/10736478/css-animation-visibility-visible-works-on-chrome-and-safari-but-not-on-ios*/
+	transition: opacity 300ms ease-out, top 300ms ease-out;
+	-webkit-transition: opacity 300ms ease-out, top 300ms ease-out;
+	-moz-transition: opacity 300ms ease-out, top 300ms ease-out;
+	-ms-transition: opacity 300ms ease-out, top 300ms ease-out;
+	-o-transition: opacity 300ms ease-out, top 300ms ease-out;
+}
+
+div.fancy-select ul.options.overflowing {
+	top: auto;
+	bottom: 36px;
+
+	transition: opacity 300ms ease-out, bottom 300ms ease-out, visibility 300ms ease-out;
+	-webkit-transition: opacity 300ms ease-out, bottom 300ms ease-out, visibility 300ms ease-out;
+	-moz-transition: opacity 300ms ease-out, bottom 300ms ease-out, visibility 300ms ease-out;
+	-ms-transition: opacity 300ms ease-out, bottom 300ms ease-out, visibility 300ms ease-out;
+	-o-transition: opacity 300ms ease-out, bottom 300ms ease-out, visibility 300ms ease-out;
+}
+
+div.fancy-select ul.options.overflowing.open {
+	top: auto;
+	bottom: 36px;
+
+	transition: opacity 300ms ease-out, bottom 300ms ease-out;
+	-webkit-transition: opacity 300ms ease-out, bottom 300ms ease-out;
+	-moz-transition: opacity 300ms ease-out, bottom 300ms ease-out;
+	-ms-transition: opacity 300ms ease-out, bottom 300ms ease-out;
+	-o-transition: opacity 300ms ease-out, bottom 300ms ease-out;
+}
+
+div.fancy-select ul.options li {
+	padding: 7px 12px;
+	color: @dropdown-link-color;
+	cursor: pointer;
+	white-space: nowrap;
+
+	transition: all 150ms ease-out;
+	-webkit-transition: all 150ms ease-out;
+	-moz-transition: all 150ms ease-out;
+	-ms-transition: all 150ms ease-out;
+	-o-transition: all 150ms ease-out;
+
+	i { margin-top: 2px; margin-right: 5px;}
+}
+
+div.fancy-select ul.options li.selected {
+	background: @dropdown-link-active-bg;
+	color: @dropdown-link-active-color;
+}
+
+div.fancy-select ul.options li.hover {
+	color: @dropdown-link-hover-color;
+	background-color: @dropdown-link-hover-bg;
+}
