@@ -1,0 +1,58 @@
+.a-1 {
+  max-width: 500px;
+  margin: 15px auto;
+  background: #fff;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.075);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.a-1 .a-1-d {
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-justify-content: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.a-1 .a-1-d > a {
+  position: relative;
+  display: inline-block;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  text-align: center;
+  padding: 20px 5px;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
+  font-size: 50px;
+  line-height: 1.5;
+  color: #fff;
+  font-weight: lighter;
+  border-top: 4px solid rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+}
+.a-1 .a-1-d > a span {
+  display: block;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.a-1 .a-1-d > a:hover,
+.a-1 .a-1-d > a:focus {
+  color: #fff;
+  box-shadow: inset 0px 0px 200px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+}
+.a-1 .a-1-c {
+  padding: 20px 25px;
+}
+.a-1 .a-1-c h3 {
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 0;
+}
+.a-1 .a-1-c p {
+  color: #888;
+  margin: 5px 0;
+}

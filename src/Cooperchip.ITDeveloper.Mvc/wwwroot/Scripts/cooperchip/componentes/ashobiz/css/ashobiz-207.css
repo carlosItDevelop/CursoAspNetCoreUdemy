@@ -1,0 +1,33 @@
+.a-207-1 {
+  margin: 10px 0px;
+  height: 12px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0);
+  background-image: radial-gradient(rgba(0, 0, 0, 0.1) 4px, transparent 5px);
+  background-size: 12px 12px;
+}
+.a-207-2 {
+  margin: 10px 0px;
+  height: 14px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0);
+  background-image: radial-gradient(rgba(0, 0, 0, 0.12) 3px, transparent 4px), radial-gradient(rgba(0, 0, 0, 0.2) 4px, transparent 5px);
+  background-size: 20px 20px;
+  background-position: 0px -3px, 10px -2px;
+}
+.a-207-3 {
+  margin: 10px 0px;
+  height: 10px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0);
+  background-image: radial-gradient(rgba(0, 0, 0, 0.15) 2px, transparent 3px);
+  background-size: 10px 10px;
+}
+.a-207-4 {
+  margin: 10px 0px;
+  height: 12px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0);
+  background-image: radial-gradient(#ffffff 2px, transparent 3px), radial-gradient(rgba(0, 0, 0, 0.15) 4px, transparent 5px);
+  background-size: 12px 12px;
+}

@@ -1,0 +1,50 @@
+.a-111 {
+  display: inline-block;
+  margin: 10px 8px;
+  padding: 17px 17px;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 14px;
+  border: 0px;
+  transition: 0.5s;
+  text-decoration: none;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
+  position: relative;
+  vertical-align: middle;
+}
+.a-111:hover,
+.a-111:focus {
+  text-decoration: none;
+}
+.a-111:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-radius: 4px;
+  top: 0;
+  left: 0;
+  opacity: 0.6;
+  background: inherit;
+  -webkit-transform: rotate(6deg) scaleX(1.05);
+  -moz-transform: rotate(6deg) scaleX(1.05);
+  -ms-transform: rotate(6deg) scaleX(1.05);
+  transform: rotate(6deg) scaleX(1.05);
+}
+.a-111:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-radius: 4px;
+  top: 0;
+  left: 0;
+  opacity: 0.6;
+  background: inherit;
+  -webkit-transform: rotate(-6deg) scaleX(1.05);
+  -moz-transform: rotate(-6deg) scaleX(1.05);
+  -ms-transform: rotate(-6deg) scaleX(1.05);
+  transform: rotate(-6deg) scaleX(1.05);
+}

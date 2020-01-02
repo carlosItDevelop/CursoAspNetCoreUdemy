@@ -1,0 +1,77 @@
+@import (reference) "ashobiz.base.less";
+.a-96{
+	position:relative;
+	width:98%; 
+	height:55px;
+	margin:40px 0px;
+	background:rgba(0,0,0,0.08);
+	&:before{
+		position:absolute;
+		width:100%;
+		height:15px;
+		content:"";
+		left:0%;
+		top:-15px;
+		background:rgba(0,0,0,0.1);
+		opacity:0.5;
+		.transform-origin(100% 15px);
+		.transform(skewX(-45deg));
+	}
+	&:after{
+		position:absolute;
+		width:15px;
+		height:100%;
+		content:"";
+		right:-15px;
+		top:0;
+		background:rgba(0,0,0,0.1);
+		opacity:0.65;
+		.transform-origin(0px 0%);
+		.transform(skewY(-45deg));
+	} 
+	.a-96-bar{
+		position:absolute;
+		bottom:0;
+		left:0;
+		height: 100%;
+		z-index:50;
+		&:before{
+			position:absolute;
+			width:100%;
+			height:15px;
+			content:"";
+			left:0%;
+			top:-15px;
+			background:inherit;
+			opacity:0.75;
+			.transform-origin(100% 15px);
+			.transform(skewX(-45deg));
+		}
+		&:after{
+			position:absolute;
+			width:15px;
+			height:100%;
+			content:"";
+			right:-15px;
+			top:0px;
+			background:inherit;
+			opacity:0.85;
+			.transform-origin(0px 0%);
+			.transform(skewY(-45deg));
+		} 
+	}
+	> span{
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 18px; 
+		left: 18px;
+		color: rgba(0,0,0,0.3);
+		font-weight: bold;
+		font-size: 18px;
+		line-height: 18px;
+		text-transform: uppercase;
+		z-index: 100;
+	}
+}

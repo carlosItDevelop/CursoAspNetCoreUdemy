@@ -1,0 +1,15 @@
+.a-92 {
+  font-size: 7vw;
+  line-height: 1.2;
+  margin: 15px 0px;
+  font-weight: lighter;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.08), 2px 2px 1px rgba(0, 0, 0, 0.075), 4px 4px 1px rgba(0, 0, 0, 0.07), 6px 6px 1px rgba(0, 0, 0, 0.065), 8px 8px 1px rgba(0, 0, 0, 0.06), 10px 10px 1px rgba(0, 0, 0, 0.055), 12px 12px 1px rgba(0, 0, 0, 0.05), 14px 14px 1px rgba(0, 0, 0, 0.045), 16px 16px 1px rgba(0, 0, 0, 0.04), 18px 18px 1px rgba(0, 0, 0, 0.035), 20px 20px 1px rgba(0, 0, 0, 0.03), 22px 22px 1px rgba(0, 0, 0, 0.025), 24px 24px 1px rgba(0, 0, 0, 0.02), 26px 26px 1px rgba(0, 0, 0, 0.015), 28px 28px 1px rgba(0, 0, 0, 0.01), 30px 30px 1px rgba(0, 0, 0, 0.005), 32px 32px 1px rgba(0, 0, 0, 0.0025), 34px 34px 1px rgba(0, 0, 0, 0.002), 36px 36px 1px rgba(0, 0, 0, 0.0015), 38px 38px 1px rgba(0, 0, 0, 0.001);
+}
+@media (max-width: 500px) {
+  .a-92 {
+    font-size: 10vw;
+    line-height: 1;
+  }
+}

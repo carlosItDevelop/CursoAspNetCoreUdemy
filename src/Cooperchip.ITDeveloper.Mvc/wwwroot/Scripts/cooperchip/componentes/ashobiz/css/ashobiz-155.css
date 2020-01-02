@@ -1,0 +1,28 @@
+.a-155 {
+  display: block;
+  width: 140px;
+  height: 140px;
+  margin: 15px auto;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+.a-155 i {
+  color: #444;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  font-size: 35px;
+  position: relative;
+  top: 30px;
+  background: #fff;
+  border: 2px solid #fff;
+  border-radius: 100%;
+  line-height: 76px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1), 1px 1px rgba(0, 0, 0, 0.01), 2px 2px rgba(0, 0, 0, 0.01), 3px 3px rgba(0, 0, 0, 0.01), 4px 4px rgba(0, 0, 0, 0.01), 5px 5px rgba(0, 0, 0, 0.01), 6px 6px rgba(0, 0, 0, 0.01), 7px 7px rgba(0, 0, 0, 0.01), 8px 8px rgba(0, 0, 0, 0.01), 9px 9px rgba(0, 0, 0, 0.01), 10px 10px rgba(0, 0, 0, 0.01), 11px 11px rgba(0, 0, 0, 0.01), 12px 12px rgba(0, 0, 0, 0.01), 13px 13px rgba(0, 0, 0, 0.01), 14px 14px rgba(0, 0, 0, 0.01), 15px 15px rgba(0, 0, 0, 0.01), 16px 16px rgba(0, 0, 0, 0.01), 17px 17px rgba(0, 0, 0, 0.01), 18px 18px rgba(0, 0, 0, 0.01), 19px 19px rgba(0, 0, 0, 0.01), 20px 20px rgba(0, 0, 0, 0.01), 21px 21px rgba(0, 0, 0, 0.01), 22px 22px rgba(0, 0, 0, 0.01), 23px 23px rgba(0, 0, 0, 0.01), 24px 24px rgba(0, 0, 0, 0.01), 25px 25px rgba(0, 0, 0, 0.01), 26px 26px rgba(0, 0, 0, 0.01), 27px 27px rgba(0, 0, 0, 0.01), 28px 28px rgba(0, 0, 0, 0.01), 29px 29px rgba(0, 0, 0, 0.01), 30px 30px rgba(0, 0, 0, 0.01), 31px 31px rgba(0, 0, 0, 0.01), 32px 32px rgba(0, 0, 0, 0.01), 33px 33px rgba(0, 0, 0, 0.01), 34px 34px rgba(0, 0, 0, 0.01), 35px 35px rgba(0, 0, 0, 0.01), 36px 36px rgba(0, 0, 0, 0.01), 37px 37px rgba(0, 0, 0, 0.01), 38px 38px rgba(0, 0, 0, 0.01), 39px 39px rgba(0, 0, 0, 0.01), 40px 40px rgba(0, 0, 0, 0.01), 41px 41px rgba(0, 0, 0, 0.01), 42px 42px rgba(0, 0, 0, 0.01), 43px 43px rgba(0, 0, 0, 0.01), 44px 44px rgba(0, 0, 0, 0.01), 45px 45px rgba(0, 0, 0, 0.01), 46px 46px rgba(0, 0, 0, 0.01), 47px 47px rgba(0, 0, 0, 0.01), 48px 48px rgba(0, 0, 0, 0.01), 49px 49px rgba(0, 0, 0, 0.01), 50px 50px rgba(0, 0, 0, 0.01), 51px 51px rgba(0, 0, 0, 0.01), 52px 52px rgba(0, 0, 0, 0.01), 53px 53px rgba(0, 0, 0, 0.01), 54px 54px rgba(0, 0, 0, 0.01), 55px 55px rgba(0, 0, 0, 0.01), 56px 56px rgba(0, 0, 0, 0.01), 57px 57px rgba(0, 0, 0, 0.01), 58px 58px rgba(0, 0, 0, 0.01), 59px 59px rgba(0, 0, 0, 0.01);
+}
+.a-155:hover i,
+.a-155:focus i {
+  color: #444;
+  text-decoration: none;
+}

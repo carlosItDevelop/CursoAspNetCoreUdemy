@@ -1,0 +1,46 @@
+/* Box shadow */
+.a-85 {
+  padding: 15px 20px;
+  box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75), -10px -10px 0px 0px rgba(0, 0, 0, 0.75);
+  margin: 30px auto;
+  max-width: 300px;
+  color: #fff;
+}
+.a-85 h4 {
+  color: #fff;
+  margin-bottom: 5px;
+}
+.a-85 h4 a,
+.a-85 h4 a:hover,
+.a-85 h4 a:focus {
+  color: #fff;
+  text-decoration: none;
+}
+.a-85 p {
+  color: #fff;
+  margin: 0;
+}
+.a-85 p a {
+  color: rgba(255, 255, 255, 0.7);
+}
+.a-85 p a:hover,
+.a-85 p a:focus {
+  color: #fff;
+}
+.a-85.a-bg-white {
+  color: #333333;
+}
+.a-85.a-bg-white h4 {
+  color: #333333;
+}
+.a-85.a-bg-white h4 a,
+.a-85.a-bg-white h4 a:hover,
+.a-85.a-bg-white h4 a:focus {
+  color: #333333;
+}
+.a-85.a-bg-white p {
+  color: #333333;
+}
+.a-85.a-bg-white p a {
+  color: rgba(0, 0, 0, 0.7);
+}

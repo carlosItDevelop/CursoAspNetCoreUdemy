@@ -1,0 +1,53 @@
+@import (reference) "ashobiz.base.less";
+.a-183{
+	text-align: center;
+	margin: 15px 0px;
+	h2{
+		font-size: 5vw;
+		line-height: 1.2;
+		margin: 15px 0px;
+		padding: 12px 0px;
+		font-weight: normal;
+		text-transform: uppercase;
+		text-shadow: 0.03em 0.03em 1px rgba(0,0,0,0.3);
+		border-top: 4px double #ccc;
+		border-bottom: 4px double #ccc;
+		@media (max-width: 1000px){
+			font-size: 8vw;
+		}
+		@media (max-width: 600px){
+			font-size: 10vw;
+		}
+		span{
+			color: #444;
+		}
+		&:before,&:after{
+			display: inline-block;
+			position: relative;
+			content: "\f005    \f005    \f005";
+			font-family: "FontAwesome";
+			font-size: 16px;
+			line-height: 1;
+			vertical-align: middle;
+			text-shadow: none;
+			top: -7px;
+			@media (max-width: 500px){
+				top: 0;
+				font-size: 14px;
+			}
+		}
+		&:before{
+			left: -15px;
+		}
+		&:after{
+			right: -15px;
+		}
+	}
+	h3{
+		font-size: 14px;
+		line-height: 1.2;
+		text-transform: uppercase;
+		letter-spacing: 0.3em;
+		color: #444;
+	}
+}

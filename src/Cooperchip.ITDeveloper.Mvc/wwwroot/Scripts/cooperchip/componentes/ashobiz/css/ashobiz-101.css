@@ -1,0 +1,93 @@
+.a-101 {
+  margin: 15px auto;
+  width: 270px;
+  height: 250px;
+  text-align: center;
+  position: relative;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  box-shadow: 4px 4px 0px 1px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 300px) {
+  .a-101 {
+    width: 220px;
+  }
+}
+.a-101 h3 {
+  margin: 0px;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: normal;
+  text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.2);
+}
+.a-101 h3 i {
+  font-size: 60px;
+  line-height: 70px;
+  margin-bottom: 10px;
+  display: block;
+}
+.a-101 p {
+  margin: 0px;
+  font-size: 13px;
+  line-height: 26px;
+  color: rgba(255, 255, 255, 0.7);
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+.a-101 .a-btn {
+  color: #fff;
+  transition: 0.5s;
+  text-transform: uppercase;
+  border: 0px;
+  font-size: 12px;
+  border-radius: 2px;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
+}
+.a-101 .a-101-f {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  padding: 70px 20px;
+  border-left: 7px solid rgba(0, 0, 0, 0.2);
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  -webkit-transform-origin: 0% 100%;
+  -moz-transform-origin: 0% 100%;
+  -ms-transform-origin: 0% 100%;
+  transform-origin: 0% 100%;
+  transition: 0.75s ease;
+  cursor: pointer;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2), inset 0px 0px 30px rgba(0, 0, 0, 0.1);
+}
+.a-101:hover .a-101-f,
+.a-101:focus .a-101-f {
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+.a-101 .a-101-b {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  padding: 40px 20px;
+}
+@media (max-width: 300px) {
+  .a-101 .a-101-b {
+    padding: 20px 20px;
+  }
+}

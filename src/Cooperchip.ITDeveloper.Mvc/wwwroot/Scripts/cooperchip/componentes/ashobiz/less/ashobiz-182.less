@@ -1,0 +1,60 @@
+@import (reference) "ashobiz.base.less";
+.a-182{
+	text-align: center;
+	margin: 15px auto;
+	max-width: 400px;
+	padding: 10px;
+	color: #fff;
+	box-shadow: 0px 0px 25px rgba(0,0,0,0.15);
+	position: relative;
+	background-image: 
+		linear-gradient(to right, rgba(0,0,0,0.075), rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.075) 0, rgba(0,0,0,0.2));
+	@media (max-width: 500px){
+		background-image: 
+		linear-gradient(to bottom, rgba(0,0,0,0.075), rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.075) 0, rgba(0,0,0,0.2));
+	}
+	> div{
+		border: 1px dashed rgba(255,255,255,0.5);
+		box-shadow: inset 0px 0px 25px rgba(0,0,0,0.1);
+		padding: 25px;
+		text-shadow: 2px 2px 1px rgba(0,0,0,0.3);
+		@media (max-width: 500px){
+			padding: 10px;
+		}
+		.clearfix;
+		i{
+			color: #fff;
+			font-size: 45px;
+			line-height: 60px;
+		}
+		h3{
+			font-size: 16px;
+			line-height: 26px;
+			font-weight: normal;
+		}			
+		.a-182-l{
+			float: left;
+			width: 49%;
+			text-align: right;
+			padding: 35px;
+			padding-left: 10px;
+			@media (max-width: 500px){
+				width: 100%;
+				text-align: center;
+				padding: 40px 0px;
+			}
+		}
+		.a-182-r{
+			float: right;
+			width: 49%;
+			text-align: left;
+			padding: 35px;
+			padding-right: 10px;			
+			@media (max-width: 500px){
+				width: 100%;
+				text-align: center;
+				padding: 40px 0px;
+			}
+		}		
+	}
+}

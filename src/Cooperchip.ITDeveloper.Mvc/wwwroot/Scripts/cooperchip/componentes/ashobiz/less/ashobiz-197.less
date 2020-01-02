@@ -1,0 +1,67 @@
+@import (reference) "ashobiz.base.less";
+.a-197{
+	max-width: 350px;
+	margin: 15px auto;
+	position: relative;
+	border: 3px solid #fff;
+	box-shadow: 0px 0px 25px rgba(0,0,0,0.1);
+	overflow: hidden;
+	img{
+		transition: 0.5s;
+		.transform(scale(1));
+	}
+	> figcaption{
+		opacity: 0;
+		position: absolute;
+		text-align: center;
+		top: 0; left: 0; right: 0; bottom: 0;
+		border: 30px solid rgba(255,255,255,0.3);
+		box-shadow: inset 0px 0px 0px 1px rgba(255,255,255,0.6), inset 0px 0px 30px rgba(0,0,0,0.3);
+		background: rgba(0,0,0,0.4);
+		padding: 10px;
+		transition: 0.5s;
+		@media (max-width: 500px){
+			border: 15px solid rgba(255,255,255,0.4);
+		}
+		span{
+			display: inline-block;
+			color: #fff;
+			margin-top: 12%;
+			font-size: 25px;
+			line-height: 35px;
+			text-shadow: 2px 2px 1px rgba(0,0,0,0.4);
+		}
+		hr{
+			width: 120px;
+			margin: 10px auto;
+			height: 2px;
+			border-top: 1px solid rgba(255,255,255,0.3);
+			border-bottom: 1px solid rgba(255,255,255,0.4);
+		}
+		> a{
+			display: inline-block;
+			margin: 5px 0px;
+			background: rgba(0,0,0,0.5);
+			padding: 1px 15px;
+			color: rgba(255,255,255,0.8);
+			font-size: 13px;
+			border-radius: 25px;
+			border: 1px solid rgba(255,255,255,0.4);
+			box-shadow: inset 0px 0px 5px rgba(0,0,0,0.2);
+			transition: 0.5s;
+			&:hover,&:focus{
+				color: #fff;
+				text-decoration: none;
+				background: rgba(0,0,0,0.6);
+			}
+		}
+	}
+	&:hover{
+		img{
+			.transform(scale(1.1));
+		}
+		> figcaption{
+			opacity: 1;
+		}
+	}
+}

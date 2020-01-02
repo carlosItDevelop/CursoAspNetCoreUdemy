@@ -1,0 +1,44 @@
+@import (reference) "ashobiz.base.less";
+/* Box shadow */
+.a-85{
+	padding:15px 20px;
+	box-shadow:10px 10px 0px 0px rgba(0,0,0,0.75), -10px -10px 0px 0px rgba(0,0,0,0.75);
+	margin:30px auto;
+	max-width: 300px;
+	color:#fff;
+	h4{
+		color:#fff;
+		margin-bottom: 5px;
+		a,a:hover,a:focus{
+			color:#fff;
+			text-decoration:none;
+		}
+	}
+	p{
+		color:#fff;
+		margin: 0;
+		a{
+			color:rgba(255,255,255,0.7);
+			&:hover,&:focus{
+				color:#fff;
+			}
+		}
+	}
+	&.a-bg-white{
+		color:@black;
+		h4{
+			color:@black;
+			a,a:hover,a:focus{
+				color:@black;
+			}
+		}
+		p{
+			color:@black;
+			a{
+				color:rgba(0,0,0,0.7);
+				&:hover,&:focus{
+				}
+			}
+		}
+	}
+}

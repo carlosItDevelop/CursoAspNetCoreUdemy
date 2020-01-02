@@ -1,0 +1,44 @@
+.a-58 {
+  margin: 15px auto;
+  position: relative;
+  background: #fff;
+  background-image: repeating-linear-gradient(45deg, #f75353, #f75353 40px, #51d466 0, #51d466 80px, #609cec 0, #609cec 120px, #fcd419 0, #fcd419 160px, #cb79e6 0, #cb79e6 200px, #32c8de 0, #32c8de 240px, #f78153 0, #f78153 280px, #ff61e7 0, #ff61e7 320px);
+  box-shadow: inset 0px 0px 50px rgba(0, 0, 0, 0.15), 0px 0px 25px rgba(0, 0, 0, 0.1);
+  padding: 50px 40px;
+  z-index: 2;
+}
+.a-58:before {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  right: 0;
+  bottom: 15px;
+  content: "";
+  background: #fff;
+  z-index: -1;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0px 0px 100px rgba(0, 0, 0, 0.04);
+}
+.a-58 h3 {
+  font-size: 30px;
+  line-height: 1.5;
+  margin: 0;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  color: #555;
+  font-weight: normal;
+}
+.a-58 h3 a,
+.a-58 h3 a:hover,
+.a-58 h3 a:focus {
+  color: #555;
+  text-decoration: none;
+}
+.a-58 p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 2.5;
+  color: #777;
+}

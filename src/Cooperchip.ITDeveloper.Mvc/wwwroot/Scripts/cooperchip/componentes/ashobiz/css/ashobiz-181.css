@@ -1,0 +1,57 @@
+.a-181 {
+  margin: 15px 0px;
+}
+.a-181 h2 {
+  font-size: 40px;
+  line-height: 50px;
+  margin: 0px;
+  font-weight: normal;
+  margin-bottom: 12px;
+  color: #444;
+}
+@media (max-width: 550px) {
+  .a-181 h2 {
+    font-size: 25px;
+    line-height: 35px;
+  }
+}
+.a-181 h2 a,
+.a-181 h2 a:hover,
+.a-181 h2 a:focus {
+  color: #444;
+  text-decoration: none;
+}
+.a-181 .a-181-b {
+  height: 6px;
+  border-top: 1px solid #ddd;
+  margin-bottom: 5px;
+}
+.a-181 .a-181-b:before,
+.a-181 .a-181-b:after {
+  content: " ";
+  display: table;
+}
+.a-181 .a-181-b:after {
+  clear: both;
+}
+.a-181 .a-181-b span {
+  width: 50px;
+  height: 100%;
+  float: left;
+  position: relative;
+  top: -1px;
+}
+.a-181 p {
+  color: #777;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: normal;
+  margin: 0;
+  margin-top: 10px;
+}
+@media (max-width: 550px) {
+  .a-181 p {
+    font-size: 14px;
+    line-height: 28px;
+  }
+}

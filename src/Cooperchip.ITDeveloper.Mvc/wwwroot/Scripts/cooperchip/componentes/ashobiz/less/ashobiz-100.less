@@ -1,0 +1,87 @@
+@import (reference) "ashobiz.base.less";
+.a-100{
+	width:250px;
+	height: 250px;
+	margin:15px auto;
+	border-radius: 100%;
+	box-shadow:0px 0px 15px rgba(0,0,0,0.05), inset 0px 0px 1px rgba(0,0,0,0.4);
+	text-align:center;
+	padding:20px 5px;
+	position:relative;
+	z-index: 4;
+	color: #fff;
+	overflow: hidden;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2), inset 6px 6px 0px rgba(0, 0, 0, 0.1);
+	border: 7px solid rgba(0,0,0,0.3);
+	> i{
+		display:block;
+		font-size:60px;
+		line-height:70px;
+		margin-top: 15px;
+		margin-bottom:10px;
+		color: #fff;
+		text-shadow: 
+			1px 1px 1px rgba(0, 0, 0, 0.08), 
+			2px 2px 1px rgba(0, 0, 0, 0.075), 
+			4px 4px 1px rgba(0, 0, 0, 0.07), 
+			6px 6px 1px rgba(0, 0, 0, 0.065), 
+			8px 8px 1px rgba(0, 0, 0, 0.06), 
+			10px 10px 1px rgba(0, 0, 0, 0.055), 
+			12px 12px 1px rgba(0, 0, 0, 0.05), 
+			14px 14px 1px rgba(0, 0, 0, 0.045), 
+			32px 32px 1px rgba(0, 0, 0, 0.0025), 
+			34px 34px 1px rgba(0, 0, 0, 0.002), 
+			36px 36px 1px rgba(0, 0, 0, 0.0015), 
+			38px 38px 1px rgba(0, 0, 0, 0.001);
+	}
+	h3{
+		font-size:20px;
+		line-height:30px;
+		margin-bottom: 20px;
+		font-weight:normal;
+		text-transform:uppercase;
+		color: #fff;
+		text-shadow: 
+			1px 1px 1px rgba(0, 0, 0, 0.08), 
+			2px 2px 1px rgba(0, 0, 0, 0.075), 
+			4px 4px 1px rgba(0, 0, 0, 0.07), 
+			6px 6px 1px rgba(0, 0, 0, 0.065), 
+			8px 8px 1px rgba(0, 0, 0, 0.06), 
+			10px 10px 1px rgba(0, 0, 0, 0.055), 
+			12px 12px 1px rgba(0, 0, 0, 0.05), 
+			14px 14px 1px rgba(0, 0, 0, 0.045), 
+			16px 16px 1px rgba(0, 0, 0, 0.04);
+	}
+	.a-100-btn{
+		display:block;
+		position: relative;
+		bottom: 5px;
+		margin:10px auto;
+		width:50px;
+		line-height:46px;
+		height:50px;
+		color:#fff;
+		font-size:18px;
+		border-radius:100%;
+		background: transparent;
+		border: 2px solid #fff; 
+		transition: 0.5s;
+		box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2), inset 4px 4px 0px rgba(0, 0, 0, 0.1);
+		&:hover{
+			background: rgba(0,0,0,0.1);
+		}
+	}
+	&.a-bg-white{
+		color: #888;
+		i{
+			color: #888;
+		}
+		h3{
+			color: #888;
+		}
+		.a-100-btn{
+			color: #888;
+			border-color: #aaa;
+		}
+	}
+}

@@ -1,0 +1,108 @@
+.a-9 {
+  max-width: 600px;
+  margin: 15px auto;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+.a-9:before,
+.a-9:after {
+  content: " ";
+  display: table;
+}
+.a-9:after {
+  clear: both;
+}
+.a-9 .a-9-l {
+  float: left;
+  width: 150px;
+  text-align: center;
+  padding: 20px 10px;
+}
+@media (max-width: 400px) {
+  .a-9 .a-9-l {
+    float: none;
+    width: 100%;
+  }
+}
+.a-9 .a-9-l h3 {
+  font-size: 14px;
+  line-height: 2;
+  color: #fff;
+  margin: 0;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+.a-9 .a-9-l h2 {
+  margin: 0;
+  font-size: 40px;
+  line-height: 1.7;
+  font-weight: lighter;
+  color: #fff;
+}
+.a-9 .a-9-l h2 > span {
+  font-size: 15px;
+  font-weight: normal;
+}
+.a-9 .a-9-l .a-9-b {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 13px;
+  border: 2px solid #fff;
+  background: transparent;
+  transition: 0.5s;
+  padding: 1px 12px;
+  color: #fff;
+}
+.a-9 .a-9-l .a-9-b:hover,
+.a-9 .a-9-l .a-9-b:focus,
+.a-9 .a-9-l .a-9-b:active {
+  color: #fff;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.1);
+}
+.a-9 .a-9-r {
+  background: rgba(0, 0, 0, 0.15);
+  margin-left: 150px;
+  border-left: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 10px;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-justify-content: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+@media (max-width: 400px) {
+  .a-9 .a-9-r {
+    margin-left: 0;
+    border-left: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+  }
+}
+.a-9 .a-9-r > div {
+  width: 100%;
+  max-width: 120px;
+  margin: 10px;
+  padding: 10px 12px 10px 14px;
+  background: rgba(0, 0, 0, 0.065);
+  border-left: 3px solid rgba(0, 0, 0, 0.08);
+}
+.a-9 .a-9-r > div h4 {
+  font-size: 12px;
+  line-height: 2;
+  margin: 0px;
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+}
+.a-9 .a-9-r > div h4 > span {
+  display: block;
+  font-size: 18px;
+  color: #fff;
+  line-height: 1.6;
+  margin: 0px;
+  font-weight: normal;
+}

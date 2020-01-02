@@ -1,0 +1,115 @@
+@-webkit-keyframes a16 {
+  0%,
+  100% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+  25% {
+    -webkit-transform: translateY(-10px) rotateY(0deg);
+    -moz-transform: translateY(-10px) rotateY(0deg);
+    -ms-transform: translateY(-10px) rotateY(0deg);
+    transform: translateY(-10px) rotateY(0deg);
+  }
+  50% {
+    -webkit-transform: translateY(-20px) rotateY(180deg);
+    -moz-transform: translateY(-20px) rotateY(180deg);
+    -ms-transform: translateY(-20px) rotateY(180deg);
+    transform: translateY(-20px) rotateY(180deg);
+  }
+}
+@keyframes a16 {
+  0%,
+  100% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+  25% {
+    -webkit-transform: translateY(-10px) rotateY(0deg);
+    -moz-transform: translateY(-10px) rotateY(0deg);
+    -ms-transform: translateY(-10px) rotateY(0deg);
+    transform: translateY(-10px) rotateY(0deg);
+  }
+  50% {
+    -webkit-transform: translateY(-20px) rotateY(180deg);
+    -moz-transform: translateY(-20px) rotateY(180deg);
+    -ms-transform: translateY(-20px) rotateY(180deg);
+    transform: translateY(-20px) rotateY(180deg);
+  }
+}
+.a-16 {
+  width: 100%;
+  margin: 15px auto;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-justify-content: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.a-16 > div {
+  width: 250px;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  padding: 20px;
+  text-align: center;
+  box-shadow: inset 0px 0px 100px rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+  overflow: hidden;
+  border-top: 6px solid rgba(0, 0, 0, 0.2);
+  -webkit-perspective: 700px;
+  perspective: 700px;
+}
+.a-16 > div > span {
+  color: #333;
+  font-size: 90px;
+  line-height: 1.5;
+  position: relative;
+  display: block;
+  margin-top: 20px;
+  font-weight: bold;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.a-16 > div > span:after {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  width: 70px;
+  height: 2px;
+  background: rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+  left: 50%;
+  margin-left: -35px;
+}
+.a-16 > div h3 {
+  margin-top: 15px;
+  font-size: 20px;
+  line-height: 1.6;
+  text-transform: uppercase;
+  color: #444;
+}
+.a-16 > div h3 a,
+.a-16 > div h3 a:hover,
+.a-16 > div h3 a:focus {
+  color: #444;
+  text-decoration: none;
+}
+.a-16 > div p {
+  color: rgba(0, 0, 0, 0.4);
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 2;
+}
+.a-16 > div:hover {
+  background: #fff;
+}
+.a-16 > div:hover > span {
+  -webkit-animation: a16 0.75s linear;
+  animation: a16 0.75s linear;
+}

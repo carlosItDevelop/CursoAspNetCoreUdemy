@@ -1,0 +1,26 @@
+.a-216-1 {
+  background-image: repeating-linear-gradient(to bottom, transparent 0, transparent 15px, rgba(255, 255, 255, 0.1) 0, rgba(255, 255, 255, 0.1) 30px), repeating-linear-gradient(to right, transparent 0, transparent 15px, rgba(255, 255, 255, 0.1) 0, rgba(255, 255, 255, 0.1) 30px), repeating-linear-gradient(45deg, transparent 0, transparent 15px, rgba(255, 255, 255, 0.1) 0, rgba(255, 255, 255, 0.1) 30px), repeating-linear-gradient(-45deg, transparent 0, transparent 15px, rgba(255, 255, 255, 0.1) 0, rgba(255, 255, 255, 0.1) 30px);
+  background-size: 50px 50px;
+}
+.a-216-2 {
+  background-image: repeating-linear-gradient(to right, rgba(255, 255, 255, 0.2) 0px, rgba(255, 255, 255, 0.2) 1px, transparent 0, transparent 19px, transparent 20px), repeating-linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 0px, rgba(255, 255, 255, 0.2) 1px, transparent 0, transparent 19px, transparent 20px), repeating-linear-gradient(to right, rgba(255, 255, 255, 0.4) 0px, rgba(255, 255, 255, 0.4) 1px, transparent 0, transparent 59px, transparent 60px), repeating-linear-gradient(to bottom, rgba(255, 255, 255, 0.4) 0px, rgba(255, 255, 255, 0.4) 1px, transparent 0, transparent 59px, transparent 60px);
+}
+.a-216-3 {
+  background-image: repeating-linear-gradient(to right, rgba(0, 0, 0, 0.075) 0px, rgba(0, 0, 0, 0.075) 1px, transparent 0, transparent 19px, transparent 20px), repeating-linear-gradient(to bottom, rgba(0, 0, 0, 0.075) 0px, rgba(0, 0, 0, 0.075) 1px, transparent 0, transparent 19px, transparent 20px);
+}
+.a-216-4 {
+  background-image: repeating-linear-gradient(to right, rgba(255, 255, 255, 0.2) 0px, rgba(255, 255, 255, 0.2) 1px, transparent 0, transparent 19px, transparent 20px), repeating-linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 0px, rgba(255, 255, 255, 0.2) 1px, transparent 0, transparent 19px, transparent 20px), repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.2) 0px, rgba(255, 255, 255, 0.2) 1px, transparent 0, transparent 59px, transparent 60px), repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.2) 0px, rgba(255, 255, 255, 0.2) 1px, transparent 0, transparent 59px, transparent 60px);
+}
+.a-216-5 {
+  background-image: repeating-linear-gradient(to right, rgba(255, 255, 255, 0.2) 0px, rgba(255, 255, 255, 0.2) 1px, transparent 0, transparent 19px, transparent 20px), repeating-linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 0px, rgba(255, 255, 255, 0.2) 1px, transparent 0, transparent 19px, transparent 20px);
+  background-size: 30px 30px;
+}
+.a-216-6 {
+  background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0px, rgba(255, 255, 255, 0.1) 1px, transparent 0, transparent 59px, transparent 60px), repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 0px, rgba(255, 255, 255, 0.1) 1px, transparent 0, transparent 59px, transparent 60px);
+  background-size: 80px 40px;
+}
+.a-216-7 {
+  background-image: repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.1) 0px, rgba(255, 255, 255, 0.1) 1px, transparent 0, transparent 59px, transparent 60px), repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0px, rgba(255, 255, 255, 0.1) 1px, transparent 0, transparent 59px, transparent 60px);
+  background-size: 80px 40px;
+  background-position: 0px 0px;
+}

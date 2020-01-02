@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Architects+Daughter');
+.a-2 {
+  max-width: 280px;
+  height: 200px;
+  margin: 25px auto;
+  color: #fff;
+  font-size: 23px;
+  font-family: 'Architects Daughter', cursive;
+  line-height: 1.6;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  border-top: 4px solid rgba(0, 0, 0, 0.075);
+}
+.a-2 > span {
+  position: relative;
+}
+.a-2 > span:before {
+  position: absolute;
+  content: "\f0c6";
+  font-family: "FontAwesome";
+  font-size: 40px;
+  line-height: 1;
+  color: #fff;
+  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
+  top: -45px;
+  left: -10px;
+}
+.a-2:before,
+.a-2:after {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 50%;
+  max-width: 300px;
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.4);
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+.a-2:after {
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+  right: 10px;
+  left: auto;
+}

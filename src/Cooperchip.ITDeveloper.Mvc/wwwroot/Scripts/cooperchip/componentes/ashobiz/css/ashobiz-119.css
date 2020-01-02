@@ -1,0 +1,84 @@
+@-webkit-keyframes a119 {
+  0 {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes a119 {
+  0 {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.a-119 {
+  display: block;
+  width: 150px;
+  height: 150px;
+  margin: 20px auto;
+  background: #fafafa;
+  border: 6px solid #fff;
+  border-radius: 100%;
+  position: relative;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.075), inset 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+.a-119 > span {
+  width: 18px;
+  height: 18px;
+  left: 20px;
+  top: 20px;
+  border-radius: 100%;
+  display: block;
+  position: absolute;
+  -webkit-transform-origin: 49px 49px;
+  -moz-transform-origin: 49px 49px;
+  -ms-transform-origin: 49px 49px;
+  transform-origin: 49px 49px;
+}
+.a-119 > span:first-of-type {
+  -webkit-animation: a119 2s linear infinite;
+  animation: a119 2s linear infinite;
+}
+.a-119 > span:nth-of-type(2) {
+  -webkit-animation: a119 2s 0.5s linear infinite;
+  animation: a119 2s 0.5s linear infinite;
+}
+.a-119 > span:nth-of-type(3) {
+  -webkit-animation: a119 2s 1s linear infinite;
+  animation: a119 2s 1s linear infinite;
+}
+.a-119 > span:last-of-type {
+  -webkit-animation: a119 2s 1.5s linear infinite;
+  animation: a119 2s 1.5s linear infinite;
+}
+.a-119 .a-119-i {
+  display: block;
+  position: relative;
+  width: 90px;
+  height: 90px;
+  margin: 0 auto;
+  margin-top: 24px;
+  text-align: center;
+  line-height: 90px;
+  background: #fff;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 100%;
+  text-transform: uppercase;
+  color: #999;
+  font-weight: bold;
+}

@@ -1,0 +1,117 @@
+@import (reference) "ashobiz.base.less";
+.a-137{
+	margin:40px auto;
+	max-width:900px;
+	.clearfix;
+	@media (max-width:650px){
+		max-width:100%;
+		margin:0px;
+	}	
+	.a-137-m{
+		width:33.333%;
+		float:left;
+		position: relative;
+		text-align:center;
+		padding:20px;
+		z-index: 1;
+		border-radius: 8px;
+		box-shadow: 0px 0px 20px rgba(0,0,0,0.075), inset 0px 0px 0px 1px rgba(0,0,0,0.1), inset 0px 0px 150px rgba(0,0,0,0.1);
+		@media (max-width:650px){
+			float:none;
+			width:100%;
+			max-width:320px;
+			margin:20px auto;
+		}
+		h4{
+			margin:10px 0;
+			text-transform:uppercase;
+			font-size:15px;
+			line-height:2;
+			color: #fff;
+		}
+		h3{
+			margin:10px 0;
+			font-size:60px;
+			line-height:70px;
+			color: #fff;
+			font-weight:bold;
+			span{
+				font-size:18px;
+				line-height:28px;
+				font-weight:bold;
+				color:rgba(255,255,255,0.9);
+			}
+		}
+		ul{
+			list-style-type:none;
+			margin:0px;
+			padding:0px;
+			margin:30px 0px;
+			li{
+				margin:10px;
+				color:#fff;
+				font-size:15px;
+				line-height:2;
+			}
+		}
+		.a-137-b{
+			background:#fff;
+			display:inline-block;
+			font-size:14px;
+			font-weight:bold;
+			text-transform:uppercase;
+			padding:5px 24px;
+			color:#777;
+			border-radius:20px;
+			transition:0.5s;
+			margin-bottom:10px;
+			&:hover,&:focus{
+				background:#fafafa;
+				color:#555;
+				text-decoration:none;
+			}
+		}
+		&:nth-child(2){
+			background:#fff;
+			z-index: 2;
+			box-shadow: 0px 0px 20px rgba(0,0,0,0.075), inset 0px 0px 0px 1px rgba(0,0,0,0.1);
+			&:before{
+				position: absolute;
+				content:"";
+				background: inherit;
+				z-index: -1;
+				width: 108%;
+				height: 108%;
+				top: -4%;
+				left: -4%;
+				border-radius: 8px;
+				box-shadow: 0px 0px 25px rgba(0,0,0,0.1);
+				@media (max-width:650px){
+					display: none;
+				}
+			}
+			h4{
+				color: #666;
+			}
+			h3{
+				color: #444;
+				span{
+					color:rgba(0,0,0,0.5);
+				}
+			}	
+			ul{
+				li{
+					color: #888;
+				}
+			}
+			.a-137-b{
+				background:#fff;
+				border:1px solid #ddd;
+				color:#555;
+				&:hover{
+					background:#fafafa;
+				}
+			}
+		}
+	}
+}

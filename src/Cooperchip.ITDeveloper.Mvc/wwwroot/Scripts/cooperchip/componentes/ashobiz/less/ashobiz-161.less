@@ -1,0 +1,59 @@
+@import (reference) "ashobiz.base.less";
+.a-161{
+	margin: 15px auto;
+	position: relative;
+	background: #eee;
+	box-shadow: inset 0px 0px 1px rgba(0,0,0,0.3);
+	border-radius: 20px;
+	width: 12px;
+	height: 400px;
+	.transform(rotate(180deg));
+	.clearfix;
+	> div{
+		position: relative;
+		box-shadow: inset 0px 0px 1px rgba(0,0,0,0.3);
+		background-image: 
+			repeating-linear-gradient(-45deg, rgba(255,255,255,0.175), rgba(255,255,255,0.175) 8px, transparent 0, transparent 16px);
+		&:first-of-type{
+			border-top-left-radius: 20px;
+			border-top-right-radius: 20px;
+		}
+		&:last-of-type{
+			border-bottom-left-radius: 20px;
+			border-bottom-right-radius: 20px;
+		}
+		> span{
+			position: absolute;
+			top: 50%;
+			right: 20px;
+			padding: 5px 8px;
+			font-size: 12px;
+			line-height: 1;
+			box-shadow: 
+				inset 0px 0px 0px 1px rgba(0,0,0,0.1), 0px 0px 15px rgba(0,0,0,0.1);
+			display: block;
+			text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
+			border-left: 2px solid #333;
+			color: #fff;
+			text-align: center;
+			background: inherit;
+			background-image: none;
+			border-radius: 3px;
+			.transform(rotate(180deg));
+			&:after {
+				right: 100%;
+				top: 50%;
+				border: solid transparent;
+				content: " ";
+				height: 0;
+				width: 0;
+				position: absolute;
+				pointer-events: none;
+				border-color: rgba(51, 51, 51, 0);
+				border-right-color: #333333;
+				border-width: 6px;
+				margin-top: -6px;
+			}
+		}
+	}
+}

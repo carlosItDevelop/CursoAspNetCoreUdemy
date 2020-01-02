@@ -1,0 +1,52 @@
+@import (reference) "ashobiz.base.less";
+.a-22{
+	width: 190px;
+	height: 55px;
+	background: #eee;
+	display: inline-block;
+	margin: 4px;
+	overflow: hidden;
+	position: relative;
+	box-shadow: 0px 0px 15px rgba(0,0,0,0.07), 0px 0px 0px 1px rgba(0,0,0,0.1);
+	> div{
+		position: relative;
+		height: 55px;
+		cursor: pointer;
+		background: #fff;
+		transition: 0.5s;
+		.transform(translateY(0));
+		.clearfix;
+		> span{
+			width: 55px;
+			height: 55px;
+			display: block;
+			line-height: 55px;
+			float: left;
+			text-align: center;
+			font-size: 20px;
+			text-shadow: 2px 2px 1px rgba(0,0,0,0.1);
+			color: #fff;
+			a,a:hover,a:focus{
+				color: #fff;
+				text-decoration: none;
+			}
+		}
+		h3{
+			margin: 0;
+			margin-left: 70px;
+			font-size: 15px;
+			line-height: 55px;
+			text-transform: uppercase;
+			color: #555;
+			a,a:hover,a:focus{
+				color: #555;
+				text-decoration: none;
+			}
+		}
+	}
+	&:hover{
+		> div{
+			.transform(translateY(-55px));
+		}
+	}
+}

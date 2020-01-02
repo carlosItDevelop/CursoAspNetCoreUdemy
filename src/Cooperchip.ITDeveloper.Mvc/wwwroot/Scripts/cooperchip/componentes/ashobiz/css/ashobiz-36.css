@@ -1,0 +1,52 @@
+.a-36 {
+  max-width: 300px;
+  margin: 15px auto;
+  position: relative;
+  padding: 4px 0px 100px 0px;
+  text-align: center;
+  box-shadow: inset 0px 0px 50px rgba(0, 0, 0, 0.1);
+}
+.a-36 > span {
+  position: absolute;
+  top: 0;
+  width: 25%;
+  height: 100%;
+  z-index: -1;
+}
+.a-36 > span:first-of-type {
+  left: 0;
+}
+.a-36 > span:nth-of-type(2) {
+  left: 25%;
+}
+.a-36 > span:nth-of-type(3) {
+  left: 50%;
+}
+.a-36 > span:last-of-type {
+  left: 75%;
+}
+.a-36 > div {
+  position: relative;
+  z-index: 2;
+  background: #fff;
+  padding: 20px;
+  border-bottom: 4px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+}
+.a-36 > div h3 {
+  font-size: 18px;
+  line-height: 2;
+  margin: 0;
+  color: #444;
+}
+.a-36 > div h3 a,
+.a-36 > div h3 a:hover,
+.a-36 > div h3 a:focus {
+  color: #444;
+  text-decoration: none;
+}
+.a-36 > div p {
+  font-size: 14px;
+  line-height: 2;
+  color: #777;
+}

@@ -1,0 +1,40 @@
+.a-199 {
+  max-width: 350px;
+  margin: 40px auto 25px auto;
+  position: relative;
+  border: 1px solid #e7e7e7;
+  background: #fdfdfd;
+  box-shadow: 2px 2px 0px 1px rgba(0, 0, 0, 0.07);
+  border-radius: 4px;
+  padding: 0px 25px 28px;
+  text-align: center;
+}
+.a-199 > span {
+  width: 50px;
+  height: 50px;
+  line-height: 80px;
+  font-size: 60px;
+  color: #fff;
+  border-radius: 100%;
+  position: absolute;
+  top: -25px;
+  left: 0px;
+  right: 0px;
+  margin: 0px auto;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+.a-199 p {
+  margin-top: 40px;
+  font-size: 16px;
+  line-height: 34px;
+  font-weight: lighter;
+  font-style: italic;
+  color: #777;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+.a-199 > small {
+  font-size: 14px;
+  text-transform: uppercase;
+  line-height: 34px;
+  font-weight: bold;
+}

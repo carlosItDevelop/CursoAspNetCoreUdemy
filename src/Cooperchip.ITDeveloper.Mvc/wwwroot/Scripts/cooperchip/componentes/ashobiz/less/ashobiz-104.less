@@ -1,0 +1,27 @@
+@import (reference) "ashobiz.base.less";
+.a-104{
+	max-width:300px;
+	margin:15px auto;
+	position: relative;
+	perspective: 100px;
+	.a-104-f{  
+		position: absolute;
+		width:20px;
+		height: 100%;
+		text-align:center;
+		.transform-origin(100% 0);
+		.transform(rotateY(-10deg));
+	}
+	.a-104-b{
+		position: relative;
+		left: 20px;
+		background:#fff;
+		box-shadow:inset 0px 0px 1px rgba(0,0,0,0.2), inset 0px 0px 30px rgba(0,0,0,0.05);
+		padding:25px;
+		font-size: 14px;
+		line-height: 2.5;
+		color: #444;	
+		.transform-origin(0 100%);
+		.transform(rotateY(3deg));
+	}
+}

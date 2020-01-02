@@ -1,0 +1,63 @@
+/* A 19 */
+.a-19 {
+  margin: 20px 0px;
+  max-width: 550px;
+}
+.a-19 .a-19-m {
+  padding: 20px 30px;
+  box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.06);
+  position: relative;
+  background: #fcfcfc;
+  margin: 0px;
+  border-width: 0px;
+  border-top-width: 2px;
+  transition: 1s;
+}
+.a-19 .a-19-m:hover {
+  background: #fff;
+  transition: 1s;
+}
+.a-19 h2 {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.a-19 h2 a {
+  color: #333333;
+}
+.a-19 h2 a:hover {
+  text-decoration: none;
+}
+.a-19 h2 i {
+  margin: 0px 1px;
+  font-size: 13px;
+  position: relative;
+  top: -2px;
+  color: #fcd419;
+}
+.a-19 p {
+  font-size: 14px;
+  line-height: 28px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.35);
+}
+.a-19 a.a-19-b {
+  position: absolute;
+  top: 45px;
+  right: 40px;
+  font-size: 22px;
+  line-height: 22px;
+}
+.a-19 a.a-19-b:hover {
+  color: #333333;
+  text-decoration: none;
+}
+@media (max-width: 600px) {
+  .a-19 a.a-19-b {
+    position: static;
+    display: inline-block;
+    margin-top: 5px;
+  }
+}

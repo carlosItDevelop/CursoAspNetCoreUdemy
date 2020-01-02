@@ -1,0 +1,103 @@
+@import (reference) "ashobiz.base.less";
+@-webkit-keyframes a144a{
+	0%,100%{
+		.transform(translateX(0) translateY(0));
+	}
+	50%{
+		.transform(translateX(210%) translateY(210%));
+	}
+}
+@keyframes a144a{
+	0%,100%{
+		.transform(translateX(0) translateY(0));
+	}
+	50%{
+		.transform(translateX(210%) translateY(210%));
+	}
+}
+@-webkit-keyframes a144b{
+	0%,100%{
+		.transform(translateX(0) translateY(0));
+	}
+	50%{
+		.transform(translateX(-210%) translateY(210%));
+	}
+}
+@keyframes a144b{
+	0%,100%{
+		.transform(translateX(0) translateY(0));
+	}
+	50%{
+		.transform(translateX(-210%) translateY(210%));
+	}
+}
+@-webkit-keyframes a144c{
+	0%,100%{
+		.transform(translateX(0) translateY(0));
+	}
+	50%{
+		.transform(translateX(210%) translateY(-210%));
+	} 
+}
+@keyframes a144c{
+	0%,100%{
+		.transform(translateX(0) translateY(0));
+	}
+	50%{
+		.transform(translateX(210%) translateY(-210%));
+	} 
+}
+@-webkit-keyframes a144d{
+	0%,100%{
+		.transform(translateX(0%) translateY(0%));
+	}
+	50%{
+		.transform(translateX(-210%) translateY(-210%));
+	}
+}
+@keyframes a144d{
+	0%,100%{
+		.transform(translateX(0%) translateY(0%));
+	}
+	50%{
+		.transform(translateX(-210%) translateY(-210%));
+	}
+}
+.a-144{
+	width: 45px;
+	height: 45px;
+	margin: 20px auto;
+	background: transparent;
+	position: relative;
+	span{
+		width: 15px;
+		height: 15px;
+		border-radius: 100%;
+		display: block;
+		position: absolute;
+		&:first-of-type{
+			top: 0;
+			left: 0;
+			animation: a144a 2s infinite linear;
+			-webkit-animation: a144a 2s infinite linear;
+		}
+		&:nth-of-type(2){
+			top: 0;
+			right: 0;
+			animation: a144b 2s infinite linear;
+			-webkit-animation: a144b 2s infinite linear;
+		}
+		&:nth-of-type(3){
+			bottom: 0;
+			left: 0;
+			animation: a144c 2s infinite linear;
+			-webkit-animation: a144c 2s infinite linear;
+		}
+		&:last-of-type{
+			bottom: 0;
+			right: 0;
+			animation: a144d 2s infinite linear;
+			-webkit-animation: a144d 2s infinite linear;
+		}
+	}
+}

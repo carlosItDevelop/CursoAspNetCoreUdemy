@@ -18,6 +18,20 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
             return View();
         }
 
+
+        [Route("dashboard")]
+        [Route("pagina-de-estatistica")]
+        public IActionResult Dashboard()
+        {
+            return View();
+        }
+
+        [Route("box-init")]
+        public IActionResult BoxInit()
+        {
+            return View();
+        }
+
         [Route("quem-somos")]
         [Route("sobre-nos")]
         [Route("sobre/{id:guid}/{paciente}/{categoria?}")]

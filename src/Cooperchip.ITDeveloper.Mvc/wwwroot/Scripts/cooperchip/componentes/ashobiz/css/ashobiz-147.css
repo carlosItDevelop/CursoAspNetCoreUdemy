@@ -1,0 +1,64 @@
+.a-147 {
+  max-width: 600px;
+  margin: 20px auto;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.075);
+  border-radius: 6px;
+  position: relative;
+  padding: 15px 20px 30px 20px;
+}
+.a-147 h3 {
+  font-size: 17px;
+  line-height: 2;
+  margin: 0;
+}
+.a-147 p {
+  margin: 0;
+  color: #888;
+}
+.a-147 .a-147-b {
+  position: absolute;
+  bottom: -17px;
+  height: 35px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+}
+.a-147 .a-147-b:before,
+.a-147 .a-147-b:after {
+  content: " ";
+  display: table;
+}
+.a-147 .a-147-b:after {
+  clear: both;
+}
+.a-147 .a-147-b a {
+  display: inline-block;
+  line-height: 35px;
+  margin: 0;
+  float: left;
+  width: 40px;
+  color: #fff;
+  transition: 0.5s;
+  text-align: center;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+.a-147 .a-147-b a:first-of-type {
+  padding-left: 5px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.a-147 .a-147-b a:last-of-type {
+  padding-right: 5px;
+  border-right: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.a-147 .a-147-b a:hover,
+.a-147 .a-147-b a:focus,
+.a-147 .a-147-b a:active {
+  color: #fff;
+  text-decoration: none;
+  box-shadow: inset 0px 0px 50px rgba(0, 0, 0, 0.1);
+}

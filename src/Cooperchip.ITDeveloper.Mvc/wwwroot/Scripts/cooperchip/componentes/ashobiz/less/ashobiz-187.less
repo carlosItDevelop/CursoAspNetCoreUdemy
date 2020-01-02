@@ -1,0 +1,134 @@
+@import (reference) "ashobiz.base.less";
+.a-187{
+	padding: 20px 0;	
+	.a-187-l{
+		text-align: center;
+		display: block;
+		margin: 0px auto;
+		width: 90px;
+		height: 90px;
+		line-height: 90px;
+		position: relative;
+		border-radius: 4px; 
+		box-shadow: 3px 3px 0px 1px rgba(0,0,0,0.1);
+		color: #fff;
+		&:hover,&:focus{
+			color: #fff;
+			text-decoration: none;
+		}
+		> span{
+			color: #fff;
+			font-size: 45px;
+			font-weight: lighter;
+			text-shadow: 3px 3px 1px rgba(0,0,0,0.3);
+		}
+	}
+	.a-187-n{
+		background: #fff;
+		max-width: 700px;
+		margin: 0px auto;
+		margin-top: 30px;
+		position: relative;
+		text-align: center;
+		border-top: 1px solid #ddd;
+		border-bottom: 1px solid #ddd;
+		box-shadow: 0px 0px 15px rgba(0,0,0,0.05);
+		padding: 14px 10px 10px 10px;
+		> a{
+			color: #444;
+			font-size: 13px;
+			line-height: 28px;
+			text-transform: uppercase;
+			position: relative;
+			z-index: 1;
+			margin: 0px 8px;
+			display: inline-block;
+			&:hover,&:focus{
+				color: #777;
+				text-decoration: none;
+			}
+		}
+		&:before{
+			position: absolute;
+			content: "";
+			top: 4px; left: 0; right: 0; bottom: 0;
+			border-top: 1px dashed rgba(0,0,0,0.25);
+		}
+	}
+	.a-187-e{
+		background: #fff;
+		max-width: 700px;
+		margin: 0px auto;
+		position: relative;
+		border-bottom: 1px solid #ddd;
+		box-shadow: 0px 3px 15px rgba(0,0,0,0.05);
+		padding: 10px 15px 14px 15px;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+	 	-webkit-justify-content: space-between;
+	 	-ms-justify-content: space-between;
+	 	justify-content: space-between;		
+	 	@media (max-width: 550px){
+	 		display: block;
+	 		text-align: center;
+	 		padding: 15px 20px 20px 20px;
+	 	}
+		> *{
+			position: relative;
+			z-index: 1;
+		}
+		&:before{
+			position: absolute;
+			content: "";
+			top: 0px; left: 0; right: 0; bottom: 4px;
+			border-bottom: 1px dashed rgba(0,0,0,0.25);
+		}
+		.a-187-s{
+			flex: 1;
+			a{
+				margin: 0 1px;
+				border-radius: 50%;
+			}
+		 	@media (max-width: 550px){
+		 		display: block;
+		 		margin-bottom: 12px;
+		 	}			
+		}
+		.a-187-se{
+			flex: 1;
+			max-width: 200px;
+			position: relative;
+		 	@media (max-width: 550px){
+		 		max-width: 250px;
+		 		margin: 0px auto;
+		 	}						
+			input{
+				width: 100%;
+				box-shadow:none;
+				height: 35px;
+				border-radius: 25px;
+				border: 1px solid #ccc;
+				padding: 2px 30px 2px 15px;
+				color: #888;
+				font-size: 13px;
+				font-style: italic;
+			}
+			&:before{
+				display: block;
+				position: absolute;
+				content: "\f002";
+				font-family: "FontAwesome";
+				width: 20px;
+				height: 100%;
+				top: 3px;
+				right: 5px;
+				font-size: 13px;
+				color: #888;
+				z-index: 1;
+			}
+		}
+	}
+}

@@ -1,0 +1,58 @@
+@import (reference) "ashobiz.base.less";
+.a-39{
+	margin: 15px 0;
+	position: relative;
+	display: -webkit-flex;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-ms-justify-content: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	.a-39-l{
+		flex: 1;
+		margin: 0;
+		background: #fff;
+		padding: 20px 30px;
+		border-top-width: 4px;
+		border-right: 0;
+		border-bottom: 0;
+		border-left: 0;
+		transition: 0.5s;
+		&:nth-of-type(even){
+			background: #fcfcfc;
+		}
+		h3{
+			margin: 0;
+			font-size: 15px;
+			line-height: 1.5;
+			margin-bottom: 8px;
+			text-transform: uppercase;
+		}
+		ul{
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+			li{
+				color: #555;
+				font-size: 14px;
+				line-height: 2;
+				margin: 3px 0px;
+				font-weight: bold;
+				transition: 0.5s;
+				.transform(translateX(0px));
+				&:hover{	
+					.transform(translateX(5px));
+				}
+				a{
+					color: #555;
+					&:hover,&:focus{
+						color: #555;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+}

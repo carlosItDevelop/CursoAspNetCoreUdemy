@@ -1,0 +1,66 @@
+.a-22 {
+  width: 190px;
+  height: 55px;
+  background: #eee;
+  display: inline-block;
+  margin: 4px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.07), 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+}
+.a-22 > div {
+  position: relative;
+  height: 55px;
+  cursor: pointer;
+  background: #fff;
+  transition: 0.5s;
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+.a-22 > div:before,
+.a-22 > div:after {
+  content: " ";
+  display: table;
+}
+.a-22 > div:after {
+  clear: both;
+}
+.a-22 > div > span {
+  width: 55px;
+  height: 55px;
+  display: block;
+  line-height: 55px;
+  float: left;
+  text-align: center;
+  font-size: 20px;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
+  color: #fff;
+}
+.a-22 > div > span a,
+.a-22 > div > span a:hover,
+.a-22 > div > span a:focus {
+  color: #fff;
+  text-decoration: none;
+}
+.a-22 > div h3 {
+  margin: 0;
+  margin-left: 70px;
+  font-size: 15px;
+  line-height: 55px;
+  text-transform: uppercase;
+  color: #555;
+}
+.a-22 > div h3 a,
+.a-22 > div h3 a:hover,
+.a-22 > div h3 a:focus {
+  color: #555;
+  text-decoration: none;
+}
+.a-22:hover > div {
+  -webkit-transform: translateY(-55px);
+  -moz-transform: translateY(-55px);
+  -ms-transform: translateY(-55px);
+  transform: translateY(-55px);
+}

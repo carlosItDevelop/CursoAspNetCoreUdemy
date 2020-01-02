@@ -1,0 +1,59 @@
+.a-214 {
+  position: relative;
+  max-width: 350px;
+  margin: 15px auto;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
+}
+.a-214 img {
+  position: relative;
+  transition: 0.5s;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+.a-214 > div {
+  width: 75%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2), inset 0px 0px 55px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  opacity: 0.9;
+  padding: 20px;
+}
+@media (max-width: 400px) {
+  .a-214 > div {
+    width: 100%;
+    position: relative;
+  }
+}
+.a-214 > div i {
+  color: #fff;
+  text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.2);
+  font-size: 40px;
+  line-height: 1.5;
+}
+.a-214 > div h3 {
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: normal;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
+}
+.a-214:hover img {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+@media (max-width: 400px) {
+  .a-214:hover img {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}

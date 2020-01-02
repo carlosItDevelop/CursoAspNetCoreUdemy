@@ -1,0 +1,60 @@
+@import (reference) "ashobiz.base.less";
+.a-148{
+	margin: 15px auto;
+	max-width: 350px;
+	background: #333;
+	padding: 20px 10px; 
+	text-align: center;
+	position: relative;
+	padding-top: 200px;
+	>div{
+		padding: 20px;
+		padding-top: 15%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		color: #fff;
+		transition: 0.5s;
+		box-shadow: 0px 0px 15px rgba(0,0,0,0.05);
+		i{
+			font-size: 50px;
+			line-height: 1; 
+			margin-bottom: 8px;
+			text-shadow: 2px 2px 1px rgba(0,0,0,0.2);
+			@media (max-width: 350px){
+				font-size: 40px;
+			}
+		}
+		h3{
+			font-size: 18px;
+			line-height: 1.5;
+			font-weight: bold;
+		}
+		p{
+			font-size: 14px;
+			line-height: 2;
+			color: rgba(255,255,255,0.9);
+		}
+	}
+	> .a-btn{
+		margin: 0px 10px;
+		font-size: 14px;
+		font-weight: bold;
+		text-transform: uppercase;
+		text-shadow: 2px 2px 1px rgba(0,0,0,0.2);
+		@media (max-width: 350px){
+			display: block;
+			margin: 7px 10px;
+		} 
+	}
+	&:hover{
+		>div{
+			.transform(translateY(-70px));
+			@media (max-width: 350px){
+				.transform(translateY(-125px));
+			}
+		}
+	}
+}

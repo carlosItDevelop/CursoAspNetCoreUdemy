@@ -1,0 +1,50 @@
+@import (reference) "ashobiz.base.less";
+/* Diamond */
+.a-86-s{
+	display:inline-block;
+	width:45px;
+	height:45px;
+	line-height:45px;
+	margin:10px;
+	transition: 0.5s;
+	text-align:center;
+	.transform(rotate(45deg));
+	box-shadow:0px 2px 5px rgba(0,0,0,0.15);
+	i{
+		color:#fff;
+		.transform(rotate(-45deg));
+		font-size:16px;
+	}
+	&.a-bg-white{
+		i{
+			color:@black;
+		}
+	}
+	&:hover{
+		box-shadow:0px 2px 5px rgba(0,0,0,0.15), inset 0px 0px 150px rgba(0,0,0,0.1);
+	}
+}
+.a-86-l{
+	display:inline-block;
+	width:90px;
+	height:90px;
+	line-height:90px;
+	margin:20px;
+	transition: 0.5s;
+	text-align:center;
+	box-shadow:0px 2px 5px rgba(0,0,0,0.20);
+	.transform(rotate(45deg));
+	i{
+		color:#fff;
+		.transform(rotate(-45deg));
+		font-size:25px;
+	}
+	&.a-bg-white{
+		i{
+			color:@black;
+		}
+	}	
+	&:hover{
+		box-shadow:0px 2px 5px rgba(0,0,0,0.15), inset 0px 0px 150px rgba(0,0,0,0.1);
+	}
+}

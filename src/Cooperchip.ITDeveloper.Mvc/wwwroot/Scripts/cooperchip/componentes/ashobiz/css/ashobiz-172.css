@@ -1,0 +1,63 @@
+.a-172 {
+  max-width: 270px;
+  margin: 15px auto;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+}
+.a-172 h2 {
+  margin: 0;
+  background: #fff;
+  padding: 15px 17px;
+  color: #666;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  box-shadow: 4px 4px 1px rgba(0, 0, 0, 0.1);
+}
+.a-172 h2 a,
+.a-172 h2 a:hover,
+.a-172 h2 a:focus {
+  color: #666;
+  text-decoration: none;
+}
+.a-172 ul {
+  margin: 10px 10px 0px 10px;
+  padding: 0;
+  list-style-type: none;
+}
+.a-172 ul li {
+  margin: 12px 0px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  transition: 0.7s;
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  -ms-transform: translateX(0px);
+  transform: translateX(0px);
+}
+.a-172 ul li a {
+  color: rgba(255, 255, 255, 0.7);
+  transition: 0.7s;
+}
+.a-172 ul li a:hover,
+.a-172 ul li a:focus {
+  color: #ffffff;
+  text-decoration: none;
+}
+.a-172 ul li.active a {
+  color: #fff;
+}
+.a-172 ul li:hover {
+  -webkit-transform: translateX(5px);
+  -moz-transform: translateX(5px);
+  -ms-transform: translateX(5px);
+  transform: translateX(5px);
+}
+.a-172 ul li:before {
+  content: "\f178";
+  font-family: "FontAwesome";
+  color: rgba(0, 0, 0, 0.3);
+  margin-right: 10px;
+}

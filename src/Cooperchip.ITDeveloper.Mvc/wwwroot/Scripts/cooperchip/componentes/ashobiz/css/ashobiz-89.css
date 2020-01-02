@@ -1,0 +1,73 @@
+.a-89 {
+  width: 200px;
+  height: 200px;
+  margin: 15px auto;
+  text-align: center;
+  line-height: 200px;
+  font-size: 100px;
+  border-radius: 100%;
+  color: #fff;
+  position: relative;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  -webkit-perspective: 700px;
+  perspective: 700px;
+}
+.a-89 a,
+.a-89 a:hover,
+.a-89 a:focus {
+  color: #fff;
+  text-decoration: none;
+}
+.a-89:before,
+.a-89:after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: inherit;
+  transition: 0.5s;
+  box-shadow: inset 0px 0px 50px rgba(0, 0, 0, 0.1), 2px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.a-89:before {
+  clip: rect(0px, 100px, 200px, 0px);
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  -webkit-transform-origin: 0 50%;
+  -moz-transform-origin: 0 50%;
+  -ms-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+}
+.a-89:after {
+  clip: rect(0px, 200px, 200px, 100px);
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  -webkit-transform-origin: 100% 50%;
+  -moz-transform-origin: 100% 50%;
+  -ms-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+}
+.a-89:hover:before {
+  box-shadow: inset 0px 0px 200px rgba(0, 0, 0, 0.3), 2px 0px 10px rgba(0, 0, 0, 0.1);
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+.a-89:hover:after {
+  box-shadow: inset 0px 0px 200px rgba(0, 0, 0, 0.3), 2px 0px 10px rgba(0, 0, 0, 0.1);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}

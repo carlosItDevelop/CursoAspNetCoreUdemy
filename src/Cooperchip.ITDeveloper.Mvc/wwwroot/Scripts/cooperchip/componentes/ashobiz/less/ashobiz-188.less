@@ -1,0 +1,83 @@
+@import (reference) "ashobiz.base.less";
+.a-188{
+	max-width: 280px;
+	margin: 15px auto;
+	border: 1px solid rgba(0,0,0,0.1);
+	.a-188-i{
+		padding: 15px 20px;
+		position: relative;
+		border-bottom: 1px solid rgba(0,0,0,0.05);
+		&:last-of-type{
+			border-bottom: 0;
+		}
+		&:nth-of-type(odd){
+			background: #fdfdfd;
+		}
+		h3{
+			margin: 0px;
+			font-size: 20px;
+			line-height: 32px;
+			color: #333;
+			font-weight: normal;
+			span{
+				display: block;
+				font-size: 14px;
+				color: #777;
+			}
+			a,a:hover,a:focus{
+				color: #333;
+				text-decoration: none;
+			}
+		}
+		h4{
+			margin: 0;
+			width: 100%;
+			text-align: right;
+			position: absolute;
+			right: 20px;
+			top: 15px;
+			font-size: 20px;
+			line-height: 32px;
+			font-weight: normal;
+			span{
+				position: absolute;
+				right: 0;
+				display: block;
+				font-size: 15px;
+				&:before,&:after{
+					margin: 0 3px;
+				}
+			}
+		}
+		&.a-188-up{
+			border-left: 4px solid @green;
+			h4{
+				span{
+					color: @green;
+					&:before{
+						content:"+";
+					}					
+					&:after{
+						content:"\f102";
+						font-family:"FontAwesome";
+					}
+				}
+			}
+		}
+		&.a-188-down{
+			border-left: 4px solid @red;
+			h4{
+				span{
+					color: @red;
+					&:before{
+						content:"-";
+					}					
+					&:after{
+						content:"\f103";
+						font-family:"FontAwesome";
+					}
+				}
+			}			
+		}
+	}
+}

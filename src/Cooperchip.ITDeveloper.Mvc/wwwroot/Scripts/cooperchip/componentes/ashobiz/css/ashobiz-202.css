@@ -1,0 +1,61 @@
+.a-202 {
+  border-radius: 4px;
+  color: #fff;
+  width: 220px;
+  margin: 10px;
+  padding: 15px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s;
+  display: inline-block;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.a-202:before,
+.a-202:after {
+  content: " ";
+  display: table;
+}
+.a-202:after {
+  clear: both;
+}
+.a-202:hover,
+.a-202:focus {
+  color: #fff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2), inset 0px 0px 100px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+}
+.a-202.a-bg-white {
+  color: #333333;
+}
+.a-202 i {
+  font-size: 40px;
+  line-height: 40px;
+  float: left;
+  display: inline-block;
+  width: 40px;
+  text-align: center;
+  margin-top: 7px;
+}
+.a-202 span {
+  font-size: 14px;
+  line-height: 1;
+  text-transform: uppercase;
+  margin-left: 15px;
+  font-weight: bold;
+  transition: 0.5s;
+}
+.a-202 span b {
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 15px;
+  transition: 0.5s;
+}
+.a-202:hover span,
+.a-202:focus span {
+  font-size: 20px;
+}
+.a-202:hover span b,
+.a-202:focus span b {
+  font-size: 15px;
+}

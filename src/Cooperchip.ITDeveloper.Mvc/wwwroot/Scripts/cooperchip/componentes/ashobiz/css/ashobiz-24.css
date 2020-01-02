@@ -1,0 +1,98 @@
+/* A 24 */
+.a-24 {
+  width: 250px;
+  height: 250px;
+  position: relative;
+  margin: 15px 10px;
+  -webkit-perspective: 400px;
+  perspective: 400px;
+}
+.a-24 .a-24-f {
+  z-index: 2;
+  opacity: 1;
+  height: 250px;
+  position: relative;
+  padding: 113px 10px;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.075);
+  transition: all .3s;
+}
+.a-24 .a-24-f h3 {
+  display: inline-block;
+  font-size: 23px;
+  line-height: 23px;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0px;
+}
+.a-24 .a-24-f.a-bg-white h3 {
+  color: #777;
+}
+.a-24:hover .a-24-f {
+  opacity: 0;
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+.a-24 .a-24-b {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transition: all .3s;
+  display: block;
+  text-align: center;
+  z-index: 1;
+  opacity: 0;
+  padding: 60px 15px;
+  border: 1px solid rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.075);
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+.a-24 .a-24-b h4 {
+  margin: 0px;
+  padding: 0px;
+  font-size: 18px;
+  line-height: 25px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.a-24 .a-24-b h4 a {
+  color: #fff;
+}
+.a-24 .a-24-b h4 a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+.a-24 .a-24-b p {
+  margin: 7px 0px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 26px;
+}
+.a-24 .a-24-b.a-bg-white h4 {
+  color: #777;
+}
+.a-24 .a-24-b.a-bg-white h4 a {
+  color: #777;
+}
+.a-24 .a-24-b.a-bg-white h4 a:hover {
+  color: #777;
+}
+.a-24 .a-24-b.a-bg-white p {
+  color: #999;
+}
+.a-24:hover .a-24-b {
+  opacity: 1;
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  z-index: 4;
+}

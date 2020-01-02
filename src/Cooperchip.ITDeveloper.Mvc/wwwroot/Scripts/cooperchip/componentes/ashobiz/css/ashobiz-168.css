@@ -1,0 +1,26 @@
+.a-168-1 {
+  background-image: repeating-linear-gradient(135deg, transparent, transparent 8px, #ffffff 0, #ffffff 16px);
+}
+.a-168-2 {
+  background-image: repeating-linear-gradient(45deg, red, red 10px, hotpink 0, hotpink 20px, moccasin 0, moccasin 30px, yellow 0, yellow 40px, purple 0, purple 50px, deepskyblue 0, deepskyblue 60px, orange 0, orange 70px, lightgreen 0, lightgreen 80px, mediumaquamarine 0, mediumaquamarine 90px);
+}
+.a-168-3 {
+  background-image: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.085), rgba(0, 0, 0, 0.085) 5px, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 10px), repeating-linear-gradient(-45deg, rgba(0, 0, 0, 0.085), rgba(0, 0, 0, 0.085) 5px, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 10px);
+}
+.a-168-4 {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.15) 3px, transparent 4px), radial-gradient(rgba(0, 0, 0, 0.2) 4px, transparent 5px);
+  background-size: 20px 20px;
+  background-position: 0px -3px, 10px -2px;
+}
+.a-168-5 {
+  background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.6) 2px, transparent 3px), repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.1) 5px, transparent 6px);
+}
+.a-168-6 {
+  background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.6) 4px, transparent 6px);
+}
+.a-168-7 {
+  background-image: repeating-linear-gradient(45deg, transparent 0, transparent 10px, rgba(0, 0, 0, 0.04) 0, rgba(0, 0, 0, 0.04) 15px), repeating-linear-gradient(-45deg, transparent 0, transparent 10px, rgba(0, 0, 0, 0.04) 0, rgba(0, 0, 0, 0.04) 15px);
+}
+.a-168-8 {
+  background-image: repeating-linear-gradient(0deg, transparent 0, transparent 2px, rgba(0, 0, 0, 0.1) 0, rgba(0, 0, 0, 0.15) 4px), repeating-linear-gradient(90deg, transparent 0, transparent 2px, rgba(0, 0, 0, 0.1) 0, rgba(0, 0, 0, 0.15) 4px);
+}

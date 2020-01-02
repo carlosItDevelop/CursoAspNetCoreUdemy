@@ -1,0 +1,63 @@
+.a-142 {
+  max-width: 280px;
+  margin: 15px auto;
+  position: relative;
+  box-shadow: inset 0px 0px 1px rgba(0, 0, 0, 0.4), 0px 0px 25px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  padding-bottom: 50px;
+  overflow: hidden;
+}
+.a-142 .a-142-i {
+  width: 530px;
+  height: 530px;
+  position: absolute;
+  top: -310px;
+  left: -260px;
+  text-align: right;
+  border-radius: 100%;
+}
+.a-142 .a-142-i:before {
+  display: block;
+  width: 250px;
+  height: 250px;
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -20%;
+  background: inherit;
+  border-radius: 100%;
+  opacity: 0.6;
+}
+.a-142 .a-142-i i {
+  color: #fff;
+  text-align: right;
+  font-size: 100px;
+  line-height: 100px;
+  position: absolute;
+  bottom: 70px;
+  right: 110px;
+  text-shadow: 5px 5px 1px rgba(0, 0, 0, 0.1);
+}
+.a-142 h3 {
+  margin-top: 230px;
+  font-size: 22px;
+  line-height: 32px;
+}
+.a-142 p {
+  color: #777;
+  line-height: 30px;
+}
+.a-142 .a-142-btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border: 0;
+  border-radius: 0;
+  display: block;
+  width: 100%;
+  padding: 16px 20px;
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}

@@ -1,0 +1,87 @@
+/* A 28 */
+.a-28 {
+  max-width: 350px;
+  margin: 20px 0;
+  border: 1px solid #ddd;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.03);
+  border-radius: 5px;
+  background: #fff;
+}
+.a-28 h2 {
+  border-bottom: 1px solid #e7e7e7;
+  background: #fafafa;
+  padding: 15px 20px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  font-size: 13px;
+  line-height: 23px;
+  margin: 0px;
+  text-transform: uppercase;
+  color: #888;
+  text-align: center;
+}
+.a-28 ul {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+.a-28 ul li {
+  margin: 0px;
+  padding: 7px 15px 12px 15px;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  transition: 0.7s;
+}
+.a-28 ul li:hover {
+  background: #fcfcfc;
+}
+.a-28 ul li:last-child {
+  border: 0px;
+}
+.a-28 ul li h3 {
+  margin: 0px;
+  font-size: 14px;
+  line-height: 14px;
+  color: #777;
+}
+.a-28 ul li h3 a,
+.a-28 ul li h3 a:hover,
+.a-28 ul li h3 a:focus {
+  color: #777;
+  text-decoration: none;
+}
+.a-28 ul li h3 i {
+  font-size: 25px;
+  width: 30px;
+  text-align: center;
+  margin-right: 10px;
+  position: relative;
+  top: 11px;
+  color: #777;
+  display: inline-block;
+}
+.a-28 ul li h3 span {
+  display: block;
+  color: #aaa;
+  font-weight: normal;
+  font-size: 12px;
+  margin-left: 44px;
+  margin-top: 6px;
+}
+.a-28 ul li .a-btn {
+  position: absolute;
+  top: 17px;
+  right: 20px;
+}
+.a-28 .a-28-f {
+  border-top: 1px solid #e7e7e7;
+  background: #fafafa;
+  padding: 15px 20px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  color: #888;
+  font-size: 12px;
+}
+.a-28 .a-28-f .a-btn {
+  margin: 0px 2px;
+}

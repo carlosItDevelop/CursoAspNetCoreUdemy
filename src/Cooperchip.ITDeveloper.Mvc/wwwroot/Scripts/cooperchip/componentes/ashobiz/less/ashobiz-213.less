@@ -1,0 +1,37 @@
+@import (reference) "ashobiz.base.less";
+.a-213{
+	margin: 15px 0;
+	text-align: center;
+	font-size: 5vw;
+	color: #444;
+	line-height: 1.5;
+	overflow: hidden;
+	@media (max-width: 800px){
+		font-size: 8vw;
+	}
+	@media (max-width: 400px){
+		font-size: 10vw;
+	}
+	b{
+		display: inline-block;
+		position: relative;
+		font-weight: normal;
+		transition: 0.5s;
+		.transform(rotateY(180deg));
+	}
+	&:hover,&:focus,&:active{
+		b{
+			background: #444;
+			color: #fff;
+			margin: 0px -1px;
+			padding: 0px 2px;
+			.transform(rotateY(0deg));
+			&:first-child{
+				padding-left: 20px;
+			}
+			&:last-child{
+				padding-right: 20px;
+			}
+		}
+	}
+}

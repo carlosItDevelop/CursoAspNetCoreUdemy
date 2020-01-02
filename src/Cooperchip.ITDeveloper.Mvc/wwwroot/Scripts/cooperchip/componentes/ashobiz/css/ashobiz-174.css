@@ -1,0 +1,101 @@
+.a-174 {
+  max-width: 270px;
+  margin: 15px auto;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1), inset 0px 0px 100px rgba(0, 0, 0, 0.025);
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.a-174:before {
+  position: absolute;
+  left: 3px;
+  right: 3px;
+  top: 3px;
+  bottom: 3px;
+  content: " ";
+  background: #fff;
+}
+.a-174:after {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  content: " ";
+  background: inherit;
+  transition: 0.3s;
+  -webkit-transform: translateY(-150%);
+  -moz-transform: translateY(-150%);
+  -ms-transform: translateY(-150%);
+  transform: translateY(-150%);
+}
+.a-174 > i {
+  display: block;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  color: #fff;
+  font-size: 25px;
+  text-align: center;
+  transition: 0.3s;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.a-174 h3 {
+  font-size: 20px;
+  line-height: 1.5;
+  position: relative;
+  margin-top: 200px;
+}
+.a-174 h4 {
+  position: absolute;
+  width: 80%;
+  bottom: 10%;
+  left: 10%;
+  transition: 0.5s;
+  color: #fff;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 1.5;
+  z-index: -1;
+  opacity: 0;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  -webkit-transform: translateY(250%);
+  -moz-transform: translateY(250%);
+  -ms-transform: translateY(250%);
+  transform: translateY(250%);
+}
+.a-174 h4 a,
+.a-174 h4 a:hover,
+.a-174 h4 a:focus {
+  color: #fff;
+  text-decoration: none;
+}
+.a-174:hover i,
+.a-174:focus i,
+.a-174:active i {
+  z-index: 3;
+  -webkit-transform: translateY(20px);
+  -moz-transform: translateY(20px);
+  -ms-transform: translateY(20px);
+  transform: translateY(20px);
+  font-size: 50px;
+}
+.a-174:hover h4,
+.a-174:focus h4,
+.a-174:active h4 {
+  -webkit-transform: translateY(0%);
+  -moz-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  transform: translateY(0%);
+  z-index: 3;
+  opacity: 1;
+}
+.a-174:hover:after {
+  -webkit-transform: translateY(0%);
+  -moz-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  transform: translateY(0%);
+}

@@ -1,0 +1,98 @@
+.a-34 {
+  max-width: 400px;
+  margin: 15px auto;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.025), inset 0px 0px 100px rgba(0, 0, 0, 0.02);
+  padding: 20px;
+  border-radius: 4px;
+}
+.a-34 h3 {
+  font-size: 16px;
+  line-height: 1.8;
+  margin: 0;
+  margin-bottom: 10px;
+}
+.a-34 .a-34-p {
+  width: 100%;
+  height: 10px;
+  background: #f8f8f8;
+  box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin: 15px 0 10px 0px;
+  position: relative;
+}
+.a-34 .a-34-p > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  border-radius: 5px;
+}
+.a-34 .a-34-l {
+  position: relative;
+  color: #777;
+  font-weight: bold;
+  font-size: 12px;
+  height: 20px;
+  line-height: 20px;
+}
+.a-34 .a-34-l > span {
+  position: absolute;
+  display: inline-block;
+}
+.a-34 .a-34-l > span:before {
+  display: block;
+  content: "";
+  width: 2px;
+  height: 10px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  margin-left: -1px;
+  z-index: 3;
+}
+.a-34 .a-34-l > span:first-of-type {
+  left: 0;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+}
+.a-34 .a-34-l > span:first-of-type:before {
+  display: none;
+}
+.a-34 .a-34-l > span:nth-of-type(2) {
+  left: 25%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.a-34 .a-34-l > span:nth-of-type(3) {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.a-34 .a-34-l > span:nth-of-type(4) {
+  left: 75%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.a-34 .a-34-l > span:last-of-type {
+  left: 100%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.a-34 .a-34-l > span:last-of-type:before {
+  display: none;
+}

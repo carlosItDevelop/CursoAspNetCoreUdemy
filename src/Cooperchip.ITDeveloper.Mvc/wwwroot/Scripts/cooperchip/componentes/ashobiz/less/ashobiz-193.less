@@ -1,0 +1,33 @@
+@import (reference) "ashobiz.base.less";
+.a-193{
+	display: inline-block;
+	margin: 0px 2px;
+	color: #fff;
+	padding: 8px 65px 8px 20px;
+	font-weight: bold;
+	text-transform: uppercase;
+	position: relative;
+	overflow: hidden;
+	text-shadow: 2px 2px 1px rgba(0,0,0,0.2);
+	&:before{
+		background: #555;
+		height: 100px;
+		width: 100px;
+		position: absolute;
+		content: "";
+		right: -50px;
+		top: -20%;
+		.transform(rotate(25deg));
+		box-shadow: inset 0px 0px 10px rgba(0,0,0,0.4);
+	}
+	i{
+		position: absolute;
+		right: 16px;
+		font-size: 16px;
+		top: 15px;
+	}
+	&:hover,&:focus{
+		color: #fff;
+		text-decoration: none;
+	}
+}

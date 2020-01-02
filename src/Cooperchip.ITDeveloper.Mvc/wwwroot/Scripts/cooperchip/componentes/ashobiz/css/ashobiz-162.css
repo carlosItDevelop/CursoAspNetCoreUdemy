@@ -1,0 +1,94 @@
+.a-162 {
+  position: relative;
+  max-width: 400px;
+  margin: 15px auto;
+  padding: 15px;
+}
+@media (max-width: 500px) {
+  .a-162 {
+    padding: 10px;
+  }
+}
+.a-162:before {
+  position: absolute;
+  content: "";
+  top: 0px;
+  left: 160px;
+  width: 1px;
+  height: 100%;
+  background: #ddd;
+}
+@media (max-width: 500px) {
+  .a-162:before {
+    left: 130px;
+  }
+}
+.a-162 .a-162-i {
+  margin: 20px 0px;
+  position: relative;
+}
+.a-162 .a-162-i:before,
+.a-162 .a-162-i:after {
+  content: " ";
+  display: table;
+}
+.a-162 .a-162-i:after {
+  clear: both;
+}
+.a-162 .a-162-i span {
+  display: block;
+  float: left;
+  width: 125px;
+  text-align: right;
+  color: #999;
+}
+@media (max-width: 500px) {
+  .a-162 .a-162-i span {
+    width: 100px;
+    font-size: 13px;
+  }
+}
+.a-162 .a-162-i b {
+  display: block;
+  width: 14px;
+  height: 14px;
+  top: 7px;
+  border-radius: 100%;
+  position: absolute;
+  left: 138px;
+  border: 3px solid #fff;
+  z-index: 5;
+}
+@media (max-width: 500px) {
+  .a-162 .a-162-i b {
+    left: 113px;
+  }
+}
+.a-162 .a-162-i b:after {
+  background: transparent;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: -4px;
+  left: -4px;
+  content: "";
+  border: 2px solid #777;
+  border-radius: 100%;
+  z-index: 3;
+}
+.a-162 .a-162-i > a {
+  display: block;
+  margin-left: 165px;
+  color: #555;
+  font-weight: bold;
+}
+@media (max-width: 500px) {
+  .a-162 .a-162-i > a {
+    margin-left: 140px;
+  }
+}
+.a-162 .a-162-i > a:hover,
+.a-162 .a-162-i > a:focus {
+  color: #777;
+  text-decoration: none;
+}

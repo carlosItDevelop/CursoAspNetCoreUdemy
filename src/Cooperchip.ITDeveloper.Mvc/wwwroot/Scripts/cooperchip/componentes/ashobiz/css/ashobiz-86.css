@@ -1,0 +1,57 @@
+/* Diamond */
+.a-86-s {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  margin: 10px;
+  transition: 0.5s;
+  text-align: center;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+}
+.a-86-s i {
+  color: #fff;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  font-size: 16px;
+}
+.a-86-s.a-bg-white i {
+  color: #333333;
+}
+.a-86-s:hover {
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15), inset 0px 0px 150px rgba(0, 0, 0, 0.1);
+}
+.a-86-l {
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  line-height: 90px;
+  margin: 20px;
+  transition: 0.5s;
+  text-align: center;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.a-86-l i {
+  color: #fff;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  font-size: 25px;
+}
+.a-86-l.a-bg-white i {
+  color: #333333;
+}
+.a-86-l:hover {
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15), inset 0px 0px 150px rgba(0, 0, 0, 0.1);
+}

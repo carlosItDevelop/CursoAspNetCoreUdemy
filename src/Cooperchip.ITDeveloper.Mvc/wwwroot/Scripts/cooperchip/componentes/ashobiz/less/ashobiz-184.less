@@ -1,0 +1,65 @@
+@import (reference) "ashobiz.base.less";
+@-webkit-keyframes a184{
+	0%{
+		.transform(rotate(0));
+	}
+	100%{
+		.transform(rotate(360deg));
+	}
+}
+@keyframes a184{
+	0%{
+		.transform(rotate(0));
+	}
+	100%{
+		.transform(rotate(360deg));
+	}
+}
+.a-184{
+	display: block;
+	width: 160px;
+	height: 160px;
+	border-radius: 100%;
+	margin: 15px auto;
+	text-align: center;
+	color: #fff;
+	padding-top: 30px;
+	box-shadow: 0px 0px 25px rgba(0,0,0,0.1);
+	position: relative;
+	overflow: hidden;
+	&:before{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		border-radius: 100%;
+		content: "";
+		background: transparent;
+		background-image: 
+			repeating-linear-gradient(to bottom, transparent 0, transparent 10px, rgba(0,0,0,0.02) 0, rgba(0,0,0,0.02) 20px), repeating-linear-gradient(to right, transparent 0, transparent 10px, rgba(0,0,0,0.02) 0, rgba(0,0,0,0.02) 20px);
+		-webkit-animation: a184 7s linear infinite;
+		animation: a184 50s linear infinite;
+	}
+	span{
+		position: relative;
+		z-index: 10;
+		font-size: 55px;
+		line-height: 1.4;
+		display: block;
+		font-weight: lighter;
+		text-shadow: 3px 3px 1px rgba(0,0,0,0.25);
+		> span{
+			font-size: 14px;
+			line-height: 1.5;
+			font-weight: bold; 
+			color: rgba(0,0,0,0.5);
+			text-transform: uppercase;
+			text-shadow: none;
+		}
+	}
+	&:hover,&:focus{
+		color: #fff;
+		text-decoration: none;
+	}
+}

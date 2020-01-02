@@ -1,0 +1,100 @@
+.a-87 {
+  max-width: 250px;
+  margin: 15px auto;
+  text-align: center;
+  padding: 25px;
+  color: #fff;
+  position: relative;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.07);
+  -webkit-perspective: 700px;
+  perspective: 700px;
+}
+.a-87 a,
+.a-87 a:hover,
+.a-87 a:focus {
+  color: #fff;
+  text-decoration: none;
+}
+.a-87:before,
+.a-87:after {
+  content: "";
+  width: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background: inherit;
+  z-index: 10;
+  transition: 0.5s;
+  box-shadow: inset 0px 0px 50px rgba(0, 0, 0, 0.05), 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.a-87:before {
+  left: 0;
+  -webkit-transform-origin: 0 50%;
+  -moz-transform-origin: 0 50%;
+  -ms-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  border-left: 6px solid rgba(0, 0, 0, 0.1);
+  border-right: 2px solid rgba(0, 0, 0, 0.05);
+}
+.a-87:after {
+  right: 0;
+  -webkit-transform-origin: 100% 50%;
+  -moz-transform-origin: 100% 50%;
+  -ms-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  border-right: 6px solid rgba(0, 0, 0, 0.1);
+  border-left: 2px solid rgba(0, 0, 0, 0.05);
+}
+.a-87:hover:before {
+  box-shadow: inset 0px 0px 150px rgba(0, 0, 0, 0.2), 0px 0px 10px rgba(0, 0, 0, 0.1);
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+.a-87:hover:after {
+  box-shadow: inset 0px 0px 150px rgba(0, 0, 0, 0.2), 0px 0px 10px rgba(0, 0, 0, 0.1);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+.a-87 h3 {
+  font-size: 16px;
+  line-height: 2;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0;
+}
+.a-87 p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 2;
+  color: rgba(255, 255, 255, 0.8);
+}
+.a-87 .a-87-btn {
+  color: #fff;
+  display: inline-block;
+  margin-top: 10px;
+  background: rgba(0, 0, 0, 0.15);
+  padding: 2px 12px;
+  border-radius: 4px;
+  transition: 0.5s;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.a-87 .a-87-btn:hover,
+.a-87 .a-87-btn:focus {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+}

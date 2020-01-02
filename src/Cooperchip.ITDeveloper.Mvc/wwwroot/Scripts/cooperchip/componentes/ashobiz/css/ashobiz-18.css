@@ -1,0 +1,84 @@
+/* A 18 */
+.a-18 {
+  position: relative;
+  max-width: 260px;
+  margin: 20px auto;
+  background: #fff;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
+}
+.a-18 .a-18-h {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  z-index: 1000;
+  color: #fff;
+  text-align: center;
+  width: 45px;
+  height: 45px;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 45px;
+  border-radius: 60px;
+  border-top-right-radius: 15px;
+}
+.a-18 img {
+  max-height: 200px;
+  margin: 20px auto;
+}
+.a-18 h4 {
+  font-size: 16px;
+  line-height: 26px;
+  margin: 5px 0px;
+}
+.a-18 h4 a {
+  color: #333333;
+}
+.a-18 h4 a:hover {
+  text-decoration: none;
+}
+.a-18 h5 {
+  font-size: 22px;
+  line-height: 22px;
+  margin: 10px 0;
+  font-weight: normal;
+}
+.a-18 h5 i {
+  font-style: normal;
+  font-size: 16px;
+  color: #aaa;
+  text-decoration: line-through;
+}
+.a-18 .a-18-c {
+  width: 100%;
+  padding: 10px;
+  transition: 0.35s;
+  background: #f8f8f8;
+  border-top: 1px solid #ddd;
+  font-size: 12px;
+  line-height: 18px;
+}
+.a-18 .a-18-c:before,
+.a-18 .a-18-c:after {
+  content: " ";
+  display: table;
+}
+.a-18 .a-18-c:after {
+  clear: both;
+}
+.a-18 .a-18-c > a {
+  color: #444;
+  margin: 0px 5px;
+  display: inline-block;
+}
+.a-18 .a-18-c > a i {
+  margin-right: 3px;
+}
+.a-18 .a-18-c > a:hover,
+.a-18 .a-18-c > a:focus {
+  color: #777;
+  text-decoration: none;
+}

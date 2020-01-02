@@ -1,0 +1,119 @@
+.a-94 {
+  display: inline-block;
+  position: relative;
+  height: 280px;
+  width: 130px;
+  margin: 15px 10px;
+  perspective: 200px;
+}
+.a-94 .a-94-b {
+  position: absolute;
+  width: 50px;
+  height: 200px;
+  top: 30px;
+  left: 50px;
+  margin-bottom: 20px;
+  background: rgba(0, 0, 0, 0.06);
+}
+.a-94 .a-94-b:before {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  content: "";
+  left: -50%;
+  bottom: 5px;
+  background: rgba(0, 0, 0, 0.04);
+  opacity: 0.8;
+  -webkit-transform-origin: 20px 100%;
+  -moz-transform-origin: 20px 100%;
+  -ms-transform-origin: 20px 100%;
+  transform-origin: 20px 100%;
+  -webkit-transform: skewY(45deg);
+  -moz-transform: skewY(45deg);
+  -ms-transform: skewY(45deg);
+  transform: skewY(45deg);
+}
+.a-94 .a-94-b:after {
+  position: absolute;
+  width: 100%;
+  height: 25px;
+  content: "";
+  left: 25px;
+  top: 0;
+  background: rgba(0, 0, 0, 0.04);
+  opacity: 0.8;
+  -webkit-transform-origin: 20px 100%;
+  -moz-transform-origin: 20px 100%;
+  -ms-transform-origin: 20px 100%;
+  transform-origin: 20px 100%;
+  -webkit-transform: skewX(45deg) translateY(-25px);
+  -moz-transform: skewX(45deg) translateY(-25px);
+  -ms-transform: skewX(45deg) translateY(-25px);
+  transform: skewX(45deg) translateY(-25px);
+}
+.a-94 .a-94-b .a-94-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+}
+.a-94 .a-94-b .a-94-bar span {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-transform: rotate(-90deg) translateY(5px) translateX(25px);
+  -moz-transform: rotate(-90deg) translateY(5px) translateX(25px);
+  -ms-transform: rotate(-90deg) translateY(5px) translateX(25px);
+  transform: rotate(-90deg) translateY(5px) translateX(25px);
+  color: rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 20px;
+}
+.a-94 .a-94-b .a-94-bar:before {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  content: "";
+  left: -50%;
+  bottom: 5px;
+  background: inherit;
+  opacity: 0.75;
+  -webkit-transform-origin: 20px 100%;
+  -moz-transform-origin: 20px 100%;
+  -ms-transform-origin: 20px 100%;
+  transform-origin: 20px 100%;
+  -webkit-transform: skewY(45deg);
+  -moz-transform: skewY(45deg);
+  -ms-transform: skewY(45deg);
+  transform: skewY(45deg);
+}
+.a-94 .a-94-b .a-94-bar:after {
+  position: absolute;
+  width: 100%;
+  height: 25px;
+  content: "";
+  left: 25px;
+  top: 0px;
+  background: inherit;
+  opacity: 0.75;
+  -webkit-transform-origin: 20px 100%;
+  -moz-transform-origin: 20px 100%;
+  -ms-transform-origin: 20px 100%;
+  transform-origin: 20px 100%;
+  -webkit-transform: skewX(45deg) translateY(-25px);
+  -moz-transform: skewX(45deg) translateY(-25px);
+  -ms-transform: skewX(45deg) translateY(-25px);
+  transform: skewX(45deg) translateY(-25px);
+}
+.a-94 h3 {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  font-size: 15px;
+  line-height: 25px;
+  text-transform: uppercase;
+}

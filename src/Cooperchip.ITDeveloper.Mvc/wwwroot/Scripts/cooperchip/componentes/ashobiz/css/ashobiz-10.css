@@ -1,0 +1,62 @@
+/* A 10 */
+.a-10 {
+  max-width: 220px;
+  margin: 20px auto;
+  height: 200px;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  border: 0px solid #fff;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.15);
+}
+.a-10 h3 {
+  margin-top: 40%;
+  text-transform: uppercase;
+  font-size: 23px;
+  font-weight: normal;
+  color: #fff;
+}
+.a-10 h3 a {
+  color: #fff;
+}
+.a-10 h3 a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+.a-10 h3 i {
+  font-size: 60px;
+  display: inline-block;
+  margin-top: -10%;
+}
+.a-10 .a-10-h {
+  padding: 10px;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  right: 0px;
+  top: 0;
+  -webkit-transform: translateY(200px);
+  -moz-transform: translateY(200px);
+  -ms-transform: translateY(200px);
+  transform: translateY(200px);
+  border-radius: 4px;
+  z-index: 1;
+  transition: all 0.5s;
+}
+.a-10:hover .a-10-h {
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  transform: translateY(0px);
+}
+.a-10:hover .a-10-h h3 {
+  margin-top: 40%;
+}
+.a-10:hover .a-10-h h3 i {
+  font-size: 60px;
+  display: inline-block;
+  margin-top: -10%;
+}

@@ -1,0 +1,60 @@
+@import (reference) "ashobiz.base.less";
+@-webkit-keyframes a591{
+	0%{
+		.transform(translate(0px));
+	}
+    50%{ 
+		.transform(translate(111px)); 
+	}
+	100%{
+		.transform(translate(0px));
+	}
+}
+@keyframes a591{
+	0%{
+		.transform(translate(0px));
+	}
+    50%{ 
+		.transform(translate(111px)); 
+	}
+	100%{
+		.transform(translate(0px));
+	}
+}
+.a-59{
+	width:125px;
+	height:40px;
+    margin:20px auto;
+    position:relative;
+	background:transparent;
+	span{
+		position:absolute;
+		display:block;
+		width:14px;
+		height:14px;
+		border-radius:100%;
+		top:50%;
+		margin-top:-7px;
+		left:0px;
+		&:nth-child(1){
+			-webkit-animation:a591 2s 0s ease infinite;
+					animation:a591 2s 0s ease infinite;
+		}
+		&:nth-child(2){
+			-webkit-animation:a591 2.2s 0.2s ease infinite;
+					animation:a591 2.2s 0.2s ease infinite;
+		}
+		&:nth-child(3){
+			-webkit-animation:a591 2.4s 0.4s ease infinite;
+					animation:a591 2.4s 0.4s ease infinite;
+		}
+		&:nth-child(4){
+			-webkit-animation:a591 2.6s 0.6s ease infinite;
+					animation:a591 2.6s 0.6s ease infinite;
+		}
+		&:nth-child(5){
+			-webkit-animation:a591 2.8s 0.8s ease infinite;
+					animation:a591 2.8s 0.8s ease infinite;
+		}
+	}
+}

@@ -1,0 +1,86 @@
+.a-120 {
+  margin: 15px auto;
+  width: 250px;
+  height: 250px;
+  text-align: center;
+  position: relative;
+  border-radius: 50%;
+  -webkit-perspective: 500px;
+  perspective: 500px;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.a-120 .a-120-f,
+.a-120 .a-120-b {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 4;
+  border-radius: 50%;
+  background: #fff;
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.07);
+  transition: 0.7s ease;
+  cursor: pointer;
+  backface-visibility: hidden;
+}
+.a-120 .a-120-f img,
+.a-120 .a-120-b img {
+  border-radius: 50%;
+}
+.a-120 .a-120-f h3,
+.a-120 .a-120-b h3 {
+  position: absolute;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  font-size: 20px;
+  line-height: 2;
+  text-align: center;
+  top: 50%;
+  left: 0;
+  padding: 4px 5px;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: normal;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.a-120 .a-120-f h3 a,
+.a-120 .a-120-b h3 a,
+.a-120 .a-120-f h3 a:hover,
+.a-120 .a-120-b h3 a:hover,
+.a-120 .a-120-f h3 a:focus,
+.a-120 .a-120-b h3 a:focus {
+  color: #fff;
+  text-decoration: none;
+}
+.a-120 .a-120-b {
+  z-index: -1;
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+.a-120:hover .a-120-f {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+.a-120:hover .a-120-b {
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+}

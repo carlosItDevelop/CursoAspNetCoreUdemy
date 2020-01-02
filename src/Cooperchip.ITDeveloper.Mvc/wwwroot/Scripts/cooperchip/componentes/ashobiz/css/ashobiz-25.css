@@ -1,0 +1,61 @@
+.a-25 {
+  max-width: 300px;
+  margin: 15px auto;
+  position: relative;
+  perspective: 100px;
+}
+.a-25:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 100%;
+  background: #444;
+  -webkit-transform-origin: 100% 0;
+  -moz-transform-origin: 100% 0;
+  -ms-transform-origin: 100% 0;
+  transform-origin: 100% 0;
+  -webkit-transform: rotateY(-10deg);
+  -moz-transform: rotateY(-10deg);
+  -ms-transform: rotateY(-10deg);
+  transform: rotateY(-10deg);
+}
+.a-25 > div {
+  position: relative;
+  left: 20px;
+  background: #fff;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05), 0px 20px 20px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  line-height: 2.5;
+  color: #444;
+  -webkit-transform-origin: 0 100%;
+  -moz-transform-origin: 0 100%;
+  -ms-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  -webkit-transform: rotateY(3deg);
+  -moz-transform: rotateY(3deg);
+  -ms-transform: rotateY(3deg);
+  transform: rotateY(3deg);
+}
+.a-25 > div > div {
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+  text-align: center;
+}
+.a-25 > div > div > a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: 0 2px;
+  border-radius: 3px;
+  line-height: 40px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.6);
+  position: relative;
+  transition: 0.5s;
+}
+.a-25 > div > div > a:hover {
+  background: rgba(0, 0, 0, 0.8);
+}

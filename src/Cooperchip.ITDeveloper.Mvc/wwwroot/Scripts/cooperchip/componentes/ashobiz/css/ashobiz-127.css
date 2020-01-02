@@ -1,0 +1,77 @@
+.a-127 {
+  margin: 15px auto;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  max-width: 270px;
+  position: relative;
+  overflow: hidden;
+}
+.a-127 .a-127-c {
+  width: 100%;
+  height: 150%;
+  position: absolute;
+  top: -60%;
+  left: -30%;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  z-index: 10;
+}
+.a-127 .a-127-i {
+  padding: 40px 20px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1), inset 0px 0px 30px rgba(0, 0, 0, 0.1);
+  z-index: 15;
+}
+.a-127 .a-127-i h2 {
+  font-size: 30px;
+  line-height: 45px;
+  font-weight: lighter;
+  color: #fff;
+  padding: 20px 0px;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+.a-127 .a-127-i h2 a,
+.a-127 .a-127-i h2 a:hover,
+.a-127 .a-127-i h2 a:focus {
+  color: #fff;
+  text-decoration: none;
+}
+.a-127 .a-127-i h2:before {
+  display: block;
+  margin: 0px auto;
+  margin-bottom: 15px;
+  position: relative;
+  width: 50px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.5);
+  content: "";
+}
+.a-127 .a-127-i h2:after {
+  display: block;
+  margin: 0px auto;
+  margin-top: 15px;
+  position: relative;
+  width: 50px;
+  height: 1px;
+  content: "";
+  background: rgba(255, 255, 255, 0.5);
+}
+.a-127 .a-127-i.a-bg-white h2 {
+  color: #666;
+  text-shadow: none;
+}
+.a-127 .a-127-i.a-bg-white h2 a,
+.a-127 .a-127-i.a-bg-white h2 a:hover,
+.a-127 .a-127-i.a-bg-white h2 a:focus {
+  color: #666;
+}
+.a-127 .a-127-i.a-bg-white h2:before {
+  background: #ddd;
+}
+.a-127 .a-127-i.a-bg-white h2:after {
+  background: #ddd;
+}

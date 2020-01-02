@@ -1,0 +1,79 @@
+/* Panel */
+.a-83 {
+  color: #fff;
+  margin: 15px auto;
+  max-width: 300px;
+  border-radius: 4px;
+  border: 3px solid rgba(0, 0, 0, 0.12);
+}
+.a-83 .a-phead {
+  background: rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  line-height: 14px;
+  padding: 16px 15px;
+  color: #fff;
+  font-weight: bold;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+.a-83 .a-phead i {
+  margin-right: 5px;
+}
+.a-83 .a-phead a {
+  color: #fff;
+}
+.a-83 .a-phead a:hover,
+.a-83 .a-phead a:focus {
+  color: #fff;
+  text-decoration: none;
+}
+.a-83 .a-pcontent {
+  padding: 14px 15px;
+}
+.a-83 .a-pcontent a {
+  color: rgba(255, 255, 255, 0.7);
+}
+.a-83 .a-pcontent a:hover,
+.a-83 .a-pcontent a:focus {
+  color: #fff;
+}
+.a-83 .a-pfoot {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 11px 15px 10px 15px;
+  color: #fff;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+.a-83 .a-pfoot a {
+  color: #fff;
+}
+.a-83 .a-pfoot a:hover,
+.a-83 .a-pfoot a:focus {
+  color: #fff;
+  text-decoration: none;
+}
+.a-83.a-bg-white {
+  color: #333333;
+}
+.a-83.a-bg-white .a-phead,
+.a-83.a-bg-white .a-pfoot {
+  color: #333333;
+}
+.a-83.a-bg-white .a-phead a,
+.a-83.a-bg-white .a-pfoot a {
+  color: #333333;
+}
+.a-83.a-bg-white .a-phead a:hover,
+.a-83.a-bg-white .a-pfoot a:hover,
+.a-83.a-bg-white .a-phead a:focus,
+.a-83.a-bg-white .a-pfoot a:focus {
+  color: #333333;
+}
+.a-83.a-bg-white .a-pcontent {
+  color: #333333;
+}
+.a-83.a-bg-white .a-pcontent a {
+  color: rgba(0, 0, 0, 0.7);
+}
+.a-83.a-bg-white .a-pcontent a:hover,
+.a-83.a-bg-white .a-pcontent a:focus {
+  color: #333333;
+}

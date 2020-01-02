@@ -1,0 +1,67 @@
+@import (reference) "ashobiz.base.less";
+.a-195{
+	width: 100%;
+	margin: 15px auto;
+	h2{
+		margin: 0;
+		font-weight: normal;
+		background: #333;
+		padding: 18px 25px;
+		color: #fff;
+		font-size: 18px;
+		line-height: 28px;
+		display: block;
+	}
+	> div{		
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+	 	-webkit-justify-content: center;
+	 	-ms-justify-content: center;
+	 	justify-content: center;
+	 	a{
+	 		position: relative;
+	 		display: block;
+	 		min-width: 200px;
+	 		max-width: 300px;
+	 		-webkit-flex: 1;
+	 		-ms-flex: 1;
+	 		flex: 1;
+	 		color: #fff;
+	 		transition: 0.5s;
+	 		padding: 100px 20px 120px 20px;
+	 		box-shadow: inset 0px 0px 100px rgba(0,0,0,0.1);
+	 		@media (max-width: 400px){
+	 			min-width: 100%;
+	 			max-width: auto;
+	 			width: 100%;
+	 			padding: 70px 30px;
+	 		}
+	 		&:hover,&:focus{
+	 			color: #fff;
+	 			text-decoration: none;
+	 			box-shadow: inset 0px 0px 200px rgba(0,0,0,0.2);
+	 		}
+	 		b{
+	 			display: inline-block;
+		 		font-size: 15px;
+		 		line-height: 25px;
+		 		margin-bottom: 10px;
+		 		font-weight: bold;
+		 		background: #fff;
+		 		color: #444;
+		 		padding: 7px 15px;
+		 		text-transform: uppercase;
+		 		box-shadow: 3px 3px 1px rgba(0,0,0,0.1);
+	 		}
+	 		span{
+	 			display: block;
+	 			font-size: 16px;
+	 			line-height: 32px;
+		 		text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+	 		}
+	 	}
+	}
+}

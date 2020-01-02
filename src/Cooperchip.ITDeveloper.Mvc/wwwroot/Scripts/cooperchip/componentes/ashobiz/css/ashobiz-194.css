@@ -1,0 +1,37 @@
+.a-194 {
+  max-width: 300px;
+  text-align: center;
+  margin: 15px auto;
+  border: 15px solid #fff;
+  position: relative;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.05), 0px 0px 20px rgba(0, 0, 0, 0.1), inset 0px 0px 15px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  background: rgba(0, 0, 0, 0.01);
+}
+.a-194.a-194-1 {
+  background-image: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.065), rgba(0, 0, 0, 0.065) 10px, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 20px), repeating-linear-gradient(-45deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 10px, rgba(0, 0, 0, 0.065) 0, rgba(0, 0, 0, 0.065) 20px);
+}
+.a-194.a-194-2 {
+  background-image: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.065), rgba(0, 0, 0, 0.065) 1px, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 2px), repeating-linear-gradient(-45deg, rgba(0, 0, 0, 0.065), rgba(0, 0, 0, 0.065) 1px, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 2px);
+}
+.a-194.a-194-3 {
+  background: rgba(0, 0, 0, 0.02);
+  background-image: radial-gradient(rgba(0, 0, 0, 0.12) 3px, transparent 4px), radial-gradient(rgba(0, 0, 0, 0.2) 4px, transparent 5px);
+  background-size: 20px 20px;
+  background-position: 0px -3px, 10px -2px;
+}
+.a-194 .a-194-c {
+  position: relative;
+  background: #fff;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2), inset 0px 0px 100px rgba(0, 0, 0, 0.025);
+  padding: 40px 20px;
+  font-size: 25px;
+  line-height: 1.7;
+  color: #666;
+}
+.a-194 .a-194-c a,
+.a-194 .a-194-c a:hover,
+.a-194 .a-194-c a:focus {
+  color: #666;
+  text-decoration: none;
+}

@@ -1,0 +1,83 @@
+@import (reference) "ashobiz.base.less";
+/* Smooth navigation */
+.a-90{
+	display:block;
+	text-align:center;
+	padding:0px;
+	margin:20px auto;
+	list-style-type:none;
+	.clearfix;
+	@media(max-width:767px){
+		max-width:400px;
+		margin:20px auto;
+	}
+	li{
+		display: inline-block;
+		width: 16.6%;
+		float: left;
+		margin:0px;
+		padding:0px;
+		transition:0.2s;
+		@media(max-width:991px){
+			width:33.3%;
+		}	
+		@media(max-width:767px){
+			width:50%;
+		}
+		@media(max-width:494px){
+			width:50%;
+		}
+		a{
+			position:relative;
+			display:block;
+			margin:0px;
+			padding:18px 0px 14px 0px;
+			width:100%;
+			color:#fff;
+			z-index:0;
+			font-size:18px;
+			line-height:27px;
+			overflow:hidden;			
+			border-bottom:4px solid rgba(0,0,0,0.05);
+			box-shadow:inset 0 0 0 1px rgba(0,0,0,0.05);
+			transition:0.3s;
+			@media (max-width:991px){
+				border-bottom:2px solid rgba(0,0,0,0);
+			}
+			span{
+				text-transform:uppercase;
+				font-weight:bold;
+				display:block;
+				b{
+					display:block;
+					font-size:14px;
+					font-weight:normal;
+					color: rgba(255,255,255,0.9);
+					text-transform:none;
+				}
+			}
+			&:hover,&:focus{
+				text-decoration:none;
+				box-shadow:inset 0 0 0 1px rgba(0,0,0,0.05), inset 0px 0px 100px rgba(0,0,0,0.1);
+			}
+			@media(max-width:494px){
+				font-size:15px;
+				line-height:25px;
+				span{
+					b{
+						font-size:14px;
+					}
+				}
+			}
+		}
+		a.a-bg-white{
+			color:@black;
+			span b{
+				color:@black;
+			}
+			&:hover,&:focus{
+				background:#eee;
+			}
+		}
+	}
+}

@@ -1,0 +1,95 @@
+@import (reference) "ashobiz.base.less";
+@-webkit-keyframes a211{
+ 	0%,15%,100%{
+   	.transform(translateY(0));
+ 	}
+  	20%,35%{
+      .transform(translateY(-90px));
+  	}
+  	40%,55%{
+      .transform(translateY(-180px));
+  	}
+  	60%,75%{
+      .transform(translateY(-270px));
+  	}
+  	80%,95%{
+    	.transform(translateY(-360px));
+  	}
+}
+@keyframes a211{
+ 	0%,15%,100%{
+   	.transform(translateY(0));
+ 	}
+  	20%,35%{
+      .transform(translateY(-90px));
+  	}
+  	40%,55%{
+      .transform(translateY(-180px));
+  	}
+  	60%,75%{
+      .transform(translateY(-270px));
+  	}
+  	80%,95%{
+    	.transform(translateY(-360px));
+  	}
+}
+@media (max-width: 500px){
+	@-webkit-keyframes a211{
+	 	0%,15%,100%{
+	   	.transform(translateY(0));
+	 	}
+	  	20%,35%{
+	      .transform(translateY(-60px));
+	  	}
+	  	40%,55%{
+	      .transform(translateY(-120px));
+	  	}
+	  	60%,75%{
+	      .transform(translateY(-180px));
+	  	}
+	  	80%,95%{
+	    	.transform(translateY(-240px));
+	  	}
+	}
+	@keyframes a211{
+	 	0%,15%,100%{
+	   	.transform(translateY(0));
+	 	}
+	  	20%,35%{
+	      .transform(translateY(-60px));
+	  	}
+	  	40%,55%{
+	      .transform(translateY(-120px));
+	  	}
+	  	60%,75%{
+	      .transform(translateY(-180px));
+	  	}
+	  	80%,95%{
+	    	.transform(translateY(-240px));
+	  	}
+	}
+}
+.a-211{
+  font-size: 60px;
+  line-height: 1;
+  margin: 15px 0;
+  @media(max-width: 500px){
+    font-size: 40px;
+  }
+  span{
+    display: block;
+    line-height: 90px;
+    height: 90px;
+    overflow: hidden;
+    @media(max-width: 500px){
+      line-height: 60px;
+      height: 60px;
+    }
+    b{
+      font-weight: normal;
+      display: block;
+      -webkit-animation: a211 10s linear infinite;
+      animation: a211 10s linear infinite;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+.a-167 {
+  max-width: 600px;
+  margin: 15px auto;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.075);
+  background: #ee4720;
+  background-image: repeating-linear-gradient(45deg, #ee4720, #ee4720 15px, #ffffff 0, #ffffff 30px, #4346ce 0, #4346ce 45px, #ffffff 0, #ffffff 60px);
+  padding: 10px;
+}
+@media (max-width: 767px) {
+  .a-167 {
+    max-width: 350px;
+  }
+}
+.a-167 > div {
+  background: #fff;
+  padding: 25px 30px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1), inset 0px 0px 50px rgba(0, 0, 0, 0.05);
+}
+.a-167 h3 {
+  font-size: 18px;
+  line-height: 38px;
+  font-weight: normal;
+  margin: 0;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+.a-167 .a-167-i {
+  display: block;
+  margin: 5px 0px;
+}
+.a-167 .a-167-i i {
+  display: inline-block;
+  width: 30px;
+  text-align: center;
+  vertical-align: top;
+  padding-top: 7px;
+  color: #666;
+}
+.a-167 .a-167-i b {
+  display: inline-block;
+  margin-left: 0px;
+  font-weight: normal;
+}

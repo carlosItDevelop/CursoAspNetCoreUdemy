@@ -1,0 +1,114 @@
+@import (reference) "ashobiz.base.less";
+@-webkit-keyframes a3{
+	0%,15%,100%{
+		.transform(translateY(0));
+	}
+	20%,35%{
+		.transform(translateY(-80px));	
+	}
+	40%,55%{
+		.transform(translateY(-160px));	
+	}
+	60%,75%{
+		.transform(translateY(-240px));	
+	}
+	80%,95%{
+		.transform(translateY(-320px));	
+	}
+}
+@keyframes a3{
+	0%,15%,100%{
+		.transform(translateY(0));
+	}
+	20%,35%{
+		.transform(translateY(-80px));	
+	}
+	40%,55%{
+		.transform(translateY(-160px));	
+	}
+	60%,75%{
+		.transform(translateY(-240px));	
+	}
+	80%,95%{
+		.transform(translateY(-320px));	
+	}
+}
+@media (max-width: 400px){
+	@-webkit-keyframes a3{
+		0%,15%,100%{
+			.transform(translateY(0));
+		}
+		20%,35%{
+			.transform(translateY(-60px));	
+		}
+		40%,55%{
+			.transform(translateY(-120px));	
+		}
+		60%,75%{
+			.transform(translateY(-180px));	
+		}
+		80%,95%{
+			.transform(translateY(-240px));	
+		}
+	}
+	@keyframes a3{
+		0%,15%,100%{
+			.transform(translateY(0));
+		}
+		20%,35%{
+			.transform(translateY(-60px));	
+		}
+		40%,55%{
+			.transform(translateY(-120px));	
+		}
+		60%,75%{
+			.transform(translateY(-180px));	
+		}
+		80%,95%{
+			.transform(translateY(-240px));	
+		}
+	}
+}
+.a-3{
+	max-width: 100%;
+	margin: 15px auto;
+	position: relative;
+	overflow: hidden;
+	text-align: center;
+	img{
+		position: relative;
+	}
+	h3{
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 100%;
+		margin: 0;
+		color: #fff;
+		background: rgba(0,0,0,0.3);
+		border-top: 1px solid rgba(0,0,0,0.5);
+		border-bottom: 1px solid rgba(0,0,0,0.5);
+		.transform(translateY(-50%));
+		font-size: 40px;
+		line-height: 80px;
+		height: 80px;
+		overflow: hidden;
+		font-weight: lighter;
+		text-transform: uppercase;
+		text-shadow: 2px 2px 1px rgba(0,0,0,0.3);
+		@media (max-width: 600px){
+			font-size: 30px;	
+		}
+		@media (max-width: 400px){
+			font-size: 20px;
+			line-height: 60px;
+			font-weight: normal;
+			height: 60px;
+		}
+		> span{
+			display: block;
+			-webkit-animation: a3 9s linear infinite;
+			animation: a3 9s linear infinite;
+		}
+	}
+}

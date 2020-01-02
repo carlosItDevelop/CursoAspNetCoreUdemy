@@ -1,0 +1,57 @@
+@-webkit-keyframes a108 {
+  0% {
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.06), 0px 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 0px 0px 1px rgba(0, 0, 0, 0.02);
+  }
+  100% {
+    box-shadow: 0px 0px 0px 40px rgba(0, 0, 0, 0), 0px 0px 0px 80px rgba(0, 0, 0, 0), 0px 0px 0px 120px rgba(0, 0, 0, 0);
+  }
+}
+@keyframes a108 {
+  0% {
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.06), 0px 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 0px 0px 1px rgba(0, 0, 0, 0.02);
+  }
+  100% {
+    box-shadow: 0px 0px 0px 40px rgba(0, 0, 0, 0), 0px 0px 0px 80px rgba(0, 0, 0, 0), 0px 0px 0px 120px rgba(0, 0, 0, 0);
+  }
+}
+.a-108 {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 5px auto;
+  perspective: 600px;
+}
+.a-108 span {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  left: 50%;
+  margin-left: -30px;
+  top: 50%;
+  border: 0;
+  margin-top: -35px;
+  border-radius: 100%;
+  box-shadow: none;
+  transition: 0.5s;
+  -webkit-transform-origin: 0 100%;
+  -moz-transform-origin: 0 100%;
+  -ms-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  -webkit-transform: rotateX(70deg);
+  -moz-transform: rotateX(70deg);
+  -ms-transform: rotateX(70deg);
+  transform: rotateX(70deg);
+  z-index: 4;
+  -webkit-animation: a108 3s ease-out infinite;
+  animation: a108 3s ease-out infinite;
+}
+.a-108 i {
+  font-size: 30px;
+  position: relative;
+  z-index: 6;
+  color: #444;
+  line-height: 100px;
+}

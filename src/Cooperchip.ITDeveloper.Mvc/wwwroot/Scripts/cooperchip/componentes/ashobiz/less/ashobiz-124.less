@@ -1,0 +1,81 @@
+@import (reference) "ashobiz.base.less";
+.a-124{
+	max-width: 230px;
+	padding: 100px 25px;
+	text-align: center;
+	margin: 20px auto;
+	color: #fff;
+	position: relative;
+	z-index: 10;
+	border-radius: 3px;
+	box-shadow: inset 0px 0px 20px rgba(0,0,0,0.05), 0px 0px 10px rgba(0,0,0,0.1), 0px 10px 10px rgba(0,0,0,0.15);
+	h3{
+		color: #fff;
+		font-size: 18px;
+		line-height: 28px;
+		margin-bottom: 10px;
+		text-transform: uppercase;
+		font-weight: normal;
+		text-shadow: 2px 2px 1px rgba(0,0,0,0.4);
+		a,a:hover,a:focus{
+			color:#fff;
+			text-decoration: none;
+		}
+	}
+	.a-124-btn{
+		color: #fff;
+		font-size: 13px;
+		line-height: 28px;
+		border-bottom: 2px dotted #fff;
+		text-shadow: 2px 2px 1px rgba(0,0,0,0.2);
+		&:hover,&:focus{
+			color: #fff;
+			text-decoration: none;
+			border-bottom: 0;
+		}
+	}
+	&:before{
+		position: absolute;
+		top: 3%;
+		width: 7px;
+		height: 94%;
+		opacity: 0.6;
+		content: "";
+		background: inherit;
+		box-shadow: inset 0px 0px 20px rgba(0,0,0,0.1), 0px 0px 10px rgba(0,0,0,0.15);	
+		left: -7px;
+		border-top-left-radius: 3px;
+		border-bottom-left-radius: 3px;	
+	}
+	&:after{
+		position: absolute;
+		top: 3%;
+		width: 7px;
+		height: 94%;
+		opacity: 0.6;
+		content: "";
+		background: inherit;
+		box-shadow: inset 0px 0px 20px rgba(0,0,0,0.1), 0px 0px 10px rgba(0,0,0,0.15);	
+		right: -7px;
+		border-top-right-radius: 3px;
+		border-bottom-right-radius: 3px;		
+	}
+	&.a-bg-white{
+		box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+		h3{
+			color: #777;
+			text-shadow: none;
+			a,a:hover,a:focus{
+				color: #777;
+			}
+		}
+		.a-124-btn{
+			color: #777;
+			border-bottom: 2px dotted #aaa;
+			text-shadow: none;
+			&:hover,&:focus{
+				color: #777;
+			}
+		}
+	}
+}

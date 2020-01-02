@@ -1,0 +1,74 @@
+@-webkit-keyframes a159 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    -moz-transform: rotate(359deg);
+    -ms-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes a159 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    -moz-transform: rotate(359deg);
+    -ms-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+.a-159 {
+  display: block;
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  margin: 15px auto;
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+  color: #fff;
+  text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1), inset 0px 0px 50px rgba(0, 0, 0, 0.15);
+}
+.a-159:after {
+  width: 140px;
+  height: 140px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  content: "";
+  background: transparent;
+  border-radius: 50%;
+  border: 2px dashed #fff;
+}
+.a-159:hover:after,
+.a-159:focus:after,
+.a-159:active:after {
+  -webkit-animation: a159 0.5s linear infinite;
+  animation: a159 0.5s linear infinite;
+}
+.a-159:hover,
+.a-159:focus {
+  color: #fff;
+  text-decoration: none;
+}
+.a-159 i {
+  font-size: 40px;
+  line-height: 50px;
+  display: block;
+  padding-top: 30px;
+  margin-bottom: 5px;
+}
+.a-159 span {
+  font-weight: bold;
+  text-transform: uppercase;
+}

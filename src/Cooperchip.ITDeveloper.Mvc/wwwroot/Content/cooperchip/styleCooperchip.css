@@ -1,0 +1,82 @@
+﻿/* --/ Style personalizado por Carlos para botões no estilo Bootstrap Transparente --- */
+.btn.btn-transparent {
+    background-color: transparent;
+    margin-left: 0;
+    margin-right: 3px
+}
+
+    .btn.btn-transparent:hover {
+        color: #464646
+    }
+
+.btn.btn-sm.btn-transparent {
+    background: none;
+    color: #696969
+}
+
+.btn-default.btn-transparent {
+    border: 1px solid #D3D7DB !important;
+    color: #333
+}
+
+    .btn-default.btn-transparent:hover {
+        background-color: rgba(197,202,208,0.2);
+        border: 1px solid #c5cad0;
+        color: #333
+    }
+
+.btn-primary.btn-transparent {
+    border: 1px solid #2c8ca1 !important;
+    color: #2c8ca1;
+    background-color: transparent !important
+}
+
+    .btn-primary.btn-transparent:hover {
+        background-color: rgba(37,140,209,0.1) !important;
+        border: 1px solid #258cd1;
+        color: #258cd1
+    }
+
+.btn-info.btn-transparent {
+    border: 1px solid #b066ff !important;
+    color: #b066ff
+}
+
+    .btn-info.btn-transparent:hover {
+        background-color: rgba(163,76,255,0.1);
+        border: 1px solid #46b8da;
+        color: #a34cff
+    }
+
+.btn-warning.btn-transparent {
+    border: 1px solid #ff8408 !important;
+    color: #ff8408;
+}
+
+    .btn-warning.btn-transparent:hover {
+        background-color: rgba(238,162,54,0.1);
+        border: 1px solid #eea236;
+        color: #eea236
+    }
+
+.btn-danger.btn-transparent {
+    border: 1px solid #c14444 !important;
+    color: #c14444
+}
+
+    .btn-danger.btn-transparent:hover {
+        background-color: rgba(212,63,58,0.1);
+        border: 1px solid #d43f3a;
+        color: #d43f3a
+    }
+
+.btn-success.btn-transparent {
+    border: 1px solid #159077 !important;
+    color: #159077
+}
+
+    .btn-success.btn-transparent:hover {
+        background-color: rgba(76,174,76,0.1);
+        border: 1px solid #4cae4c;
+        color: #4cae4c
+    }

@@ -1,0 +1,52 @@
+/* A 30 */
+.a-30 {
+  margin: 20px 0px;
+  max-width: 300px;
+}
+.a-30:before,
+.a-30:after {
+  content: " ";
+  display: table;
+}
+.a-30:after {
+  clear: both;
+}
+.a-30 .a-30-f {
+  float: left;
+  position: relative;
+  width: 55px;
+  height: 70px;
+  padding: 40px 12px 10px 12px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: bold;
+  border-radius: 3px;
+}
+.a-30 .a-30-f:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-width: 0 15px 15px 0px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.1) #ffffff;
+}
+.a-30 h3 {
+  margin: 10px 0px;
+  margin-left: 70px;
+  font-size: 17px;
+  line-height: 25px;
+}
+.a-30 h3 a,
+.a-30 h3 a:hover,
+.a-30 h3 a:focus {
+  color: #555;
+  text-decoration: none;
+}
+.a-30 h3 span {
+  display: block;
+  font-size: 13px;
+  color: #888;
+  font-weight: normal;
+}

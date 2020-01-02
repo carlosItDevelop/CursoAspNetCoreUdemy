@@ -1,0 +1,84 @@
+/* A 15 */
+.a-15 {
+  max-width: 300px;
+  height: 300px;
+  background: #fff;
+  margin: 20px auto;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.a-15 b {
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 28px;
+  display: block;
+  color: #333333;
+}
+.a-15 strong {
+  font-size: 14px;
+  line-height: 2.4;
+  display: block;
+  font-weight: normal;
+  color: #777;
+}
+.a-15 .a-15-o {
+  box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.07);
+  background: #fff;
+  position: absolute;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  transform: translateY(0px);
+  padding: 50px 30px;
+  height: 300px;
+  transition: all 0.5s;
+}
+.a-15 .a-15-t {
+  box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.07);
+  position: absolute;
+  -webkit-transform: translateY(500px);
+  -moz-transform: translateY(500px);
+  -ms-transform: translateY(500px);
+  transform: translateY(500px);
+  padding: 40px 30px;
+  transition: all 0.5s;
+  height: 300px;
+  font-size: 14px;
+}
+.a-15 .a-15-t b,
+.a-15 .a-15-t strong {
+  color: #fff;
+}
+.a-15 .a-15-t > a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 2px 15px;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 0px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #fff;
+  transition: 0.5s;
+}
+.a-15 .a-15-t > a:hover,
+.a-15 .a-15-t > a:focus {
+  color: #666;
+  text-decoration: none;
+  background: #fff;
+}
+.a-15:hover .a-15-o {
+  -webkit-transform: translateY(-500px);
+  -moz-transform: translateY(-500px);
+  -ms-transform: translateY(-500px);
+  transform: translateY(-500px);
+}
+.a-15:hover .a-15-t {
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  transform: translateY(0px);
+}

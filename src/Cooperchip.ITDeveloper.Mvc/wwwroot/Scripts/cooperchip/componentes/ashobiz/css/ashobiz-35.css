@@ -1,0 +1,68 @@
+/* A 35 */
+.a-35 {
+  max-width: 270px;
+  margin: 15px auto;
+  padding: 10px;
+}
+.a-35:before,
+.a-35:after {
+  content: " ";
+  display: table;
+}
+.a-35:after {
+  clear: both;
+}
+.a-35 a {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 125px;
+  padding: 15px;
+  box-sizing: border-box;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  color: #fff;
+  text-align: center;
+  transition: 0.5s;
+}
+.a-35 a:hover,
+.a-35 a:focus {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+}
+.a-35 a i {
+  display: block;
+  font-size: 40px;
+  line-height: 40px;
+  margin: 4px 0px 15px 0px;
+}
+.a-35 a span {
+  display: block;
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.a-35 a:nth-child(1),
+.a-35 a:nth-child(4) {
+  background: rgba(0, 0, 0, 0.05);
+}
+.a-35 a:nth-child(1):hover,
+.a-35 a:nth-child(4):hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+.a-35 a:nth-child(2),
+.a-35 a:nth-child(4) {
+  border-right: 0px;
+}
+.a-35 a:nth-child(3),
+.a-35 a:nth-child(4) {
+  border-bottom: 0px;
+}
+@media (max-width: 440px) {
+  .a-35 {
+    width: auto;
+  }
+}

@@ -1,0 +1,45 @@
+@import (reference) "ashobiz.base.less";
+@-webkit-keyframes a203{
+	0%,100%{
+		.transform(scaleY(1));
+	}
+	50%{
+		.transform(scaleY(1.8));
+	}
+}
+@keyframes a203{
+	0%,100%{
+		.transform(scaleY(1));
+	}
+	50%{
+		.transform(scaleY(1.8));
+	}
+}
+.a-203{
+	width: 100px;
+	height: 70px;
+	margin: 15px auto;
+	text-align: center;
+	>span{
+		display: inline-block;
+		position: relative;
+		width: 6px;
+		height: 30px;
+		margin: 0px 1px;
+		top: 20px;
+		-webkit-animation: a203 1.4s linear infinite;
+		animation: a203 1.4s linear infinite;
+		&:nth-of-type(2){
+			-webkit-animation-delay: 0.12s; 
+			animation-delay: 0.12s;
+		}
+		&:nth-of-type(3){
+			-webkit-animation-delay: 0.24s;
+			animation-delay: 0.24s;
+		}
+		&:last-of-type{
+			-webkit-animation-delay: 0.46s;
+			animation-delay: 0.46s;
+		}
+	}
+}

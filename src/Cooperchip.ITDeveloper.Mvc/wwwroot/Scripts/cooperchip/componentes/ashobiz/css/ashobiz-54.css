@@ -1,0 +1,39 @@
+.a-54 {
+  margin: 2px;
+  text-align: center;
+  padding: 12px 15px;
+  position: relative;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 1.5;
+  background: #fff;
+  border-radius: 4px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #444;
+  border: 0;
+  z-index: 2;
+  transition: 0.5s;
+  background-image: linear-gradient(to right, #f75353, #f75353 10%, #51d466 0, #51d466 20%, #609cec 0, #609cec 30%, #fcd419 0, #fcd419 40%, #cb79e6 0, #cb79e6 50%, #32c8de 0, #32c8de 60%, #f78153 0, #f78153 70%, #ff61e7 0, #ff61e7 80%, #d08166 0, #d08166 90%, #fcd419 0);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+.a-54:before {
+  position: absolute;
+  top: 3px;
+  bottom: 3px;
+  left: 0;
+  right: 0;
+  content: "";
+  z-index: -1;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 0;
+  border-bottom: 0;
+  transition: 0.5s;
+  background: #fff;
+}
+.a-54:hover,
+.a-54:focus,
+.a-54:active {
+  color: #777;
+  text-decoration: none;
+}

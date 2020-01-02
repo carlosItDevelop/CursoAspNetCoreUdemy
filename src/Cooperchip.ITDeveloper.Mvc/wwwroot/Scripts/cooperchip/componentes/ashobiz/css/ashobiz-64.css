@@ -1,0 +1,78 @@
+.a-64 {
+  max-width: 300px;
+  margin: 10px 0;
+  background: #fafafa;
+  text-align: center;
+  position: relative;
+}
+.a-64:before,
+.a-64:after {
+  content: " ";
+  display: table;
+}
+.a-64:after {
+  clear: both;
+}
+.a-64 > a {
+  display: inline-block;
+  width: 49%;
+  color: #fff;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+  box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 350px) {
+  .a-64 > a {
+    width: 100%;
+    margin: 7px 0px;
+  }
+}
+.a-64 > a:hover,
+.a-64 > a:focus {
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.1), inset 0px 0px 100px rgba(0, 0, 0, 0.1);
+}
+.a-64 > a:first-of-type {
+  float: left;
+  padding: 8px 12px 8px 8px;
+}
+@media (max-width: 350px) {
+  .a-64 > a:first-of-type {
+    float: none;
+    padding: 8px 12px;
+  }
+}
+.a-64 > a:last-of-type {
+  float: right;
+  padding: 8px 8px 8px 12px;
+}
+@media (max-width: 350px) {
+  .a-64 > a:last-of-type {
+    float: none;
+    padding: 8px 12px;
+  }
+}
+.a-64:before {
+  display: block;
+  position: absolute;
+  content: "OR";
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  color: #444;
+  border-radius: 50%;
+  background: #fff;
+  font-weight: bold;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  font-size: 12px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}

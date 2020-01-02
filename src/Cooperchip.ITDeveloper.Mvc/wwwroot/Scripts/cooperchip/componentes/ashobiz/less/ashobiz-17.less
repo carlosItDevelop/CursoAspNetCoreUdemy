@@ -1,0 +1,136 @@
+@import (reference) "ashobiz.base.less";
+@-webkit-keyframes a17{
+	0%{
+		color: #444;
+		font-weight: normal;
+		letter-spacing: -0.1em;
+	}
+	30%{
+		color: #444;
+		font-weight: normal;
+	}
+	35%{
+		color: #444;
+		font-weight: bold;
+		.transform(rotateY(0deg));
+	}
+	40%{
+		color: @red;
+	}
+	45%{
+		color: @green;
+	}
+	50%{
+		color: @yellow;
+		font-weight: bold;
+		letter-spacing: 0.3em;
+		.transform(rotateY(360deg));
+	}
+	55%{
+		color: @violet;
+	}
+	60%{
+		color: @blue;
+	}	
+	65%{
+		color: #444;
+		font-weight: bold;
+		.transform(rotateY(0deg));
+	}	
+	70%{
+		color: #444;
+		font-weight: normal;
+	}
+	100%{
+		color: #444;
+		letter-spacing: -0.1em;
+		font-weight: normal;
+	}	
+}
+@keyframes a17{
+	0%{
+		color: #444;
+		font-weight: normal;
+		letter-spacing: -0.1em;
+	}
+	30%{
+		color: #444;
+		font-weight: normal;
+	}
+	35%{
+		color: #444;
+		font-weight: bold;
+		.transform(rotateY(0deg));
+	}
+	40%{
+		color: @red;
+	}
+	45%{
+		color: @green;
+	}
+	50%{
+		color: @yellow;
+		font-weight: bold;
+		letter-spacing: 0.3em;
+		.transform(rotateY(360deg));
+	}
+	55%{
+		color: @violet;
+	}
+	60%{
+		color: @blue;
+	}	
+	65%{
+		color: #444;
+		font-weight: bold;
+		.transform(rotateY(0deg));
+	}	
+	70%{
+		color: #444;
+		font-weight: normal;
+	}
+	100%{
+		color: #444;
+		letter-spacing: -0.1em;
+		font-weight: normal;
+	}	
+}
+.a-17{
+	text-align: center;
+	>b{
+		display: inline-block;
+		position: relative;
+		font-size: 30px;
+		line-height: 1.5;
+		-webkit-animation: a17 3s ease-out infinite;
+		animation: a17 3s ease-out infinite;
+		&:first-of-type{
+			-webkit-animation-delay: 0s;
+			animation-delay: 0s;
+		}
+		&:nth-of-type(2){
+			-webkit-animation-delay: 0.1s;
+			animation-delay: 0.1s;
+		}
+		&:nth-of-type(3){
+			-webkit-animation-delay: 0.2s;
+			animation-delay: 0.2s;
+		}
+		&:nth-of-type(4){
+			-webkit-animation-delay: 0.3s;
+			animation-delay: 0.2s;
+		}
+		&:nth-of-type(5){
+			-webkit-animation-delay: 0.4s;
+			animation-delay: 0.4s;
+		}
+		&:nth-of-type(6){
+			-webkit-animation-delay: 0.5s;
+			animation-delay: 0.5s;
+		}
+		&:last-of-type{
+			-webkit-animation-delay: 0.6s;
+			animation-delay: 0.6s;
+		}
+	}
+}

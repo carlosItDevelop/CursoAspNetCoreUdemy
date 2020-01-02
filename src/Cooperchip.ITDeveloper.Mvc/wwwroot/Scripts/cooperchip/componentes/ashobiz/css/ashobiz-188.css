@@ -1,0 +1,81 @@
+.a-188 {
+  max-width: 280px;
+  margin: 15px auto;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.a-188 .a-188-i {
+  padding: 15px 20px;
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+.a-188 .a-188-i:last-of-type {
+  border-bottom: 0;
+}
+.a-188 .a-188-i:nth-of-type(odd) {
+  background: #fdfdfd;
+}
+.a-188 .a-188-i h3 {
+  margin: 0px;
+  font-size: 20px;
+  line-height: 32px;
+  color: #333;
+  font-weight: normal;
+}
+.a-188 .a-188-i h3 span {
+  display: block;
+  font-size: 14px;
+  color: #777;
+}
+.a-188 .a-188-i h3 a,
+.a-188 .a-188-i h3 a:hover,
+.a-188 .a-188-i h3 a:focus {
+  color: #333;
+  text-decoration: none;
+}
+.a-188 .a-188-i h4 {
+  margin: 0;
+  width: 100%;
+  text-align: right;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: normal;
+}
+.a-188 .a-188-i h4 span {
+  position: absolute;
+  right: 0;
+  display: block;
+  font-size: 15px;
+}
+.a-188 .a-188-i h4 span:before,
+.a-188 .a-188-i h4 span:after {
+  margin: 0 3px;
+}
+.a-188 .a-188-i.a-188-up {
+  border-left: 4px solid #51d466;
+}
+.a-188 .a-188-i.a-188-up h4 span {
+  color: #51d466;
+}
+.a-188 .a-188-i.a-188-up h4 span:before {
+  content: "+";
+}
+.a-188 .a-188-i.a-188-up h4 span:after {
+  content: "\f102";
+  font-family: "FontAwesome";
+}
+.a-188 .a-188-i.a-188-down {
+  border-left: 4px solid #f75353;
+}
+.a-188 .a-188-i.a-188-down h4 span {
+  color: #f75353;
+}
+.a-188 .a-188-i.a-188-down h4 span:before {
+  content: "-";
+}
+.a-188 .a-188-i.a-188-down h4 span:after {
+  content: "\f103";
+  font-family: "FontAwesome";
+}

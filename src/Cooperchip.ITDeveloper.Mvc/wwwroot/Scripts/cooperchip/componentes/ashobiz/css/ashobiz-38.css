@@ -1,0 +1,65 @@
+/* A 38 */
+.a-38 {
+  max-width: 300px;
+  margin: 20px auto;
+  position: relative;
+  background: #fdfdfd;
+  padding: 20px;
+  border: 1px solid #ddd;
+  box-shadow: 2px 2px 0px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+  overflow: hidden;
+}
+.a-38 .a-38-h {
+  position: absolute;
+  width: 200px;
+  margin: 0px auto;
+  top: 20px;
+  right: -65px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  border: 3px solid rgba(0, 0, 0, 0.05);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.a-38 h3 {
+  margin: 10px 0px;
+  font-size: 30px;
+  line-height: 40px;
+  color: #555;
+}
+.a-38 ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+.a-38 ul li {
+  margin: 5px 0px;
+  font-size: 15px;
+  line-height: 33px;
+  color: #777;
+}
+.a-38 h4 {
+  margin: 20px 0px;
+  font-size: 25px;
+  line-height: 35px;
+  color: #555;
+}
+.a-38 h4 span {
+  font-size: 14px;
+  line-height: 14px;
+  color: #999;
+  display: block;
+}
+.a-38 a.a-btn {
+  border: 0px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 10px;
+}

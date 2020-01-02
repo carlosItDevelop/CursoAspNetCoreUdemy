@@ -1,0 +1,70 @@
+@-webkit-keyframes a212 {
+  0%,
+  45%,
+  100% {
+    border-color: #ffffff;
+    box-shadow: inset 0px 0px 100px rgba(0, 0, 0, 0.2);
+  }
+  50%,
+  95% {
+    border-color: rgba(0, 0, 0, 0.2);
+    box-shadow: none;
+  }
+}
+@keyframes a212 {
+  0%,
+  45%,
+  100% {
+    border-color: #ffffff;
+    box-shadow: inset 0px 0px 100px rgba(0, 0, 0, 0.2);
+  }
+  50%,
+  95% {
+    border-color: rgba(0, 0, 0, 0.2);
+    box-shadow: none;
+  }
+}
+.a-212 {
+  margin: 15px auto;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  padding: 0.8em 1em;
+  font-size: 50px;
+  line-height: 1.2;
+  color: #fff;
+  text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+}
+@media (max-width: 500px) {
+  .a-212 {
+    font-size: 30px;
+  }
+}
+.a-212:before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  right: 7px;
+  bottom: 7px;
+  border: 3px dotted;
+  -webkit-animation: a212 2s linear infinite;
+  animation: a212 2s linear infinite;
+}
+.a-212 a {
+  color: #fff;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+.a-212 a:hover,
+.a-212 a:focus {
+  color: #fff;
+  text-decoration: none;
+}

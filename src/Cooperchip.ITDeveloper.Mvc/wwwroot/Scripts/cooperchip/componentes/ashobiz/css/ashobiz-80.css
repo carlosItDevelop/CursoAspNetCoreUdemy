@@ -1,0 +1,54 @@
+.a-80 {
+  position: relative;
+  display: inline-block;
+  z-index: 10000;
+  margin: 2px 1px;
+  padding: 5px 18px 7px 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
+  letter-spacing: 0.05em;
+  font-size: 15px;
+  border-top: 3px solid rgba(0, 0, 0, 0.1);
+  color: #fff;
+  cursor: pointer;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.a-80 span {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #fff;
+  color: #666;
+  font-size: 13px;
+  line-height: 2;
+  letter-spacing: normal;
+  font-weight: normal;
+  text-transform: none;
+  text-shadow: none;
+  padding: 12px 17px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 0;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.075);
+  transition: 0.5s;
+  -webkit-transform-origin: 50% 0;
+  -moz-transform-origin: 50% 0;
+  -ms-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transform: perspective(1000px) rotateX(-90deg);
+  -moz-transform: perspective(1000px) rotateX(-90deg);
+  -ms-transform: perspective(1000px) rotateX(-90deg);
+  transform: perspective(1000px) rotateX(-90deg);
+}
+.a-80:hover span,
+.a-80:focus span,
+.a-80:active span {
+  -webkit-transform: perspective(1000px) rotateX(-360deg);
+  -moz-transform: perspective(1000px) rotateX(-360deg);
+  -ms-transform: perspective(1000px) rotateX(-360deg);
+  transform: perspective(1000px) rotateX(-360deg);
+}

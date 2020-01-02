@@ -1,0 +1,32 @@
+@import (reference) "ashobiz.base.less";
+.a-156{
+	padding: 50px 20px;
+	color: #fff;
+	text-align: center;
+	margin: 15px 0px;
+	border: 8px solid #fff;
+	box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.15), 0px 0px 15px rgba(0,0,0,0.1), inset 0px 0px 50px rgba(0,0,0,0.1);
+	position: relative;
+	z-index: 2;
+	&:before{
+		position: absolute;
+		content: "";
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		z-index: -1;
+		background-image: 
+			repeating-linear-gradient(-45deg,transparent 0,transparent 10px,rgba(255,255,255,0.1) 0,rgba(255,255,255,0.1) 12px),
+			repeating-linear-gradient(45deg,transparent 0,transparent 10px,rgba(255,255,255,0.1) 0,rgba(255,255,255,0.1) 12px),
+			repeating-linear-gradient(to right,transparent 0,transparent 10px,rgba(255,255,255,0.1) 0,rgba(255,255,255,0.1) 12px),
+			repeating-linear-gradient(to bottom,transparent 0,transparent 10px,rgba(255,255,255,0.1) 0,rgba(255,255,255,0.1) 12px);
+	}
+	h3{
+		color: #fff;
+		font-size: 35px;
+		line-height: 1.5;
+		font-weight: lighter;
+		text-shadow: 2px 2px 1px rgba(0,0,0,0.2);
+	}
+}

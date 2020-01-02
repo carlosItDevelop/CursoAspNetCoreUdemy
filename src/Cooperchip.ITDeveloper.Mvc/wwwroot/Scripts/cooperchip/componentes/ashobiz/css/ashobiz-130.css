@@ -1,0 +1,70 @@
+.a-130 {
+  max-width: 350px;
+  margin: 15px auto;
+  overflow: hidden;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1), inset 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+.a-130 .a-130-c {
+  position: relative;
+  top: 0;
+  left: 20%;
+  width: 80%;
+  height: 100%;
+  background: #fff;
+  padding: 30px 20px 30px 10px;
+  z-index: 10;
+}
+.a-130 .a-130-c:before {
+  position: absolute;
+  width: 100%;
+  height: 120%;
+  content: "";
+  background: #fff;
+  top: 0;
+  left: -40px;
+  -webkit-transform: rotate(-10deg);
+  -moz-transform: rotate(-10deg);
+  -ms-transform: rotate(-10deg);
+  transform: rotate(-10deg);
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  z-index: -1;
+}
+.a-130 .a-130-c:after {
+  position: absolute;
+  width: 120%;
+  height: 100%;
+  content: "";
+  background: #fff;
+  top: 0;
+  left: -40px;
+  -webkit-transform: rotate(10deg);
+  -moz-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
+  transform: rotate(10deg);
+  -webkit-transform-origin: 0 100%;
+  -moz-transform-origin: 0 100%;
+  -ms-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  z-index: -1;
+}
+.a-130 .a-130-c h3 {
+  font-size: 25px;
+  line-height: 35px;
+  margin-bottom: 10px;
+  color: #666;
+  font-weight: normal;
+}
+.a-130 .a-130-c h3 a,
+.a-130 .a-130-c h3 a:hover,
+.a-130 .a-130-c h3 a:focus {
+  color: #666;
+  text-decoration: none;
+}
+.a-130 .a-130-c p {
+  color: #888;
+  font-size: 15px;
+  line-height: 30px;
+}

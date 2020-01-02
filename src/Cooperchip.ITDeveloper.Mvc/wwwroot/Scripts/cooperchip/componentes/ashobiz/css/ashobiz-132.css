@@ -1,0 +1,91 @@
+.a-132 {
+  max-width: 260px;
+  margin: 20px auto 15px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 20px;
+  background: #fff;
+  position: relative;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.06), inset 0px 0px 100px rgba(0, 0, 0, 0.015);
+}
+.a-132 hr {
+  margin: 20px 0px;
+  border-top: 1px dashed #ddd;
+}
+.a-132 h3 {
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  background: #fafafa;
+  font-size: 13px;
+  line-height: 2;
+  text-transform: uppercase;
+  color: #444;
+  padding: 0px 10px;
+  font-weight: normal;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.a-132 h2 {
+  font-size: 35px;
+  line-height: 1.5;
+  color: #666;
+  font-weight: lighter;
+}
+.a-132 h2 i {
+  font-size: 20px;
+}
+.a-132 h4 {
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+  display: inline-block;
+  margin: 0px;
+  position: relative;
+  width: 100%;
+}
+.a-132 h4 span {
+  position: absolute;
+  right: 0px;
+  color: #777;
+  font-weight: normal;
+}
+.a-132 .a-132-b {
+  margin: 8px 0px 25px 0px;
+  height: 9px;
+  background: #f3f3f3;
+  border-radius: 4px;
+  box-shadow: inset 0px 0px 1px rgba(0, 0, 0, 0.5);
+  position: relative;
+  height: 7px;
+}
+.a-132 .a-132-b .a-132-bar {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: 4px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  height: 100%;
+  text-align: right;
+}
+.a-132 .a-132-s {
+  background: #fbfbfb;
+  margin: 10px 0px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  padding: 3px 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 13px;
+}
+.a-132 .a-132-s > span {
+  margin: 0px 5px;
+}
+.a-132 .a-btn {
+  display: block;
+  text-align: center;
+  padding: 12px 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+}

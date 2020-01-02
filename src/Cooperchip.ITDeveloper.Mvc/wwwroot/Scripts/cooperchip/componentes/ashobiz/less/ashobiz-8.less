@@ -1,0 +1,92 @@
+@import (reference) "ashobiz.base.less";
+.a-8{
+	max-width:600px;
+	margin:20px 20px 20px 85px;
+	border-left:1px solid rgba(0,0,0,0.1);
+	padding:10px 0px;
+	@media (max-width: 500px){
+		margin: 20px;
+		border: 0;
+	}
+	> div{
+		position:relative;
+		margin:40px 0px;
+		h3{
+			width:120px;
+			height:120px;
+			box-shadow: inset 0px 0px 40px rgba(0,0,0,0.05);
+			text-align:center;
+			line-height:40px;
+			font-size:14px;
+			font-weight: normal;
+			text-transform:uppercase;
+			border-radius:50%;
+			position:absolute;
+			left:-60px;
+			color:#fff;
+			padding-top:22px;
+			text-shadow: 2px 2px 1px rgba(0,0,0,0.2);
+			span{
+				display:block;
+				font-size:45px;
+				font-weight: normal;
+			}
+			@media (max-width: 500px){
+				position: static;
+				margin-bottom:20px;
+			}
+		}
+		.a-8-c{
+			margin-left:90px;
+			position:relative;
+			background:#fff;
+			border:1px solid rgba(0,0,0,0.1);
+			padding:15px 20px;
+			border-radius: 6px;
+			box-shadow:3px 3px 0px 1px rgba(0,0,0,0.1);
+			@media (max-width: 500px){
+				margin-left: 0;
+			}
+			h4{
+				font-size: 18px;
+				line-height: 1.8;
+				margin: 0;
+				margin-bottom: 3px;
+			}
+			p{
+				font-size: 14px;
+				line-height: 2;
+				color: #777;
+				margin: 0;
+			}
+			&:before,&:after{
+				right: 100%;
+				top: 35%;
+				border: solid transparent;
+				content: " ";
+				height: 0;
+				width: 0;
+				position: absolute;
+				pointer-events: none;
+				@media (max-width: 600px){
+					top: 25%;
+				}
+				@media (max-width: 500px){
+					display:none;
+				}
+			}
+			&:after {
+				border-color: rgba(255, 255, 255, 0);
+				border-right-color: #ffffff;
+				border-width: 13px;
+				margin-top: -20px;
+			}
+			&:before {
+				border-color: rgba(238, 238, 238, 0);
+				border-right-color: rgba(0,0,0,0.15);
+				border-width: 14px;
+				margin-top: -21px;
+			}
+		}
+	}
+}

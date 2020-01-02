@@ -1,0 +1,29 @@
+.a-191 {
+  display: inline-block;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  line-height: 100px;
+  text-align: center;
+  text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.2);
+  font-size: 45px;
+  border-radius: 4px;
+  color: #fff;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.175), rgba(0, 0, 0, 0.175) 50%, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0) 51%, rgba(0, 0, 0, 0));
+}
+.a-191:before {
+  width: 90%;
+  left: 5%;
+  height: 20px;
+  bottom: 0;
+  position: absolute;
+  content: "";
+  z-index: -1;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+}
+.a-191:hover,
+.a-191:focus {
+  color: #fff;
+  text-decoration: none;
+}

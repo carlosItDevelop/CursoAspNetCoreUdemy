@@ -1,0 +1,64 @@
+/* A 55 */
+.a-55 {
+  max-width: 350px;
+  margin: 15px auto;
+  position: relative;
+  overflow: hidden;
+}
+.a-55 .a-55-m {
+  position: absolute;
+  top: 0px;
+  right: 0%;
+  width: 50%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2), inset 0px 0px 15px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  transition: 0.5s;
+  -webkit-transform: translateX(200px);
+  -moz-transform: translateX(200px);
+  -ms-transform: translateX(200px);
+  transform: translateX(200px);
+}
+.a-55 .a-55-m h3 {
+  color: #fff;
+  margin: 10px 0px;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: normal;
+  margin-top: 40%;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
+}
+.a-55 .a-55-m h3 a,
+.a-55 .a-55-m h3 a:hover,
+.a-55 .a-55-m h3 a:focus {
+  color: #fff;
+  text-decoration: none;
+}
+@media (max-width: 550px) {
+  .a-55 .a-55-m h3 {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+.a-55 .a-55-m > a i {
+  display: block;
+  margin: 5px 0px;
+  width: 35px;
+  height: 35px;
+  line-height: 31px;
+  border: 2px solid #fff;
+  border-radius: 100%;
+  font-size: 25px;
+  color: #fff;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.1);
+}
+.a-55:hover .a-55-m {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+}

@@ -1,6 +1,6 @@
-﻿using Cooperchip.ITDeveloper.Mvc.Extentions.Filters;
+﻿
+using Cooperchip.ITDeveloper.Mvc.Extentions.Filters;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Cooperchip.ITDeveloper.Mvc.Configuration
@@ -18,7 +18,7 @@ namespace Cooperchip.ITDeveloper.Mvc.Configuration
             }).SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
 
 
-            services.AddControllersWithViews();
+            services.AddControllersWithViews().AddRazorRuntimeCompilation();
             services.AddRazorPages();
 
             return services;

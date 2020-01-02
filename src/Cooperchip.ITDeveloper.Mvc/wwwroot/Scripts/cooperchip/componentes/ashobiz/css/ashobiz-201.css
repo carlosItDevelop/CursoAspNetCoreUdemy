@@ -1,0 +1,74 @@
+.a-201 {
+  max-width: 280px;
+  margin: 15px auto;
+  text-align: center;
+  border-radius: 4px;
+}
+.a-201 > a {
+  display: block;
+  color: #fff;
+  padding: 15px 0px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  font-size: 16px;
+  border-top: 4px solid rgba(0, 0, 0, 0.05);
+  font-weight: bold;
+}
+.a-201 > a:hover,
+.a-201 > a:focus {
+  color: #fff;
+  text-decoration: none;
+}
+.a-201 > a i {
+  display: block;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-size: 24px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.15);
+  margin: 5px auto 10px;
+}
+.a-201 .a-201-c {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-bottom-width: 4px;
+  border-top: 0px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.a-201 .a-201-c:before,
+.a-201 .a-201-c:after {
+  content: " ";
+  display: table;
+}
+.a-201 .a-201-c:after {
+  clear: both;
+}
+.a-201 .a-201-c h5 {
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: normal;
+  padding: 13px 5px 12px 5px;
+  width: 50%;
+  text-align: center;
+  box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.05), inset 0px 0px 50px rgba(0, 0, 0, 0.025);
+  float: left;
+}
+.a-201 .a-201-c h5 span {
+  display: block;
+  font-size: 25px;
+  font-weight: normal;
+  color: #666;
+}
+.a-201 .a-201-c h5 a {
+  color: #777;
+}
+.a-201 .a-201-c h5 a:hover,
+.a-201 .a-201-c h5 a:focus {
+  color: #777;
+  text-decoration: none;
+}
