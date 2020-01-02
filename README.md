@@ -1,6 +1,11 @@
-# Repositório Oficial do Projeto MedicalManagement-Sys
+## Repositório Oficial do Projeto MedicalManagement-Sys
 
-## Este projeto é o Caso de Uso do nosso Curso de Asp.NetCore MVC - Do Zero ao Ninja
+### Este projeto é o Caso de Uso do nosso Curso de Asp.NetCore MVC - Do Zero ao Ninja
+
+> *__Tela Inicial criada em 02-01-2020. Está no Release 0.10.1. Confira lá:__*
+
+![Tela Inicial do Projeto MedicalManagenet-Sys](https://user-images.githubusercontent.com/1213751/71663844-87052780-2d35-11ea-95c0-623a74885ebc.png "Antes do Dashboard")
+
 
 ### DataCadastro:
 
