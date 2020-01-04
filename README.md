@@ -19,12 +19,12 @@
 ---------------------------------------------------------------	| -------------	| --------	
  Criar uma Tag Helper para exibir um e-mail no Rodapé			| Alta			| Ok		
  Podemos usar um domínio padrão ou um parametrizado				| Alta			| Ok		
- Vamos customizar a Tag Html "a", usando, inclusive, o mailTo	| Normal		| Not Implem		
- Preciso de uma classe com o sufixo Tagelper					| Baixa			| Not Implem
- Preciso que a classe acima Herde de TagHelper					| Alta			| Not Implem
- Package: using Microsoft.Asp.NetCore.Razor.TagHelpers			| Baixa			| Not Implem
- Essa class precisa sobrescrever a Task ProcessAsync			| Média			| Not Implem
- Parâmetros: (TagHelperContext context, TagHelperOutput output)	| Média			| Not Implem
+ Vamos customizar a Tag Html "a", usando, inclusive, o mailTo	| Normal		| Ok		
+ Preciso de uma classe com o sufixo Tagelper					| Baixa			| Ok
+ Preciso que a classe acima Herde de TagHelper					| Alta			| Ok
+ Package: using Microsoft.Asp.NetCore.Razor.TagHelpers			| Baixa			| Ok
+ Essa class precisa sobrescrever a Task ProcessAsync			| Média			| Ok
+ Parâmetros: (TagHelperContext context, TagHelperOutput output)	| Média			| Ok
  Neste exemplo vamos deixar o context de lado					| Baixa			| Ok
  Usaremos um domínio default ou receberemos no parâmetro		| Normal		| OK
  Usaremos a notação Kebab Case: MeuEmail  => meu-email			| Baixa			| Ok
