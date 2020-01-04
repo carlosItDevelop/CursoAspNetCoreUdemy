@@ -13,6 +13,18 @@
 
 ---
 
+### Controle de Versão:
+
+> __Fim do Módulo Básico e Intermediário__:  *Preimeiro pré-release com todo o Módulo Básico e Parte do Intermediário, até a Migração do Asp.Net Core 2.2 para as versões 3.0.0 e 3.1.0*
+
+- Pré-Release v.0.9.0: **[Acesse Aqui](https://github.com/carlosItDevelop/CursoAspNetCoreUdemy/releases/tag/CursoAspNetCoreUdemy)**.
+
+> __Tela Inicial e Correção de Bug__:  *Pré-Release com a Criação da Tela Inicial do Projeto e Correção de Bug (Atualização de .CSHTML em Runtime).*
+
+- Pré-Release v.0.10.1: **[Acesse Aqui](https://github.com/carlosItDevelop/CursoAspNetCoreUdemy/releases/tag/Atualizacao_TelaInicial)**.
+
+---
+
 > ### TaskList - Tag Helpers
 
  Feature														| Complexidade	| Status	
