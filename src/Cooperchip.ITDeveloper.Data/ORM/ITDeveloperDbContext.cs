@@ -1,13 +1,8 @@
 ﻿
-using System;
-using Cooperchip.ITDeveloper.Data.Mapping;
 using Cooperchip.ITDeveloper.Domain.Entities;
 using Cooperchip.ITDeveloper.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace Cooperchip.ITDeveloper.Data.ORM
 {

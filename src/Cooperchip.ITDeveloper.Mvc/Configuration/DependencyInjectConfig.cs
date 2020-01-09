@@ -1,4 +1,4 @@
-﻿using Cooperchip.ITDeveloper.Mvc.Extentions.Filters;
+﻿using Cooperchip.ITDeveloper.Mvc.Extensions.Filters;
 using KissLog;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;

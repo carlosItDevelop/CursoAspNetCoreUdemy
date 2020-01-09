@@ -55,11 +55,5 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
-        [Route("icones")]
-        public IActionResult Icones()
-        {
-            return View();
-        }
-
     }
 }

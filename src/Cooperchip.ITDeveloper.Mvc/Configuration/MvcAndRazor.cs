@@ -1,5 +1,5 @@
 ﻿
-using Cooperchip.ITDeveloper.Mvc.Extentions.Filters;
+using Cooperchip.ITDeveloper.Mvc.Extensions.Filters;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -15,7 +15,7 @@ namespace Cooperchip.ITDeveloper.Mvc.Configuration
                 options.Filters.Add(typeof(AuditoriaIloggerFilter));
                 // Todo: add >> AutoValidateAntiforgeryTokenAttribute
 
-            }).SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
+            });//.SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
 
 
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
