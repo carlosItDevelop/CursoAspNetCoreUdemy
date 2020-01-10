@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
+using Cooperchip.ITDeveloper.Mvc.Extensions.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -13,13 +14,13 @@ namespace Cooperchip.ITDeveloper.Mvc.Areas.Identity.Pages.Account.Manage
 {
     public partial class IndexModel : PageModel
     {
-        private readonly UserManager<IdentityUser> _userManager;
-        private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly IEmailSender _emailSender;
 
         public IndexModel(
-            UserManager<IdentityUser> userManager,
-            SignInManager<IdentityUser> signInManager,
+            UserManager<ApplicationUser> userManager,
+            SignInManager<ApplicationUser> signInManager,
             IEmailSender emailSender)
         {
             _userManager = userManager;
@@ -39,6 +40,26 @@ namespace Cooperchip.ITDeveloper.Mvc.Areas.Identity.Pages.Account.Manage
 
         public class InputModel
         {
+            // Todo: by Carlos
+
+            [PersonalData]
+            [Required(ErrorMessage = "O campo {0} é obrigatório!")]
+            [StringLength(maximumLength: 35, ErrorMessage = "O campo {0} deve ter entre {2} e {1} caracteres!", MinimumLength = 2)]
+            public string Apelido { get; set; }
+
+            [PersonalData]
+            [Display(Name = "Nome Completo")]
+            [Required(ErrorMessage = "O campo {0} é obrigatório!")]
+            [StringLength(maximumLength: 80, ErrorMessage = "O campo {0} deve ter entre {2} e {1} caracteres!", MinimumLength = 2)]
+            public string NomeCompleto { get; set; }
+
+            [PersonalData]
+            [Required(ErrorMessage = "O campo {0} é obrigatório!")]
+            [DataType(DataType.Date)]
+            [Display(Name = "Data de Nascimento")]
+            public DateTime DataNascimento { get; set; }
+            // ============================================
+
             [Required]
             [EmailAddress]
             public string Email { get; set; }
@@ -65,7 +86,12 @@ namespace Cooperchip.ITDeveloper.Mvc.Areas.Identity.Pages.Account.Manage
             Input = new InputModel
             {
                 Email = email,
-                PhoneNumber = phoneNumber
+                PhoneNumber = phoneNumber,
+
+                // Todo: Insert Carlos
+                Apelido = user.Apelido,
+                NomeCompleto = user.NomeCompleto,
+                DataNascimento = user.DataNascimento
             };
 
             IsEmailConfirmed = await _userManager.IsEmailConfirmedAsync(user);
@@ -107,6 +133,22 @@ namespace Cooperchip.ITDeveloper.Mvc.Areas.Identity.Pages.Account.Manage
                     throw new InvalidOperationException($"Unexpected error occurred setting phone number for user with ID '{userId}'.");
                 }
             }
+
+            // Todo: Insert Carlos
+            if (Input.Apelido != user.Apelido)
+            {
+                user.Apelido = Input.Apelido;
+            }
+            if (Input.NomeCompleto != user.NomeCompleto)
+            {
+                user.NomeCompleto = Input.NomeCompleto;
+            }
+            if (Input.DataNascimento != user.DataNascimento)
+            {
+                user.DataNascimento = Input.DataNascimento;
+            }
+
+
 
             await _signInManager.RefreshSignInAsync(user);
             StatusMessage = "Your profile has been updated";

@@ -1,4 +1,5 @@
 ﻿using Cooperchip.ITDeveloper.Mvc.Configuration;
+using Cooperchip.ITDeveloper.Mvc.Extensions.Identity.Services;
 using KissLog.Apis.v1.Listeners;
 using KissLog.AspNetCore;
 
@@ -37,7 +38,7 @@ namespace Cooperchip.ITDeveloper.Mvc
             services.AddDbContextConfig(Configuration); // In DbContextConfig
             services.AddIdentityConfig(Configuration); // In IdentityConfig
             services.AddMvcAndRazor(); // In MvcAndRazor
-            services.AddDependencyInjectConfig(); // In DependencyInjectConfig
+            services.AddDependencyInjectConfig(Configuration); // In DependencyInjectConfig
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -71,6 +72,12 @@ namespace Cooperchip.ITDeveloper.Mvc
                     ));
                 });
             }
+
+            var authMsgSenderOpt = new AuthMessageSenderOptions
+            {
+                SendGridUser = Configuration["SendGridUser"],
+                SendGridKey = Configuration["SendGridKey"]
+            };
 
             app.UseEndpoints(endpoints =>
             {

@@ -3,7 +3,7 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Identity;
 
-namespace Cooperchip.ITDeveloper.Mvc.Extensions
+namespace Cooperchip.ITDeveloper.Mvc.Extensions.Identity
 {
     public class ApplicationUser : IdentityUser
     {

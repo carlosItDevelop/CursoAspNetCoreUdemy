@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
+using Cooperchip.ITDeveloper.Mvc.Extensions.Identity;
 using Microsoft.AspNetCore.Authorization; 
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
@@ -15,14 +16,14 @@ namespace Cooperchip.ITDeveloper.Mvc.Areas.Identity.Pages.Account
     [AllowAnonymous]
     public class RegisterModel : PageModel
     {
-        private readonly SignInManager<IdentityUser> _signInManager;
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly SignInManager<ApplicationUser> _signInManager;
+        private readonly UserManager<ApplicationUser> _userManager;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
 
         public RegisterModel(
-            UserManager<IdentityUser> userManager,
-            SignInManager<IdentityUser> signInManager,
+            UserManager<ApplicationUser> userManager,
+            SignInManager<ApplicationUser> signInManager,
             ILogger<RegisterModel> logger,
             IEmailSender emailSender)
         {
@@ -39,6 +40,27 @@ namespace Cooperchip.ITDeveloper.Mvc.Areas.Identity.Pages.Account
 
         public class InputModel
         {
+
+            // Todo: by Carlos
+
+            [PersonalData]
+            [Required(ErrorMessage = "O campo {0} é obrigatório!")]
+            [StringLength(maximumLength: 35, ErrorMessage = "O campo {0} deve ter entre {2} e {1} caracteres!", MinimumLength = 2)]
+            public string Apelido { get; set; }
+
+            [PersonalData]
+            [Display(Name = "Nome Completo")]
+            [Required(ErrorMessage = "O campo {0} é obrigatório!")]
+            [StringLength(maximumLength: 80, ErrorMessage = "O campo {0} deve ter entre {2} e {1} caracteres!", MinimumLength = 2)]
+            public string NomeCompleto { get; set; }
+
+            [PersonalData]
+            [Required(ErrorMessage = "O campo {0} é obrigatório!")]
+            [DataType(DataType.Date)]
+            [Display(Name = "Data de Nascimento")]
+            public DateTime DataNascimento { get; set; }
+            // ============================================
+
             [Required]
             [EmailAddress]
             [Display(Name = "Email")]
@@ -66,7 +88,14 @@ namespace Cooperchip.ITDeveloper.Mvc.Areas.Identity.Pages.Account
             returnUrl = returnUrl ?? Url.Content("~/");
             if (ModelState.IsValid)
             {
-                var user = new IdentityUser { UserName = Input.Email, Email = Input.Email };
+                var user = new ApplicationUser
+                {
+                    UserName = Input.Email, 
+                    Email = Input.Email,
+                    Apelido = Input.Apelido,
+                    NomeCompleto = Input.NomeCompleto,
+                    DataNascimento = Input.DataNascimento
+                };
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
                 {

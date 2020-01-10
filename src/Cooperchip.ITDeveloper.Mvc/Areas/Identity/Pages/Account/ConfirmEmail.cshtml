@@ -1,12 +1,21 @@
 ﻿@page
 @model ConfirmEmailModel
 @{
-    ViewData["Title"] = "Confirm email";
+    ViewData["Title"] = "Confirmação de Email";
 }
 
-<h2>@ViewData["Title"]</h2>
-<div>
-    <p>
-        Thank you for confirming your email.
-    </p>
+<div class="card">
+    <div class="card-title">
+        <h3 class="card-header">Confirmação de Email</h3>
+    </div>
+    <div class="card-body">
+        <h4>Sucesso!</h4>
+        <hr />
+        <p>Obrigado por confirmar seu email.</p>
+        <p>A partir de agora você poderá usufluir de todos os benefícios do sistema.</p>
+    </div>
+    <div class="card-footer">
+        <a class="btn btn-info" asp-controller="Home" asp-action="Index">Voltar para a página inicial</a>
+    </div>
+
 </div>

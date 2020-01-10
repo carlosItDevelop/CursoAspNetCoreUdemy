@@ -1,5 +1,5 @@
-﻿using Cooperchip.ITDeveloper.Mvc.Extensions;
-using Microsoft.AspNetCore.Identity;
+﻿
+using Cooperchip.ITDeveloper.Mvc.Extensions.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
