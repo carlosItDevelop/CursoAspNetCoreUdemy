@@ -1,10 +1,14 @@
 ﻿using Cooperchip.ITDeveloper.Mvc.Configuration;
+using Cooperchip.ITDeveloper.Mvc.Data;
+using Cooperchip.ITDeveloper.Mvc.Extensions.Identity;
 using Cooperchip.ITDeveloper.Mvc.Extensions.Identity.Services;
+using Cooperchip.ITDeveloper.Mvc.Identity.Services;
 using KissLog.Apis.v1.Listeners;
 using KissLog.AspNetCore;
 
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -41,7 +45,9 @@ namespace Cooperchip.ITDeveloper.Mvc
             services.AddDependencyInjectConfig(Configuration); // In DependencyInjectConfig
         }
 
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ApplicationDbContext context,
+            UserManager<ApplicationUser> userManager,
+            RoleManager<IdentityRole> roleManager)
         {
             if (env.IsDevelopment())
             {
@@ -88,6 +94,8 @@ namespace Cooperchip.ITDeveloper.Mvc
                 endpoints.MapRazorPages();
 
             });
+
+            DefaultUsersAndRoles.Seed(context, userManager, roleManager).Wait();
 
         }
     }

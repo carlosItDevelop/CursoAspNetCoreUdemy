@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Cooperchip.ITDeveloper.Mvc.Controllers
 {
-    //[Authorize]
+    [Authorize]
     public class PacienteController : Controller
     {
         private readonly ITDeveloperDbContext _context;
@@ -35,7 +35,7 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
                 return NotFound();
             }
 
-            var paciente = await _context.Paciente.Include(x=>x.EstadoPaciente).AsNoTracking()
+            var paciente = await _context.Paciente.Include(x => x.EstadoPaciente).AsNoTracking()
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (paciente == null)
             {
@@ -124,7 +124,7 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
                 return NotFound();
             }
 
-            var paciente = await _context.Paciente.Include(x=>x.EstadoPaciente).AsNoTracking()
+            var paciente = await _context.Paciente.Include(x => x.EstadoPaciente).AsNoTracking()
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (paciente == null)
             {
