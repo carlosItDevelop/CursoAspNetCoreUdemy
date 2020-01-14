@@ -79,6 +79,7 @@ namespace Cooperchip.ITDeveloper.Mvc
                 });
             }
 
+
             var authMsgSenderOpt = new AuthMessageSenderOptions
             {
                 SendGridUser = Configuration["SendGridUser"],
