@@ -44,36 +44,6 @@ namespace Cooperchip.ITDeveloper.Mvc
             services.AddIdentityConfig(Configuration); // In IdentityConfig
             services.AddMvcAndRazor(); // In MvcAndRazor
             services.AddDependencyInjectConfig(Configuration); // In DependencyInjectConfig
-
-
-
-            services.Configure<IdentityOptions>(options =>
-            {
-                // User Config
-                options.User.RequireUniqueEmail = true;
-                options.User.AllowedUserNameCharacters =
-                    "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+";
-
-                // Lockout Config
-                options.Lockout.AllowedForNewUsers = true;
-                options.Lockout.MaxFailedAccessAttempts = 4;
-                options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(4);
-
-                // SignIn Config
-                options.SignIn.RequireConfirmedPhoneNumber = false;
-                options.SignIn.RequireConfirmedAccount = false;
-                options.SignIn.RequireConfirmedEmail = true;  // Pay Attention
-
-                // Password Config          // Todo: Quer que a senha padrão seja Admin@123
-                options.Password.RequireUppercase = true;                   // A
-                options.Password.RequireLowercase = true;                   // dmin
-                options.Password.RequireNonAlphanumeric = true;             // @
-                options.Password.RequireDigit = true;                       // 123
-                options.Password.RequiredLength = 8;                        // Ok
-                options.Password.RequiredUniqueChars = 2;                   // 111
-
-            });
-
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ApplicationDbContext context,
@@ -117,6 +87,8 @@ namespace Cooperchip.ITDeveloper.Mvc
                 SendGridKey = Configuration["SendGridKey"]
             };
 
+            DefaultUsersAndRoles.Seed(context, userManager, roleManager).Wait();
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
@@ -126,8 +98,6 @@ namespace Cooperchip.ITDeveloper.Mvc
                 endpoints.MapRazorPages();
 
             });
-
-            DefaultUsersAndRoles.Seed(context, userManager, roleManager).Wait();
 
         }
     }

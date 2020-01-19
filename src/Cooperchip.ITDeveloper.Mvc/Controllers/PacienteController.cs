@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Cooperchip.ITDeveloper.Mvc.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "Admin")]
     public class PacienteController : Controller
     {
         private readonly ITDeveloperDbContext _context;

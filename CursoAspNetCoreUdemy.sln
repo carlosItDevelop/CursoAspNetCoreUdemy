@@ -21,9 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cooperchip.ITDeveloper.Data
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.Console", "5.Console", "{95A6370E-847C-4001-A741-329186717E15}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cooperchip.ITDeveloper.ConsoleApp", "src\Cooperchip.ITDeveloper.ConsoleApp\Cooperchip.ITDeveloper.ConsoleApp.csproj", "{5FF0312C-FA23-4387-AD60-02A3BE75DBCB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cooperchip.ITDeveloper.ConsoleApp", "src\Cooperchip.ITDeveloper.ConsoleApp\Cooperchip.ITDeveloper.ConsoleApp.csproj", "{5FF0312C-FA23-4387-AD60-02A3BE75DBCB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cooperchip.ITDeveloper.DomainCore", "src\Cooperchip.ITDeveloper.DomainCore\Cooperchip.ITDeveloper.DomainCore.csproj", "{6A8870CC-F6B3-4C03-9A8D-70D86420FDB5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cooperchip.ITDeveloper.DomainCore", "src\Cooperchip.ITDeveloper.DomainCore\Cooperchip.ITDeveloper.DomainCore.csproj", "{6A8870CC-F6B3-4C03-9A8D-70D86420FDB5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
