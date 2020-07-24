@@ -1,0 +1,21 @@
+﻿
+
+@model Cooperchip.ITDeveloper.Mvc.ViewModels.ContatoViewModel
+
+<div class="form-group">
+    <label asp-for="Email" class="control-label"></label>
+    <input asp-for="Email" class="form-control">
+    <span asp-validation-for="Email" class="text-danger"></span>
+</div>
+
+<div class="form-group">
+    <label asp-for="Subject" class="control-label"></label>
+    <input asp-for="Subject" class="form-control">
+    <span asp-validation-for="Subject" class="text-danger"></span>
+</div>
+
+<div class="form-group">
+    <label asp-for="Message" class="control-label"></label>
+    <textarea asp-for="Message" cols="30" rows="10" class="form-control"></textarea>
+    <span asp-validation-for="Message" class="text-danger"></span>
+</div>

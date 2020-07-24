@@ -28,6 +28,7 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
                 .Include(x => x.EstadoPaciente).AsNoTracking().ToListAsync());
         }
 
+
         public async Task<IActionResult> Details(Guid id)
         {
             if (id == null)

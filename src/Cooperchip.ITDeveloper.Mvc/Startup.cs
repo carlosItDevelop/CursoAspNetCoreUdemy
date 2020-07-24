@@ -3,6 +3,7 @@ using Cooperchip.ITDeveloper.Mvc.Configuration;
 using Cooperchip.ITDeveloper.Mvc.Data;
 using Cooperchip.ITDeveloper.Mvc.Extensions.Identity;
 using Cooperchip.ITDeveloper.Mvc.Extensions.Identity.Services;
+using Cooperchip.ITDeveloper.Mvc.Extensions.Middlewares;
 using Cooperchip.ITDeveloper.Mvc.Identity.Services;
 using KissLog.Apis.v1.Listeners;
 using KissLog.AspNetCore;
@@ -87,7 +88,10 @@ namespace Cooperchip.ITDeveloper.Mvc
                 SendGridKey = Configuration["SendGridKey"]
             };
 
-            DefaultUsersAndRoles.Seed(context, userManager, roleManager).Wait();
+            //CriaUsersAndRoles.Seed(context, userManager, roleManager).Wait();
+            //app.UseMiddleware<DefaultUsersAndRolesMiddeware>();
+
+            app.UseAddUserAndRoles();
 
             app.UseEndpoints(endpoints =>
             {

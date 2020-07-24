@@ -69,7 +69,7 @@ namespace Cooperchip.ITDeveloper.Mvc.Areas.Identity.Pages.Account
                 protocol: Request.Scheme);
 
             await _emailSender.SendEmailAsync(email, "Confirme seu Email antes de Logar",
-                $"Por gentileza, confirme sua conta <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'> Clicando aqui</a>.");
+                $"Por gentileza, confirme sua conta <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>Clicando aqui</a>.");
 
             StatusMessage = "Verificação de conta enviada. Por gentileza verifique seu Email";
 
