@@ -89,9 +89,8 @@ namespace Cooperchip.ITDeveloper.Mvc
             };
 
             //CriaUsersAndRoles.Seed(context, userManager, roleManager).Wait();
-            //app.UseMiddleware<DefaultUsersAndRolesMiddeware>();
-
-            app.UseAddUserAndRoles();
+            //app.UseMiddleware<DefaultUsersAndRolesMiddeware>();            
+            //app.UseAddUserAndRoles();
 
             app.UseEndpoints(endpoints =>
             {

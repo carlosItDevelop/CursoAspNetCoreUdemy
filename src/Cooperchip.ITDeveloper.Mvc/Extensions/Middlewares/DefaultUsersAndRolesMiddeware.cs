@@ -1,5 +1,6 @@
 ﻿using Cooperchip.ITDeveloper.Mvc.Data;
 using Cooperchip.ITDeveloper.Mvc.Extensions.Identity;
+using Cooperchip.ITDeveloper.Mvc.Identity.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using System;
@@ -28,8 +29,10 @@ namespace Cooperchip.ITDeveloper.Mvc.Extensions.Middlewares
         public async Task InvokeAsync(HttpContext _context)
         {
             Debug.WriteLine("RODANDO O PROCESSO DE VERIFICAÇÃO DE USUÁRIO E PAPEIS EXISTENTES. SE NÃO HOUVER CRIAR!");
-            // Executar nossa rotina de Criação de User and Role, só agora através de um Middleware
+
+            CriaUsersAndRoles.Seed(_dbContext, _userManager, _roleManager).Wait();
             await _next(_context);
+
             Debug.WriteLine("PROCESSO DE VERIFICAÇÃO DE USUÁRIO E PAPEIS TERMINADO!");
 
         }
