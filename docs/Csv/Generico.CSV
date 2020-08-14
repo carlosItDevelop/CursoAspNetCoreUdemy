@@ -1,0 +1,388 @@
+GenericoId;Descricao
+1;Abacavir
+2;Abciximab
+3;Acarbose
+4;Acetazolamida
+5;Aciclovir
+6;Ácido Acetilsalicílico
+7;Ácido Fólico
+8;Ácido Folínico
+9;Ácido Nicotínico
+10;Ácido Tranexâmico
+11;Ácido Valpróico
+12;Adenosina
+13;Adrenalina
+14;AGE
+15;Água
+16;AINEs
+17;Albendazol
+18;Albumina
+19;Alfentanil
+20;Alopurinol
+21;Alprazolam
+22;Alteplase
+23;Amantadina
+24;Ambroxol
+25;Amicacina
+26;Aminofilina
+27;Amiodarona
+28;Amitriptilina
+29;Amoxicilina
+30;Amoxicilina-clavulanato
+31;Ampicilina
+32;Ampicilina-sulbactam
+33;Amprenavir
+34;Amrinona
+35;Anestésicos gerais
+36;Anfotericina B
+37;Anlodipina
+38;Antiarrítmicos
+39;Antiparkinsonianos
+40;Antipsicóticos
+41;Astemizol
+42;Atazanavir
+43;Atenolol
+44;Atorvastatina
+45;Atovaquona
+46;Atracúrio
+47;Atropina
+48;Azitromicina
+49;Aztreonam
+50;Baclofeno
+51;Bamifilina
+52;Benzoato de Benzila
+53;Betabloqueadores
+54;Betametasona
+55;Bezafibrato
+56;Bicarbonato de Sódio
+57;Biperideno
+58;Bisacodil
+59;Bisoprolol
+60;Bromazepam
+61;Bromoprida
+62;Bupivacaína
+63;Buspirona
+64;Captopril
+65;Carbamazepina
+66;Carvedilol
+67;Caspofungina
+68;Cefaclor
+69;Cefadroxil
+70;Cefalexina
+71;Cefalotina
+72;Cefazolina
+73;Cefepima
+74;Cefotaxima
+75;Cefpiroma
+76;Ceftazidima
+77;Ceftriaxona
+78;Cefuroxima
+79;Celecoxibe
+80;Cetoconazol
+81;Cetoprofeno
+82;Cetorolaco
+83;Ciclosporina
+84;Cilostazol
+85;Cimetidina
+86;Cinarizina
+87;Ciprofloxacina
+88;Cisaprida
+89;Citalopram
+90;Claritromicina
+91;Clindamicina
+92;Clofibrato
+93;Clonazepam
+94;Clonidina
+95;Clopidogrel
+96;Cloranfenicol
+97;Clordiazepóxido
+98;Cloroquina
+99;Clorpromazina
+100;Clorpropamida
+101;Clortalidona
+102;Codeína
+103;Codergocrina
+104;Colchicina
+105;Colestiramina
+106;Complexo B
+107;Dantrolene
+108;Dapsona
+109;Daptomicina
+110;Darunavir
+111;Delavirdina
+112;Deslanosídeo C
+113;Desmopressina
+114;Dexametasona
+115;Dexclorfeniramina
+116;Dexmedetomidine
+117;Diazepam
+118;Diclofenaco
+119;Didanosina
+120;Dieta
+121;Digoxina
+122;Diltiazem
+123;Dimenidrinato
+124;Dimeticona
+125;Dinitrato de Isossorbida
+126;Diosmina-Hesperidina
+127;Dipirona
+128;Disopiramida
+129;Diuréticos de alça
+130;Dobutamina
+131;Domperidona
+132;Dopamina
+133;Doxazosina
+134;Doxiciclina
+135;Drotrecogina Alfa
+136;Ebastina
+137;Efavirenz
+138;Enalapril
+139;Enoxiparina
+140;Eritromicina
+141;Eritropoietina
+142;Ertapenem
+143;Esmolol
+144;Espironolactona
+145;Estavudina
+146;Estreptomicina
+147;Estreptoquinase
+148;Etambutol
+149;Etionamida
+150;Etoricoxibe
+151;Fenazopiridina
+152;Fenitoína
+153;Fenobarbital
+154;Fenotiazinas
+155;Fentanil
+156;Finasterida
+157;Fleet Enema
+158;Floratil
+159;Fluconazol
+160;Fludrocortisona
+161;Flumazenil
+162;Flunarizina
+163;Flunitrazepam
+164;Fluoxetina
+165;Fluvastatina
+166;Fosamprenavir
+167;Furosemida
+168;Gabapentina
+169;Ganciclovir
+170;Gatifloxacina
+171;Genfibrozil
+172;Gentamicina
+173;Gingko Biloba
+174;Glibenclamida
+175;Glicerina
+176;Gliclazida
+177;Glicose
+178;Glimepirida
+179;Glipizida
+180;Glucagon
+181;Gluconato de Cálcio
+182;Haloperidol
+183;Heparina
+184;Hidralazina
+185;Hidroclorotiazida
+186;Hidrocortisona
+187;Hidroxicloroquina
+188;Hidróxido de Alumínio
+189;Hidroxietilamido
+190;Hidroxizina
+191;Hioscina
+192;Hioscina Composta
+193;Hioscina-Dipirona
+194;Hipoglicemiantes orais
+195;Hisoscel
+196;Hypericum perfuratum
+197;Ibuprofeno
+198;Imipenem
+199;Imipramina
+200;Indapamida
+201;Indinavir
+202;Indometacina
+203;Inibidores da Anidrase Carbônica
+204;Inibidores da Protease
+205;Insulina
+206;Isoniazida
+207;Itraconazol
+208;Ivermectina
+209;KCl
+210;Ketamina
+211;Labetalol
+212;Lactulose
+213;Lamivudina
+214;Lamivudina-Zidovudina
+215;Lansoprazol
+216;Levodopa
+217;Levodopa/Carbidopa
+218;Levodopa-Carbidopa
+219;Levofloxacina
+220;Levomepromazina
+221;Levosimendam
+222;Levotiroxina
+223;Lidocaína
+224;Linezolida
+225;Lisinopril
+226;Lítio
+227;Loperamida
+228;Lopinavir/r
+229;Lopinavir-r
+230;Loratadina
+231;Lorazepam
+232;Lorazepan
+233;Losartan
+234;Lovastatina
+235;Manitol
+236;Mebendazol
+237;Mefloquina
+238;Meperidina
+239;Meropenem
+240;Mesalazina
+241;Metadona
+242;Metformina
+243;Metildopa
+244;Metilprednisolona
+245;Metimazol
+246;Metoclopramida
+247;Metoprolol
+248;Metotrexate
+249;Metronidazol
+250;Midazolam
+251;Milrinona
+252;Mononitrato de Isossorbida
+253;Morfina
+254;Moxifloxacina
+255;Mupirocin
+256;N-Acetilcisteína
+257;NaCl
+258;Nalbufina
+259;Naloxona
+260;Nebivolol
+261;Nelfinavir
+262;Neostigmina
+263;Nevirapina
+264;Nifedipina
+265;Nifepidina
+266;Nimesulida
+267;Nimodipina
+268;Nistatina
+269;Nitrendipina
+270;Nitroglicerina
+271;Nitroprussiato de Sódio
+272;Noradrenalina
+273;Norfloxacina
+274;Nortriptilina
+275;Nutrição Parenteral Total
+276;Ocitocina
+277;Octreotida
+278;Octreotide
+279;Óleo Mineral
+280;Omeprazol
+281;Ondansetrona
+282;Orlistate
+283;Oseltamivir
+284;Oxacilina
+285;Oxigênio
+286;Pancurônio
+287;Pantoprazol
+288;Paracetamol
+289;Paroxetina
+290;Penicilina G
+291;Pentamidina
+292;Pentobarbital
+293;Pentoxifilina
+294;Piperacilina-tazobactam
+295;Pirazinamida
+296;Piridostigmina
+297;Pirimetamina
+298;Piroxicam
+299;Pitavastatina
+300;Plasma fresco congelado
+301;Polimixina B
+302;Posaconazol
+303;Pravastatina
+304;Prednisolona
+305;Prednisona
+306;Primidona
+307;Procainamida
+308;Prometazina
+309;Propafenona
+310;Propatilnitrato
+311;Propiltiouracil
+312;Propofol
+313;Propranolol
+314;Protamina
+315;Quinidina
+316;Quinina
+317;Quinolonas
+318;Quinupristina-dalfopristina
+319;Ramipril
+320;Ranitidina
+321;Repaglinida
+322;Rifabutina
+323;Rifampicina
+324;Rifampicina-Isoniazida
+325;Ringer Lactato
+326;Ringer Simples
+327;Risperidona
+328;Ritonavir
+329;Rivaroxabana
+330;Rivastigmina
+331;Rosiglitazona
+332;Rosuvastatina
+333;rtPA
+334;Salbutamol
+335;Saquinavir
+336;Secnidazol
+337;Sertralina
+338;Sildenafil
+339;Sinvastatina
+340;Sotalol
+341;Succinilcolina
+342;Sucralfato
+343;Sulfametoxazol-Trimetoprim
+344;Sulfassalazina
+345;Sulfato de Magnésio
+346;Sulfato Ferroso
+347;Tamarine
+348;Teicoplanina
+349;Tenoxicam
+350;Terfenadina
+351;Tiabendazol
+352;Tiazídicos
+353;Ticarcilina
+354;Ticarcilina-clavulanato
+355;Ticlopidina
+356;Tigeciclina
+357;Timolol
+358;Tinidazol
+359;Tiopental
+360;Tipranavir
+361;Tirofiban
+362;Tobramicina
+363;Tramadol
+364;Trazodona
+365;Tricíclicos
+366;Trimetazidina
+367;Troglitazona
+368;Valaciclovir
+369;Valsartan
+370;Vancomicina
+371;Vasopressina
+372;Vecurônio
+373;Venlafaxina
+374;Veparamil
+375;Verapamil
+376;Vitamina B1
+377;Vitamina B12
+378;Vitamina B6
+379;Vitamina C
+380;Vitamina D
+381;Vitamina E
+382;Vitamina K
+383;Voriconazol
+384;Warfarin
+385;Zidovudina
+386;RIPE
+387;Curativo

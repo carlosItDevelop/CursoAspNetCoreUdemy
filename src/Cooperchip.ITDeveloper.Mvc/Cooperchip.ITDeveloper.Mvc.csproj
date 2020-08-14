@@ -6,6 +6,19 @@
     <UserSecretsId>b3c8d2d8-5814-43f8-99a5-e1baf75e3240</UserSecretsId>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Migrations\20200814022045_AddGenericoAppDbContext-02.cs" />
+    <Compile Remove="Migrations\20200814022045_AddGenericoAppDbContext-02.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bin\Debug\netcoreapp3.1\Csv\Bairro.CSV" />
+    <None Include="bin\Debug\netcoreapp3.1\Csv\Cid.CSV" />
+    <None Include="bin\Debug\netcoreapp3.1\Csv\Cidade.CSV" />
+    <None Include="bin\Debug\netcoreapp3.1\Csv\Generico.CSV" />
+    <None Include="bin\Debug\netcoreapp3.1\Csv\Medicamentos.CSV" />
+  </ItemGroup>
+
 
   <ItemGroup>
 

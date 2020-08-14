@@ -1,0 +1,1107 @@
+MedicamentoId;Descricao;Generico;IdGenerico
+1;3TC (comprimido);Lamivudina;213
+2;3TC (solução);Lamivudina;213
+3;AAS;Ácido Acetilsalicílico;6
+4;Abacavir (comprimido);Abacavir;1
+5;Abacavir (solução);Abacavir;1
+6;Abciximab;Abciximab;2
+7;Abelcet;Anfotericina B;36
+8;Acarbose;Acarbose;3
+9;Acarsan (sabonete);Benzoato de Benzila;52
+10;Acarsan (loção);Benzoato de Benzila;52
+11;Acetazolamida;Acetazolamida;4
+12;Acetilcisteína (ampola);N-Acetilcisteína;256
+13;Acetilcisteína (comprimido);N-Acetilcisteína;256
+14;Acetilcisteína (envelope);N-Acetilcisteína;256
+15;Acetilcisteína (nasal);N-Acetilcisteína;256
+16;Acetilcisteína (xarope);N-Acetilcisteína;256
+17;Aciclovir (comprimido);Aciclovir;5
+18;Aciclovir (creme);Aciclovir;5
+19;Aciclovir (injetável);Aciclovir;5
+20;Aciclovir (pomada oftálmica);Aciclovir;5
+21;Ácido Acetilsalicílico;Ácido Acetilsalicílico;6
+22;Ácido Ascórbico (ampola);Vitamina C;379
+23;Ácido Ascórbico (comprimido);Vitamina C;379
+24;Ácido Ascórbico (gotas);Vitamina C;379
+25;Ácido Fólico (comprimido);Ácido Fólico;7
+26;Ácido Fólico (gotas);Ácido Fólico;7
+27;Ácido Fólico (solução);Ácido Fólico;7
+28;Ácido Folínico (comprimido);Ácido Folínico;8
+29;Ácido Folínico (injetável);Ácido Folínico;8
+30;Ácido Nicotínico;Ácido Nicotínico;9
+31;Ácido Tranexâmico (ampola);Ácido Tranexâmico;10
+32;Ácido Tranexâmico (comprimido);Ácido Tranexâmico;10
+33;Ácido Valpróico (CC);Ácido Valpróico;11
+34;Ácido Valpróico (xarope);Ácido Valpróico;11
+35;Actilyse;Alteplase;22
+36;Adalat;Nifedipina;264
+37;Adalat Óros;Nifedipina;264
+38;Adalat Retard;Nifedipina;264
+39;Adenocard;Adenosina;12
+40;Adenosina;Adenosina;12
+41;Adrenalina;Adrenalina;13
+42;Advil;Ibuprofeno;197
+43;Aerolin (ampola);Salbutamol;334
+44;Aerolin (comprimido);Salbutamol;334
+45;Aerolin (spray);Salbutamol;334
+46;Aerolin (xarope);Salbutamol;334
+47;Agarol;Óleo Mineral;279
+48;AGE creme;AGE;14
+49;Agenerase (cápsula);Amprenavir;33
+50;Agenerase (solução);Amprenavir;33
+51;Agrastat;Tirofiban;361
+52;Água Livre;Água;15
+53;Akineton (ampola);Biperideno;57
+54;Akineton (comprimido);Biperideno;57
+55;Albendazol (comprimido);Albendazol;17
+56;Albendazol (suspensão);Albendazol;17
+57;Albumina 20%;Albumina;18
+58;Aldactone;Espironolactona;144
+59;Aldomet;Metildopa;243
+60;Allopurinol;Alopurinol;20
+61;Alopurinol;Alopurinol;20
+62;Alprazolam;Alprazolam;21
+63;Alteplase;Alteplase;22
+64;Amantadina;Amantadina;23
+65;Amaryl;Glimepirida;178
+66;Ambisome;Anfotericina B;36
+67;Ambroxol (CC);Ambroxol;24
+68;Ambroxol (gotas);Ambroxol;24
+69;Ambroxol (xarope);Ambroxol;24
+70;Amicacina;Amicacina;25
+71;Aminofilina (ampola);Aminofilina;26
+72;Aminofilina (comprimido);Aminofilina;26
+73;Aminofilina (gotas);Aminofilina;26
+74;Amiodarona (ampola);Amiodarona;27
+75;Amiodarona (comprimido);Amiodarona;27
+76;Amiodarona (gotas);Amiodarona;27
+77;Amitriptilina;Amitriptilina;28
+78;Amlodipina;Anlodipina;37
+79;Amoxicilina (cápsula);Amoxicilina;29
+80;Amoxicilina (suspensão);Amoxicilina;29
+81;Amoxicilina-clavulanato (drágea);Amoxicilina-clavulanato;30
+82;Amoxicilina-clavulanato (injetável);Amoxicilina-clavulanato;30
+83;Amoxicilina-clavulanato (suspensão);Amoxicilina-clavulanato;30
+84;Amoxil (cápsula);Amoxicilina;29
+85;Amoxil (suspensão);Amoxicilina;29
+86;Amoxil BD (comprimido);Amoxicilina;29
+87;Amoxil BD (suspensão);Amoxicilina;29
+88;Ampicilina (CC);Ampicilina;31
+89;Ampicilina (injetável);Ampicilina;31
+90;Ampicilina (suspensão);Ampicilina;31
+91;Ampicilina-sulbactam (comprimido);Ampicilina-sulbactam;32
+92;Ampicilina-sulbactam (injetável);Ampicilina-sulbactam;32
+93;Ampicilina-sulbactam (suspensão);Ampicilina-sulbactam;32
+94;Amplictil (ampola);Clorpromazina;99
+95;Amplictil (comprimido);Clorpromazina;99
+96;Amplictil (gotas);Clorpromazina;99
+97;Amprenavir (cápsula);Amprenavir;33
+98;Amprenavir (solução);Amprenavir;33
+99;Amrinona;Amrinona;34
+100;Amytril;Amitriptilina;28
+101;Ancoron (ampola);Amiodarona;27
+102;Ancoron (comprimido);Amiodarona;27
+103;Ancoron (gotas);Amiodarona;27
+104;Anfotericina B;Anfotericina B;36
+105;Anlodipina;Anlodipina;37
+106;Anrinona;Amrinona;34
+107;Antak (ampola);Ranitidina;320
+108;Antak (comprimido);Ranitidina;320
+109;Antak (xarope);Ranitidina;320
+110;Apresolina;Hidralazina;184
+111;Arcoxia;Etoricoxibe;150
+112;Atazanavir;Atazanavir;42
+113;Atenol;Atenolol;43
+114;Atenolol;Atenolol;43
+115;Atensina;Clonidina;94
+116;Atorvastatina;Atorvastatina;44
+117;Atracúrio;Atracúrio;46
+118;Atropina (ampola);Atropina;47
+119;Atropina (colírio);Atropina;47
+120;Avalox (comprimido);Moxifloxacina;254
+121;Avalox (injetável);Moxifloxacina;254
+122;Azactam;Aztreonam;49
+123;Azitromicina (CC);Azitromicina;48
+124;Azitromicina (injetável);Azitromicina;48
+125;Azitromicina (suspensão);Azitromicina;48
+126;AZT (cápsula);Zidovudina;385
+127;AZT (suspensão);Zidovudina;385
+128;Aztreonam;Aztreonam;49
+129;Azulfin;Sulfassalazina;344
+130;Bactrim (ampola);Sulfametoxazol-Trimetoprim;343
+131;Bactrim (comprimido);Sulfametoxazol-Trimetoprim;343
+132;Bactrim (suspensão);Sulfametoxazol-Trimetoprim;343
+133;Bactrim-F (comprimido);Sulfametoxazol-Trimetoprim;343
+134;Bactrim-F (suspensão);Sulfametoxazol-Trimetoprim;343
+135;Bactroban;Mupirocin;255
+136;Balcor (comprimido);Diltiazem;122
+137;Balcor (injetável);Diltiazem;122
+138;Balcor Retard;Diltiazem;122
+139;Bamifilina;Bamifilina;51
+140;Bamifix;Bamifilina;51
+141;Benerva;Vitamina B1;376
+142;Benzetacil;Penicilina G;290
+143;Benzoato de Benzila (loção);Benzoato de Benzila;52
+144;Benzoato de Benzila (sabonete);Benzoato de Benzila;52
+145;Betametasona (ampola);Betametasona;54
+146;Betametasona (comprimido);Betametasona;54
+147;Betametasona (elixir);Betametasona;54
+148;Betametasona (gotas);Betametasona;54
+149;Betametasona (pomada);Betametasona;54
+150;Bicarbonato de Sódio 8,4%;Bicarbonato de Sódio;56
+151;Binotal (CC);Ampicilina;31
+152;Binotal (injetável);Ampicilina;31
+153;Biovir;Lamivudina-Zidovudina;214
+154;Biperideno (ampola);Biperideno;57
+155;Biperideno (comprimido);Biperideno;57
+156;Bisacodil (drágea);Bisacodil;58
+157;Bisacodil (gotas);Bisacodil;58
+158;Bisacodil (supositório);Bisacodil;58
+159;Brevibloc;Esmolol;143
+160;Bromazepam;Bromazepam;60
+161;Bromoprida (ampola);Bromoprida;61
+162;Bromoprida (CC);Bromoprida;61
+163;Bromoprida (gotas);Bromoprida;61
+164;Bromoprida (suspensão);Bromoprida;61
+165;Buscopan (ampola);Hioscina;191
+166;Buscopan (CC);Hioscina;191
+167;Buscopan (gotas);Hioscina;191
+168;Buscopan Composto (ampola);Hioscina-Dipirona;193
+169;Buscopan Composto (comprimido);Hioscina-Dipirona;193
+170;Buscopan Composto (gotas);Hioscina-Dipirona;193
+171;Buspar;Buspirona;63
+172;Buspirona;Buspirona;63
+173;Caltren;Nitrendipina;269
+174;Cancidas;Caspofungina;67
+175;Capoten;Captopril;64
+176;Captopril;Captopril;64
+177;Carbamazepina (comprimido);Carbamazepina;65
+178;Carbamazepina (suspensão);Carbamazepina;65
+179;Carbidopa-Levodopa;Levodopa-Carbidopa;218
+180;Carbolitium;Lítio;226
+181;Carbolitium CR;Lítio;226
+182;Carbonato de Lítio;Lítio;226
+183;Cardilol;Carvedilol;66
+184;Carduran;Doxazosina;133
+185;Carvedilol;Carvedilol;66
+186;Caspofungina;Caspofungina;67
+187;Cataflam (ampola);Diclofenaco;118
+188;Cataflam (drágea);Diclofenaco;118
+189;Cataflam (emulgel);Diclofenaco;118
+190;Cataflam (gotas);Diclofenaco;118
+191;Cataflam (spray);Diclofenaco;118
+192;Cataflam (supositório);Diclofenaco;118
+193;Cebralat;Cilostazol;84
+194;Ceclor (CC);Cefaclor;68
+195;Ceclor (suspensão);Cefaclor;68
+196;Cedilanide;Deslanosídeo C;112
+197;Cefaclor (CC);Cefaclor;68
+198;Cefaclor (suspensão);Cefaclor;68
+199;Cefadroxil (CC);Cefadroxil;69
+200;Cefadroxil (suspensão);Cefadroxil;69
+201;Cefalexina (CC);Cefalexina;70
+202;Cefalexina (suspensão);Cefalexina;70
+203;Cefalotina;Cefalotina;71
+204;Cefamox (CC);Cefadroxil;69
+205;Cefamox (suspensão);Cefadroxil;69
+206;Cefazolina;Cefazolina;72
+207;Cefepima;Cefepima;73
+208;Cefotaxima;Cefotaxima;74
+209;Cefpiroma;Cefpiroma;75
+210;Cefrom;Cefpiroma;75
+211;Ceftazidima;Ceftazidima;76
+212;Ceftriaxona;Ceftriaxona;77
+213;Cefuroxima (comprimido);Cefuroxima;78
+214;Cefuroxima (injetável);Cefuroxima;78
+215;Cefuroxima (suspensão);Cefuroxima;78
+216;Celebra;Celecoxibe;79
+217;Celecoxibe;Celecoxibe;79
+218;Celestone (ampola);Betametasona;54
+219;Celestone (comprimido);Betametasona;54
+220;Celestone (elixir);Betametasona;54
+221;Celestone (gotas);Betametasona;54
+222;Celestone Soluspam;Betametasona;54
+223;Cetoconazol (comprimido);Cetoconazol;80
+224;Cetoconazol (creme);Cetoconazol;80
+225;Cetoconazol (shampoo);Cetoconazol;80
+226;Cetoprofeno (ampola);Cetoprofeno;81
+227;Cetoprofeno (CC);Cetoprofeno;81
+228;Cetoprofeno (gel);Cetoprofeno;81
+229;Cetoprofeno (gotas);Cetoprofeno;81
+230;Cetoprofeno (solução);Cetoprofeno;81
+231;Cetoprofeno (supositório);Cetoprofeno;81
+232;Cetorolaco (ampola);Cetorolaco;82
+233;Cetorolaco (comprimido);Cetorolaco;82
+234;Cianocobalamina;Vitamina B12;377
+235;Ciclosporina (cápsula);Ciclosporina;83
+236;Ciclosporina (gotas);Ciclosporina;83
+237;Cilostazol;Cilostazol;84
+238;Cimetidina;Cimetidina;85
+239;Cinarizina (comprimido);Cinarizina;86
+240;Cinarizina (gotas);Cinarizina;86
+241;Cinetol;Biperideno;57
+242;Cipramil;Citalopram;89
+243;Cipro;Ciprofloxacina;87
+244;Cipro XR;Ciprofloxacina;87
+245;Ciprofloxacina (comprimido);Ciprofloxacina;87
+246;Ciprofloxacina (injetável);Ciprofloxacina;87
+247;Citalopram;Citalopram;89
+248;Citalor;Atorvastatina;44
+249;Citoneurin 1000 I;Complexo B;106
+250;Citoneurin 1000 II;Vitamina B12;377
+251;Citoneurin 5000;Complexo B;106
+252;Citoneurin 5000 I;Complexo B;106
+253;Citoneurin 5000 II;Vitamina B12;377
+254;Claforan;Cefotaxima;74
+255;Claritin (comprimido);Loratadina;230
+256;Claritin (xarope);Loratadina;230
+257;Claritromicina (comprimido);Claritromicina;90
+258;Claritromicina (injetável);Claritromicina;90
+259;Claritromicina (suspensão);Claritromicina;90
+260;Clavulin (drágea);Amoxicilina-clavulanato;30
+261;Clavulin (injetável);Amoxicilina-clavulanato;30
+262;Clavulin (suspensão);Amoxicilina-clavulanato;30
+263;Clavulin BD (drágea);Amoxicilina-clavulanato;30
+264;Clavulin BD (suspensão);Amoxicilina-clavulanato;30
+265;Clexane;Enoxiparina;139
+266;Clindamicina (ampola);Clindamicina;91
+267;Clindamicina (cápsula);Clindamicina;91
+268;Clindamicina (solução);Clindamicina;91
+269;Clonazepam (comprimido);Clonazepam;93
+270;Clonazepam (gotas);Clonazepam;93
+271;Clonidina;Clonidina;94
+272;Clopidogrel;Clopidogrel;95
+273;Clorpromazina (ampola);Clorpromazina;99
+274;Clorpromazina (comprimido);Clorpromazina;99
+275;Clorpromazina (gotas);Clorpromazina;99
+276;Clortalidona;Clortalidona;101
+277;Codeína (ampola);Codeína;102
+278;Codeína (comprimido);Codeína;102
+279;Codeína (solução);Codeína;102
+280;Codergocrina (ampola);Codergocrina;103
+281;Codergocrina (CC);Codergocrina;103
+282;Codergocrina (gotas);Codergocrina;103
+283;Codergocrina (solução);Codergocrina;103
+284;Colchicina;Colchicina;104
+285;Colchis;Colchicina;104
+286;Colestiramina;Colestiramina;105
+287;Complexo B (ampola);Complexo B;106
+288;Complexo B (drágea);Complexo B;106
+289;Cosopt;Timolol;357
+290;Cotrimoxazol (ampola);Sulfametoxazol-Trimetoprim;343
+291;Cotrimoxazol (comprimido);Sulfametoxazol-Trimetoprim;343
+292;Cotrimoxazol (suspensão);Sulfametoxazol-Trimetoprim;343
+293;Cozaar;Losartan;233
+294;Crixivan;Indinavir;201
+295;Cubicin;Daptomicina;109
+296;Curativo;Curativo;387
+297;D4T;Estavudina;145
+298;Daflon;Diosmina-Hesperidina;126
+299;Dalacin C (ampola);Clindamicina;91
+300;Dalacin C (cápsula);Clindamicina;91
+301;Dalacin T;Clindamicina;91
+302;Dantrium (cápsula);Dantrolene;107
+303;Dantrium (injetável);Dantrolene;107
+304;Dantrolene (cápsula);Dantrolene;107
+305;Dantrolene (injetável);Dantrolene;107
+306;Daonil;Glibenclamida;174
+307;Dapsona;Dapsona;108
+308;Daptomicina;Daptomicina;109
+309;Daraprim;Pirimetamina;297
+310;Darunavir (comprimido);Darunavir;110
+311;Darunavir (solução);Darunavir;110
+312;DDAVP (ampola);Desmopressina;113
+313;DDAVP (comprimido);Desmopressina;113
+314;DDAVP (solução nasal);Desmopressina;113
+315;DDAVP (spray nasal);Desmopressina;113
+316;DDI;Didanosina;119
+317;Decadron (ampola);Dexametasona;114
+318;Decadron (colírio);Dexametasona;114
+319;Decadron (comprimido);Dexametasona;114
+320;Decadron (elixir);Dexametasona;114
+321;Decadron (solução nasal);Dexametasona;114
+322;Deocil;Cetorolaco;82
+323;Depakene (CC);Ácido Valpróico;11
+324;Depakene (xarope);Ácido Valpróico;11
+325;Depakote;Ácido Valpróico;11
+326;Depakote ER;Ácido Valpróico;11
+327;Dersani creme;AGE;14
+328;Deslanosídeo C;Deslanosídeo C;112
+329;Desmopressina (ampola);Desmopressina;113
+330;Desmopressina (comprimido);Desmopressina;113
+331;Desmopressina (solução nasal);Desmopressina;113
+332;Desmopressina (spray nasal);Desmopressina;113
+333;Despacilina;Penicilina G;290
+334;Dexametasona (ampola);Dexametasona;114
+335;Dexametasona (colírio);Dexametasona;114
+336;Dexametasona (comprimido);Dexametasona;114
+337;Dexametasona (elixir);Dexametasona;114
+338;Dexametasona (solução nasal);Dexametasona;114
+339;Dexclorfeniramina (comprimido);Dexclorfeniramina;115
+340;Dexclorfeniramina (creme);Dexclorfeniramina;115
+341;Dexclorfeniramina (gotas);Dexclorfeniramina;115
+342;Dexclorfeniramina (solução);Dexclorfeniramina;115
+343;Dexmedetomidina;Dexmedetomidine;116
+344;Dexmedetomidine;Dexmedetomidine;116
+345;Diamicron MR;Gliclazida;176
+346;Diamox;Acetazolamida;4
+347;Diazepam (ampola);Diazepam;117
+348;Diazepam (comprimido);Diazepam;117
+349;Diclofenaco (ampola);Diclofenaco;118
+350;Diclofenaco (colírio);Diclofenaco;118
+351;Diclofenaco (comprimido);Diclofenaco;118
+352;Diclofenaco (emulgel);Diclofenaco;118
+353;Diclofenaco (spray);Diclofenaco;118
+354;Diclofenaco (supositório);Diclofenaco;118
+355;Didanosina;Didanosina;119
+356;Digesan (ampola);Bromoprida;61
+357;Digesan (CC);Bromoprida;61
+358;Digesan (gotas);Bromoprida;61
+359;Digesan(suspensão);Bromoprida;61
+360;Digoxina;Digoxina;121
+361;Dilacoron;Verapamil;375
+362;Diltiazem (comprimido);Diltiazem;122
+363;Diltiazem (injetável);Diltiazem;122
+364;Dimenidrinato (ampola);Dimenidrinato;123
+365;Dimenidrinato (comprimido);Dimenidrinato;123
+366;Dimenidrinato (gotas);Dimenidrinato;123
+367;Dimenidrinato (solução);Dimenidrinato;123
+368;Dimeticona (comprimidos);Dimeticona;124
+369;Dimeticona (gotas);Dimeticona;124
+370;Dimorf (ampola);Morfina;253
+371;Dimorf (comprimido);Morfina;253
+372;Dimorf (gotas);Morfina;253
+373;Dinitrato de Isossorbida;Dinitrato de Isossorbida;125
+374;Diosmina-Hesperidina;Diosmina-Hesperidina;126
+375;Diovan;Valsartan;369
+376;Dipirona (ampola);Dipirona;127
+377;Dipirona (comprimido);Dipirona;127
+378;Dipirona (gotas);Dipirona;127
+379;Dipirona (supositório);Dipirona;127
+380;Dipirona (suspensão);Dipirona;127
+381;Diprivan PFS 1%;Propofol;312
+382;Diprivan PFS 2%;Propofol;312
+383;Diprospan;Betametasona;54
+384;Divelol;Carvedilol;66
+385;Dobutamina;Dobutamina;130
+386;Dobutrex;Dobutamina;130
+387;Dolantina;Meperidina;238
+388;Dolosal;Meperidina;238
+389;Domperidona (comprimido);Domperidona;131
+390;Domperidona (suspensão);Domperidona;131
+391;Donaren;Trazodona;364
+392;Dormonid (ampola);Midazolam;250
+393;Dormonid (comprimido);Midazolam;250
+394;Doxazosina;Doxazosina;133
+395;Doxiciclina;Doxiciclina;134
+396;Dramin (comprimido);Dimenidrinato;123
+397;Dramin (solução);Dimenidrinato;123
+398;Dramin B6 (ampola);Dimenidrinato;123
+399;Dramin B6 (comprimido);Dimenidrinato;123
+400;Dramin B6 (gotas);Dimenidrinato;123
+401;Drenol;Hidroclorotiazida;185
+402;Drotrecogina Alfa;Drotrecogina Alfa;135
+403;Dulcolax (drágea);Bisacodil;58
+404;Dulcolax (gotas);Bisacodil;58
+405;Dulcolax (supositório);Bisacodil;58
+406;Durogesic D-Trans;Fentanil;155
+407;Efavirenz (cápsula);Efavirenz;137
+408;Efavirenz (solução);Efavirenz;137
+409;Enalapril (comprimido);Enalapril;138
+410;Enalapril (injetável);Enalapril;138
+411;Encrise;Vasopressina;371
+412;Endofolin;Ácido Fólico;7
+413;Enoxaparina;Enoxiparina;139
+414;Enoxiparina;Enoxiparina;139
+415;Ephynal;Vitamina E;381
+416;Epinefrina;Adrenalina;13
+417;Epivir (comprimido);Lamivudina;213
+418;Epivir (solução);Lamivudina;213
+419;Eritrex (comprimido);Eritromicina;140
+420;Eritrex (suspensão);Eritromicina;140
+421;Eritromicina (comprimido);Eritromicina;140
+422;Eritromicina (gotas);Eritromicina;140
+423;Eritromicina (tópica);Eritromicina;140
+424;Eritromicina (suspensão);Eritromicina;140
+425;Eritropoietina;Eritropoietina;141
+426;Ertapenem;Ertapenem;142
+427;Esmolol;Esmolol;143
+428;Espironolactona;Espironolactona;144
+429;Esquema RIPE;RIPE;386
+430;Estavudina;Estavudina;145
+431;Estreptomicina;Estreptomicina;146
+432;Estreptoquinase;Estreptoquinase;147
+433;Etambutol (comprimido);Etambutol;148
+434;Etambutol (solução);Etambutol;148
+435;Etionamida;Etionamida;149
+436;Etoricoxibe;Etoricoxibe;150
+437;Exelon (cápsula);Rivastigmina;330
+438;Exelon (gotas);Rivastigmina;330
+439;Fauldpenta;Pentamidina;291
+440;Feldene (ampola);Piroxicam;298
+441;Feldene (CC);Piroxicam;298
+442;Feldene (gotas);Piroxicam;298
+443;Feldene (gel);Piroxicam;298
+444;Feldene (supositório);Piroxicam;298
+445;Fenazopiridina;Fenazopiridina;151
+446;Fenergan (ampola);Prometazina;308
+447;Fenergan (comprimido);Prometazina;308
+448;Fenergan (creme);Prometazina;308
+449;Fenergan (xarope);Prometazina;308
+450;Fenitoína (ampola);Fenitoína;152
+451;Fenitoína (comprimido);Fenitoína;152
+452;Fenobarbital (ampola);Fenobarbital;153
+453;Fenobarbital (comprimido);Fenobarbital;153
+454;Fenobarbital (gotas);Fenobarbital;153
+455;Fenocris;Fenobarbital;153
+456;Fentanest (adesivo);Fentanil;155
+457;Fentanest (ampola);Fentanil;155
+458;Fentanil (adesivo);Fentanil;155
+459;Fentanil (ampola);Fentanil;155
+460;Finasterida;Finasterida;156
+461;Fitomenadiona;Vitamina K;382
+462;Flagyl (comprimido);Metronidazol;249
+463;Flagyl (creme vaginal);Metronidazol;249
+464;Flagyl (injetável);Metronidazol;249
+465;Flagyl (suspensão);Metronidazol;249
+466;Fleet Enema;Fleet Enema;157
+467;Floratil;Floratil;158
+468;Floxacin;Norfloxacina;273
+469;Fluconazol (cápsula);Fluconazol;159
+470;Fluconazol (injetável);Fluconazol;159
+471;Fluimucil (ampola);N-Acetilcisteína;256
+472;Fluimucil (comprimido);N-Acetilcisteína;256
+473;Fluimucil (envelope);N-Acetilcisteína;256
+474;Fluimucil (nasal);N-Acetilcisteína;256
+475;Fluimucil (xarope);N-Acetilcisteína;256
+476;Flumazenil;Flumazenil;161
+477;Flunarizina;Flunarizina;162
+478;Flunitrazepam;Flunitrazepam;163
+479;Flunitrazepan;Flunitrazepam;163
+480;Fluoxetina (CC);Fluoxetina;164
+481;Fluoxetina (gotas);Fluoxetina;164
+482;Fluoxetina (solução);Fluoxetina;164
+483;Foldan;Tiabendazol;351
+484;Fortaz;Ceftazidima;76
+485;Frontal;Alprazolam;21
+486;Fungizon;Anfotericina B;36
+487;Furosemida (ampola);Furosemida;167
+488;Furosemida (comprimido);Furosemida;167
+489;Gabapentina;Gabapentina;168
+490;Ganciclovir (cápsula);Ganciclovir;169
+491;Ganciclovir (injetável);Ganciclovir;169
+492;Ganvirax;Ganciclovir;169
+493;Garamicina (ampola);Gentamicina;172
+494;Garamicina (colírio);Gentamicina;172
+495;Garamicina (creme);Gentamicina;172
+496;Garasone;Gentamicina;172
+497;Gardenal (comprimido);Fenobarbital;153
+498;Gardenal (gotas);Fenobarbital;153
+499;Gatifloxacina;Gatifloxacina;170
+500;Gemfibrozil;Genfibrozil;171
+501;Gemfibrozila;Genfibrozil;171
+502;Genfibrozil;Genfibrozil;171
+503;Genfibrozila;Genfibrozil;171
+504;Gentamicina (ampola);Gentamicina;172
+505;Gentamicina (colírio);Gentamicina;172
+506;Gentamicina (creme);Gentamicina;172
+507;Gingko Biloba;Gingko Biloba;173
+508;Ginkoba;Gingko Biloba;173
+509;Glibenclamida;Glibenclamida;174
+510;Glicerina;Glicerina;175
+511;Gliclazida;Gliclazida;176
+512;Glicose;Glicose;177
+513;Glifage;Metformina;242
+514;Glimepirida;Glimepirida;178
+515;Glucobay;Acarbose;3
+516;Gluconato de Cálcio 10%;Gluconato de Cálcio;181
+517;Haldol (ampola);Haloperidol;182
+518;Haldol (comprimido);Haloperidol;182
+519;Haldol (gotas);Haloperidol;182
+520;Haldol Decanoato;Haloperidol;182
+521;Haloperidol (ampola);Haloperidol;182
+522;Haloperidol (comprimido);Haloperidol;182
+523;Haloperidol (gotas);Haloperidol;182
+524;Hemax;Eritropoietina;141
+525;Heparina;Heparina;183
+526;Hidantal (ampola);Fenitoína;152
+527;Hidantal (comprimido);Fenitoína;152
+528;Hidralazina (ampola);Hidralazina;184
+529;Hidralazina (comprimido);Hidralazina;184
+530;Hidroclorotiazida;Hidroclorotiazida;185
+531;Hidrocortisona (ampola);Hidrocortisona;186
+532;Hidrocortisona (pomada);Hidrocortisona;186
+533;Hidroxicobalamina;Vitamina B12;377
+534;Hidróxido de Alumínio (CC);Hidróxido de Alumínio;188
+535;Hidróxido de Alumínio (suspensão);Hidróxido de Alumínio;188
+536;Higroton;Clortalidona;101
+537;Hioscina (ampola);Hioscina;191
+538;Hioscina (CC);Hioscina;191
+539;Hioscina (gotas);Hioscina;191
+540;Hisoscel;Hisoscel;195
+541;Hydergine (ampola);Codergocrina;103
+542;Hydergine (CC);Codergocrina;103
+543;Hydergine (gotas);Codergocrina;103
+544;Hydergine (solução);Codergocrina;103
+545;Ibuprofeno;Ibuprofeno;197
+546;Ictus;Carvedilol;66
+547;Ilosone (comprimido);Eritromicina;140
+548;Ilosone (gotas);Eritromicina;140
+549;Ilosone (tópica);Eritromicina;140
+550;Ilosone (suspensão);Eritromicina;140
+551;Imipenem;Imipenem;198
+552;Imipramina;Imipramina;199
+553;Imosec;Loperamida;227
+554;Indapamida;Indapamida;200
+555;Inderal;Propranolol;313
+556;Indinavir;Indinavir;201
+557;Inocor;Amrinona;34
+558;Insulina;Insulina;205
+559;Insulina NPH;Insulina;205
+560;Insulina Regular;Insulina;205
+561;Invanz;Ertapenem;142
+562;Invirase;Saquinavir;335
+563;Iscover;Clopidogrel;95
+564;Isoniazida;Isoniazida;206
+565;Isordil;Dinitrato de Isossorbida;125
+566;Itraconazol;Itraconazol;207
+567;Itranax;Itraconazol;207
+568;Ivermectina;Ivermectina;208
+569;Kaletra (CC);Lopinavir-r;229
+570;Kaletra (solução);Lopinavir-r;229
+571;Kanakion MM;Vitamina K;382
+572;Kanakion MM Pediátrico;Vitamina K;382
+573;KCl (ampola);KCl;209
+574;KCl (comprimido);KCl;209
+575;KCl (solução);KCl;209
+576;Kefazol;Cefazolina;72
+577;Keflex (CC);Cefalexina;70
+578;Keflex (suspensão);Cefalexina;70
+579;Keflin;Cefalotina;71
+580;Ketalar;Ketamina;210
+581;Ketamina;Ketamina;210
+582;Klaricid (comprimido);Claritromicina;90
+583;Klaricid (injetável);Claritromicina;90
+584;Klaricid (suspensão);Claritromicina;90
+585;Lactulona;Lactulose;212
+586;Lactulose;Lactulose;212
+587;Lamivudina (comprimido);Lamivudina;213
+588;Lamivudina (solução);Lamivudina;213
+589;Lamivudina-Zidovudina;Lamivudina-Zidovudina;214
+590;Lanatosídeo C;Deslanosídeo C;112
+591;Lanexat;Flumazenil;161
+592;Lansoprazol;Lansoprazol;215
+593;Lasix (ampola);Furosemida;167
+594;Lasix (comprimido);Furosemida;167
+595;L-Dopa;Levodopa;216
+596;Legifol CS;Ácido Folínico;8
+597;Leucovorin (comprimido);Ácido Folínico;8
+598;Leucovorin (injetável);Ácido Folínico;8
+599;Levaquin (comprimido);Levofloxacina;219
+600;Levaquin (injetável);Levofloxacina;219
+601;Levodopa;Levodopa;216
+602;Levodopa-Carbidopa;Levodopa-Carbidopa;218
+603;Levofloxacina (comprimido);Levofloxacina;219
+604;Levofloxacina (injetável);Levofloxacina;219
+605;Levomepromazina (ampola);Levomepromazina;220
+606;Levomepromazina (comprimido);Levomepromazina;220
+607;Levomepromazina (gotas);Levomepromazina;220
+608;Levophed;Noradrenalina;272
+609;Levosimendam;Levosimendam;221
+610;Levotiroxina;Levotiroxina;222
+611;Levotiroxina sódica;Levotiroxina;222
+612;Levozine (comprimido);Levomepromazina;220
+613;Levozine (gotas);Levomepromazina;220
+614;Lexotam;Bromazepam;60
+615;Lidocaína (ampola);Lidocaína;223
+616;Lidocaína (geleia 2%);Lidocaína;223
+617;Lidocaína (pomada 5%);Lidocaína;223
+618;Lidocaína (spray 10%);Lidocaína;223
+619;Linezolida (comprimido);Linezolida;224
+620;Linezolida (injetável);Linezolida;224
+621;Lípitor;Atorvastatina;44
+622;Liquemine;Heparina;183
+623;Lisinopril;Lisinopril;225
+624;Lítio;Lítio;226
+625;Loperamida;Loperamida;227
+626;Lopid;Genfibrozil;171
+627;Lopinavir-r (CC);Lopinavir-r;229
+628;Lopinavir-r (solução);Lopinavir-r;229
+629;Loratadina (comprimido);Loratadina;230
+630;Loratadina (xarope);Loratadina;230
+631;Lorax;Lorazepam;231
+632;Lorazepam;Lorazepam;231
+633;Lorazepan;Lorazepam;231
+634;Losartan;Losartan;233
+635;Losec;Omeprazol;280
+636;Lovastatina;Lovastatina;234
+637;Luftal (comprimido);Dimeticona;124
+638;Luftal (gotas);Dimeticona;124
+639;Manitol 20%;Manitol;235
+640;Mantidan;Amantadina;23
+641;Marevan;Warfarin;384
+642;Maxcef;Cefepima;73
+643;Mebendazol (comprimido);Mebendazol;236
+644;Mebendazol (suspensão);Mebendazol;236
+645;Meperidina;Meperidina;238
+646;Meronem;Meropenem;239
+647;Meropenem;Meropenem;239
+648;Mesacol (comprimido);Mesalazina;240
+649;Mesacol (supositório);Mesalazina;240
+650;Mesalazina (comprimido);Mesalazina;240
+651;Mesalazina (supositório);Mesalazina;240
+652;Mestinon;Piridostigmina;296
+653;Metadona (ampola);Metadona;241
+654;Metadona (comprimido);Metadona;241
+655;Metformina;Metformina;242
+656;Meticorten;Prednisona;305
+657;Metildopa;Metildopa;243
+658;Metilprednisolona;Metilprednisolona;244
+659;Metimazol;Metimazol;245
+660;Metoclopramida (ampola);Metoclopramida;246
+661;Metoclopramida (comprimido);Metoclopramida;246
+662;Metoclopramida (gotas);Metoclopramida;246
+663;Metoclopramida (supositório);Metoclopramida;246
+664;Metoclopramida (suspensão);Metoclopramida;246
+665;Metoprolol (comprimido);Metoprolol;247
+666;Metoprolol (injetável);Metoprolol;247
+667;Metotrexate (comprimido);Metotrexate;248
+668;Metotrexate (injetável);Metotrexate;248
+669;Metri;Ácido Nicotínico;9
+670;Metronidazol (comprimido);Metronidazol;249
+671;Metronidazol (creme vaginal);Metronidazol;249
+672;Metronidazol (injetável);Metronidazol;249
+673;Metronidazol (suspensão);Metronidazol;249
+674;Midazolam (ampola);Midazolam;250
+675;Midazolam (comprimido);Midazolam;250
+676;Milrinona;Milrinona;251
+677;Monocordil (ampola);Mononitrato de Isossorbida;252
+678;Monocordil (comprimido);Mononitrato de Isossorbida;252
+679;Mononitrato de Isossorbida (ampola);Mononitrato de Isossorbida;252
+680;Mononitrato de Isossorbida (comprimido);Mononitrato de Isossorbida;252
+681;Morfina (ampola);Morfina;253
+682;Morfina (comprimido);Morfina;253
+683;Morfina (gotas);Morfina;253
+684;Motilium (comprimido);Domperidona;131
+685;Motilium (suspensão);Domperidona;131
+686;Moxifloxacina (comprimido);Moxifloxacina;254
+687;Moxifloxacina (injetável);Moxifloxacina;254
+688;Mupirocin;Mupirocin;255
+689;Mupirocina;Mupirocin;255
+690;Mytedon (ampola);Metadona;241
+691;Mytedon (comprimido);Metadona;241
+692;N-Acetilcisteína (ampola);N-Acetilcisteína;256
+693;N-Acetilcisteína (comprimido);N-Acetilcisteína;256
+694;N-Acetilcisteína (envelope);N-Acetilcisteína;256
+695;N-Acetilcisteína (nasal);N-Acetilcisteína;256
+696;N-Acetilcisteína (xarope);N-Acetilcisteína;256
+697;NaCl;NaCl;257
+698;Naloxona;Naloxona;259
+699;Naprix;Ramipril;319
+700;Narcan;Naloxona;259
+701;Natrilix;Indapamida;200
+702;Natrilix SR;Indapamida;200
+703;Nebilet;Nebivolol;260
+704;Nebivolol;Nebivolol;260
+705;Nelfinavir (comprimido);Nelfinavir;261
+706;Nelfinavir (solução);Nelfinavir;261
+707;Neozine (ampola);Levomepromazina;220
+708;Neozine (comprimido);Levomepromazina;220
+709;Neozine (gotas);Levomepromazina;220
+710;Nepresol;Hidralazina;184
+711;Neurontin;Gabapentina;168
+712;Nevirapina (comprimido);Nevirapina;263
+713;Nevirapina (solução);Nevirapina;263
+714;Nifedipina (CC);Nifedipina;264
+715;Nimesulida (comprimido);Nimesulida;266
+716;Nimesulida (gel);Nimesulida;266
+717;Nimesulida (gotas);Nimesulida;266
+718;Nimesulida (suspensão);Nimesulida;266
+719;Nimodipina (comprimido);Nimodipina;267
+720;Nimodipina (gotas);Nimodipina;267
+721;Nimodipina (injetável);Nimodipina;267
+722;Nimotop (comprimido);Nimodipina;267
+723;Nimotop (injetável);Nimodipina;267
+724;Nipride;Nitroprussiato de Sódio;271
+725;Nistatina (creme);Nistatina;268
+726;Nistatina (creme vaginal);Nistatina;268
+727;Nistatina (suspensão);Nistatina;268
+728;Nitrendipina;Nitrendipina;269
+729;Nitroglicerina (ampola);Nitroglicerina;270
+730;Nitroglicerina (adesivo);Nitroglicerina;270
+731;Nitroprussiato;Nitroprussiato de Sódio;271
+732;Nitroprussiato de Sódio;Nitroprussiato de Sódio;271
+733;Nizoral (comprimido);Cetoconazol;80
+734;Nizoral (creme);Cetoconazol;80
+735;Nizoral (shampoo);Cetoconazol;80
+736;Noradrenalina;Noradrenalina;272
+737;Norfloxacina;Norfloxacina;273
+738;Noripurum (ampola);Sulfato Ferroso;346
+739;Noripurum (comprimido);Sulfato Ferroso;346
+740;Noripurum (gotas);Sulfato Ferroso;346
+741;Noripurum (xarope);Sulfato Ferroso;346
+742;Nortriptilina;Nortriptilina;274
+743;Norvasc;Anlodipina;37
+744;Norvir (cápsula);Ritonavir;328
+745;Norvir (gotas);Ritonavir;328
+746;Novalgina (ampola);Dipirona;127
+747;Novalgina (comprimido);Dipirona;127
+748;Novalgina (gotas);Dipirona;127
+749;Novalgina (supositório);Dipirona;127
+750;Novalgina (suspensão);Dipirona;127
+751;Novamin;Amicacina;25
+752;NPT;Nutrição Parenteral Total;275
+753;Nutrição Parenteral Total;Nutrição Parenteral Total;275
+754;Nyolol;Timolol;357
+755;Ocitocina (ampola);Ocitocina;276
+756;Ocitocina (spray nasal);Ocitocina;276
+757;Octreotida;Octreotida;277
+758;Octreotide;Octreotida;277
+759;Óleo Mineral;Óleo Mineral;279
+760;Omcilon AM;Betametasona;54
+761;Omcilon AM em Orabase;Betametasona;54
+762;Omeprazol (CC);Omeprazol;280
+763;Omeprazol (injetável);Omeprazol;280
+764;Ondansetrona;Ondansetrona;281
+765;Oseltamivir;Oseltamivir;283
+766;Oxacilina;Oxacilina;284
+767;Oxygen (comprimido);Nimodipina;267
+768;Oxygen (gotas);Nimodipina;267
+769;Pamelor;Nortriptilina;274
+770;Pancuron;Pancurônio;286
+771;Pancurônio;Pancurônio;286
+772;Pantelmin (comprimido);Mebendazol;236
+773;Pantelmin (suspensão);Mebendazol;236
+774;Paracetamol (comprimido);Paracetamol;288
+775;Paracetamol (gotas);Paracetamol;288
+776;Paracetamol (suspensão);Paracetamol;288
+777;Paroxetina;Paroxetina;289
+778;Pavulon;Pancurônio;286
+779;Penicilina Benzatina;Penicilina G;290
+780;Penicilina Cristalina;Penicilina G;290
+781;Penicilina G Benzatina;Penicilina G;290
+782;Penicilina G Cristalina;Penicilina G;290
+783;Penicilina G Procaína;Penicilina G;290
+784;Penicilina Procaína;Penicilina G;290
+785;Pentamidina;Pentamidina;291
+786;Pentox;Pentoxifilina;293
+787;Pentoxifilina (ampola);Pentoxifilina;293
+788;Pentoxifilina (comprimido);Pentoxifilina;293
+789;Petidina;Meperidina;238
+790;Piperacilina-tazobactam;Piperacilina-tazobactam;294
+791;Pirazinamida;Pirazinamida;295
+792;Piridostigmina;Piridostigmina;296
+793;Piridoxina;Vitamina B6;378
+794;Pirimetamina;Pirimetamina;297
+795;Piroxicam (ampola);Piroxicam;298
+796;Piroxicam (CC);Piroxicam;298
+797;Piroxicam (gotas);Piroxicam;298
+798;Piroxicam (gel);Piroxicam;298
+799;Piroxicam (supositório);Piroxicam;298
+800;Plasil (ampola);Metoclopramida;246
+801;Plasil (comprimido);Metoclopramida;246
+802;Plasil (gotas);Metoclopramida;246
+803;Plasil (suspensão);Metoclopramida;246
+804;Plasma Fresco Congelado;Plasma fresco congelado;300
+805;Plavix;Clopidogrel;95
+806;Pletil;Tinidazol;358
+807;Polaramine (comprimido);Dexclorfeniramina;115
+808;Polaramine (creme);Dexclorfeniramina;115
+809;Polaramine (gotas);Dexclorfeniramina;115
+810;Polaramine (solução);Dexclorfeniramina;115
+811;Polimixina B;Polimixina B;301
+812;Pondera;Paroxetina;289
+813;Pravacol;Pravastatina;303
+814;Pravastatina;Pravastatina;303
+815;Prazol;Lansoprazol;215
+816;Precedex;Dexmedetomidine;116
+817;Prednisolona (comprimido);Prednisolona;304
+818;Prednisolona (injetável);Prednisolona;304
+819;Prednisolona (gotas);Prednisolona;304
+820;Prednisona;Prednisona;305
+821;Prelone (comprimido);Prednisolona;304
+822;Prelone (injetável);Prednisolona;304
+823;Prelone (gotas);Prednisolona;304
+824;Prezista (comprimido);Darunavir;110
+825;Prezista (solução);Darunavir;110
+826;Primacor;Milrinona;251
+827;Prinivil;Lisinopril;225
+828;Procainamida (ampola);Procainamida;307
+829;Procainamida (comprimido);Procainamida;307
+830;Procamide (ampola);Procainamida;307
+831;Procamide (comprimido);Procainamida;307
+832;Procimax;Citalopram;89
+833;Profenid (ampola);Cetoprofeno;81
+834;Profenid (CC);Cetoprofeno;81
+835;Profenid (gel);Cetoprofeno;81
+836;Profenid (gotas);Cetoprofeno;81
+837;Profenid (solução);Cetoprofeno;81
+838;Profenid (supositório);Cetoprofeno;81
+839;Profenid Retard;Cetoprofeno;81
+840;Prolopa;Levodopa;216
+841;Prometazina (ampola);Prometazina;308
+842;Prometazina (comprimido);Prometazina;308
+843;Prometazina (creme);Prometazina;308
+844;Prometazina (xarope);Prometazina;308
+845;Propafenona (ampola);Propafenona;309
+846;Propafenona (comprimido);Propafenona;309
+847;Propatilnitrato;Propatilnitrato;310
+848;Propécia;Finasterida;156
+849;Propil;Propiltiouracil;311
+850;Propiltiouracil;Propiltiouracil;311
+851;Propofol;Propofol;312
+852;Propranolol (ampola);Propranolol;313
+853;Propranolol (comprimido);Propranolol;313
+854;Protamina;Protamina;314
+855;Prozac (CC);Fluoxetina;164
+856;Prozac (solução);Fluoxetina;164
+857;Puran T4;Levotiroxina;222
+858;Pyridium;Fenazopiridina;151
+859;Quelicin;Succinilcolina;341
+860;Questran Light;Colestiramina;105
+861;Quetamina;Ketamina;210
+862;Quinicardine;Quinidina;315
+863;Quinidina;Quinidina;315
+864;Quinupristina-dalfopristina;Quinupristina-dalfopristina;318
+865;Ramipril;Ramipril;319
+866;Ranitidina (ampola);Ranitidina;320
+867;Ranitidina (comprimido);Ranitidina;320
+868;Ranitidina (xarope);Ranitidina;320
+869;Redoxon (comprimido);Vitamina C;379
+870;Redoxon (gotas);Vitamina C;379
+871;Renitec (comprimido);Enalapril;138
+872;Renitec (injetável);Enalapril;138
+873;Reopro;Abciximab;2
+874;Retrovir (cápsula);Zidovudina;385
+875;Retrovir (solução);Zidovudina;385
+876;Revectina;Ivermectina;208
+877;Revirax;Zidovudina;385
+878;Reyataz;Atazanavir;42
+879;Rifaldin (cápsula);Rifampicina;323
+880;Rifaldin (suspensão);Rifampicina;323
+881;Rifampicina (cápsula);Rifampicina;323
+882;Rifampicina (suspensão);Rifampicina;323
+883;Rifampicina-Isoniazida;Rifampicina-Isoniazida;324
+884;Ringer Lactato;Ringer Lactato;325
+885;Ringer Simples;Ringer Simples;326
+886;RIPE;RIPE;386
+887;Risperdal (comprimido);Risperidona;327
+888;Risperdal (gotas);Risperidona;327
+889;Risperdal Consta;Risperidona;327
+890;Risperidona (comprimido);Risperidona;327
+891;Risperidona (gotas);Risperidona;327
+892;Risperidona (injetável);Risperidona;327
+893;Ritmonorm (ampola);Propafenona;309
+894;Ritmonorm (comprimido);Propafenona;309
+895;Ritonavir (cápsula);Ritonavir;328
+896;Ritonavir (gotas);Ritonavir;328
+897;Rivaroxabana;Rivaroxabana;329
+898;Rivastigmina (cápsula);Rivastigmina;330
+899;Rivastigmina (gotas);Rivastigmina;330
+900;Rivotril (comprimido);Clonazepam;93
+901;Rivotril (gotas);Clonazepam;93
+902;Rivotril SL;Clonazepam;93
+903;Rocefin;Ceftriaxona;77
+904;Rohypnol;Flunitrazepam;163
+905;Salbutamol (ampola);Salbutamol;334
+906;Salbutamol (comprimido);Salbutamol;334
+907;Salbutamol (spray);Salbutamol;334
+908;Salbutamol (xarope);Salbutamol;334
+909;Sandostatin;Octreotida;277
+910;Sandostatin lar;Octreotida;277
+911;Saquinavir;Saquinavir;335
+912;Scaflam (comprimido);Nimesulida;266
+913;Scaflam (gel);Nimesulida;266
+914;Scaflam (gotas);Nimesulida;266
+915;Scaflam (suspensão);Nimesulida;266
+916;Secnidal (comprimido);Secnidazol;336
+917;Secnidal (suspensão);Secnidazol;336
+918;Secnidazol (comprimido);Secnidazol;336
+919;Secnidazol (suspensão);Secnidazol;336
+920;Seloken (comprimido);Metoprolol;247
+921;Seloken (injetável);Metoprolol;247
+922;Sertralina;Sertralina;337
+923;Simdax;Levosimendam;221
+924;Sinemet;Levodopa-Carbidopa;218
+925;Sinvastatina;Sinvastatina;339
+926;Solu-Cortef;Hidrocortisona;186
+927;Solu-Medrol;Metilprednisolona;244
+928;Soro Fisiológico 0,225%;NaCl;257
+929;Soro Fisiológico 0,45%;NaCl;257
+930;Soro Fisiológico 0,9%;NaCl;257
+931;Soro Glicosado 10%;Glicose;177
+932;Soro Glicosado 20%;Glicose;177
+933;Soro Glicosado 5%;Glicose;177
+934;Sotacor;Sotalol;340
+935;Sotalol;Sotalol;340
+936;Sporanox;Itraconazol;207
+937;Staficilin;Oxacilina;284
+938;Staficilin-N;Oxacilina;284
+939;Stocrin (cápsula);Efavirenz;137
+940;Stocrin (solução);Efavirenz;137
+941;Streptase;Estreptoquinase;147
+942;Stugeron (comprimido);Cinarizina;86
+943;Stugeron (gotas);Cinarizina;86
+944;Succinilcolina;Succinilcolina;341
+945;Sucrafilm (comprimido);Sucralfato;342
+946;Sucrafilm (suspensão);Sucralfato;342
+947;Sucralfato (comprimido);Sucralfato;342
+948;Sucralfato (suspensão);Sucralfato;342
+949;Sulfametoxazol-Trimetoprim (ampola);Sulfametoxazol-Trimetoprim;343
+950;Sulfametoxazol-Trimetoprim (comprimido);Sulfametoxazol-Trimetoprim;343
+951;Sulfametoxazol-Trimetoprim (suspensão);Sulfametoxazol-Trimetoprim;343
+952;Sulfassalazina;Sulfassalazina;344
+953;Sulfato de Magnésio 10%;Sulfato de Magnésio;345
+954;Sulfato de Magnésio 50%;Sulfato de Magnésio;345
+955;Sulfato Ferroso (ampola);Sulfato Ferroso;346
+956;Sulfato Ferroso (comprimido);Sulfato Ferroso;346
+957;Sulfato Ferroso (gotas);Sulfato Ferroso;346
+958;Sulfato Ferroso (xarope);Sulfato Ferroso;346
+959;Sustrate;Propatilnitrato;310
+960;Synercid;Quinupristina-dalfopristina;318
+961;Synthroid;Levotiroxina;222
+962;Syntocinon (ampola);Ocitocina;276
+963;Syntocinon (spray nasal);Ocitocina;276
+964;Tagamet;Cimetidina;85
+965;Tamarine (cápsula);Tamarine;347
+966;Tamarine (geléia);Tamarine;347
+967;Tamiflu;Oseltamivir;283
+968;Tanakan (comprimido);Gingko Biloba;173
+969;Tanakan (gotas);Gingko Biloba;173
+970;Tapazol;Metimazol;245
+971;Targocid;Teicoplanina;348
+972;Tavanic;Levofloxacina;219
+973;Tazocin;Piperacilina-tazobactam;294
+974;Tegretol (comprimido);Carbamazepina;65
+975;Tegretol (suspensão);Carbamazepina;65
+976;Teicoplanina;Teicoplanina;348
+977;Tenoxicam (comprimido);Tenoxicam;349
+978;Tenoxicam (injetável);Tenoxicam;349
+979;Thiaben (comprimido);Tiabendazol;351
+980;Thiaben (suspensão);Tiabendazol;351
+981;Thionembutal;Tiopental;359
+982;Tiabendazol (comprimido);Tiabendazol;351
+983;Tiabendazol (loção);Tiabendazol;351
+984;Tiabendazol (pomada);Tiabendazol;351
+985;Tiabendazol (sabonete);Tiabendazol;351
+986;Tiabendazol (suspensão);Tiabendazol;351
+987;Tiamina;Vitamina B1;376
+988;Ticarcilina-clavulanato;Ticarcilina-clavulanato;354
+989;Ticlid;Ticlopidina;355
+990;Ticlopidina;Ticlopidina;355
+991;Tienam;Imipenem;198
+992;Tigeciclina;Tigeciclina;356
+993;Tilatil (comprimido);Tenoxicam;349
+994;Tilatil (injetável);Tenoxicam;349
+995;Timentim;Ticarcilina-clavulanato;354
+996;Timolol (colírio);Timolol;357
+997;Timolol (gel oftálmico);Timolol;357
+998;Timoptol;Timolol;357
+999;Tinidazol;Tinidazol;358
+1000;Tiopental;Tiopental;359
+1001;Tirofiban;Tirofiban;361
+1002;Tocoferol;Vitamina E;381
+1003;Tofranil;Imipramina;199
+1004;Toradol;Cetorolaco;82
+1005;Toragesic;Cetorolaco;82
+1006;Tracrium;Atracúrio;46
+1007;Tramadol (ampola);Tramadol;363
+1008;Tramadol (CC);Tramadol;363
+1009;Tramadol (gotas);Tramadol;363
+1010;Tramadol (supositório);Tramadol;363
+1011;Tramal (ampola);Tramadol;363
+1012;Tramal (CC);Tramadol;363
+1013;Tramal (gotas);Tramadol;363
+1014;Tramal (supositório);Tramadol;363
+1015;Transamin (ampola);Ácido Tranexâmico;10
+1016;Transamin (comprimido);Ácido Tranexâmico;10
+1017;Trazodona;Trazodona;364
+1018;Trental (ampola);Pentoxifilina;293
+1019;Trental (comprimido);Pentoxifilina;293
+1020;Triatec;Ramipril;319
+1021;Tridil;Nitroglicerina;270
+1022;Trimetazidina;Trimetazidina;366
+1023;Tygacil;Tigeciclina;356
+1024;Tylenol (comprimido);Paracetamol;288
+1025;Tylenol (gotas);Paracetamol;288
+1026;Tylenol (suspensão);Paracetamol;288
+1027;Tylex;Codeína;102
+1028;Unasyn (comprimido);Ampicilina-sulbactam;32
+1029;Unasyn (injetável);Ampicilina-sulbactam;32
+1030;Unasyn (suspensão);Ampicilina-sulbactam;32
+1031;Valaciclovir;Valaciclovir;368
+1032;Valium (ampola);Diazepam;117
+1033;Valium (comprimido);Diazepam;117
+1034;Valproato de Sódio (CC);Ácido Valpróico;11
+1035;Valproato de Sódio (xarope);Ácido Valpróico;11
+1036;Valsartan;Valsartan;369
+1037;Valsartana;Valsartan;369
+1038;Valtrex;Valaciclovir;368
+1039;Vancocid;Vancomicina;370
+1040;Vancomicina;Vancomicina;370
+1041;Vasogard;Cilostazol;84
+1042;Vasopressina;Vasopressina;371
+1043;Vastarel;Trimetazidina;366
+1044;Vastarel MR;Trimetazidina;366
+1045;Vecuron;Vecurônio;372
+1046;Vecurônio;Vecurônio;372
+1047;Verapamil (ampola);Verapamil;375
+1048;Verapamil (comprimido);Verapamil;375
+1049;Vertix;Flunarizina;162
+1050;Vibramicina;Doxiciclina;134
+1051;Videx EC;Didanosina;119
+1052;Viracept (comprimido);Nelfinavir;261
+1053;Viracept (solução);Nelfinavir;261
+1054;Viramune (comprimido);Nevirapina;263
+1055;Viramune (solução);Nevirapina;263
+1056;Vitamina B1;Vitamina B1;376
+1057;Vitamina B12;Vitamina B12;377
+1058;Vitamina B3;Ácido Nicotínico;9
+1059;Vitamina B6;Vitamina B6;378
+1060;Vitamina C (ampola);Vitamina C;379
+1061;Vitamina C (comprimido);Vitamina C;379
+1062;Vitamina C (gotas);Vitamina C;379
+1063;Vitamina E;Vitamina E;381
+1064;Vitamina K;Vitamina K;382
+1065;Voltaren (ampola);Diclofenaco;118
+1066;Voltaren (colírio);Diclofenaco;118
+1067;Voltaren (comprimido);Diclofenaco;118
+1068;Voltaren (emulgel);Diclofenaco;118
+1069;Voltaren Retard;Diclofenaco;118
+1070;Voltaren SR 75;Diclofenaco;118
+1071;Voluven 6%;Hidroxietilamido;189
+1072;Warfarin;Warfarin;384
+1073;Xarelto;Rivaroxabana;329
+1074;Xigris;Drotrecogina Alfa;135
+1075;Xylocaína geléia 2 %;Lidocaína;223
+1076;Xylocaína pomada 5 %;Lidocaína;223
+1077;Xylocaína spray 10 %;Lidocaína;223
+1078;Zentel (comprimido);Albendazol;17
+1079;Zentel (suspensão);Albendazol;17
+1080;Zeritavir;Estavudina;145
+1081;Zestril;Lisinopril;225
+1082;Ziagenavir (comprimido);Abacavir;1
+1083;Ziagenavir (solução);Abacavir;1
+1084;Zidovudina (cápsula);Zidovudina;385
+1085;Zidovudina (suspensão);Zidovudina;385
+1086;Zinacef;Cefuroxima;78
+1087;Zinnat (comprimido);Cefuroxima;78
+1088;Zinnat (suspensão);Cefuroxima;78
+1089;Zitromax (CC);Azitromicina;48
+1090;Zitromax (injetável);Azitromicina;48
+1091;Zitromax (suspensão);Azitromicina;48
+1092;Zocor;Sinvastatina;339
+1093;Zofran;Ondansetrona;281
+1094;Zolben (comprimido);Albendazol;17
+1095;Zolben (suspensão);Albendazol;17
+1096;Zoloft;Sertralina;337
+1097;Zoltec (cápsula);Fluconazol;159
+1098;Zoltec (injetável);Fluconazol;159
+1099;Zovirax (comprimido);Aciclovir;5
+1100;Zovirax (creme);Aciclovir;5
+1101;Zovirax (injetável);Aciclovir;5
+1102;Zovirax (pomada oftálmica);Aciclovir;5
+1103;Zyloric;Alopurinol;20
+1104;Zymar (colírio);Gatifloxacina;170
+1105;Zyvox (comprimido);Linezolida;224
+1106;Zyvox (injetável);Linezolida;224

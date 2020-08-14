@@ -4,14 +4,16 @@ using Cooperchip.ITDeveloper.Data.ORM;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Cooperchip.ITDeveloper.Data.Migrations
 {
     [DbContext(typeof(ITDeveloperDbContext))]
-    partial class ITDeveloperDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200806015521_ClearData")]
+    partial class ClearData
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -61,23 +63,6 @@ namespace Cooperchip.ITDeveloper.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("EstadoPaciente");
-                });
-
-            modelBuilder.Entity("Cooperchip.ITDeveloper.Domain.Models.Generico", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<int>("Codigo")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Nome")
-                        .HasColumnType("varchar(90)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Generico");
                 });
 
             modelBuilder.Entity("Cooperchip.ITDeveloper.Domain.Models.Paciente", b =>

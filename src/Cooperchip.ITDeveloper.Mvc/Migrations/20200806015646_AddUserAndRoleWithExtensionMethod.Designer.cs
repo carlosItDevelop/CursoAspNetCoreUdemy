@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Cooperchip.ITDeveloper.Mvc.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200725041336_AddNewUsrAndRole")]
-    partial class AddNewUsrAndRole
+    [Migration("20200806015646_AddUserAndRoleWithExtensionMethod")]
+    partial class AddUserAndRoleWithExtensionMethod
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -101,22 +101,22 @@ namespace Cooperchip.ITDeveloper.Mvc.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "F6F2A61B-4B5A-4C9C-88C9-42A473B7987C",
+                            Id = "F6F2A61B-4B5A-4C9C-88C9-42A473B7958D",
                             AccessFailedCount = 0,
-                            Apelido = "carlos",
-                            ConcurrencyStamp = "5cf046fa-2eda-466b-85a2-ae33d59fc9fc",
-                            DataNascimento = new DateTime(2020, 7, 25, 1, 13, 34, 690, DateTimeKind.Local).AddTicks(4868),
-                            Email = "csantos@gmail.com",
+                            Apelido = "rfraca",
+                            ConcurrencyStamp = "4d615e85-a138-4a57-8442-84a72d4fcae5",
+                            DataNascimento = new DateTime(2020, 8, 5, 22, 56, 45, 900, DateTimeKind.Local).AddTicks(7906),
+                            Email = "rfranca@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
-                            NomeCompleto = "Carlos Santos",
-                            NormalizedEmail = "CSANTOS@GMAIL.COM",
-                            NormalizedUserName = "CSANTOS@GMAIL.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEDO33S7V54NPh+TiusG1HhUYsOypa1qimbhZ7D4ZJzhd9ZUaC5nDjEyOHToPr8VPvA==",
+                            NomeCompleto = "Roberto França",
+                            NormalizedEmail = "RFRANCA@GMAIL.COM",
+                            NormalizedUserName = "RFRANCA@GMAIL.COM",
+                            PasswordHash = "AQAAAAEAACcQAAAAEOAhYjDFPuK9OJSS0nE4EH8m+73cYghEZ9hz2TuqQyecp7nbziB9MEnkVKuTaYiNkA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "0568f543-6335-4665-b909-e0846a2e3984",
+                            SecurityStamp = "ff1cbccf-c561-42a2-b46d-7e2766bdfce2",
                             TwoFactorEnabled = false,
-                            UserName = "csantos@gmail.com"
+                            UserName = "rfranca@gmail.com"
                         });
                 });
 
@@ -149,10 +149,10 @@ namespace Cooperchip.ITDeveloper.Mvc.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "3EE387F4-ADBD-42BF-A068-022D48E99145",
-                            ConcurrencyStamp = "fbc1a1ad-8865-4694-88bc-b4980ebfc521",
-                            Name = "Convidado",
-                            NormalizedName = "CONVIDADO"
+                            Id = "3EE387F4-ADBD-42BF-A068-022D48E99021",
+                            ConcurrencyStamp = "c06d5d74-a7c2-407e-8748-882f0ecb252a",
+                            Name = "Admin",
+                            NormalizedName = "ADMIN"
                         });
                 });
 
@@ -245,8 +245,8 @@ namespace Cooperchip.ITDeveloper.Mvc.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = "F6F2A61B-4B5A-4C9C-88C9-42A473B7987C",
-                            RoleId = "3EE387F4-ADBD-42BF-A068-022D48E99145"
+                            UserId = "F6F2A61B-4B5A-4C9C-88C9-42A473B7958D",
+                            RoleId = "3EE387F4-ADBD-42BF-A068-022D48E99021"
                         });
                 });
 
