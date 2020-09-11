@@ -1,24 +1,45 @@
 ﻿@model Cooperchip.ITDeveloper.Domain.Models.Generico
 
-<div>
-    <h4>Generico</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Codigo)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Codigo)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Nome)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Nome)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
+
+
+@{
+    ViewBag.Title = "Detalhes do Genérico: [ " + Model.Nome.ToUpper() + " ]";
+}
+
+@{ Layout = null; }
+
+
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title">MedicalManagement-Sys</h4>
+        </div>
+        <div class="modal-body">
+            <div class="form-horizontal">
+
+                <div>
+                    <h4> @ViewBag.Title </h4>
+                    <hr />
+                    <dl class="dl-horizontal">
+
+                        <dt>ID: </dt>
+                        <dd>@Html.DisplayFor(model => model.Id)</dd>
+
+                        <dt>CÓDIGO: </dt>
+                        <dd>@Html.DisplayFor(model => model.Codigo)</dd>
+
+                        <dt>GENÉRICO: </dt>
+                        <dd>@Html.DisplayFor(model => model.Nome)</dd>
+
+                    </dl>
+                </div>
+
+            </div>
+        </div>
+        <div class="modal-footer">
+            <input type="button" value="Fechar" class="btn btn-default" data-dismiss="modal" />
+        </div>
+
+    </div><!-- /.modal-content -->
+</div><!-- /.modal-dialog -->

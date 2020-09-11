@@ -9,7 +9,7 @@
     <div class="col-lg-12">
 
         <p>
-            <button class="btn btn-default create" data-toggle="tooltip" data-placement="bottom" title="Adicionar um novo tipo de genérico" data-original-title="Adicionar um novo genérico">  <i class="glyphicon glyphicon-plus-sign"></i>  </button>
+            <button class="btn btn-default create" data-toggle="tooltip" data-placement="bottom" title="Adicionar um novo genérico" data-original-title="Adicionar um novo genérico">  <i class="glyphicon glyphicon-plus-sign"></i>  </button>
 
             <a asp-controller="Home" asp-action="Index" class="btn btn-default">Home</a>
 
@@ -78,11 +78,52 @@
 </div>
 
 
+<div class="modal fade modal-style6"
+     id="modalGnerico"
+     tabindex="-1"
+     role="dialog"
+     aria-labelledby="myModalLabel"
+     aria-hidden="true">
+
+</div>
+
 
 @section Scripts {
 
 
     <script src="~/bundle/dataTables.min.js"></script>
+
+
+    <script type="text/javascript">
+
+        $(".details").click(function () {
+            var id = $(this).attr("data-id");
+            $("#modalGnerico").load("/Generico/Details?id=" + id, function () {
+                $("#modalGnerico").modal();
+            });
+        });
+
+        $(".delete").click(function () {
+            var id = $(this).attr("data-id");
+            $("#modalGnerico").load("/Generico/Delete?id=" + id, function () {
+                $("#modalGnerico").modal();
+            });
+        });
+
+        $(".edit").click(function () {
+            var id = $(this).attr("data-id");
+            $("#modalGnerico").load("/Generico/Edit?id=" + id, function () {
+                $("#modalGnerico").modal();
+            });
+        });
+
+        $(".create").click(function () {
+            $("#modalGnerico").load("/Generico/Create", function () {
+                $("#modalGnerico").modal();
+            });
+        });
+
+    </script>
 
     <script>
         $(document).ready(function () {
