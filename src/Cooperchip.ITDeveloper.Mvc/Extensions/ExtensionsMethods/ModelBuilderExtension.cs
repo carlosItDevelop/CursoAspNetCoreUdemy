@@ -97,5 +97,45 @@ namespace Cooperchip.ITDeveloper.Mvc.Extensions.ExtensionsMethods
             return builder;
         }
 
+        public static ModelBuilder AddCid(this ModelBuilder builder)
+        {
+
+            var k = 0;
+            string line;
+
+            var outPutDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().CodeBase);
+            var csvPath = Path.Combine(outPutDirectory, "Csv\\Cid.CSV");
+            string filePath = new Uri(csvPath).LocalPath;
+
+
+            using (var fs = File.OpenRead(filePath))
+            using (var reader = new StreamReader(fs))
+                while ((line = reader.ReadLine()) != null)
+                {
+                    var parts = line.Split(';');
+
+                    var cidinternalid = parts[0];
+                    var codigo = parts[1];
+                    var diagnostico = parts[2]; 
+
+                    // Pular cabeçalho
+                    if (k > 0)
+                    {
+                        //CidInternalId;Codigo;Diagnostico
+                        builder.Entity<Cid>().HasData(new Cid
+                        {
+                            CidInternalId = Convert.ToInt32(cidinternalid),
+                            Codigo = codigo,
+                            Diagnostico = diagnostico
+                        });
+                    }
+
+                    k++;
+                }
+
+            return builder;
+        }
+
+
     }
 }

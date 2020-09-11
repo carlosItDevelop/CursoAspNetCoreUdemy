@@ -20,8 +20,9 @@ namespace Cooperchip.ITDeveloper.Mvc.Data
 
             //ModelBuilderExtension.AddUserAndRole(builder);
 
-            builder.AddUserAndRole();
-            builder.AddGenericos();
+            //builder.AddUserAndRole();
+            //builder.AddGenericos();
+            //builder.AddCid();
 
 
             base.OnModelCreating(builder);
