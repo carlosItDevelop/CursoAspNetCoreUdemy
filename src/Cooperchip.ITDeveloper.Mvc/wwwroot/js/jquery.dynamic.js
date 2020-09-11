@@ -68,7 +68,7 @@
             backToTop: {
                 active: true, //activate back to top
                 scrolltime: 800, //scroll time speed
-                imgsrc: 'img/backtop.png', //image 
+                imgsrc: '../img/backtop.png', //image 
                 width: 48, //width of image
                 place: 'bottom-right', //position top-left, top-right, bottom-right, bottom-left
                 fadein: 500, //fadein speed
@@ -83,7 +83,6 @@
             }
 
         }
-
         // current instance of the object
         var plugin = this;
 
@@ -109,7 +108,13 @@
             //activate mousewheel plugin
             this.mouseWheel();
             //activate retina ready plugin
-            this.retinaReady();
+
+
+            // Alterado por Carlos
+            //this.retinaReady();
+
+
+
             //toggle sidebar
             this.toggleSidebar();
             //sidebar nav function
@@ -411,6 +416,7 @@
                         plugin.toggleLeftSidebar();
                         plugin.collapseSideBarNav(false);
                     }
+                    
                 }
 
                 //remember toggle                
@@ -464,9 +470,6 @@
         plugin.toggleLeftSidebar = function() {
             var breakpoint = plugin.getBreakPoint();
             var scrollto = $("#sidebar .sidebar-scrollarea");
-            var nav = $('.side-nav>.nav');
-            var subs = nav.find(".hasSub>.sub");
-
             if (plugin.settings.sidebar.fixed) {
                 plugin.removeScrollTo(scrollto);
             }
@@ -477,9 +480,6 @@
             if (breakpoint == 'tablet' && !plugin.settings.sidebar.offCanvas) {
                 $('.page-content, #footer').removeClass('overLap');
             }
-            subs.each(function(index, el) {
-                $(this).attr('style', '');
-            });
         }
 
         //untogle left sidebar
@@ -880,8 +880,8 @@
                 // reset panel position for page
                 $('.reset-layout').click(function(e) {
                     bootbox.confirm({
-                        message: "Warning!!! This action will reset panels position",
-                        title: "Are you sure ?",
+                        message: "Tem certeza que deseja resetar as posições dos paineis?",
+                        title: "AVISO!!!",
                         className: "modal-style2",
                         callback: function(result) {
                             if (result) {
@@ -1023,7 +1023,7 @@
             var navsub = navel.closest('.nav.sub');
             //empty curmb
             breadcrumb.empty();
-            breadcrumb.append('<li>'+homeIcon+'<a href="index.html">Home</a></li>');
+            breadcrumb.append('<li>'+homeIcon+'<a href="/Home/Index">Home</a></li>');
 
             if (navsub.closest('li').hasClass('hasSub')) {
                 //get previous

@@ -2,7 +2,7 @@
  + * Korean translation for bootstrap-markdown
  + * WoongBi Kim <ssinss@gmail.com>
  + */
-;(function($){
+(function($){
   $.fn.markdown.messages['kr'] = {
     'Bold': "진하게",
     'Italic': "이탤릭체",

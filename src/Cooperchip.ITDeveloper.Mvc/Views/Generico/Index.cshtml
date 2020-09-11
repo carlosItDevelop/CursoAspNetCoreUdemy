@@ -79,19 +79,20 @@
 
 
 
-
-
-
-
 @section Scripts {
 
 
+    <script src="~/bundle/dataTables.min.js"></script>
 
+    <script>
+        $(document).ready(function () {
+            $('#myTable').DataTable({
+                dom: 'T<"clear">lfrtip',
+                tableTools: {
+                    "sSwfPath": "/myPlugins/copy_csv_xls_pdf.swf"
+                }
+            });
+        });
+    </script>
 
 }
-
-
-
-
-
-

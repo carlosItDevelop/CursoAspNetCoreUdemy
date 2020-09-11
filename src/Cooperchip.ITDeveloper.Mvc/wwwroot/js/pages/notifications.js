@@ -42,7 +42,7 @@ $(document).ready(function() {
 
 	//------------- Gritter notices -------------//
 
-	//regular notice
+	//info notice
 	$('#regular-notice').click(function() {
 		$.gritter.add({
 			// (string | mandatory) the heading of the notification

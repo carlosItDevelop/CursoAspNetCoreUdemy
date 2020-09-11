@@ -7,7 +7,7 @@ $(document).ready(function() {
 		width: '100%',
 		height: '20px',
 		barColor: '#dfe2e7',
-		zeroAxis: false,
+		zeroAxis: false
 	});
 
 	$('#spark-templateviews').sparkline([12,11,6,13,8,5,8,10,12,11,6,13,8,5,8,10,12,11,6,13,8,5,8], {
@@ -15,7 +15,7 @@ $(document).ready(function() {
 		width: '100%',
 		height: '20px',
 		barColor: '#dfe2e7',
-		zeroAxis: false,
+		zeroAxis: false
 	});
 
 	$('#spark-sales').sparkline([19,18,20,17,20,18,22,24,23,19,18,20,17,20,18,22,24,23,19,18,20,17], {
@@ -23,7 +23,7 @@ $(document).ready(function() {
 		width: '100%',
 		height: '20px',
 		barColor: '#dfe2e7',
-		zeroAxis: false,
+		zeroAxis: false
 	});
 
 	//------------- Other charts -------------//
@@ -36,94 +36,94 @@ $(document).ready(function() {
 		green: '#66c796',
 		orange: '#cfa448',
 		gray_lighter: '#e8ecf1',
-		gray_light: '#777777',
+		gray_light: '#777777'
 	}
 
 	//------------- Init Easy pie charts -------------//
-    //pass the variables to pie chart init function
-    //first is line width, size for pie, animated time , and colours object for theming.
+	//pass the variables to pie chart init function
+	//first is line width, size for pie, animated time , and colours object for theming.
 	initPieChartPage(20,100,1500, chartColours);
 
 	//------------- Sparklines -------------//
 
 	//line default
 	$("#spark-line").sparkline([2,4,7,9,9,5,3,2,2,4,6,7], {
-    	type: 'line',
-    	width: '100%',
+		type: 'line',
+		width: '100%',
 		height: '30px',
 		lineWidth: 1,
 		lineColor: '#b4bac1',
 		fillColor: chartColours.gray_lighter,
-		spotRadius: 0, //remove spots
-    });
+		spotRadius: 0 //remove spots
+	});
 
-    //line blue
+	//line blue
 	$("#spark-line-blue").sparkline([1,4,2,3,5,7,3,1,4,6,6,9], {
-    	type: 'line',
-    	width: '100%',
+		type: 'line',
+		width: '100%',
 		height: '30px',
 		lineWidth: 1,
 		lineColor: chartColours.blue,
 		fillColor: '#aaddee',
-		spotRadius: 0, //remove spots
-    });
+		spotRadius: 0 //remove spots
+	});
 
-    //line red
+	//line red
 	$("#spark-line-red").sparkline([2,4,3,2,5,1,5,3,8,6,2,5], {
-    	type: 'line',
-    	width: '100%',
+		type: 'line',
+		width: '100%',
 		height: '30px',
 		lineWidth: 1,
 		lineColor: chartColours.red,
 		fillColor: '#ed96a0',
-		spotRadius: 0, //remove spots
-    });
+		spotRadius: 0 //remove spots
+	});
 
-    //line green
+	//line green
 	$("#spark-line-green").sparkline([1,2,4,3,8,3,2,5,5,7,8,5], {
-    	type: 'line',
-    	width: '100%',
+		type: 'line',
+		width: '100%',
 		height: '30px',
 		lineWidth: 1,
 		lineColor: chartColours.green,
 		fillColor: '#99e8c0',
-		spotRadius: 0, //remove spots
-    });
+		spotRadius: 0 //remove spots
+	});
 
 	// Bar types
 	//==========
 
-    //bar default
+	//bar default
 	$("#spark-bar").sparkline([5,8,10,8,7,12,11,6,13,8,5,8,10,11,7,12,11,6,13,8,10,12,7,12,11,6,13,8,5,8], {
-    	type: 'bar',
-    	width: '100%',
+		type: 'bar',
+		width: '100%',
 		height: '30px',
-		barColor: '#b4bac1',
-    });
+		barColor: '#b4bac1'
+	});
 
-    //bar blue
+	//bar blue
 	$("#spark-bar-blue").sparkline([5,8,10,8,7,12,11,6,13,8,5,8,10,11,7,12,11,6,13,8,10,12,7,12,11,6,13,8,5,8], {
-    	type: 'bar',
-    	width: '100%',
+		type: 'bar',
+		width: '100%',
 		height: '30px',
-		barColor: chartColours.blue,
-    });
+		barColor: chartColours.blue
+	});
 
-    //bar red
+	//bar red
 	$("#spark-bar-red").sparkline([5,8,10,8,7,12,11,6,13,8,5,8,10,11,7,12,11,6,13,8,10,12,7,12,11,6,13,8,5,8], {
-    	type: 'bar',
-    	width: '100%',
+		type: 'bar',
+		width: '100%',
 		height: '30px',
-		barColor: chartColours.red,
-    });
+		barColor: chartColours.red
+	});
 
-    //bar green
+	//bar green
 	$("#spark-bar-green").sparkline([5,8,10,8,7,12,11,6,13,8,5,8,10,11,7,12,11,6,13,8,10,12,7,12,11,6,13,8,5,8], {
-    	type: 'bar',
-    	width: '100%',
+		type: 'bar',
+		width: '100%',
 		height: '30px',
-		barColor: chartColours.green,
-    });
+		barColor: chartColours.green
+	});
 
 
 	//------------- Gauge -------------//
@@ -230,95 +230,95 @@ $(document).ready(function() {
 	//update gauges every 5 sec with random data
 	setInterval(function() {
 		gauge.set(Math.floor( Math.random()*(100-1+1)+1));
-    	gaugeBlue.set(Math.floor( Math.random()*(100-1+1)+1));
-    	gaugeRed.set(Math.floor( Math.random()*(100-1+1)+1));
-    	gaugeGreen.set(Math.floor( Math.random()*(100-1+1)+1));
-    	gaugePercent.set(Math.floor( Math.random()*(100-1+1)+1));
-    }, 5000);
+		gaugeBlue.set(Math.floor( Math.random()*(100-1+1)+1));
+		gaugeRed.set(Math.floor( Math.random()*(100-1+1)+1));
+		gaugeGreen.set(Math.floor( Math.random()*(100-1+1)+1));
+		gaugePercent.set(Math.floor( Math.random()*(100-1+1)+1));
+	}, 5000);
 
 	//------------- Glow gauge -------------//
 	var glowGauge = document.getElementById("glow-gauge");
 	var glowGauge = new fabledweb.Gauge({
-	    "tick_length": 10,
-        "large_tick_length": 20,
-        "tick_thickness": 2,
-        "num_sub_ticks": 2,
-        "total_degrees": 180,
-        "tick_color": chartColours.gray_light,
-        "tick_on_color": chartColours.blue,
-        "tick_on_glow": 5,
-        "bg_image": null,
-        "gauge_scale": 1,
-        "animation_duration": 1000,
-        "percent": 70,
-	    "canvas": glowGauge
+		"tick_length": 10,
+		"large_tick_length": 20,
+		"tick_thickness": 2,
+		"num_sub_ticks": 2,
+		"total_degrees": 180,
+		"tick_color": chartColours.gray_light,
+		"tick_on_color": chartColours.blue,
+		"tick_on_glow": 5,
+		"bg_image": null,
+		"gauge_scale": 1,
+		"animation_duration": 1000,
+		"percent": 70,
+		"canvas": glowGauge
 	});
 	glowGauge.render();
 
 	//red gauge
 	var glowRedGauge = document.getElementById("glow-red-gauge");
 	var glowRedGauge = new fabledweb.Gauge({
-	    "tick_length": 10,
-        "large_tick_length": 20,
-        "tick_thickness": 2,
-        "num_sub_ticks": 2,
-        "total_degrees": 180,
-        "tick_color": chartColours.gray_light,
-        "tick_on_color": chartColours.red,
-        "tick_on_glow": 5,
-        "bg_image": null,
-        "gauge_scale": 1,
-        "animation_duration": 1000,
-        "percent": 30,
-	    "canvas": glowRedGauge
+		"tick_length": 10,
+		"large_tick_length": 20,
+		"tick_thickness": 2,
+		"num_sub_ticks": 2,
+		"total_degrees": 180,
+		"tick_color": chartColours.gray_light,
+		"tick_on_color": chartColours.red,
+		"tick_on_glow": 5,
+		"bg_image": null,
+		"gauge_scale": 1,
+		"animation_duration": 1000,
+		"percent": 30,
+		"canvas": glowRedGauge
 	});
 	glowRedGauge.render();
 
 	//green gauge
 	var glowGreenGauge = document.getElementById("glow-green-gauge");
 	var glowGreenGauge = new fabledweb.Gauge({
-	    "tick_length": 10,
-        "large_tick_length": 20,
-        "tick_thickness": 2,
-        "num_sub_ticks": 2,
-        "total_degrees": 180,
-        "tick_color": chartColours.gray_light,
-        "tick_on_color": chartColours.green,
-        "tick_on_glow": 5,
-        "bg_image": null,
-        "gauge_scale": 1,
-        "animation_duration": 1000,
-        "percent": 50,
-	    "canvas": glowGreenGauge
+		"tick_length": 10,
+		"large_tick_length": 20,
+		"tick_thickness": 2,
+		"num_sub_ticks": 2,
+		"total_degrees": 180,
+		"tick_color": chartColours.gray_light,
+		"tick_on_color": chartColours.green,
+		"tick_on_glow": 5,
+		"bg_image": null,
+		"gauge_scale": 1,
+		"animation_duration": 1000,
+		"percent": 50,
+		"canvas": glowGreenGauge
 	});
 	glowGreenGauge.render();
 
 	//green gauge
 	var glowYellowGauge = document.getElementById("glow-yellow-gauge");
 	var glowYellowGauge = new fabledweb.Gauge({
-	    "tick_length": 10,
-        "large_tick_length": 20,
-        "tick_thickness": 2,
-        "num_sub_ticks": 2,
-        "total_degrees": 180,
-        "tick_color": chartColours.gray_light,
-        "tick_on_color": chartColours.orange,
-        "tick_on_glow": 5,
-        "bg_image": null,
-        "gauge_scale": 1,
-        "animation_duration": 1000,
-        "percent": 10,
-	    "canvas": glowYellowGauge
+		"tick_length": 10,
+		"large_tick_length": 20,
+		"tick_thickness": 2,
+		"num_sub_ticks": 2,
+		"total_degrees": 180,
+		"tick_color": chartColours.gray_light,
+		"tick_on_color": chartColours.orange,
+		"tick_on_glow": 5,
+		"bg_image": null,
+		"gauge_scale": 1,
+		"animation_duration": 1000,
+		"percent": 10,
+		"canvas": glowYellowGauge
 	});
 	glowYellowGauge.render();
 
 	//update gauges every 5 sec with random data
 	setInterval(function() {
-        glowGauge.updatePercent(Math.floor( Math.random()*(100-1+1)+1));
-        glowRedGauge.updatePercent(Math.floor( Math.random()*(100-1+1)+1));
-        glowGreenGauge.updatePercent(Math.floor( Math.random()*(100-1+1)+1));
-        glowYellowGauge.updatePercent(Math.floor( Math.random()*(100-1+1)+1));
-    }, 5000);
+		glowGauge.updatePercent(Math.floor( Math.random()*(100-1+1)+1));
+		glowRedGauge.updatePercent(Math.floor( Math.random()*(100-1+1)+1));
+		glowGreenGauge.updatePercent(Math.floor( Math.random()*(100-1+1)+1));
+		glowYellowGauge.updatePercent(Math.floor( Math.random()*(100-1+1)+1));
+	}, 5000);
 	
 });
 
@@ -326,53 +326,53 @@ $(document).ready(function() {
 var initPieChartPage = function(lineWidth, size, animateTime, colours) {
 
 	$(".easy-pie-chart").easyPieChart({
-        barColor: colours.gray,
-        borderColor: colours.gray,
-        trackColor: colours.gray_lighter,
-        scaleColor: false,
-        lineCap: 'butt',
-        lineWidth: lineWidth,
-        size: size,
-        animate: animateTime
-    });
-    $(".easy-pie-chart-red").easyPieChart({
-        barColor: colours.red,
-        borderColor: colours.red,
-        trackColor: '#ebb7bd',
-        scaleColor: false,
-        lineCap: 'butt',
-        lineWidth: lineWidth,
-        size: size,
-        animate: animateTime
-    });
-    $(".easy-pie-chart-green").easyPieChart({
-        barColor: colours.green,
-        borderColor: colours.green,
-        trackColor: '#a9e2c6',
-        scaleColor: false,
-        lineCap: 'butt',
-        lineWidth: lineWidth,
-        size: size,
-        animate: animateTime
-    });
-    $(".easy-pie-chart-blue").easyPieChart({
-        barColor: colours.blue,
-        borderColor: colours.blue,
-        trackColor: '#b7e0ee',
-        scaleColor: false,
-        lineCap: 'butt',
-        lineWidth: lineWidth,
-        size: size,
-        animate: animateTime
-    });
-    $(".easy-pie-chart-yellow").easyPieChart({
-        barColor: colours.orange,
-        borderColor: colours.orange,
-        trackColor: '#e9d09a',
-        scaleColor: false,
-        lineCap: 'butt',
-        lineWidth: lineWidth,
-        size: size,
-        animate: animateTime
-    });
+		barColor: colours.gray,
+		borderColor: colours.gray,
+		trackColor: colours.gray_lighter,
+		scaleColor: false,
+		lineCap: 'butt',
+		lineWidth: lineWidth,
+		size: size,
+		animate: animateTime
+	});
+	$(".easy-pie-chart-red").easyPieChart({
+		barColor: colours.red,
+		borderColor: colours.red,
+		trackColor: '#ebb7bd',
+		scaleColor: false,
+		lineCap: 'butt',
+		lineWidth: lineWidth,
+		size: size,
+		animate: animateTime
+	});
+	$(".easy-pie-chart-green").easyPieChart({
+		barColor: colours.green,
+		borderColor: colours.green,
+		trackColor: '#a9e2c6',
+		scaleColor: false,
+		lineCap: 'butt',
+		lineWidth: lineWidth,
+		size: size,
+		animate: animateTime
+	});
+	$(".easy-pie-chart-blue").easyPieChart({
+		barColor: colours.blue,
+		borderColor: colours.blue,
+		trackColor: '#b7e0ee',
+		scaleColor: false,
+		lineCap: 'butt',
+		lineWidth: lineWidth,
+		size: size,
+		animate: animateTime
+	});
+	$(".easy-pie-chart-yellow").easyPieChart({
+		barColor: colours.orange,
+		borderColor: colours.orange,
+		trackColor: '#e9d09a',
+		scaleColor: false,
+		lineCap: 'butt',
+		lineWidth: lineWidth,
+		size: size,
+		animate: animateTime
+	});
 }

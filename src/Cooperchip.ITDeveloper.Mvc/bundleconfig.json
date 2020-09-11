@@ -1,49 +1,57 @@
 [
   {
-    "outputFileName": "wwwroot/output/bundle.js",
-    "inputFiles": []
-  },
-  {
-    "outputFileName": "wwwroot/bundle/jQueryFlot.js",
+    "outputFileName": "wwwroot/bundle/firstpage.min.js",
     "inputFiles": [
-      "wwwroot/plugins/charts/flot/jquery.flot.categories.js",
-      "wwwroot/plugins/charts/flot/jquery.flot.curvedLines.js",
-      "wwwroot/plugins/charts/flot/jquery.flot.custom.js",
-      "wwwroot/plugins/charts/flot/jquery.flot.growraf.js",
-      "wwwroot/plugins/charts/flot/jquery.flot.orderBars.js",
-      "wwwroot/plugins/charts/flot/jquery.flot.pie.js",
-      "wwwroot/plugins/charts/flot/jquery.flot.resize.js",
-      "wwwroot/plugins/charts/flot/jquery.flot.stack.js",
-      "wwwroot/plugins/charts/flot/jquery.flot.time.js",
-      "wwwroot/plugins/charts/flot/jquery.flot.tooltip.js"
+      "wwwroot/plugins/core/pace/pace.min.js"
     ]
   },
   {
-    "outputFileName": "wwwroot/bundle/core.js",
+    "outputFileName": "wwwroot/bundle/allpages.min.js",
     "inputFiles": [
-      "wwwroot/js/bootstrap/bootstrap.js",
+      "wwwroot/Scripts/jquery.unobtrusive-ajax.js",
+      "wwwroot/js/bootstrap/bootstrap.min.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/bundle/core.min.js",
+    "inputFiles": [
       "wwwroot/js/libs/modernizr.custom.js",
       "wwwroot/js/jRespond.min.js",
+      "wwwroot/plugins/core/slimscroll/jquery.slimscroll.min.js",
       "wwwroot/plugins/core/slimscroll/jquery.slimscroll.horizontal.min.js",
-      "wwwroot/plugins/core/slimscroll/jquery.slimscroll.js",
       "wwwroot/plugins/core/fastclick/fastclick.js",
       "wwwroot/plugins/core/velocity/jquery.velocity.min.js",
-      "wwwroot/plugins/core/quicksearch/jquery.quicksearch.js",
-      "wwwroot/plugins/ui/bootbox/bootbox.js"
+      "wwwroot//plugins/core/quicksearch/jquery.quicksearch.js",
+      "wwwroot//plugins/ui/bootbox/bootbox.js"
     ]
   },
   {
-    "outputFileName": "wwwroot/bundle/core.dashboard.js",
+    "outputFileName": "wwwroot/bundle/dashboard.min.js",
     "inputFiles": [
       "wwwroot/plugins/charts/sparklines/jquery.sparkline.js",
       "wwwroot/plugins/charts/progressbars/progressbar.js",
       "wwwroot/plugins/ui/waypoint/waypoints.js",
       "wwwroot/plugins/ui/weather/skyicons.js",
-      "wwwroot/plugins/ui/notify/jquery.gritter.js"
+      "wwwroot/plugins/ui/notify/jquery.gritter.js",
+      "wwwroot/plugins/misc/vectormaps/jquery-jvectormap-1.2.2.min.js",
+      "wwwroot/plugins/misc/vectormaps/maps/jquery-jvectormap-world-mill-en.js",
+      "wwwroot/plugins/misc/countTo/jquery.countTo.js",
+      "wwwroot/js/jquery.dynamic.js",
+      "wwwroot/js/main.js",
+      "wwwroot/js/pages/dashboard.js"
     ]
   },
   {
-    "outputFileName": "wwwroot/bundle/core.css",
+    "outputFileName": "wwwroot/bundle/dataTables.min.js",
+    "inputFiles": [
+      "wwwroot/plugins/tables/datatables/jquery.dataTables.js",
+      "wwwroot/plugins/tables/datatables/dataTables.tableTools.js",
+      "wwwroot/plugins/tables/datatables/dataTables.bootstrap.js",
+      "wwwroot/plugins/tables/datatables/dataTables.responsive.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/bundle/core.min.css",
     "inputFiles": [
       "wwwroot/css/bootstrap.css",
       "wwwroot/css/plugins.css",
@@ -53,3 +61,5 @@
     ]
   }
 ]
+
+

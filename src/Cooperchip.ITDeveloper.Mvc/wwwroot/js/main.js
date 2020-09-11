@@ -30,9 +30,9 @@ window.addEventListener('load', function() {
 $(document).ready(function() {
 
     //Disable certain links
-    $('a[href^=#]').click(function (e) {
-        e.preventDefault()
-    })
+    $('a[href^="'+'#"]').click(function(e) {
+        e.preventDefault();
+    });
 
     //------------- Init our plugin -------------//
     $('body').dynamic({

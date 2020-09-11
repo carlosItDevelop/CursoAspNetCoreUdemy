@@ -136,11 +136,9 @@
 							&.hasSub {
 								a.notExpand {
 									background-color: lighten(@nav-hover-bg, 5%);
+									margin-top: 8px !important;
 								}
 								ul.sub {
-                                    position: relative;
-                                    height: 100%;
-                                    top: -6px !important;
 									left: 0;
 									top: 37px;	
 									background-color: lighten(@nav-hover-bg, 15%);
@@ -168,7 +166,7 @@
 
 							& +li {
 								margin-top: 0;
-								&:last-child:not(.hasSub) {
+								&:last-child {
 									padding-bottom: 0;
 									a {padding-bottom: 8px !important;}
 								}
@@ -176,9 +174,6 @@
 							&:last-child {
 								a {border-bottom-right-radius: @border-radius-base;}
 							}
-                            &:first-child {
-                                margin-top: 8px;
-                            }
 						}
 					}
 				}
@@ -213,12 +208,13 @@
 						.transition-duration(0.4s);
 
 						&.sideNav-arrow {
-							float: right;
-                            margin-right: 5px;
+							position: absolute;
+							right: 0;
 							font-size: 14px;
+							top: 7px;
 							.transition(all);
 							.transition-duration(0.4s);
-							
+							margin-top: 3px;
 						}
 					}
 					.txt {
@@ -281,7 +277,7 @@
 								.transition-duration(0.4s);
 
 								&.sideNav-arrow {
-								
+									top: -2px;
 								}
 							}
 
@@ -321,11 +317,6 @@
 						&:first-child {
 							a {
 								padding-top: 10px;
-                                &.expand {
-                                    &:after {
-                                        height: 20px;
-                                    }
-                                }
 							}
 						}
 
@@ -345,9 +336,6 @@
 							a {
 								background-color: @nav-sub-bg;
 								position: relative;
-                                &.expand:after {
-                                    height: 18px;
-                                }
 							}
 
 							&.highlight-menu {
@@ -365,39 +353,16 @@
 										padding-bottom: 2px;
 									}
 								}
-                                a.expand {
-                                    &:after {
-                                        height: 19px;
-                                    }
-                                }
 							}
 							//3 level
 							.sub {
-                                &:before {
-                                    content: "";
-                                    width: 12px;
-                                    height: 1px;
-                                    position: absolute;
-                                    left: 33px;
-                                    top: -14px;
-                                    background-color: @nav-icon-color;
-                                }
-                                &:after {
-                                    content: "";
-                                    width: 17px;
-                                    height: 1px;
-                                    position: absolute;
-                                    left: 29px;
-                                    bottom: 0px;
-                                    background-color: @nav-icon-color;
-                                }
 								li {
 									a {
 										padding: 3px 20px 2px 75px;
 										&:before {left:42px;}
 										&:after {
 											left:45px;
-											height: 29px;
+											height: 30px;
 											top: -13px;
 										}
 									}
@@ -412,23 +377,10 @@
 										a {
 											padding-top: 3px;
 											padding-bottom: 10px;
-                                            &:after {
-                                                height: 46px;
-                                            }
 										}
 									}
 								}
 							}
-                            &:last-child {
-                                .sub {
-                                    &:after {
-                                        background-color: transparent;
-                                    }
-                                    li:last-child {
-                                        a:after {height: 29px;}
-                                    }
-                                }
-                            }
 						}
 					}
 				}
