@@ -76,6 +76,10 @@ namespace Cooperchip.ITDeveloper.Mvc.Extentions.TagHelpers
 >> Se você for um iniciante em Asp.Net Core talvez nunca tenha ouvido falar de AddMvcCore().
 
 
-
 Consultar a documentação para TagHelpers e ViewComponents, **[Leia aqui](https://docs.microsoft.com/pt-br/)**.
 Consultar a documentação para MarkDown, **[Leia aqui](http://daringfireball.net/projects/markdown/basics)**.
+
+---
+
+> Quer conhecer nosso projeto? Acesse o curso na Udemy:  **[Acesse aqui](https://www.udemy.com/course/curso-de-aspnet-core-mvc-2-2-do-zero-ao-ninja/?referralCode=41B345D11D74CEDD7E57)**.
+
