@@ -22,7 +22,7 @@ namespace Cooperchip.ITDeveloper.Mvc.Data
 
             //builder.AddUserAndRole();
             //builder.AddGenericos();
-            //builder.AddCid();
+
 
 
             base.OnModelCreating(builder);

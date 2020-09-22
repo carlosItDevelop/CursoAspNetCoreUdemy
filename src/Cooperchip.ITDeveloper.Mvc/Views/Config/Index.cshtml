@@ -1,0 +1,32 @@
+﻿
+
+
+<div class="row" style="margin-top: 12px;">
+    <div class="col-lg-12">
+        <p>
+
+            @Html.ActionLink("Home", "Index", "Home", null, new { @class = "btn btn-default" })
+        </p>
+
+        <div class="animated fadeInRightBig">
+            <div class="panel panel-primary toggle">
+
+                <div class="panel-heading">
+                    <h4 class="panel-title"><i class="fa fa-magic"></i> MedicalManagement-Sys - Configurações</h4>
+                </div>
+
+                <div class="panel-body">
+
+                    <div class="jumbotron">
+                        <a asp-controller="Config" asp-action="ImportMedicamentos" class="btn btn-info">Importar Medicamentos</a>
+                        <a href="#" class="btn btn-info">Importar Genérico</a>
+                        <a href="#" class="btn btn-info">Importar Cid</a>
+                        <a href="#" class="btn btn-info">Importar Bairro</a>
+                        <a href="#" class="btn btn-info">Importar Cidade</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

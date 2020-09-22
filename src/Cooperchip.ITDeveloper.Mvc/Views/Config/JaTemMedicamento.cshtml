@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Cooperchip.ITDeveloper.Domain.Models.Medicamento>
+
+
+
+<div class="row" style="margin-top: 12px;">
+
+
+
+    <div class="col-lg-12">
+
+        <div class="animated fadeInRightBig">
+            <div class="panel panel-primary toggle">
+                <!-- Start .panel -->
+                <div class="panel-heading">
+                    <h4 class="panel-title"><i class="fa fa-magic"></i> MedicalManagement-Sys - Lista de Medicamentos</h4>
+                </div>
+                <div class="panel-body">
+
+                    <div class="jumbotron">
+                        <h3 class="alert alert-info">Os medicamantos Já foram importados!</h3>
+                    </div>
+
+                    <partial name="_ListaMedicamento" model="@Model"/>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade modal-style4"
+     id="modalGnerico"
+     tabindex="-1"
+     role="dialog"
+     aria-labelledby="myModalLabel"
+     aria-hidden="true">
+
+</div>
+
+
+
+@section Scripts {
+
+
+    @* Bundle  dataTable *@
+    <script src="/bundle/dataTables.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#myTable').DataTable({
+                dom: 'T<"clear">lfrtip',
+                tableTools: {
+                    "sSwfPath": "/myPlugins/copy_csv_xls_pdf.swf"
+                }
+            });
+        });
+    </script>
+}

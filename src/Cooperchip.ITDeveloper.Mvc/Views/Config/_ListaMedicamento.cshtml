@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Cooperchip.ITDeveloper.Domain.Models.Medicamento>
+
+
+
+            <table class="table" id="myTable">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Codigo)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Descricao)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Generico)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.CodigoGenerico)
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Codigo)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Descricao)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Generico)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.CodigoGenerico)
+                            </td>
+                            <td>
+
+                                <button class="btn btn-default details" data-id="@item.Id" data-toggle="tooltip" data-placement="bottom" title="Detalhes de Medicamento" data-original-title="Detalhes de Medicamento"><i class="glyphicon glyphicon-file"></i></button>
+
+                                <button class="btn btn-danger delete" data-id="@item.Id" data-toggle="tooltip" data-placement="bottom" title="Excluir Medicamento" data-original-title="Excluir Medicamento"><i class="glyphicon glyphicon-trash"></i></button>
+
+                                <button class="btn btn-primary edit" data-id="@item.Id" data-toggle="tooltip" data-placement="bottom" title="Editar Medicamento" data-original-title="Editar Medicamento"><i class="glyphicon glyphicon-edit"></i></button>
+
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+
