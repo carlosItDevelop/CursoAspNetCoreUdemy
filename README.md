@@ -23,6 +23,10 @@
 
 - Pré-Release v.0.10.1: **[Acesse Aqui](https://github.com/carlosItDevelop/CursoAspNetCoreUdemy/releases/tag/Atualizacao_TelaInicial)**.
 
+> __Início da Última seção antes do Módulo Bônus (Arquitetura de Softuare), Polular Tabelas Iniciais, Importação de .CSV e Correção de Bug__:
+
+- Pré-Release v.0.11.0: **[Acesse Aqui](https://github.com/carlosItDevelop/CursoAspNetCoreUdemy/releases/tag/ImportCSV)**
+
 ---
 
 > ### TaskList - Tag Helpers
