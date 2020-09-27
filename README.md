@@ -1,12 +1,10 @@
-#### Curso de Asp.Net Core 3.1 (Início em 2.2) - Do Zero ao Ninja
+### Repositório Oficial do Projeto MedicalManagement-Sys
 
-##### Repositório Oficial do Projeto MedicalManagement-Sys
+### Curso de Asp.Net Core 3.1 (Início em 2.2) - Do Zero ao Ninja
 
 ---
 
-> Quer conhecer nosso projeto? Acesse o curso na Udemy:  **[Acesse aqui](https://www.udemy.com/course/curso-de-aspnet-core-mvc-2-2-do-zero-ao-ninja/?referralCode=41B345D11D74CEDD7E57)**.
-
-> *__Tela Inicial. Está no Release 0.11.1. Confira lá:__*
+__Quer conhecer nosso projeto? Acesse o curso na Udemy:  **[Acesse aqui](https://www.udemy.com/course/curso-de-aspnet-core-mvc-2-2-do-zero-ao-ninja/?referralCode=41B345D11D74CEDD7E57)**.__
 
 ![Tela Inicial do Projeto MedicalManagenet-Sys](https://user-images.githubusercontent.com/1213751/71663844-87052780-2d35-11ea-95c0-623a74885ebc.png "Antes do Dashboard")
 
@@ -25,39 +23,6 @@
 > __Fim do Módulo Básico e Intermediário__:  *Preimeiro pré-release com todo o Módulo Básico e Parte do Intermediário, até a Migração do Asp.Net Core 2.2 para as versões 3.0.0 e 3.1.0*
 
 - Pré-Release v.0.9.0: **[Acesse Aqui](https://github.com/carlosItDevelop/CursoAspNetCoreUdemy/releases/tag/CursoAspNetCoreUdemy)**.
-
-
----
-
-
-##### DataCadastro:
-
-> Todo: O campo DataCadastro deve ser incluído automaticamente, mas não deve ser alterado. Este processo será implementado no contexto da aplicação.
-
----
-
-### Código pronto do nosso EmailTagHelper
-
-```CSharp
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Razor.TagHelpers;
-
-namespace Cooperchip.ITDeveloper.Mvc.Extentions.TagHelpers
-{
-    public class EmailTagHelper : TagHelper
-    {
-        public string Domain { get; set; } = "eaditdeveloper.com.br";
-        public override async Task ProcessAsync(TagHelperContext context, TagHelperOutput output)
-        {
-            output.TagName = "a";
-            var content = await output.GetChildContentAsync();
-            var target = content.GetContent() + "@" + Domain;
-            output.Attributes.SetAttribute("href", "mailto:" + target);
-            output.Content.SetContent(target);
-        }
-    }
-}
-```
 
 ---
 
