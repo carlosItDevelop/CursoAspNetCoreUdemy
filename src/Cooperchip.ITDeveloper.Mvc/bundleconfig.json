@@ -28,6 +28,16 @@
   {
     "outputFileName": "wwwroot/bundle/dashboard.min.js",
     "inputFiles": [
+      "wwwroot/plugins/charts/flot/jquery.flot.custom.js",
+      "wwwroot/plugins/charts/flot/jquery.flot.pie.js",
+      "wwwroot/plugins/charts/flot/jquery.flot.resize.js",
+      "wwwroot/plugins/charts/flot/jquery.flot.time.js",
+      "wwwroot/plugins/charts/flot/jquery.flot.growraf.js",
+      "wwwroot/plugins/charts/flot/jquery.flot.categories.js",
+      "wwwroot/plugins/charts/flot/jquery.flot.stack.js",
+      "wwwroot/plugins/charts/flot/jquery.flot.orderBars.js",
+      "wwwroot/plugins/charts/flot/jquery.flot.tooltip.min.js",
+      "wwwroot/plugins/charts/flot/jquery.flot.curvedLines.js",
       "wwwroot/plugins/charts/sparklines/jquery.sparkline.js",
       "wwwroot/plugins/charts/progressbars/progressbar.js",
       "wwwroot/plugins/ui/waypoint/waypoints.js",
@@ -61,5 +71,3 @@
     ]
   }
 ]
-
-

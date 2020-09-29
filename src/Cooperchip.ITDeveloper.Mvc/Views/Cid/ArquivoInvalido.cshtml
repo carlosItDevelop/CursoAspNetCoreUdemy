@@ -1,0 +1,26 @@
+﻿@{ ViewData["Title"] = "ArquivoInvalido"; }
+
+<div class="row" style="margin-top: 12px;">
+    <div class="col-lg-12">
+        <p>
+            @Html.ActionLink("Home", "Index", "Home", null, new { @class = "btn btn-default" })
+            @Html.ActionLink("Voltar", "ImportarCid", "Config", null, new { @class = "btn btn-default" })
+        </p>
+
+        <div class="animated fadeInRightBig">
+            <div class="panel panel-primary toggle">
+                <!-- Start .panel -->
+                <div class="panel-heading">
+                    <h4 class="panel-title"><i class="fa fa-magic"></i> @ViewData["Title"]</h4>
+                </div>
+                <div class="panel-body">
+
+                    <div class="jumbotron">
+                        <h3 class="alert alert-danger">@TempData["ArquivoInvalido"]</h3>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

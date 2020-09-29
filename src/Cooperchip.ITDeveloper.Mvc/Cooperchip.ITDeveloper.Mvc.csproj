@@ -1065,4 +1065,9 @@
     <ProjectReference Include="..\Cooperchip.ITDeveloper.Data\Cooperchip.ITDeveloper.Data.csproj" />
   </ItemGroup>
 
+
+  <ItemGroup>
+    <Folder Include="wwwroot\importFile\" />
+  </ItemGroup>
+
 </Project>
