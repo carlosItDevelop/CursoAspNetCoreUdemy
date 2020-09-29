@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using Cooperchip.ITDeveloper.Application.Extensions;
 using Cooperchip.ITDeveloper.Data.ORM;
@@ -25,7 +26,10 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Cid.AsNoTracking().OrderBy(o => o.CidInternalId).Where(c => c.CidInternalId < 1001).ToListAsync());
+            return View(await _context.Cid.AsNoTracking()
+                .Where(c => c.CidInternalId < 1001)
+                .OrderBy(o => o.CidInternalId)
+                .ToListAsync());
         }
 
         public IActionResult ArquivoInvalido()
@@ -35,14 +39,13 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
         }
 
 
-
         [HttpPost]
         public async Task<IActionResult> ImportCid(IFormFile file, [FromServices] IWebHostEnvironment webHostEnvironment)
         {
             // DRY
-            if (!ArquivoValido.EhValido(file, "Cid_utf8.Csv")) return RedirectToAction("ArquivoInvalido"); // DELEGUEI
+            if (!ArquivoValido.EhValido(file, "Cid.Csv")) return RedirectToAction("ArquivoInvalido"); // DELEGUEI
 
-            var filePah = $"{webHostEnvironment.WebRootPath}\\importFile\\{file.FileName}";
+            var filePah = $"{webHostEnvironment.WebRootPath}\\importFiles\\{file.FileName}";
 
             CopiarArquivo.Copiar(file, filePah); // Deleguei
 
@@ -50,9 +53,11 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
             string line;
 
             List<Cid> cids = new List<Cid>();
+            Encoding encoding = Encoding.GetEncoding(1252);  /// ANSI
+            bool detectEncoding = false;
 
             using (var fs = System.IO.File.OpenRead(filePah))
-            using(var stream = new StreamReader(fs))
+            using (var stream = new StreamReader(fs, encoding, detectEncoding))
                 while((line = stream.ReadLine()) != null)
                 {
                     string[] parts = line.Split(";");

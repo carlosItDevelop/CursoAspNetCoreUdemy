@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 using Cooperchip.ITDeveloper.Mvc.Configuration;
 using Cooperchip.ITDeveloper.Mvc.Data;
 using Cooperchip.ITDeveloper.Mvc.Extensions.Identity;
@@ -45,6 +46,7 @@ namespace Cooperchip.ITDeveloper.Mvc
             services.AddIdentityConfig(Configuration); // In IdentityConfig
             services.AddMvcAndRazor(); // In MvcAndRazor
             services.AddDependencyInjectConfig(Configuration); // In DependencyInjectConfig
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ApplicationDbContext context,

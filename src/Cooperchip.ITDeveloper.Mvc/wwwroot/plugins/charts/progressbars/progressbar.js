@@ -1,6 +1,3 @@
-(function () {
-
-
 // ProgressBar.js 0.6.1
 // https://kimmobrunfeldt.github.io/progressbar.js
 // License: MIT
@@ -1903,6 +1900,4 @@ module.exports = {
 };
 
 },{}]},{},[4])(4)
-    });
-
-})();
+});
