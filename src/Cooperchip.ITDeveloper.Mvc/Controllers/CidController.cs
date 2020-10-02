@@ -1,16 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Cooperchip.ITDeveloper.Application.Extensions;
+﻿using Cooperchip.ITDeveloper.Application.Extensions;
 using Cooperchip.ITDeveloper.Data.ORM;
 using Cooperchip.ITDeveloper.Domain.Models;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Cooperchip.ITDeveloper.Mvc.Controllers
 {
@@ -53,20 +52,21 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
             string line;
 
             List<Cid> cids = new List<Cid>();
-            Encoding encoding = Encoding.GetEncoding(1252);  /// ANSI
+            Encoding encodingPage = Encoding.GetEncoding(1252);
             bool detectEncoding = false;
 
             using (var fs = System.IO.File.OpenRead(filePah))
-            using (var stream = new StreamReader(fs, encoding, detectEncoding))
-                while((line = stream.ReadLine()) != null)
+            using (var stream = new StreamReader(fs, encoding: encodingPage, detectEncoding))
+                while ((line = stream.ReadLine()) != null)
                 {
                     string[] parts = line.Split(";");
                     // cidinternalid, codigo, diagnostico  (os campos que vem no cabecalho do .csv)
                     if (k > 0) // Pular Cabechalho
                     {
-                        if (!_context.Cid.Any(e=>e.CidInternalId == int.Parse(parts[0]))){
+                        if (!_context.Cid.Any(e => e.CidInternalId == int.Parse(parts[0])))
+                        {
                             cids.Add(new Cid
-                            { 
+                            {
                                 CidInternalId = int.Parse(parts[0]),
                                 Codigo = parts[1],
                                 Diagnostico = parts[2]

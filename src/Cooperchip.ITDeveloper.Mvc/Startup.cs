@@ -46,7 +46,9 @@ namespace Cooperchip.ITDeveloper.Mvc
             services.AddIdentityConfig(Configuration); // In IdentityConfig
             services.AddMvcAndRazor(); // In MvcAndRazor
             services.AddDependencyInjectConfig(Configuration); // In DependencyInjectConfig
-            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+            // Prover Suporte para Code Page (1252) (windows-1252)
+            services.AddCodePageProviderNotSupportedInDotNetCoreForAnsi(); 
+
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ApplicationDbContext context,

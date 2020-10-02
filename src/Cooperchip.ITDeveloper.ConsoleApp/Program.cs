@@ -2,12 +2,21 @@
 using Cooperchip.ITDeveloper.DomainCore.Extensions;
 using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace Cooperchip.ITDeveloper.ConsoleApp
 {
+
     internal class Program
     {
         static void Main(string[] args)
+        {
+            AlunosCall();
+        }
+
+
+
+        private static void AlunosCall()
         {
             var pacientes = new List<Paciente>
             {
@@ -72,8 +81,10 @@ namespace Cooperchip.ITDeveloper.ConsoleApp
             Console.WriteLine();
 
             Console.ReadKey();
+
         }
 
-
     }
+
+
 }
