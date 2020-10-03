@@ -13,6 +13,7 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
             List<CodigoPagina> listaCodPage = new List<CodigoPagina>();
             foreach (EncodingInfo encInfo in Encoding.GetEncodings())
             {
+                Encoding e = encInfo.GetEncoding(); // Não estou usando ainda               
                 listaCodPage.Add(new CodigoPagina 
                 { 
                     Code = encInfo.CodePage,
