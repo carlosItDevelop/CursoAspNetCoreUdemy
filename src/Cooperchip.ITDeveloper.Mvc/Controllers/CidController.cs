@@ -142,7 +142,7 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
                 {
                     throw new Exception(ex.Message);
                 }
-                RedirectToAction("Index");
+                return RedirectToAction(nameof(Index));
             }
             return View(cid);
         }
@@ -177,10 +177,10 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
                     }
                     else
                     {
-                        return BadRequest();
+                        throw;
                     }
                 }
-                RedirectToAction("Index");
+                return RedirectToAction(nameof(Index));
             }
             return View(cid);
         }
