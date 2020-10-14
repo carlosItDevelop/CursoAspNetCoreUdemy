@@ -1,5 +1,6 @@
 ﻿
-@model IEnumerable<Cooperchip.ITDeveloper.Domain.Models.Cid>
+@using X.PagedList.Mvc.Core;
+@model X.PagedList.IPagedList<Cooperchip.ITDeveloper.Domain.Models.Cid>
 
 @{
     ViewData["Title"] = "Medical Management Sys - Lista de CID";
@@ -12,18 +13,50 @@
             <button class="btn btn-default create" data-toggle="tooltip" data-placement="bottom" title="Adicionar uma nova CID" data-original-title="Adicionar uma nova CID">  <i class="glyphicon glyphicon-plus-sign"></i>  </button>
             @Html.ActionLink("Home", "Index", "Home", null, new { @class = "btn btn-default" })
         </p>
+
         <div class="animated fadeInRightBig">
             <div class="panel panel-primary toggle">
                 <div class="panel-heading">
                     <h4 class="panel-title"><i class="fa fa-magic"></i> @ViewData["Title"]</h4>
                 </div>
+
+                <div class="row col-12">
+                    <div class="form-group" style="margin: 15px 5px 2px 35px;">
+                        <div class="pull-left">
+                            Listando registros de @Model.FirstItemOnPage a @Model.LastItemOnPage de um total de @Model.TotalItemCount
+                        </div>
+                    </div>
+                </div>
+
                 <div class="panel-body">
+
+                    <form asp-action="Index" method="get">
+                        <div class="form-action no-color">
+                            <p>
+                                <input type="text" name="stringBusca" value="@ViewData["filtroAtual"]" placeholder="Buscar por...">
+                                <input type="submit" value="Buscar" class="btn btn-default"> | <a asp-action="Index" class="btn btn-default">Retornar à Lista Completa</a>
+                            </p>
+                        </div>
+                    </form>
+
                     <table id="myTableCid" class="table table-striped table-bordered" style="width:100%" cellspacing="0" width="100%">
                         <thead>
                             <tr>
-                                <th>ID Interno</th>
-                                <th>Código</th>
-                                <th>Diagnóstico</th>
+                                <th>
+                                    <a asp-action="Index"
+                                       asp-route-stringBusca="@ViewData["filtroAtual"]"
+                                       asp-route-ordenacao="@ViewData["OrderByInternalId"]">ID Interno</a>
+                                </th>
+                                <th>
+                                    <a asp-action="Index"
+                                       asp-route-stringBusca="@ViewData["filtroAtual"]"
+                                       asp-route-ordenacao="@ViewData["OrderByCodigo"]">Código</a>
+                                </th>
+                                <th>
+                                    <a asp-action="Index"
+                                       asp-route-stringBusca="@ViewData["filtroAtual"]"
+                                       asp-route-ordenacao="@ViewData["OrderByDiagnostico"]">Diagnóstico</a>
+                                </th>
                                 <th class="text-center">Ação</th>
                             </tr>
                         </thead>
@@ -81,10 +114,17 @@
     </div>
 </div>
 
+<div class="row col-12">
+    <div class="form-group" style="margin: 15px 15px 5px 15px;">
+        <div class="pull-right">
+            @Html.PagedListPager(Model, Page => Url.Action("Index", "Cid", new { pagina = Page, ordenacao = ViewData["ordenacao"], stringBusca = ViewData["filtroAtual"] }))
+        </div>
+    </div>
+</div>
 
 
 <div class="modal fade modal-style6"
-     id="modalGnerico"
+     id="modalCid"
      tabindex="-1"
      role="dialog"
      aria-labelledby="myModalLabel"
@@ -96,7 +136,6 @@
 @section Scripts {
 
     <script src="~/bundle/dashboard.min.js"></script>
-    <script src="~/bundle/dataTables.min.js"></script>
 
     <script type="text/javascript">
         $(".details").click(function () {
@@ -120,18 +159,6 @@
         $(".create").click(function () {
             $("#modalCid").load("/Cid/Create", function () {
                 $("#modalCid").modal();
-            });
-        });
-    </script>
-
-
-    <script>
-        $(document).ready(function () {
-            $('#myTableCid').DataTable({
-                dom: 'T<"clear">lfrtip',
-                tableTools: {
-                    "sSwfPath": "/myPlugins/copy_csv_xls_pdf.swf"
-                }
             });
         });
     </script>

@@ -97,51 +97,28 @@
                 </ul>
             </li>
 
-
-
             <li class="dropdown">
-                <a href="#" data-toggle="dropdown">
-                    <i class="fa fa-user"></i>
-                    <span class="sr-only">Gerenciamento de Usuário</span>
-                </a>
+                <a href="#" data-toggle="dropdown"><i class="fa fa-user"></i><span class="sr-only">Gerenciamento de Usuário</span></a>
                 @if (SignInManager.IsSignedIn(User))
                 {
-                    <ul class="dropdown-menu right dropdown-notification" role="menu">
-                        <li>
-                            <a href="#" class="dropdown-menu-header">Gerenciamento de Usuário</a>
-                        </li>
-                        <li>
-                            <a asp-area="Identity" asp-page="/Account/Manage/Index" title="Usuário"><i class="l-basic-life-buoy"></i> @UserManager.GetUserName(User)</a>
-                        </li>
-                        <form style="margin: 6px;" asp-area="Identity" asp-page="/Account/Logout" 
-                              asp-route-returnUrl="@Url.Page("/Index", new { area = "" })" method="post">
-                            <li>
-                                <button type="submit" class="btn btn-link text-left" style="align-content: flex-start; text-decoration: none; text-decoration-color: darkgray;"><i class="l-basic-signs"></i> Sair</button>
-                            </li>
-                        </form>
-                        <li>
-                            <a href="#" class="view-all">Visualizar todos <i class="l-arrows-right"></i> </a>
-                        </li>
-                    </ul>
-                }
-                else
-                {
-                    <ul class="dropdown-menu right dropdown-notification" role="menu">
-                        <li>
-                            <a href="#" class="dropdown-menu-header">Gerenciamento de Usuário</a>
-                        </li>
-                        <li>
-                            <a asp-area="Identity" asp-page="/Account/Register"><i class="l-basic-life-buoy"></i> Registre-se</a>
-                        </li>
-                        <li>
-                            <a asp-area="Identity" asp-page="/Account/Login"><i class="l-basic-server2"></i> Fazer Login</a>
-                        </li>
-                    </ul>
-                }
+                    <form style="margin: 6px;" asp-area="Identity" asp-page="/Account/Logout"
+                          asp-route-returnUrl="@Url.Page("/Index", new { area = "" })" method="post">
+                        <ul class="dropdown-menu right dropdown-notification" role="menu">
+                            <li><a href="#" class="dropdown-menu-header">Gerenciamento de Usuário</a></li>
+                            <li><a asp-area="Identity" asp-page="/Account/Manage/Index" title="Usuário"><i class="l-basic-life-buoy"></i> @UserManager.GetUserName(User)</a></li>
 
+                            <li><button type="submit" class="btn btn-link text-left" style="align-content: flex-start; text-decoration: none; text-decoration-color: darkgray;"><i class="l-basic-signs"></i> Sair</button></li>
+                            <li><a href="#" class="view-all">Visualizar todos <i class="l-arrows-right"></i> </a></li>
+                        </ul>
+                    </form>
+                } else {
+                    <ul class="dropdown-menu right dropdown-notification" role="menu">
+                        <li><a href="#" class="dropdown-menu-header">Gerenciamento de Usuário</a></li>
+                        <li><a asp-area="Identity" asp-page="/Account/Register"><i class="l-basic-life-buoy"></i> Registre-se</a></li>
+                        <li><a asp-area="Identity" asp-page="/Account/Login"><i class="l-basic-server2"></i> Fazer Login</a></li>
+                    </ul>
+                }
             </li>
-
-
 
             <li>
                 <a id="toggle-right-sidebar" href="#" class="tipB" title="Toggle right sidebar">
