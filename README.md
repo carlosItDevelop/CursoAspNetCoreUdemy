@@ -244,6 +244,8 @@ namespace Cooperchip.ITDeveloper.Application.Services
 ---------------------------------------------------------------	| -------------	| --------	
  Validar as Views - Modal sem fechá-las              			| Média			| Pendente		
  Validar o tamanho / resolção da Imagem de Profile              | Baixa         | Pendente
+ Validar tipo de arquivo para o Perfil do Usuário (jpg/png)     | Baixa         | Pendente
+
   
 
 
