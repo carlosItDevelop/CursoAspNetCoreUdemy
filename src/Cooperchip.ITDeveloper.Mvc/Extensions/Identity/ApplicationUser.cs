@@ -1,7 +1,6 @@
-﻿using System;
-using System.ComponentModel;
+﻿using Microsoft.AspNetCore.Identity;
+using System;
 using System.ComponentModel.DataAnnotations;
-using Microsoft.AspNetCore.Identity;
 
 namespace Cooperchip.ITDeveloper.Mvc.Extensions.Identity
 {
@@ -23,5 +22,11 @@ namespace Cooperchip.ITDeveloper.Mvc.Extensions.Identity
         [DataType(DataType.Date)]
         [Display(Name = "Data de Nascimento")]
         public DateTime DataNascimento { get; set; }
+
+        [ProtectedPersonalData]
+        [DataType(DataType.Text)]
+        [StringLength(maximumLength:255, ErrorMessage = "O campo {0} deve ter entre {2} e{1} caracteres", MinimumLength = 21)]
+        public string ImgProfilePath { get; set; }
+
     }
 }

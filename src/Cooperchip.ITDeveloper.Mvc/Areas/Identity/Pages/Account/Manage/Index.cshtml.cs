@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text.Encodings.Web;
-using System.Threading.Tasks;
-using Cooperchip.ITDeveloper.Mvc.Extensions.Identity;
+﻿using Cooperchip.ITDeveloper.Mvc.Extensions.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System;
+using System.ComponentModel.DataAnnotations;
+using System.Text.Encodings.Web;
+using System.Threading.Tasks;
 
 namespace Cooperchip.ITDeveloper.Mvc.Areas.Identity.Pages.Account.Manage
 {
@@ -58,6 +56,12 @@ namespace Cooperchip.ITDeveloper.Mvc.Areas.Identity.Pages.Account.Manage
             [DataType(DataType.Date)]
             [Display(Name = "Data de Nascimento")]
             public DateTime DataNascimento { get; set; }
+
+            [ProtectedPersonalData]
+            [DataType(DataType.Text)]
+            [StringLength(maximumLength: 255, ErrorMessage = "O campo {0} deve ter entre {2} e{1} caracteres", MinimumLength = 21)]
+            public string ImgProfilePath { get; set; }
+
             // ============================================
 
             [Required]
@@ -91,7 +95,8 @@ namespace Cooperchip.ITDeveloper.Mvc.Areas.Identity.Pages.Account.Manage
                 // Todo: Insert Carlos
                 Apelido = user.Apelido,
                 NomeCompleto = user.NomeCompleto,
-                DataNascimento = user.DataNascimento
+                DataNascimento = user.DataNascimento,
+                ImgProfilePath = user.ImgProfilePath
             };
 
             IsEmailConfirmed = await _userManager.IsEmailConfirmedAsync(user);
@@ -135,19 +140,10 @@ namespace Cooperchip.ITDeveloper.Mvc.Areas.Identity.Pages.Account.Manage
             }
 
             // Todo: Insert Carlos
-            if (Input.Apelido != user.Apelido)
-            {
-                user.Apelido = Input.Apelido;
-            }
-            if (Input.NomeCompleto != user.NomeCompleto)
-            {
-                user.NomeCompleto = Input.NomeCompleto;
-            }
-            if (Input.DataNascimento != user.DataNascimento)
-            {
-                user.DataNascimento = Input.DataNascimento;
-            }
-
+            if (Input.Apelido != user.Apelido) user.Apelido = Input.Apelido;
+            if (Input.NomeCompleto != user.NomeCompleto) user.NomeCompleto = Input.NomeCompleto;            
+            if (Input.DataNascimento != user.DataNascimento) user.DataNascimento = Input.DataNascimento;
+            if (Input.ImgProfilePath != user.ImgProfilePath) user.ImgProfilePath = Input.ImgProfilePath;
 
 
             await _signInManager.RefreshSignInAsync(user);

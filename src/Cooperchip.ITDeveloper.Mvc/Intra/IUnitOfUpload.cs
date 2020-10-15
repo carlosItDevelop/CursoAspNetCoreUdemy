@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 
-namespace Cooperchip.ITDeveloper.Mvc.Infra
+namespace Cooperchip.ITDeveloper.Mvc.Intra
 {
     public interface IUnitOfUpload
     {

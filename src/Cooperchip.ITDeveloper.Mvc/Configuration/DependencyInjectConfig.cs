@@ -1,5 +1,6 @@
 ﻿using Cooperchip.ITDeveloper.Mvc.Extensions.Filters;
 using Cooperchip.ITDeveloper.Mvc.Extensions.Identity.Services;
+using Cooperchip.ITDeveloper.Mvc.Intra;
 using KissLog;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity.UI.Services;
@@ -12,7 +13,8 @@ namespace Cooperchip.ITDeveloper.Mvc.Configuration
     {
         public static IServiceCollection AddDependencyInjectConfig(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddTransient<IUnitOfUpload, UnitOfUpload>();
+
             services.AddScoped((context) => Logger.Factory.Get());
             services.AddScoped<AuditoriaIloggerFilter>();
 
