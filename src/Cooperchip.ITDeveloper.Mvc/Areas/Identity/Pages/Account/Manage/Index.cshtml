@@ -15,14 +15,17 @@
             <div asp-validation-summary="All" class="text-danger"></div>
 
             <label>Imagem de Perfil:</label><br />
-            @if (!string.IsNullOrEmpty(Model.Input.ImgProfilePath))
-            {
-                <img src="/uploads/@Model.Input.ImgProfilePath" alt="Imagem de Perfil" class="img-thumbnail" />
-            }
-            else
-            {
-                <img src="/img/avatars/foto-padrao.jpg" alt="Imagem de Perfil"  />
-            }
+            <div style="clear: both; float: left; margin-top: 15px; margin-bottom: 15px; padding-top: 10px; padding-left: 10px; border: 2px solid #00ffff; background-color: #76795d; width: 330px; height: 330px; border-radius: 3%; ">
+                @if (!string.IsNullOrEmpty(Model.Input.ImgProfilePath))
+                {
+                    <img src="/uploads/@Model.Input.ImgProfilePath" alt="Imagem de Perfil" style="clear: both; float: left; margin-right: 10px; border: 2px solid #eeeeee; width: 310px; height: 310px; border-radius: 50%; " />
+                }
+                else
+                {
+                    <img src="/img/avatars/foto-padrao.jpg" alt="Imagem de Perfil" style="clear: both; float: left; margin-right: 10px; border: 2px solid #eeeeee; width: 310px; height: 310px; border-radius: 50%; " />
+                }
+            </div>
+
             <br />
 
             <div class="form-group">

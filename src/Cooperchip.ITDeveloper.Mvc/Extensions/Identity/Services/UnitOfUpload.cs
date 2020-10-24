@@ -1,7 +1,6 @@
 ﻿using Cooperchip.ITDeveloper.Mvc.Intra;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using System;
 using System.IO;
 
 namespace Cooperchip.ITDeveloper.Mvc.Extensions.Identity.Services
@@ -33,7 +32,6 @@ namespace Cooperchip.ITDeveloper.Mvc.Extensions.Identity.Services
                     }
                 }
             }
-
         }
 
         private string ObterCaminhoMaisNomeDoArquivo(string fileName)

@@ -143,7 +143,7 @@ namespace Cooperchip.ITDeveloper.Mvc.Areas.Identity.Pages.Account.Manage
             if (Input.Apelido != user.Apelido) user.Apelido = Input.Apelido;
             if (Input.NomeCompleto != user.NomeCompleto) user.NomeCompleto = Input.NomeCompleto;            
             if (Input.DataNascimento != user.DataNascimento) user.DataNascimento = Input.DataNascimento;
-            if (Input.ImgProfilePath != user.ImgProfilePath) user.ImgProfilePath = Input.ImgProfilePath;
+            ///if (Input.ImgProfilePath != user.ImgProfilePath) user.ImgProfilePath = Input.ImgProfilePath;
 
 
             await _signInManager.RefreshSignInAsync(user);

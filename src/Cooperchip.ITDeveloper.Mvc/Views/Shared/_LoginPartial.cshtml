@@ -9,6 +9,9 @@
           id="logoutForm" class="navbar-right">
         <ul class="nav navbar-nav navbar-right">
             <li>
+                <img src="/img/avatars/foto-padrao.jpg" alt="Imagem de Perfil" style="clear: both; float: left; margin-right: 10px; border: 2px solid #eeeeee; width: 50px; height: 50px; border-radius: 50%; " />
+            </li>
+            <li>
                 <a asp-area="Identity" asp-page="/Account/Manage/Index" 
                    title="Manage">Olá, @UserManager.GetUserName(User)!</a>
             </li>
