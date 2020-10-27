@@ -133,8 +133,9 @@ namespace Cooperchip.ITDeveloper.Repository.Base
         }
         public async Task ExcluirPorId(TKey id)
         {
-            TEntity obj = await SelecionarPorId(id);
-            await Excluir(obj);
+            //TEntity obj = await SelecionarPorId(id);
+            _context.Set<TEntity>().Remove(new TEntity {Id = id});
+            await Salvar();
         }
         public async Task Inserir(TEntity obj)
         {
