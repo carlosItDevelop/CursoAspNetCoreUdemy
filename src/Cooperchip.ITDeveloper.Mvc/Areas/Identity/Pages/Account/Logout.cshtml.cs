@@ -20,18 +20,11 @@ namespace Cooperchip.ITDeveloper.Mvc.Areas.Identity.Pages.Account
             _logger = logger;
         }
 
-        public IActionResult OnGet(string returnUrl = null)
+        public IActionResult OnGet()
         {
             _signInManager.SignOutAsync();
             _logger.LogInformation("Usuário deslogado com sucesso!");
-            if (returnUrl != null)
-            {
-                return LocalRedirect(returnUrl);
-            }
-            else
-            {
-                return Page();
-            }
+            return Redirect("./Login");
         }
 
         public async Task<IActionResult> OnPost(string returnUrl = null)

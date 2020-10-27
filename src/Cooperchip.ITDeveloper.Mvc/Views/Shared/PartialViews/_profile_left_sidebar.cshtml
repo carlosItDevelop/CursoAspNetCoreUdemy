@@ -1,14 +1,23 @@
-﻿<!--  .sidebar-panel -->
-<div class="sidebar-panel">
-    <h5 class="sidebar-panel-title">Profile</h5>
-</div>
-<!-- / .sidebar-panel -->
+﻿
+@inject Cooperchip.ITDeveloper.Domain.Interfaces.IUserInContext _userInContext
 
+<div class="sidebar-panel"><h5 class="sidebar-panel-title">Profile</h5></div>
 
 <div class="user-info clearfix">
-    <img src="/img/avatars/foto-padrao.jpg" alt="avatar" style="clear: both; float: left; margin-right: 10px; border: 2px solid #eeeeee; width: 50px; height: 50px; border-radius: 50%; ">
 
-    <span class="name">SuggeElson</span>
+    <div id="imgProfie">
+        @if (_userInContext.IsAuthenticated() && !string.IsNullOrEmpty(_userInContext.GetUserImgProfilePath()))
+        {
+            <img src="/uploads/@_userInContext.GetUserImgProfilePath()" alt="Imagem de Perfil" style="clear: both; float: left; margin-right: 10px; border: 2px solid #eeeeee; width: 50px; height: 50px; border-radius: 50%; ">
+        }
+        else
+        {
+            <img src="/img/avatars/foto-padrao.jpg" alt="Imagem de Perfil" style="clear: both; float: left; margin-right: 10px; border: 2px solid #eeeeee; width: 50px; height: 50px; border-radius: 50%; ">
+        }
+    </div>
+
+
+    <span class="name">ITDeveloper</span>
     <div class="btn-group">
         <button type="button" class="btn btn-default btn-xs">
             <i class="l-basic-gear"></i>
@@ -16,20 +25,24 @@
         <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
             settings <span class="caret"></span>
         </button>
+
         <ul class="dropdown-menu right" role="menu">
-            <li>
-                <a href="#"><i class="fa fa-edit"></i>Edit profile</a>
-            </li>
-            <li>
-                <a href="#"><i class="fa fa-money"></i>Windraws</a>
-            </li>
-            <li>
-                <a href="#"><i class="fa fa-credit-card"></i>Deposits</a>
-            </li>
+
+            @if (_userInContext.IsAuthenticated())
+            {
+                <li><a asp-area="Identity" asp-page="/Account/Manage/Index" title="User Profile"><i class="fa fa-edit"></i> Editar Perfil</a></li>
+                <li><a asp-area="Identity" asp-page="/Account/Logout" title="Sair"><i class="fa fa-power-off"></i> Sair</a></li>
+            }
+            else
+            {
+                <li><a asp-area="Identity" asp-page="/Account/Login" title="Login"><i class="fa fa-edit"></i> Entrar</a></li>
+            }
+
+            <li><a href="#"><i class="fa fa-edit"></i>Outra coisa</a></li>
+            <li><a href="#"><i class="fa fa-money"></i>Mais Algo</a></li>
+            <li><a href="#"><i class="fa fa-credit-card"></i>Deposits</a></li>
             <li class="divider"></li>
-            <li>
-                <a href="#"><i class="fa fa-power-off"></i>Logout</a>
-            </li>
+            <li><a href="#"><i class="fa fa-power-off"></i>Mais uma</a></li>
         </ul>
     </div>
 </div>

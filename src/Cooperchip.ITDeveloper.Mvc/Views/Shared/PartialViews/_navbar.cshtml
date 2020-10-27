@@ -1,7 +1,5 @@
 ﻿
-@using Microsoft.AspNetCore.Identity
-@inject SignInManager<ApplicationUser> SignInManager
-@inject UserManager<ApplicationUser> UserManager
+@inject Cooperchip.ITDeveloper.Domain.Interfaces.IUserInContext _userInContext
 
 <!-- .page-navbar -->
 <div id="header" class="page-navbar">
@@ -99,18 +97,17 @@
 
             <li class="dropdown">
                 <a href="#" data-toggle="dropdown"><i class="fa fa-user"></i><span class="sr-only">Gerenciamento de Usuário</span></a>
-                @if (SignInManager.IsSignedIn(User))
+                @if (_userInContext.IsAuthenticated())
                 {
-                    <form style="margin: 6px;" asp-area="Identity" asp-page="/Account/Logout"
-                          asp-route-returnUrl="@Url.Page("/Index", new { area = "" })" method="post">
-                        <ul class="dropdown-menu right dropdown-notification" role="menu">
-                            <li><a href="#" class="dropdown-menu-header">Gerenciamento de Usuário</a></li>
-                            <li><a asp-area="Identity" asp-page="/Account/Manage/Index" title="Usuário"><i class="l-basic-life-buoy"></i> @UserManager.GetUserName(User)</a></li>
+                    <ul class="dropdown-menu right dropdown-notification" role="menu">
+                        <li><a href="#" class="dropdown-menu-header">Gerenciamento de Usuário</a></li>
 
-                            <li><button type="submit" class="btn btn-link text-left" style="align-content: flex-start; text-decoration: none; text-decoration-color: darkgray;"><i class="l-basic-signs"></i> Sair</button></li>
-                            <li><a href="#" class="view-all">Visualizar todos <i class="l-arrows-right"></i> </a></li>
-                        </ul>
-                    </form>
+                        <li><a asp-area="Identity" asp-page="/Account/Manage/Index" title="Gerenciamento de Usuário" style="text-decoration: none;"><i class="fa fa-edit"></i> @_userInContext.GetUserApelido()</a></li>
+
+                        <li><a asp-area="Identity" asp-page="/Account/Logout" title="Logout" style="text-decoration: none;"><i class="fa fa-power-off"></i> Sair</a></li>
+
+                        <li><a href="#" class="view-all">Visualizar todos <i class="l-arrows-right"></i> </a></li>
+                    </ul>
                 } else {
                     <ul class="dropdown-menu right dropdown-notification" role="menu">
                         <li><a href="#" class="dropdown-menu-header">Gerenciamento de Usuário</a></li>

@@ -1,19 +1,18 @@
-﻿@using Microsoft.AspNetCore.Identity
-@inject SignInManager<ApplicationUser> SignInManager
-@inject UserManager<ApplicationUser> UserManager
+﻿
+@inject Cooperchip.ITDeveloper.Domain.Interfaces.IUserInContext _userInContext
 
-@if (SignInManager.IsSignedIn(User))
+@if (_userInContext.IsAuthenticated())
 {
-    <form asp-area="Identity" asp-page="/Account/Logout" 
-          asp-route-returnUrl="@Url.Page("/Index", new { area = "" })" method="post" 
-          id="logoutForm" class="navbar-right">
+    <form asp-area="Identity" asp-page="/Account/Logout"
+          asp-route-returnUrl="@Url.Page("/Index", new { area = "" })" method="post" id="logoutForm" class="navbar-right">
+
         <ul class="nav navbar-nav navbar-right">
             <li>
-                <img src="/img/avatars/foto-padrao.jpg" alt="Imagem de Perfil" style="clear: both; float: left; margin-right: 10px; border: 2px solid #eeeeee; width: 50px; height: 50px; border-radius: 50%; " />
+                <img src="/uploads/@_userInContext.GetUserImgProfilePath()" alt="Imagem de Perfil" style="clear: both; float: left; margin-right: 10px; border: 2px solid #eeeeee; width: 50px; height: 50px; border-radius: 50%; " />
             </li>
             <li>
-                <a asp-area="Identity" asp-page="/Account/Manage/Index" 
-                   title="Manage">Olá, @UserManager.GetUserName(User)!</a>
+                <a asp-area="Identity" asp-page="/Account/Manage/Index"
+                   title="Manage">Olá, @_userInContext.GetUserNomeCompleto()!</a>
             </li>
             <li>
                 <button type="submit" class="btn btn-link navbar-btn navbar-link">Logout</button>
@@ -23,8 +22,11 @@
 }
 else
 {
-    <ul class="nav navbar-nav navbar-right">
-        <li><a asp-area="Identity" asp-page="/Account/Register">Register</a></li>
-        <li><a asp-area="Identity" asp-page="/Account/Login">Login</a></li>
-    </ul>
+<ul class="nav navbar-nav navbar-right">
+    <li>
+        <img src="/img/avatars/foto-padrao.jpg" alt="Imagem de Perfil" style="clear: both; float: left; margin-right: 10px; border: 2px solid #eeeeee; width: 50px; height: 50px; border-radius: 50%; " />
+    </li>
+    <li><a asp-area="Identity" asp-page="/Account/Register">Register</a></li>
+    <li><a asp-area="Identity" asp-page="/Account/Login">Login</a></li>
+</ul>
 }

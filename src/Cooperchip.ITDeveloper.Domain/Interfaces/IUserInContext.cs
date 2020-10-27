@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Security.Claims;
 namespace Cooperchip.ITDeveloper.Domain.Interfaces
 {
-    public interface IUserInContext<TKey>
+    public interface IUserInContext
     {
         string Name { get; }
-        TKey GetUserId();
+        Guid GetUserId();
         string GetUserEmail();
         bool IsAuthenticated();
         bool IsInRole(string role);

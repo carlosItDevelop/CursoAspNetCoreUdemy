@@ -7,7 +7,7 @@ using System.Security.Claims;
 
 namespace Cooperchip.ITDeveloper.CrossCutting.Helpers
 {
-    public class AspNetUser : IUserInContext<Guid>
+    public class AspNetUser : IUserInContext
     {
         private readonly IHttpContextAccessor _accessor;
         public AspNetUser(IHttpContextAccessor accessor){ _accessor = accessor; }

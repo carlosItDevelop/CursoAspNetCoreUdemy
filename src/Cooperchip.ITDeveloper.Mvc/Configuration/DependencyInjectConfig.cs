@@ -23,7 +23,7 @@ namespace Cooperchip.ITDeveloper.Mvc.Configuration
             // =====/ Mantem o estado do contexto Http por toda a aplicação === //
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             // ================================================================ //
-            services.AddScoped<IUserInContext<Guid>, AspNetUser>();
+            services.AddScoped<IUserInContext, AspNetUser>();
             // ================================================================ //
 
             // =====/ Adicionar Claims para HttpContext >> toda a Applications ================ //
