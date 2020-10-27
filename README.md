@@ -121,32 +121,32 @@ namespace Cooperchip.ITDeveloper.Repository.Base
             //this.DbSet = _context.Set<TEntity>();
         }
 
-        public async Task Atualizar(TEntity obj)
+        public virtual async Task Atualizar(TEntity obj)
         {
             _context.Entry(obj).State = EntityState.Modified;
             await Salvar();
         }
-        public async Task Excluir(TEntity obj)
+        public virtual async Task Excluir(TEntity obj)
         {
             _context.Entry(obj).State = EntityState.Deleted;
             await Salvar();
         }
-        public async Task ExcluirPorId(TKey id)
+        public virtual async Task ExcluirPorId(TKey id)
         {
             //TEntity obj = await SelecionarPorId(id);
             _context.Set<TEntity>().Remove(new TEntity {Id = id});
             await Salvar();
         }
-        public async Task Inserir(TEntity obj)
+        public virtual async Task Inserir(TEntity obj)
         {
             _context.Set<TEntity>().Add(obj);
             await Salvar();
         }
-        public async Task<TEntity> SelecionarPorId(TKey id)
+        public virtual async Task<TEntity> SelecionarPorId(TKey id)
         {
             return await _context.Set<TEntity>().FindAsync(id);
         }
-        public async Task<IEnumerable<TEntity>> SelecionarTodos(Expression<Func<TEntity, bool>> expressaowhere = null)
+        public virtual async Task<IEnumerable<TEntity>> SelecionarTodos(Expression<Func<TEntity, bool>> expressaowhere = null)
         {
             if (expressaowhere == null)
             {
@@ -154,7 +154,7 @@ namespace Cooperchip.ITDeveloper.Repository.Base
             }
             return await _context.Set<TEntity>().AsNoTracking().Where(expressaowhere).ToListAsync();
         }
-        public async Task Salvar()
+        public virtual async Task Salvar()
         {
             await _context.SaveChangesAsync();
         }
