@@ -1,0 +1,32 @@
+﻿
+
+.cooperchipCicleProfile {
+    clear: both;
+    float: left;
+    margin-right: 10px;
+}
+
+#imgProfie > img.cooperchipCicleProfile {
+    border: 2px solid #eeeeee;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+div.cooperchipCicleProfileIndex {
+    clear: both;
+    float: left;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 3%;
+    border: 2px solid #00ffff;
+    background-color: #76795d;
+}
+
+img.cooperchipCicleProfileIndex {
+    border-radius: 50%;
+    border: 2px solid #eeeeee;
+    width: 340px;
+    height: 340px;
+}

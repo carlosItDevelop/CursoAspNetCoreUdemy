@@ -8,11 +8,11 @@
     <div id="imgProfie">
         @if (_userInContext.IsAuthenticated() && !string.IsNullOrEmpty(_userInContext.GetUserImgProfilePath()))
         {
-            <img src="/uploads/@_userInContext.GetUserImgProfilePath()" alt="Imagem de Perfil" style="clear: both; float: left; margin-right: 10px; border: 2px solid #eeeeee; width: 50px; height: 50px; border-radius: 50%; ">
+            <img src="/uploads/@_userInContext.GetUserImgProfilePath()" alt="Imagem de Perfil" class="cooperchipCicleProfile">
         }
         else
         {
-            <img src="/img/avatars/foto-padrao.jpg" alt="Imagem de Perfil" style="clear: both; float: left; margin-right: 10px; border: 2px solid #eeeeee; width: 50px; height: 50px; border-radius: 50%; ">
+            <img src="/img/avatars/foto-padrao.jpg" alt="Imagem de Perfil" class="cooperchipCicleProfile">
         }
     </div>
 

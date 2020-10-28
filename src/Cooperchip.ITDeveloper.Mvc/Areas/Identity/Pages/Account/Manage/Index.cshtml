@@ -16,15 +16,15 @@
 
             <label>Imagem do Perfil:</label><br />
 
-            <div class="input-group" style=" clear: both; float: left; margin-bottom: 15px; margin-top: 15px; padding-top: 10px; padding-left: 10px; border-radius: 3%; border: 2px solid #00ffff; width: 340px; height:340px; background-color: #76795d">
+            <div class="input-group cooperchipCicleProfileIndex" >
 
                 @if (!string.IsNullOrEmpty(Model.Input.ImgProfilePath))
                 {
-                    <img src="/uploads/@Model.Input.ImgProfilePath" alt="Imagem de Perfil" style=" clear: both; float: left; margin-right: 10px; border-radius: 50%; border: 2px solid #eeeeee; width: 310px; height: 310px;" />
+                    <img src="/uploads/@Model.Input.ImgProfilePath" alt="Imagem de Perfil" class="cooperchipCicleProfileIndex" />
                 }
                 else
                 {
-                    <img src="/img/avatars/foto-padrao.jpg" alt="Imagem de Perfil" style=" clear: both; float: left; margin-right: 10px; border-radius: 50%; border: 2px solid #eeeeee; width: 310px; height: 310px;" />
+                    <img src="/img/avatars/foto-padrao.jpg" alt="Imagem de Perfil" class="cooperchipCicleProfileIndex" />
                 }
             </div>
 
