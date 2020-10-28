@@ -134,7 +134,8 @@ namespace Cooperchip.ITDeveloper.Repository.Base
         public virtual async Task ExcluirPorId(TKey id)
         {
             //TEntity obj = await SelecionarPorId(id);
-            _context.Set<TEntity>().Remove(new TEntity {Id = id});
+            //await Excluir(obj);
+            _context.Set<TEntity>().Remove(new TEntity{ Id = id });
             await Salvar();
         }
         public virtual async Task Inserir(TEntity obj)
