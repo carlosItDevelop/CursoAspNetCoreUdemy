@@ -1,12 +1,14 @@
 ﻿
+using Cooperchip.ITDeveloper.Domain.Interfaces;
 using Cooperchip.ITDeveloper.Mvc.Models;
-using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Diagnostics;
-using System.Threading.Tasks;
 using Cooperchip.ITDeveloper.Mvc.ViewModels;
 using KissLog;
 using Microsoft.AspNetCore.Identity.UI.Services;
+using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Threading.Tasks;
 
 namespace Cooperchip.ITDeveloper.Mvc.Controllers
 {
@@ -18,25 +20,69 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
     {
         private readonly IEmailSender _emailSender;
         private readonly ILogger _logger;
+        private readonly IUserInContext _user;
+        private readonly IUserInAllLayer _userInAllLayer;
 
-        public HomeController(IEmailSender emailSender, ILogger logger)
+        public HomeController(IEmailSender emailSender, 
+                              ILogger logger,
+                              IUserInContext user,
+                              IUserInAllLayer userInAllLayer)
         {
             _emailSender = emailSender;
             _logger = logger;
+            this._user = user;
+            this._userInAllLayer = userInAllLayer;
         }
 
         [Route("")]
         [Route("pagina-inicial")]
         public IActionResult Index()
         {
-            return View();
+              return View();
         }
 
 
+        //[Authorize(Roles = "Admin")]
         [Route("dashboard")]
         [Route("pagina-de-estatistica")]
         public IActionResult Dashboard()
         {
+
+            var email = "";
+
+            //if (User.Identity.IsAuthenticated) { }
+            // posso fazer assim também, com o Return aqui  
+            // e sem o _user (neste projeto)}
+
+            IDictionary<string, string> minhasClaims = new Dictionary<string, string>();
+
+            if (_user.IsAuthenticated())
+            {
+                // Posso pegar a Claim Com Type Apelido assim, sem método de extensão
+                // Esse 'Apelido' em hard-code aqui está totalmente fora de questão
+                // Sem contar que se eu NÃO puder usar os mesmos métodos em qualquer lugar
+                // fere o princípio DRY (Don't Repeat yourself) - Não se repita.
+                var apelido = User.FindFirst(x => x.Type == "Apelido")?.Value;
+                email = User.FindFirst(e => e.Type == "Email")?.Value;
+
+                minhasClaims.Add("Apelido", _user.GetUserApelido());
+                minhasClaims.Add("Nome Completo", _user.GetUserNomeCompleto());
+                minhasClaims.Add("Imagem do Perfil", _user.GetUserImgProfilePath());
+                minhasClaims.Add("Id", _user.GetUserId().ToString());
+                minhasClaims.Add("Nome", _user.Name);
+                minhasClaims.Add("Email", _user.GetUserEmail());
+                minhasClaims.Add("E Administrador", _user.IsInRole("Admin") ? "SIM" : "NÃO");
+
+                var testeUserClaims = minhasClaims;
+                var testeDictionaryOfClaims = _userInAllLayer.DictionaryOfClaimss();
+                var testeUserListClaims = _userInAllLayer.LisOfClaims();
+
+                var nome = minhasClaims["Nome"];
+                email = minhasClaims["Email"];
+                var EhAdministrador = minhasClaims["E Administrador"];
+
+            }
+
             return View();
         }
 

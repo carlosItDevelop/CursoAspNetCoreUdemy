@@ -1,7 +1,5 @@
 ﻿using Microsoft.AspNetCore.Razor.TagHelpers;
-using System.Threading.Tasks;
-
-namespace Cooperchip.ITDeveloper.Mvc.Extensions.TagHelpers
+namespace Cooperchip.ITDeveloper.Mvc.Extentions.TagHelpers
 {
     public class IndexHomeTagHelper : TagHelper
     {
@@ -14,9 +12,8 @@ namespace Cooperchip.ITDeveloper.Mvc.Extensions.TagHelpers
         [HtmlAttributeName("visualizacao")]
         public string Visualizacao { get; set; }
 
-        public override Task ProcessAsync(TagHelperContext context, TagHelperOutput output)
+        public override void Process(TagHelperContext context, TagHelperOutput output)
         {
-
             output.TagName = "session";
 
             output.Content.AppendHtml("<div class='col-md-3 col-sm-3 col-sx-12' style='padding-bottom: 15px; '>");
@@ -26,12 +23,9 @@ namespace Cooperchip.ITDeveloper.Mvc.Extensions.TagHelpers
             output.Content.AppendHtml("<div class='card-img-overlay'>");
             output.Content.AppendHtml("<div style='text-align: center;'>");
             output.Content.AppendHtml("<a href='/" + Controlador + "/" + Visualizacao + "' style='text-decoration: none; color: #ed5353; font-size: 16px;' >");
-            output.Content.AppendHtml($"<h4 class='card-title'>{Titulo}</h4>");
+            output.Content.AppendHtml("<h4 class='card-title'>" + Titulo + "</h4>");
             output.Content.AppendHtml("</a></div></div></div></div>");
 
-
-
-            return base.ProcessAsync(context, output);
         }
     }
 }

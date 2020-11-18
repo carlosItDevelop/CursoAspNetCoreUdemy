@@ -1,4 +1,5 @@
-﻿using Cooperchip.ITDeveloper.CrossCutting.Helpers;
+﻿using Cooperchip.ITDeveloper.CrossCutting.Auxiliar;
+using Cooperchip.ITDeveloper.CrossCutting.Helpers;
 using Cooperchip.ITDeveloper.Domain.Interfaces;
 using Cooperchip.ITDeveloper.Mvc.Extensions.Filters;
 using Cooperchip.ITDeveloper.Mvc.Extensions.Identity;
@@ -24,6 +25,7 @@ namespace Cooperchip.ITDeveloper.Mvc.Configuration
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             // ================================================================ //
             services.AddScoped<IUserInContext, AspNetUser>();
+            services.AddScoped<IUserInAllLayer, UserInAllLayer>();
             // ================================================================ //
 
             // =====/ Adicionar Claims para HttpContext >> toda a Applications ================ //
