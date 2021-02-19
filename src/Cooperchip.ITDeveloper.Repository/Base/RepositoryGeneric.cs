@@ -1,7 +1,9 @@
 ﻿using Cooperchip.ITDeveloper.Data.ORM;
 using Cooperchip.ITDeveloper.DomainCore.Base;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
@@ -17,38 +19,46 @@ namespace Cooperchip.ITDeveloper.Repository.Base
             this._context = ctx;
         }
 
-        public Task Atualizar(TEntity obj)
+        public virtual async Task Atualizar(TEntity obj)
         {
-            throw new NotImplementedException();
+            this._context.Entry(obj).State = EntityState.Modified;
+            await Salvar();
         }
 
 
-        public Task Excluir(TEntity obj)
+        public virtual async Task Excluir(TEntity obj)
         {
-            throw new NotImplementedException();
+            this._context.Entry(obj).State = EntityState.Deleted;
+            await Salvar();
         }
 
-        public Task ExcluirPorId(TKey id)
+        public virtual async Task ExcluirPorId(TKey id)
         {
-            throw new NotImplementedException();
+            TEntity obj = await SelecionarPorId(id);
+            await Excluir(obj);
         }
 
-        public Task Inserir(TEntity obj)
+        public virtual async Task Inserir(TEntity obj)
         {
-            throw new NotImplementedException();
+            this._context.Set<TEntity>().Add(obj);
+            await Salvar();
         }
 
-        public Task<TEntity> SelecionarPorId(TKey id)
+        public async Task<TEntity> SelecionarPorId(TKey id)
         {
-            throw new NotImplementedException();
+            return await this._context.Set<TEntity>().FindAsync(id);
         }
 
-        public Task<IEnumerable<TEntity>> SelecionarTodos(Expression<Func<TEntity, bool>> quando = null)
+        public virtual async Task<IEnumerable<TEntity>> SelecionarTodos(Expression<Func<TEntity, bool>> quando = null)
         {
-            throw new NotImplementedException();
+            if(quando == null)
+            {
+                return await this._context.Set<TEntity>().AsNoTracking().ToListAsync();
+            }
+            return await this._context.Set<TEntity>().AsNoTracking().Where(quando).ToListAsync();
         }
 
-        public async Task Salvar()
+        private async Task Salvar()
         {
             await _context.SaveChangesAsync();
         }
