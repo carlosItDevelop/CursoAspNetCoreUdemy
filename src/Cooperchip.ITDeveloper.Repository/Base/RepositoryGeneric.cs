@@ -12,7 +12,7 @@ namespace Cooperchip.ITDeveloper.Repository.Base
     public abstract class RepositoryGeneric<TEntity, TKey> : IDomainGenericRepository<TEntity, TKey> where TEntity : class, new()
     {
 
-        private ITDeveloperDbContext _context;
+        protected ITDeveloperDbContext _context;
 
         public RepositoryGeneric(ITDeveloperDbContext ctx) // Guardem essa info
         {

@@ -4,4 +4,8 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Cooperchip.ITDeveloper.DomainCore\Cooperchip.ITDeveloper.DomainCore.csproj" />
+  </ItemGroup>
+
 </Project>
