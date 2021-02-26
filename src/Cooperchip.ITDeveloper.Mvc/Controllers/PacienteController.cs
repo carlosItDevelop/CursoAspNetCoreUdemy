@@ -7,7 +7,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Rendering;
-
+using Cooperchip.ITDeveloper.Domain.Interfaces.Entidades;
 
 namespace Cooperchip.ITDeveloper.Mvc.Controllers
 {
@@ -16,16 +16,19 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
     {
         private readonly ITDeveloperDbContext _context;
 
-        public PacienteController(ITDeveloperDbContext context)
+        private readonly IRepositoryDomainPaciente _repoPaciente;
+
+
+        public PacienteController(ITDeveloperDbContext context, IRepositoryDomainPaciente repoPaciente)
         {
             _context = context;
+            this._repoPaciente = repoPaciente;
         }
 
         // GET: Paciente
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Paciente
-                .Include(x => x.EstadoPaciente).AsNoTracking().ToListAsync());
+            return View(await _repoPaciente.ListaPacientesComEstado());
         }
 
 
@@ -36,8 +39,9 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
                 return NotFound();
             }
 
-            var paciente = await _context.Paciente.Include(x => x.EstadoPaciente).AsNoTracking()
-                .FirstOrDefaultAsync(m => m.Id == id);
+
+            var paciente = await this._repoPaciente.SelecionarPorId(id);
+
             if (paciente == null)
             {
                 return NotFound();
