@@ -11,5 +11,15 @@ namespace Cooperchip.ITDeveloper.Domain.Entities
 
         public Guid Id { get; set; }
 
+        // DataCadastro
+        // DataModificacao
+        // UserChange
+
+
+        // var m = new Maca
+        // maçã => id = 1
+        // Outra maçã => id <> 1 <> Limão
+
+
     }
 }

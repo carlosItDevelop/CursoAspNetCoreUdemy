@@ -13,5 +13,6 @@ namespace Cooperchip.ITDeveloper.DomainCore.Base
         Task Atualizar(TEntity obj);
         Task Excluir(TEntity obj);
         Task ExcluirPorId(TKey id);
+        Task<int> SaveAsync();
     }
 }

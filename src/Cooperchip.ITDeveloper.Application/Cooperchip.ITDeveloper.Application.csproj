@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Cooperchip.ITDeveloper.Data\Cooperchip.ITDeveloper.Data.csproj" />
+    <ProjectReference Include="..\Cooperchip.ITDeveloper.Repository\Cooperchip.ITDeveloper.Repository.csproj" />
   </ItemGroup>
 
 </Project>

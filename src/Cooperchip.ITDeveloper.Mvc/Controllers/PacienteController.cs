@@ -64,9 +64,7 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
             if (ModelState.IsValid)
             {
                 //paciente.Id = Guid.NewGuid(); // Não Usar
-                _context.Add(paciente);
-                await _context.SaveChangesAsync();
-                //return RedirectToAction(nameof(Index));
+                await this._repoPaciente.Inserir(paciente);
                 return RedirectToAction("Index");
             }
             ViewBag.EstadoPaciente = new SelectList(_context.EstadoPaciente, "Id", "Descricao", paciente.EstadoPacienteId);
@@ -102,8 +100,7 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
             {
                 try
                 {
-                    _context.Update(paciente);
-                    await _context.SaveChangesAsync();
+                    await this._repoPaciente.Atualizar(paciente);
                 }
                 catch (DbUpdateConcurrencyException)
                 {

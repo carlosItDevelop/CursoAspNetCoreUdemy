@@ -7,13 +7,14 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Cooperchip.ITDeveloper.Repository.Entidades
+namespace Cooperchip.ITDeveloper.Application.Servicos
 {
-    public class RepositoryPaciente : RepositoryGeneric<Paciente, Guid>, IRepositoryDomainPaciente
+    public class PacienteService : RepositoryGeneric<Paciente, Guid>, IRepositoryDomainPaciente
     {
+
         private readonly ITDeveloperDbContext _ctx;
 
-        public RepositoryPaciente(ITDeveloperDbContext ctx) : base(ctx)
+        public PacienteService(ITDeveloperDbContext ctx) : base(ctx)
         {
             this._ctx = ctx;
         }
@@ -24,5 +25,6 @@ namespace Cooperchip.ITDeveloper.Repository.Entidades
         {
             return await _ctx.Paciente.Include(e => e.EstadoPaciente).AsNoTracking().ToListAsync();
         }
+
     }
 }
