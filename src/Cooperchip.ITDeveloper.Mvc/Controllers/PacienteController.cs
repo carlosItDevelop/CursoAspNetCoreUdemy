@@ -143,8 +143,7 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
 
         private bool PacienteExists(Guid id)
         {
-            //return _context.Paciente.Any(e => e.Id == id);
-            return true;
+            return _repoPaciente.TemPaciente(id);
         }
     }
 }

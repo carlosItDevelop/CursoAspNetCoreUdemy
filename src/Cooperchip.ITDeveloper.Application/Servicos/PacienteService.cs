@@ -37,5 +37,11 @@ namespace Cooperchip.ITDeveloper.Application.Servicos
         {
             return await _ctx.Paciente.Include(e => e.EstadoPaciente).AsNoTracking().FirstOrDefaultAsync(x => x.Id == pacienteId);
         }
+
+        public bool TemPaciente(Guid pacienteId)
+        {
+            return _ctx.Paciente.Any(x => x.Id == pacienteId);
+        }
+
     }
 }
