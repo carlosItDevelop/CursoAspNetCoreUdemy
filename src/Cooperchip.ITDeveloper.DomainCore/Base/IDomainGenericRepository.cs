@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
+
 namespace Cooperchip.ITDeveloper.DomainCore.Base
 {
     public interface IDomainGenericRepository<TEntity, TKey> : IDisposable where TEntity : class

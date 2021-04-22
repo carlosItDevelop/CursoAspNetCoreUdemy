@@ -1,4 +1,5 @@
 ﻿using Cooperchip.ITDeveloper.Data.ORM;
+using Cooperchip.ITDeveloper.Domain.Entities;
 using Cooperchip.ITDeveloper.DomainCore.Base;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Cooperchip.ITDeveloper.Repository.Base
 {
-    public abstract class RepositoryGeneric<TEntity, TKey> : IDomainGenericRepository<TEntity, TKey> where TEntity : class, new()
+    public abstract class RepositoryGeneric<TEntity, TKey> : IDomainGenericRepository<TEntity, TKey> where TEntity : EntityBase, new()
     {
 
         protected ITDeveloperDbContext _context;
@@ -36,8 +37,6 @@ namespace Cooperchip.ITDeveloper.Repository.Base
         {
             TEntity obj = await SelecionarPorId(id);
             await Excluir(obj);
-
-            //_context.Set<TEntity>().Remove(new TEntity {Id = id });
 
         }
 

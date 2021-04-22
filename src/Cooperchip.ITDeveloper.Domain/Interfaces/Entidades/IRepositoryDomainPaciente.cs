@@ -11,7 +11,8 @@ namespace Cooperchip.ITDeveloper.Domain.Interfaces.Entidades
         Task<IEnumerable<Paciente>> ListaPacientesComEstado();
         Task<IEnumerable<Paciente>> ListaPacientes();
 
-        // ListaEstadosDePaciente()
+        List<EstadoPaciente> ListaEstadoPaciente();
+
         // ListaEstadoDePacientePorPaciente( Guid PacienteId )
     }
 }

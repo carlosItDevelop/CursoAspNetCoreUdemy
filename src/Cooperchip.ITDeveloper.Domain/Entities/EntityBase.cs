@@ -15,10 +15,16 @@ namespace Cooperchip.ITDeveloper.Domain.Entities
         // DataModificacao
         // UserChange
 
+        // Criar Comparações entre entidades
 
-        // var m = new Maca
-        // maçã => id = 1
-        // Outra maçã => id <> 1 <> Limão
+
+        // -------------------------------------- Para refletir
+        // Maca = OutraMaca ????
+
+        // maca = new Maca()  => Instancia de uma Maca
+
+        // Pessoa xpto = new {id=1, nome=Carlos, cpf=38487432943};
+        // Pessoa xpto2 = new {id=2, nome=Marcos, cpf=77487432943};
 
 
     }

@@ -5,6 +5,7 @@ using Cooperchip.ITDeveloper.Repository.Base;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Cooperchip.ITDeveloper.Application.Servicos
@@ -19,12 +20,19 @@ namespace Cooperchip.ITDeveloper.Application.Servicos
             this._ctx = ctx;
         }
 
+
         public async Task<IEnumerable<Paciente>> ListaPacientes() => await this._ctx.Paciente.AsNoTracking().ToArrayAsync();
 
         public async Task<IEnumerable<Paciente>> ListaPacientesComEstado()
         {
             return await _ctx.Paciente.Include(e => e.EstadoPaciente).AsNoTracking().ToListAsync();
         }
+
+        public List<EstadoPaciente> ListaEstadoPaciente()
+        {
+            return this._ctx.EstadoPaciente.AsNoTracking().ToListAsync().Result;
+        }
+
 
     }
 }

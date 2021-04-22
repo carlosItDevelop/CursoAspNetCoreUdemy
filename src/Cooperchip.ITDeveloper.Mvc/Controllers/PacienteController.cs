@@ -1,27 +1,22 @@
-﻿using Cooperchip.ITDeveloper.Data.ORM;
+﻿using Cooperchip.ITDeveloper.Domain.Interfaces.Entidades;
 using Cooperchip.ITDeveloper.Domain.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Cooperchip.ITDeveloper.Domain.Interfaces.Entidades;
 
 namespace Cooperchip.ITDeveloper.Mvc.Controllers
 {
     [Authorize(Roles = "Admin")]
     public class PacienteController : Controller
     {
-        private readonly ITDeveloperDbContext _context;
-
         private readonly IRepositoryDomainPaciente _repoPaciente;
 
-
-        public PacienteController(ITDeveloperDbContext context, IRepositoryDomainPaciente repoPaciente)
+        public PacienteController(IRepositoryDomainPaciente repoPaciente)
         {
-            _context = context;
             this._repoPaciente = repoPaciente;
         }
 
@@ -52,7 +47,7 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
 
         public IActionResult Create()
         {
-            ViewBag.EstadoPaciente = new SelectList(_context.EstadoPaciente, "Id", "Descricao");
+            ViewBag.EstadoPaciente = new SelectList(_repoPaciente.ListaEstadoPaciente(), "Id", "Descricao");
             return View();
         }
 
@@ -67,7 +62,7 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
                 await this._repoPaciente.Inserir(paciente);
                 return RedirectToAction("Index");
             }
-            ViewBag.EstadoPaciente = new SelectList(_context.EstadoPaciente, "Id", "Descricao", paciente.EstadoPacienteId);
+            ViewBag.EstadoPaciente = new SelectList(_repoPaciente.ListaEstadoPaciente(), "Id", "Descricao", paciente.EstadoPacienteId);
             return View(paciente);
         }
 
@@ -83,7 +78,7 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
             {
                 return NotFound();
             }
-            ViewBag.EstadoPaciente = new SelectList(_context.EstadoPaciente, "Id", "Descricao", paciente.EstadoPacienteId);
+            ViewBag.EstadoPaciente = new SelectList(_repoPaciente.ListaEstadoPaciente(), "Id", "Descricao", paciente.EstadoPacienteId);
             return View(paciente);
         }
 
@@ -115,7 +110,7 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewBag.EstadoPaciente = new SelectList(_context.EstadoPaciente, "Id", "Descricao", paciente.EstadoPacienteId);
+            ViewBag.EstadoPaciente = new SelectList(_repoPaciente.ListaEstadoPaciente(), "Id", "Descricao", paciente.EstadoPacienteId);
             return View(paciente);
         }
 
