@@ -35,7 +35,7 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
             }
 
 
-            var paciente = await this._repoPaciente.SelecionarPorId(id);
+            var paciente = await this._repoPaciente.ObterPacienteComEstadoPaciente(id);
 
             if (paciente == null)
             {
@@ -68,12 +68,12 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
 
         public async Task<IActionResult> Edit(Guid? id)
         {
-            if (id == null)
+            if (id.Value == null)
             {
                 return NotFound();
             }
 
-            var paciente = await _context.Paciente.FindAsync(id);
+            var paciente = await  _repoPaciente.SelecionarPorId(id.Value);
             if (paciente == null)
             {
                 return NotFound();
@@ -121,8 +121,9 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
                 return NotFound();
             }
 
-            var paciente = await _context.Paciente.Include(x => x.EstadoPaciente).AsNoTracking()
-                .FirstOrDefaultAsync(m => m.Id == id);
+
+            var paciente = await _repoPaciente.ObterPacienteComEstadoPaciente(id);
+
             if (paciente == null)
             {
                 return NotFound();
@@ -135,15 +136,15 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(Guid id)
         {
-            var paciente = await _context.Paciente.FindAsync(id);
-            _context.Paciente.Remove(paciente);
-            await _context.SaveChangesAsync();
+            await _repoPaciente.ExcluirPorId(id);
+
             return RedirectToAction(nameof(Index));
         }
 
         private bool PacienteExists(Guid id)
         {
-            return _context.Paciente.Any(e => e.Id == id);
+            //return _context.Paciente.Any(e => e.Id == id);
+            return true;
         }
     }
 }

@@ -33,6 +33,9 @@ namespace Cooperchip.ITDeveloper.Application.Servicos
             return this._ctx.EstadoPaciente.AsNoTracking().ToListAsync().Result;
         }
 
-
+        public async Task<Paciente> ObterPacienteComEstadoPaciente(Guid pacienteId)
+        {
+            return await _ctx.Paciente.Include(e => e.EstadoPaciente).AsNoTracking().FirstOrDefaultAsync(x => x.Id == pacienteId);
+        }
     }
 }
