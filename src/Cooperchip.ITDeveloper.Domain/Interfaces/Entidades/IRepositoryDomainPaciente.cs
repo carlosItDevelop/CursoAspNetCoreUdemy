@@ -13,6 +13,8 @@ namespace Cooperchip.ITDeveloper.Domain.Interfaces.Entidades
 
         List<EstadoPaciente> ListaEstadoPaciente();
 
+        Task<Paciente> OterPacienteComEstadoPaciente(Guid pacienteId);
+
         // ListaEstadoDePacientePorPaciente( Guid PacienteId )
     }
 }
