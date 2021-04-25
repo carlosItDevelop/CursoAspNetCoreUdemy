@@ -1,5 +1,5 @@
 ﻿using Cooperchip.ITDeveloper.Data.ORM;
-using Cooperchip.ITDeveloper.Domain.Interfaces.Entidades;
+using Cooperchip.ITDeveloper.Domain.Interfaces.Repository;
 using Cooperchip.ITDeveloper.Domain.Models;
 using Cooperchip.ITDeveloper.Repository.Base;
 using Microsoft.EntityFrameworkCore;
@@ -8,14 +8,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Cooperchip.ITDeveloper.Application.Servicos
+namespace Cooperchip.ITDeveloper.Application.Repository
 {
-    public class PacienteService : RepositoryGeneric<Paciente, Guid>, IRepositoryDomainPaciente
+    public class PacienteRepository : RepositoryGeneric<Paciente, Guid>, IRepositoryPaciente
     {
 
         private readonly ITDeveloperDbContext _ctx;
 
-        public PacienteService(ITDeveloperDbContext ctx) : base(ctx)
+        public PacienteRepository(ITDeveloperDbContext ctx) : base(ctx)
         {
             this._ctx = ctx;
         }
@@ -43,5 +43,16 @@ namespace Cooperchip.ITDeveloper.Application.Servicos
             return _ctx.Paciente.Any(x => x.Id == pacienteId);
         }
 
+        public async Task<IEnumerable<Paciente>> ObterPacientesPorEstadoPaciente(Guid estadoPacienteId)
+        {
+            var lista = await _ctx.Paciente
+                .Include(ep => ep.EstadoPaciente)
+                .AsNoTracking()
+                .Where(x => x.EstadoPaciente.Id == estadoPacienteId)
+                .OrderBy(order => order.Nome).ToListAsync();
+
+            return lista;
+
+        }
     }
 }

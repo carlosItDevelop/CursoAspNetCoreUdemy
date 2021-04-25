@@ -1,8 +1,8 @@
-﻿using Cooperchip.ITDeveloper.Application.Servicos;
+﻿using Cooperchip.ITDeveloper.Application.Repository;
 using Cooperchip.ITDeveloper.CrossCutting.Auxiliar;
 using Cooperchip.ITDeveloper.CrossCutting.Helpers;
 using Cooperchip.ITDeveloper.Domain.Interfaces;
-using Cooperchip.ITDeveloper.Domain.Interfaces.Entidades;
+using Cooperchip.ITDeveloper.Domain.Interfaces.Repository;
 using Cooperchip.ITDeveloper.Mvc.Extensions.Filters;
 using Cooperchip.ITDeveloper.Mvc.Extensions.Identity;
 using Cooperchip.ITDeveloper.Mvc.Extensions.Identity.Services;
@@ -21,7 +21,7 @@ namespace Cooperchip.ITDeveloper.Mvc.Configuration
         public static IServiceCollection AddDependencyInjectConfig(this IServiceCollection services, IConfiguration configuration)
         {
 
-            services.AddScoped<IRepositoryDomainPaciente, PacienteService>();
+            services.AddScoped<IRepositoryPaciente, PacienteRepository>();
 
 
             services.AddTransient<IUnitOfUpload, UnitOfUpload>();

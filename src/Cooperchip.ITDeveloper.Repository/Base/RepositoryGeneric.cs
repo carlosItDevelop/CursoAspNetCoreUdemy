@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Cooperchip.ITDeveloper.Repository.Base
 {
-    public abstract class RepositoryGeneric<TEntity, TKey> : IDomainGenericRepository<TEntity, TKey> where TEntity : EntityBase, new()
+    public abstract class RepositoryGeneric<TEntity, TKey> : IRepository<TEntity, TKey> where TEntity : EntityBase, new()
     {
 
         protected ITDeveloperDbContext _context;

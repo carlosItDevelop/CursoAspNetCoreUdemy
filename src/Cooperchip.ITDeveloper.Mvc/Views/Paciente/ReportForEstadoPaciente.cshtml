@@ -2,30 +2,21 @@
 @using Cooperchip.ITDeveloper.Mvc.Extensions.ExtensionsMethods
 @model IEnumerable<Cooperchip.ITDeveloper.Domain.Models.Paciente>
 
+
 @{
-    ViewData["Title"] = "Lista de Pacinte";
+    ViewData["Title"] = "Gráfico por Estado de Paciente";
 }
 
+<vc:cabecalho titulo="Medical Management-Sys / Módulo Pacientes" subtitulo="Módulo de Administração de Pacientes">
 
-<vc:cabecalho titulo="Medical Management-Sys / Módulo Pacientes"
-              subtitulo="Administração de Pacientes"></vc:cabecalho>
+</vc:cabecalho>
 
-@*@await Component.InvokeAsync("Cabecalho", new { Titulo = "", Subtitulo = "" })*@
-
-@*<partial name="PartialViews/_estado_paciente" />*@
-
-<div class="panel panel-default panel-controls">
+<div class="row">
     <div class="panel panel-heading">
-        <h3>Lista de Pacientes</h3>
+        <h3>Relatório de Pacientes por Estado-de-Paciente</h3>
     </div>
 
     <div class="panel panel-body">
-        <p>
-            <a asp-controller="Paciente" asp-action="Create" class="btn btn-primary">Novo Paciente</a>
-        </p>
-
-        @*<table-grid Items="@Model"></table-grid>*@
-
         <table class="table table-bordered table-hover myTable" id="ccc">
             <thead class="dark">
                 <tr>
@@ -89,9 +80,6 @@
                             <a asp-controller="Paciente" asp-action="Edit" asp-route-id="@item.Id"><span class="fa fa-pencil-square fa-2x" title="Editar Paciente"></span> </a>
                             <a asp-controller="Paciente" asp-action="Details" asp-route-id="@item.Id"><span class="fa fa-search fa-2x" title="Detalhes Paciente"></span> </a>
                             <a asp-controller="Paciente" asp-action="Delete" asp-route-id="@item.Id"><span class="fa fa-trash fa-2x" title="Excluir Paciente"></span> </a>
-
-                            <a asp-action="ReportForEstadoPaciente" asp-route-id=@item.EstadoPacienteId><span class="fa fa-filter fa-2x" title="Paciente por Estado"></span> </a>
-
                         </td>
 
                     </tr>
@@ -101,24 +89,3 @@
 
     </div>
 </div>
-
-
-@section Scripts {
-
-    @* Bundle  dataTable *@
-    <script src="/bundle/dataTables.min.js"></script>
-
-    <script>
-        $(document).ready(function () {
-            $('.myTable').DataTable({
-                dom: 'T<"clear">lfrtip',
-                tableTools: {
-                    "sSwfPath": "/myPlugins/copy_csv_xls_pdf.swf"
-                }
-            });
-        });
-    </script>
-
-    <script src="~/bundle/dashboard.min.js"></script>
-
-}

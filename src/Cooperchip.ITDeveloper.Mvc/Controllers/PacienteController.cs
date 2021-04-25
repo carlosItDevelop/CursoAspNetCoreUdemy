@@ -1,4 +1,4 @@
-﻿using Cooperchip.ITDeveloper.Domain.Interfaces.Entidades;
+﻿using Cooperchip.ITDeveloper.Domain.Interfaces.Repository;
 using Cooperchip.ITDeveloper.Domain.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -13,9 +13,9 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
     [Authorize(Roles = "Admin")]
     public class PacienteController : Controller
     {
-        private readonly IRepositoryDomainPaciente _repoPaciente;
+        private readonly IRepositoryPaciente _repoPaciente;
 
-        public PacienteController(IRepositoryDomainPaciente repoPaciente)
+        public PacienteController(IRepositoryPaciente repoPaciente)
         {
             this._repoPaciente = repoPaciente;
         }
@@ -44,6 +44,18 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
 
             return View(paciente);
         }
+
+        public async Task<IActionResult> ReportForEstadoPaciente(Guid? id)
+        {
+            if (id.Value == null) return NotFound();
+
+            var pacientePorEstado = await this._repoPaciente.ObterPacientesPorEstadoPaciente(id.Value);
+
+            if (pacientePorEstado == null) return NotFound();
+
+            return View(pacientePorEstado);
+        }
+
 
         public IActionResult Create()
         {

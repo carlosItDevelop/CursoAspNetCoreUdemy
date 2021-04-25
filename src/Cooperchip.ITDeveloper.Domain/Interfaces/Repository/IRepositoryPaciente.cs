@@ -4,9 +4,9 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Cooperchip.ITDeveloper.Domain.Interfaces.Entidades
+namespace Cooperchip.ITDeveloper.Domain.Interfaces.Repository
 {
-    public interface IRepositoryDomainPaciente : IDomainGenericRepository<Paciente, Guid>
+    public interface IRepositoryPaciente : IRepository<Paciente, Guid>
     {
         Task<IEnumerable<Paciente>> ListaPacientesComEstado();
         Task<IEnumerable<Paciente>> ListaPacientes();
@@ -17,6 +17,6 @@ namespace Cooperchip.ITDeveloper.Domain.Interfaces.Entidades
 
         bool TemPaciente(Guid pacienteId);
 
-        // ListaEstadoDePacientePorPaciente( Guid PacienteId )
+        Task<IEnumerable<Paciente>> ObterPacientesPorEstadoPaciente(Guid estadoPacienteId);
     }
 }
