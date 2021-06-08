@@ -58,6 +58,9 @@ namespace Cooperchip.ITDeveloper.Mvc
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                //app.UseDatabaseErrorPage();  // Obsoleto 3.1
+                app.UseMigrationsEndPoint();
+
             }
             else
             {
