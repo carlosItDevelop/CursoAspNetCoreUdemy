@@ -1,6 +1,6 @@
 ### Repositório Oficial do Projeto MedicalManagement-Sys
 
-### Curso de Asp.Net Core 3.1 (Início em 2.2) - Do Zero ao Ninja
+### Curso de Asp.Net Core 5.0 (Início em 2.2) - Do Zero ao Ninja
 
 ---
 
