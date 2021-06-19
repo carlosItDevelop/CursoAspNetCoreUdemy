@@ -29,11 +29,6 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
 
         public async Task<IActionResult> Details(Guid id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
 
             var paciente = await this._repoPaciente.ObterPacienteComEstadoPaciente(id);
 
@@ -45,11 +40,9 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
             return View(paciente);
         }
 
-        public async Task<IActionResult> ReportForEstadoPaciente(Guid? id)
+        public async Task<IActionResult> ReportForEstadoPaciente(Guid id)
         {
-            if (id.Value == null) return NotFound();
-
-            var pacientePorEstado = await this._repoPaciente.ObterPacientesPorEstadoPaciente(id.Value);
+            var pacientePorEstado = await this._repoPaciente.ObterPacientesPorEstadoPaciente(id);
 
             if (pacientePorEstado == null) return NotFound();
 
@@ -78,14 +71,9 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
             return View(paciente);
         }
 
-        public async Task<IActionResult> Edit(Guid? id)
+        public async Task<IActionResult> Edit(Guid id)
         {
-            if (id.Value == null)
-            {
-                return NotFound();
-            }
-
-            var paciente = await  _repoPaciente.SelecionarPorId(id.Value);
+            var paciente = await  _repoPaciente.SelecionarPorId(id);
             if (paciente == null)
             {
                 return NotFound();
@@ -128,12 +116,6 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
 
         public async Task<IActionResult> Delete(Guid id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-
             var paciente = await _repoPaciente.ObterPacienteComEstadoPaciente(id);
 
             if (paciente == null)

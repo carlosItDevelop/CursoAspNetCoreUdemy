@@ -5,8 +5,11 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  
   <ItemGroup>
-    <Folder Include="Validation\" />
+    <Compile Remove="Validation\**" />
+    <EmbeddedResource Remove="Validation\**" />
+    <None Remove="Validation\**" />
   </ItemGroup>  
   
 

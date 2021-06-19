@@ -52,7 +52,6 @@
     <ProjectReference Include="..\Cooperchip.ITDeveloper.Application\Cooperchip.ITDeveloper.Application.csproj" />
     <ProjectReference Include="..\Cooperchip.ITDeveloper.CrossCutting\Cooperchip.ITDeveloper.CrossCutting.csproj" />
     <ProjectReference Include="..\Cooperchip.ITDeveloper.Data\Cooperchip.ITDeveloper.Data.csproj" />
-    <ProjectReference Include="..\Cooperchip.ITDeveloper.Repository\Cooperchip.ITDeveloper.Repository.csproj" />
   </ItemGroup>
 
 </Project>

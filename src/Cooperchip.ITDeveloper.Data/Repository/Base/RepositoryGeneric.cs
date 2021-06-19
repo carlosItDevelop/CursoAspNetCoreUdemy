@@ -8,7 +8,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
-namespace Cooperchip.ITDeveloper.Repository.Base
+namespace Cooperchip.ITDeveloper.Data.Repository.Base
 {
     public abstract class RepositoryGeneric<TEntity, TKey> : IRepository<TEntity, TKey> where TEntity : EntityBase, new()
     {

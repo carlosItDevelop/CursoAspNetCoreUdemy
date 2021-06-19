@@ -1,6 +1,6 @@
-﻿using Cooperchip.ITDeveloper.Application.Repository;
-using Cooperchip.ITDeveloper.CrossCutting.Auxiliar;
+﻿using Cooperchip.ITDeveloper.CrossCutting.Auxiliar;
 using Cooperchip.ITDeveloper.CrossCutting.Helpers;
+using Cooperchip.ITDeveloper.Data.Repository;
 using Cooperchip.ITDeveloper.Domain.Interfaces;
 using Cooperchip.ITDeveloper.Domain.Interfaces.Repository;
 using Cooperchip.ITDeveloper.Mvc.Extensions.Filters;
