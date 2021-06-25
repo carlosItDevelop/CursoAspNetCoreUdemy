@@ -15,9 +15,99 @@ namespace Cooperchip.ITDeveloper.Data.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.0")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
+                .HasAnnotation("ProductVersion", "5.0.6")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("Cooperchip.ITDeveloper.Domain.Entities.Cid", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("CidInternalId")
+                        .HasColumnType("int")
+                        .HasColumnName("CidInternalId");
+
+                    b.Property<string>("Codigo")
+                        .IsRequired()
+                        .HasMaxLength(6)
+                        .HasColumnType("varchar(6)")
+                        .HasColumnName("Codigo");
+
+                    b.Property<string>("Diagnostico")
+                        .IsRequired()
+                        .HasMaxLength(4000)
+                        .HasColumnType("nvarchar(4000)")
+                        .HasColumnName("Diagnostico");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Cid");
+                });
+
+            modelBuilder.Entity("Cooperchip.ITDeveloper.Domain.Entities.EstadoPaciente", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Descricao")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("varchar(20)")
+                        .HasColumnName("Descricao");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("EstadoPaciente");
+                });
+
+            modelBuilder.Entity("Cooperchip.ITDeveloper.Domain.Entities.Generico", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("Codigo")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Nome")
+                        .HasColumnType("varchar(90)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Generico");
+                });
+
+            modelBuilder.Entity("Cooperchip.ITDeveloper.Domain.Entities.Medicamento", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("Codigo")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CodigoGenerico")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Descricao")
+                        .IsRequired()
+                        .HasMaxLength(4000)
+                        .HasColumnType("nvarchar(4000)")
+                        .HasColumnName("Descricao");
+
+                    b.Property<string>("Generico")
+                        .IsRequired()
+                        .HasMaxLength(4000)
+                        .HasColumnType("nvarchar(4000)")
+                        .HasColumnName("Generico");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Medicamento");
+                });
 
             modelBuilder.Entity("Cooperchip.ITDeveloper.Domain.Entities.Mural", b =>
                 {
@@ -46,97 +136,7 @@ namespace Cooperchip.ITDeveloper.Data.Migrations
                     b.ToTable("Mural");
                 });
 
-            modelBuilder.Entity("Cooperchip.ITDeveloper.Domain.Models.Cid", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<int>("CidInternalId")
-                        .HasColumnName("CidInternalId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Codigo")
-                        .IsRequired()
-                        .HasColumnName("Codigo")
-                        .HasColumnType("varchar(6)")
-                        .HasMaxLength(6);
-
-                    b.Property<string>("Diagnostico")
-                        .IsRequired()
-                        .HasColumnName("Diagnostico")
-                        .HasColumnType("nvarchar(4000)")
-                        .HasMaxLength(4000);
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Cid");
-                });
-
-            modelBuilder.Entity("Cooperchip.ITDeveloper.Domain.Models.EstadoPaciente", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Descricao")
-                        .IsRequired()
-                        .HasColumnName("Descricao")
-                        .HasColumnType("varchar(30)")
-                        .HasMaxLength(20);
-
-                    b.HasKey("Id");
-
-                    b.ToTable("EstadoPaciente");
-                });
-
-            modelBuilder.Entity("Cooperchip.ITDeveloper.Domain.Models.Generico", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<int>("Codigo")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Nome")
-                        .HasColumnType("varchar(90)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Generico");
-                });
-
-            modelBuilder.Entity("Cooperchip.ITDeveloper.Domain.Models.Medicamento", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<int>("Codigo")
-                        .HasColumnType("int");
-
-                    b.Property<int>("CodigoGenerico")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Descricao")
-                        .IsRequired()
-                        .HasColumnName("Descricao")
-                        .HasColumnType("nvarchar(4000)")
-                        .HasMaxLength(4000);
-
-                    b.Property<string>("Generico")
-                        .IsRequired()
-                        .HasColumnName("Generico")
-                        .HasColumnType("nvarchar(4000)")
-                        .HasMaxLength(4000);
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Medicamento");
-                });
-
-            modelBuilder.Entity("Cooperchip.ITDeveloper.Domain.Models.Paciente", b =>
+            modelBuilder.Entity("Cooperchip.ITDeveloper.Domain.Entities.Paciente", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -146,10 +146,10 @@ namespace Cooperchip.ITDeveloper.Data.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("Cpf")
-                        .HasColumnName("Cpf")
+                        .HasMaxLength(11)
                         .HasColumnType("varchar(11)")
-                        .IsFixedLength(true)
-                        .HasMaxLength(11);
+                        .HasColumnName("Cpf")
+                        .IsFixedLength(true);
 
                     b.Property<DateTime>("DataInternacao")
                         .HasColumnType("datetime2");
@@ -158,28 +158,31 @@ namespace Cooperchip.ITDeveloper.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Email")
-                        .HasColumnName("Email")
-                        .HasColumnType("varchar(150)");
+                        .HasColumnType("varchar(150)")
+                        .HasColumnName("Email");
 
                     b.Property<Guid>("EstadoPacienteId")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("Motivo")
+                        .HasColumnType("varchar(90)");
+
                     b.Property<string>("Nome")
                         .IsRequired()
-                        .HasColumnName("Nome")
-                        .HasColumnType("varchar(80)");
+                        .HasColumnType("varchar(80)")
+                        .HasColumnName("Nome");
 
                     b.Property<string>("Rg")
-                        .HasColumnName("Rg")
+                        .HasMaxLength(15)
                         .HasColumnType("varchar(15)")
-                        .HasMaxLength(15);
+                        .HasColumnName("Rg");
 
                     b.Property<DateTime>("RgDataEmissao")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("RgOrgao")
-                        .HasColumnName("RgOrgao")
-                        .HasColumnType("varchar(10)");
+                        .HasColumnType("varchar(10)")
+                        .HasColumnName("RgOrgao");
 
                     b.Property<int>("Sexo")
                         .HasColumnType("int");
@@ -194,12 +197,19 @@ namespace Cooperchip.ITDeveloper.Data.Migrations
                     b.ToTable("Paciente");
                 });
 
-            modelBuilder.Entity("Cooperchip.ITDeveloper.Domain.Models.Paciente", b =>
+            modelBuilder.Entity("Cooperchip.ITDeveloper.Domain.Entities.Paciente", b =>
                 {
-                    b.HasOne("Cooperchip.ITDeveloper.Domain.Models.EstadoPaciente", "EstadoPaciente")
+                    b.HasOne("Cooperchip.ITDeveloper.Domain.Entities.EstadoPaciente", "EstadoPaciente")
                         .WithMany("Paciente")
                         .HasForeignKey("EstadoPacienteId")
                         .IsRequired();
+
+                    b.Navigation("EstadoPaciente");
+                });
+
+            modelBuilder.Entity("Cooperchip.ITDeveloper.Domain.Entities.EstadoPaciente", b =>
+                {
+                    b.Navigation("Paciente");
                 });
 #pragma warning restore 612, 618
         }

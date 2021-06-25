@@ -1,4 +1,4 @@
-﻿using Cooperchip.ITDeveloper.Domain.Models;
+﻿using Cooperchip.ITDeveloper.Domain.Entities;
 using Cooperchip.ITDeveloper.DomainCore.Base;
 using System;
 using System.Collections.Generic;
@@ -11,7 +11,7 @@ namespace Cooperchip.ITDeveloper.Domain.Interfaces.Repository
         Task<IEnumerable<Paciente>> ListaPacientesComEstado();
         Task<IEnumerable<Paciente>> ListaPacientes();
 
-        List<EstadoPaciente> ListaEstadoPaciente();
+        Task<List<EstadoPaciente>> ListaEstadoPaciente();
 
         Task<Paciente> ObterPacienteComEstadoPaciente(Guid pacienteId);
 

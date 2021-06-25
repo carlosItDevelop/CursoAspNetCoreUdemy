@@ -1,12 +1,12 @@
-﻿@model Cooperchip.ITDeveloper.Domain.Models.Paciente
+﻿@model Cooperchip.ITDeveloper.Application.ViewModels.PacienteViewModel
 
 @{
     ViewData["Title"] = "Detalhes de Pacientes";
 }
 
-    <vc:cabecalho titulo="Medical Management-Sys / Módulo Pacientes" subtitulo="Módulo de Administração de Pacientes">
+<vc:cabecalho titulo="Medical Management-Sys / Módulo Pacientes" subtitulo="Módulo de Administração de Pacientes">
 
-    </vc:cabecalho>
+</vc:cabecalho>
 
 <div class="row">
     <div class="panel panel-heading">
@@ -16,7 +16,7 @@
     <div class="panel panel-body">
 
         <div>
-            <partial name="_delete_details"/>
+            <partial name="_delete_details" />
         </div>
 
         <div>
@@ -26,3 +26,11 @@
 
     </div>
 </div>
+
+@section Scripts {
+
+    @* Bundle  dataTable *@
+    <script src="/bundle/dataTables.min.js"></script>
+    <script src="~/bundle/dashboard.min.js"></script>
+
+}

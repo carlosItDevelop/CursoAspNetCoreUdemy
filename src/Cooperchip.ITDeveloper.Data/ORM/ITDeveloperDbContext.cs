@@ -1,6 +1,6 @@
 ﻿
 using Cooperchip.ITDeveloper.Domain.Entities;
-using Cooperchip.ITDeveloper.Domain.Models;
+using Cooperchip.ITDeveloper.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 

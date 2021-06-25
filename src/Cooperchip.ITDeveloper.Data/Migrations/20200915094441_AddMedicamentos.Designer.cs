@@ -48,7 +48,7 @@ namespace Cooperchip.ITDeveloper.Data.Migrations
                     b.ToTable("Mural");
                 });
 
-            modelBuilder.Entity("Cooperchip.ITDeveloper.Domain.Models.Cid", b =>
+            modelBuilder.Entity("Cooperchip.ITDeveloper.Domain.Entities.Cid", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -75,7 +75,7 @@ namespace Cooperchip.ITDeveloper.Data.Migrations
                     b.ToTable("Cid");
                 });
 
-            modelBuilder.Entity("Cooperchip.ITDeveloper.Domain.Models.EstadoPaciente", b =>
+            modelBuilder.Entity("Cooperchip.ITDeveloper.Domain.Entities.EstadoPaciente", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -92,7 +92,7 @@ namespace Cooperchip.ITDeveloper.Data.Migrations
                     b.ToTable("EstadoPaciente");
                 });
 
-            modelBuilder.Entity("Cooperchip.ITDeveloper.Domain.Models.Generico", b =>
+            modelBuilder.Entity("Cooperchip.ITDeveloper.Domain.Entities.Generico", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -109,7 +109,7 @@ namespace Cooperchip.ITDeveloper.Data.Migrations
                     b.ToTable("Generico");
                 });
 
-            modelBuilder.Entity("Cooperchip.ITDeveloper.Domain.Models.Medicamento", b =>
+            modelBuilder.Entity("Cooperchip.ITDeveloper.Domain.Entities.Medicamento", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -138,7 +138,7 @@ namespace Cooperchip.ITDeveloper.Data.Migrations
                     b.ToTable("Medicamento");
                 });
 
-            modelBuilder.Entity("Cooperchip.ITDeveloper.Domain.Models.Paciente", b =>
+            modelBuilder.Entity("Cooperchip.ITDeveloper.Domain.Entities.Paciente", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -196,9 +196,9 @@ namespace Cooperchip.ITDeveloper.Data.Migrations
                     b.ToTable("Paciente");
                 });
 
-            modelBuilder.Entity("Cooperchip.ITDeveloper.Domain.Models.Paciente", b =>
+            modelBuilder.Entity("Cooperchip.ITDeveloper.Domain.Entities.Paciente", b =>
                 {
-                    b.HasOne("Cooperchip.ITDeveloper.Domain.Models.EstadoPaciente", "EstadoPaciente")
+                    b.HasOne("Cooperchip.ITDeveloper.Domain.Entities.EstadoPaciente", "EstadoPaciente")
                         .WithMany("Paciente")
                         .HasForeignKey("EstadoPacienteId")
                         .IsRequired();

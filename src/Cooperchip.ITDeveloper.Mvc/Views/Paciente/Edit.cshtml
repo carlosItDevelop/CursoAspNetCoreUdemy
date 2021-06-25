@@ -1,13 +1,13 @@
 ﻿@using Cooperchip.ITDeveloper.Domain.Enums
-@model Cooperchip.ITDeveloper.Domain.Models.Paciente
+@model Cooperchip.ITDeveloper.Domain.Entities.Paciente
 
 @{
     ViewData["Title"] = "Editar Paciente";
 }
 
-    <vc:cabecalho titulo="Medical Management-Sys / Módulo Pacientes" subtitulo="Módulo de Administração de Pacientes">
+<vc:cabecalho titulo="Medical Management-Sys / Módulo Pacientes" subtitulo="Módulo de Administração de Pacientes">
 
-    </vc:cabecalho>
+</vc:cabecalho>
 
 <div class="row">
     <div class="panel panel-heading">
@@ -26,7 +26,7 @@
                     <input type="submit" value="Salvar" class="btn btn-success" />
                     <a asp-controller="Paciente" asp-action="Index" class="btn btn-info">Voltar à lista</a>
                 </div>
-                
+
 
             </form>
         </div>
@@ -38,4 +38,12 @@
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    @* Bundle  dataTable *@
+    <script src="/bundle/dataTables.min.js"></script>
+    <script src="~/bundle/dashboard.min.js"></script>
+
 }
+
+
+

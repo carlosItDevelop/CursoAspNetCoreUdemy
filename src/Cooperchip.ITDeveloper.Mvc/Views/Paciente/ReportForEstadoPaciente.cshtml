@@ -1,6 +1,6 @@
 ﻿
 @using Cooperchip.ITDeveloper.Mvc.Extensions.ExtensionsMethods
-@model IEnumerable<Cooperchip.ITDeveloper.Domain.Models.Paciente>
+@model IEnumerable<Cooperchip.ITDeveloper.Application.ViewModels.PacienteViewModel>
 
 
 @{
@@ -89,3 +89,11 @@
 
     </div>
 </div>
+
+@section Scripts {
+
+    @* Bundle  dataTable *@
+    <script src="/bundle/dataTables.min.js"></script>
+    <script src="~/bundle/dashboard.min.js"></script>
+
+}

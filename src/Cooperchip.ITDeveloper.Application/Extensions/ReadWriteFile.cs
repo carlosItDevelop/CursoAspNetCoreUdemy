@@ -1,5 +1,5 @@
 ﻿using Cooperchip.ITDeveloper.Data.ORM;
-using Cooperchip.ITDeveloper.Domain.Models;
+using Cooperchip.ITDeveloper.Domain.Entities;
 using Microsoft.EntityFrameworkCore.Internal;
 using System.IO;
 using System.Linq;

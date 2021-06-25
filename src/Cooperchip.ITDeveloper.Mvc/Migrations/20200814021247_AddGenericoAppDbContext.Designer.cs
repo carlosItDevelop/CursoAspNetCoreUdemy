@@ -21,7 +21,7 @@ namespace Cooperchip.ITDeveloper.Mvc.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Cooperchip.ITDeveloper.Domain.Models.Generico", b =>
+            modelBuilder.Entity("Cooperchip.ITDeveloper.Domain.Entities.Generico", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()

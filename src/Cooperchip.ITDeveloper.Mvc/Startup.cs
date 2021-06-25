@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text;
+using Cooperchip.ITDeveloper.Application.AutoMapper;
 using Cooperchip.ITDeveloper.Mvc.Configuration;
 using Cooperchip.ITDeveloper.Mvc.Data;
 using Cooperchip.ITDeveloper.Mvc.Extensions.Identity;
@@ -42,6 +43,9 @@ namespace Cooperchip.ITDeveloper.Mvc
 
         public void ConfigureServices(IServiceCollection services)
         {
+            // TODO: Apagar o assembly startup (Didático)
+            services.AddAutoMapper(typeof(AutoMapperConfig), typeof(Startup));
+
             services.AddDbContextConfig(Configuration); // In DbContextConfig
             services.AddIdentityConfig(Configuration); // In IdentityConfig
             services.AddMvcAndRazor(); // In MvcAndRazor

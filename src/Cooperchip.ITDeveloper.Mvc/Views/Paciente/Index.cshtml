@@ -1,6 +1,6 @@
 ﻿
 @using Cooperchip.ITDeveloper.Mvc.Extensions.ExtensionsMethods
-@model IEnumerable<Cooperchip.ITDeveloper.Domain.Models.Paciente>
+@model IEnumerable<Cooperchip.ITDeveloper.Application.ViewModels.PacienteViewModel>
 
 @{
     ViewData["Title"] = "Lista de Pacinte";
@@ -10,9 +10,6 @@
 <vc:cabecalho titulo="Medical Management-Sys / Módulo Pacientes"
               subtitulo="Administração de Pacientes"></vc:cabecalho>
 
-@*@await Component.InvokeAsync("Cabecalho", new { Titulo = "", Subtitulo = "" })*@
-
-@*<partial name="PartialViews/_estado_paciente" />*@
 
 <div class="panel panel-default panel-controls">
     <div class="panel panel-heading">
@@ -23,8 +20,6 @@
         <p>
             <a asp-controller="Paciente" asp-action="Create" class="btn btn-primary">Novo Paciente</a>
         </p>
-
-        @*<table-grid Items="@Model"></table-grid>*@
 
         <table class="table table-bordered table-hover myTable" id="ccc">
             <thead class="dark">

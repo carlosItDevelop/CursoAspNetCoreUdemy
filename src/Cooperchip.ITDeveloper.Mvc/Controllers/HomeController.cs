@@ -1,7 +1,6 @@
 ﻿
+using Cooperchip.ITDeveloper.Application.ViewModels;
 using Cooperchip.ITDeveloper.Domain.Interfaces;
-using Cooperchip.ITDeveloper.Mvc.Models;
-using Cooperchip.ITDeveloper.Mvc.ViewModels;
 using KissLog;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;

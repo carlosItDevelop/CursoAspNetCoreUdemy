@@ -1,7 +1,7 @@
 ﻿using Cooperchip.ITDeveloper.Data.ORM;
 using Cooperchip.ITDeveloper.Data.Repository.Base;
+using Cooperchip.ITDeveloper.Domain.Entities;
 using Cooperchip.ITDeveloper.Domain.Interfaces.Repository;
-using Cooperchip.ITDeveloper.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -26,9 +26,9 @@ namespace Cooperchip.ITDeveloper.Data.Repository
             return await _context.Paciente.Include(e => e.EstadoPaciente).AsNoTracking().ToListAsync();
         }
 
-        public List<EstadoPaciente> ListaEstadoPaciente()
+        public async Task<List<EstadoPaciente>> ListaEstadoPaciente()
         {
-            return _context.EstadoPaciente.AsNoTracking().ToListAsync().Result;
+            return await _context.EstadoPaciente.AsNoTracking().ToListAsync();
         }
 
         public async Task<Paciente> ObterPacienteComEstadoPaciente(Guid pacienteId)
