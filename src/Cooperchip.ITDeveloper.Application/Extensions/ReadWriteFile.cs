@@ -1,6 +1,5 @@
 ﻿using Cooperchip.ITDeveloper.Data.ORM;
 using Cooperchip.ITDeveloper.Domain.Entities;
-using Microsoft.EntityFrameworkCore.Internal;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
@@ -35,7 +34,7 @@ namespace Cooperchip.ITDeveloper.Application.Extensions
                         var generico = parts[2];
                         var codigogenerico = parts[3];
 
-                        // Considerando que os valores dos imports são sempre iguais, portanto qq registro que já exista a gente aborata
+                        // TODO: Considerando que os valores dos imports são sempre iguais, portanto qq registro que já exista a gente aborta
                         if (JaTemMedicamanto(codigomedicamento, ctx)) return false;
 
                         ctx.Add(new Medicamento

@@ -10,13 +10,9 @@ namespace Cooperchip.ITDeveloper.Domain.Interfaces.Repository
     {
         Task<IEnumerable<Paciente>> ListaPacientesComEstado();
         Task<IEnumerable<Paciente>> ListaPacientes();
-
         Task<List<EstadoPaciente>> ListaEstadoPaciente();
-
         Task<Paciente> ObterPacienteComEstadoPaciente(Guid pacienteId);
-
         bool TemPaciente(Guid pacienteId);
-
         Task<IEnumerable<Paciente>> ObterPacientesPorEstadoPaciente(Guid estadoPacienteId);
     }
 }
