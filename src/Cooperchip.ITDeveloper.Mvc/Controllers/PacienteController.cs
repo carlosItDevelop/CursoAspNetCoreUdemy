@@ -1,4 +1,5 @@
 ﻿using Cooperchip.ITDeveloper.Application.Interfaces;
+using Cooperchip.ITDeveloper.Application.ViewModels;
 using Cooperchip.ITDeveloper.Domain.Entities;
 using Cooperchip.ITDeveloper.Domain.Interfaces.Repository;
 using Microsoft.AspNetCore.Authorization;
@@ -13,14 +14,11 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
     [Authorize(Roles = "Admin")]
     public class PacienteController : Controller
     {
-        private readonly IRepositoryPaciente _repoPaciente;
         private readonly IServicoAplicacaoPaciente _serviceApp;
 
-        public PacienteController(IServicoAplicacaoPaciente serviceApp, 
-                                  IRepositoryPaciente repoPaciente)
+        public PacienteController(IServicoAplicacaoPaciente serviceApp)
         {
             _serviceApp = serviceApp;
-            _repoPaciente = repoPaciente;
         }
 
         // GET: Paciente
@@ -65,20 +63,20 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Paciente paciente)
+        public async Task<IActionResult> Create(PacienteViewModel pacienteVM)
         {
             if (ModelState.IsValid)
             {
-                await this._repoPaciente.Inserir(paciente);
+                await this._serviceApp.AdicionarPacienteApplication(pacienteVM);
                 return RedirectToAction("Index");
             }
-            ViewBag.EstadoPaciente = new SelectList(await _serviceApp.ListaEstadoPacienteApplication(), "Id", "Descricao", paciente.EstadoPacienteId);
-            return View(paciente);
+            ViewBag.EstadoPaciente = new SelectList(await _serviceApp.ListaEstadoPacienteApplication(), "Id", "Descricao", pacienteVM.EstadoPacienteId);
+            return View(pacienteVM);
         }
 
         public async Task<IActionResult> Edit(Guid id)
         {
-            var paciente = await  _repoPaciente.SelecionarPorId(id);
+            var paciente = await _serviceApp.ObterPacienteComEstadoPacienteApplication(id);
             if (paciente == null)
             {
                 return NotFound();
@@ -89,9 +87,9 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(Guid id, Paciente paciente)
+        public async Task<IActionResult> Edit(Guid id, PacienteViewModel pacienteVM)
         {
-            if (id != paciente.Id)
+            if (id != pacienteVM.Id)
             {
                 return NotFound();
             }
@@ -100,11 +98,11 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
             {
                 try
                 {
-                    await this._repoPaciente.Atualizar(paciente);
+                    await this._serviceApp.AtualizarPacienteApllication(pacienteVM);
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!PacienteExists(paciente.Id))
+                    if (!PacienteExists(pacienteVM.Id))
                     {
                         return NotFound();
                     }
@@ -115,13 +113,13 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewBag.EstadoPaciente = new SelectList(await _serviceApp.ListaEstadoPacienteApplication(), "Id", "Descricao", paciente.EstadoPacienteId);
-            return View(paciente);
+            ViewBag.EstadoPaciente = new SelectList(await _serviceApp.ListaEstadoPacienteApplication(), "Id", "Descricao", pacienteVM.EstadoPacienteId);
+            return View(pacienteVM);
         }
 
         public async Task<IActionResult> Delete(Guid id)
         {
-            var paciente = await _repoPaciente.ObterPacienteComEstadoPaciente(id);
+            var paciente = await _serviceApp.ObterPacienteComEstadoPacienteApplication(id);
 
             if (paciente == null)
             {
@@ -135,7 +133,7 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(Guid id)
         {
-            await _repoPaciente.ExcluirPorId(id);
+            await _serviceApp.RemoverPacienteApplication(id);
 
             return RedirectToAction(nameof(Index));
         }

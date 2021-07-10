@@ -2,6 +2,7 @@
 using Cooperchip.ITDeveloper.Application.Interfaces;
 using Cooperchip.ITDeveloper.Application.ViewModels;
 using Cooperchip.ITDeveloper.Domain.Entities;
+using Cooperchip.ITDeveloper.Domain.Interfaces;
 using Cooperchip.ITDeveloper.Domain.Interfaces.Repository;
 using System;
 using System.Collections.Generic;
@@ -14,15 +15,19 @@ namespace Cooperchip.ITDeveloper.Application.Services
         // (query) - Get ==> Fala diretamente com o Repository
         private readonly IRepositoryPaciente _repoPaciente;
 
+        // (Command) - Post, Put, Patch, Delete - Fala com Domain
+        private readonly IPacienteDomainService _serviceDomain;
+
         // Cuida do Mapeamento Model/ViewModel & Reverse,
         // antes de passar para Repositório ou Seviços de Domain
         private readonly IMapper _mapper;
 
-        public ServicoAplicacaoPaciente(IRepositoryPaciente repoPaciente, 
-                                        IMapper mapper)
+        public ServicoAplicacaoPaciente(IRepositoryPaciente repoPaciente,
+                                        IMapper mapper, IPacienteDomainService serviceDomain)
         {
             _repoPaciente = repoPaciente;
             _mapper = mapper;
+            _serviceDomain = serviceDomain;
         }
 
         public async Task<PacienteViewModel> ObterPacienteComEstadoPacienteApplication(Guid pacienteId)
@@ -79,6 +84,26 @@ namespace Cooperchip.ITDeveloper.Application.Services
                 });
             }
             return listaView;
+        }
+
+        // =======================================================================
+        /* ===/ Estes três métodos abaixo delegam a responsabilidade para os Domain Srvices, 
+         * pois lá haverá as validações de Regra de Negócios; 
+         */
+        public async Task AdicionarPacienteApplication(PacienteViewModel pacienteViewModel)
+        {
+            await _serviceDomain.AdicionarPaciente(_mapper.Map<Paciente>(pacienteViewModel));
+        }
+
+        public async Task AtualizarPacienteApllication(PacienteViewModel pacienteViewModel)
+        {
+            await _serviceDomain.AtualizarPaciente(_mapper.Map<Paciente>(pacienteViewModel));
+        }
+
+        public async Task RemoverPacienteApplication(Guid id)
+        {
+            var paciente = await _repoPaciente.SelecionarPorId(id);
+            await _serviceDomain.ExcluirPaciente(paciente);
         }
 
         #endregion

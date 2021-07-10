@@ -5,6 +5,7 @@ using Cooperchip.ITDeveloper.CrossCutting.Helpers;
 using Cooperchip.ITDeveloper.Data.Repository;
 using Cooperchip.ITDeveloper.Domain.Interfaces;
 using Cooperchip.ITDeveloper.Domain.Interfaces.Repository;
+using Cooperchip.ITDeveloper.Domain.Interfaces.Services;
 using Cooperchip.ITDeveloper.Mvc.Extensions.Filters;
 using Cooperchip.ITDeveloper.Mvc.Extensions.Identity;
 using Cooperchip.ITDeveloper.Mvc.Extensions.Identity.Services;
@@ -26,11 +27,10 @@ namespace Cooperchip.ITDeveloper.Mvc.Configuration
             /* Application */
             services.AddScoped<IServicoAplicacaoPaciente, ServicoAplicacaoPaciente>();
             /* Domain => Service */
+            services.AddScoped<IPacienteDomainService, PacienteDomainService>();
             /* Domain => Repository */
-
-
-
             services.AddScoped<IRepositoryPaciente, PacienteRepository>();
+
 
 
             services.AddTransient<IUnitOfUpload, UnitOfUpload>();

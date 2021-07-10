@@ -18,5 +18,11 @@ namespace Cooperchip.ITDeveloper.Application.Interfaces
 
 
         /* Commands */
+
+        Task AdicionarPacienteApplication(PacienteViewModel pacienteViewModel);
+        Task AtualizarPacienteApllication(PacienteViewModel pacienteViewModel);
+        Task RemoverPacienteApplication(Guid id);
+
+
     }
 }
