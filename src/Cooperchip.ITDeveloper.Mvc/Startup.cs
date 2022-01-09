@@ -1,12 +1,8 @@
-﻿using System;
-using System.Text;
-using Cooperchip.ITDeveloper.Application.AutoMapper;
+﻿using Cooperchip.ITDeveloper.Application.AutoMapper;
 using Cooperchip.ITDeveloper.Mvc.Configuration;
 using Cooperchip.ITDeveloper.Mvc.Data;
 using Cooperchip.ITDeveloper.Mvc.Extensions.Identity;
 using Cooperchip.ITDeveloper.Mvc.Extensions.Identity.Services;
-using Cooperchip.ITDeveloper.Mvc.Extensions.Middlewares;
-using Cooperchip.ITDeveloper.Mvc.Identity.Services;
 using KissLog.Apis.v1.Listeners;
 using KissLog.AspNetCore;
 

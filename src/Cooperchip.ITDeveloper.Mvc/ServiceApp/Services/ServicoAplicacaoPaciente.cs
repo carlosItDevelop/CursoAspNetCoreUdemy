@@ -1,14 +1,14 @@
 ﻿using AutoMapper;
+using Cooperchip.ITDeveloper.Application.Interfaces;
 using Cooperchip.ITDeveloper.Application.ViewModels;
 using Cooperchip.ITDeveloper.Domain.Entities;
 using Cooperchip.ITDeveloper.Domain.Interfaces;
 using Cooperchip.ITDeveloper.Domain.Interfaces.Repository;
-using Cooperchip.ITDeveloper.Mvc.ServiceApp.Abstractions;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Cooperchip.ITDeveloper.Mvc.ServiceApp.Services
+namespace Cooperchip.ITDeveloper.Application.Services
 {
     public class ServicoAplicacaoPaciente : IServicoAplicacaoPaciente
     {

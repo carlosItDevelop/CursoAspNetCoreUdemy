@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Cooperchip.ITDeveloper.Mvc.ServiceApp.Abstractions
+namespace Cooperchip.ITDeveloper.Application.Interfaces
 {
     public interface IServicoAplicacaoPaciente
     {

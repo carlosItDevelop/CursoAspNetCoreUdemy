@@ -1,4 +1,6 @@
-﻿using Cooperchip.ITDeveloper.CrossCutting.Auxiliar;
+﻿using Cooperchip.ITDeveloper.Application.Interfaces;
+using Cooperchip.ITDeveloper.Application.Services;
+using Cooperchip.ITDeveloper.CrossCutting.Auxiliar;
 using Cooperchip.ITDeveloper.CrossCutting.Helpers;
 using Cooperchip.ITDeveloper.Data.Repository;
 using Cooperchip.ITDeveloper.Domain.Interfaces;
@@ -8,8 +10,6 @@ using Cooperchip.ITDeveloper.Mvc.Extensions.Filters;
 using Cooperchip.ITDeveloper.Mvc.Extensions.Identity;
 using Cooperchip.ITDeveloper.Mvc.Extensions.Identity.Services;
 using Cooperchip.ITDeveloper.Mvc.Intra;
-using Cooperchip.ITDeveloper.Mvc.ServiceApp.Abstractions;
-using Cooperchip.ITDeveloper.Mvc.ServiceApp.Services;
 using KissLog;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;

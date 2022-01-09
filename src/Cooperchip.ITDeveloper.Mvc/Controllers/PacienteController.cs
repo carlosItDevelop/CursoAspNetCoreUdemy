@@ -1,7 +1,5 @@
-﻿using Cooperchip.ITDeveloper.Application.ViewModels;
-using Cooperchip.ITDeveloper.Domain.Entities;
-using Cooperchip.ITDeveloper.Domain.Interfaces.Repository;
-using Cooperchip.ITDeveloper.Mvc.ServiceApp.Abstractions;
+﻿using Cooperchip.ITDeveloper.Application.Interfaces;
+using Cooperchip.ITDeveloper.Application.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
