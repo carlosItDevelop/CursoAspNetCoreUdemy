@@ -10,6 +10,9 @@ __Quer conhecer nosso projeto? Acesse o curso na Udemy:  **[Acesse aqui](https:/
 ### *A partir deste ponto começaremos com as Seções Avançadas*
 ---
 
+> #### *Que fique claro que esta RC é do Projeto Aula e não do nosso Caso de Uso*
+
+
 ![Tela Inicial do Projeto MedicalManagenet-Sys](https://user-images.githubusercontent.com/1213751/71663844-87052780-2d35-11ea-95c0-623a74885ebc.png "Antes do Dashboard")
 
 
