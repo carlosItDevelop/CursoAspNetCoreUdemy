@@ -6,12 +6,17 @@
 
 __Quer conhecer nosso projeto? Acesse o curso na Udemy:  **[Acesse aqui](https://www.udemy.com/course/curso-de-aspnet-core-mvc-2-2-do-zero-ao-ninja/?referralCode=41B345D11D74CEDD7E57)**.__
 
+---
+### *A partir deste ponto começaremos com as Seções Avançadas*
+---
+
 ![Tela Inicial do Projeto MedicalManagenet-Sys](https://user-images.githubusercontent.com/1213751/71663844-87052780-2d35-11ea-95c0-623a74885ebc.png "Antes do Dashboard")
 
 
 > __Validação global contra Ataque CSRF, prevenindo-se da ausências nas Actions;__
 
 ---
+
 
 ```CSHARP
 using Cooperchip.ITDeveloper.Mvc.Extentions.Filters;
