@@ -36,7 +36,8 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
             _mapper = mapper;
         }
 
-        public async Task<ActionResult<IEnumerable<PacienteViewModel>>> Index()
+        [HttpGet]
+        public async Task<IActionResult> Index()
         {
             var pacientes = await _repoPaciente.ListaPacientesComEstado();
             List<PacienteViewModel> listaView = new List<PacienteViewModel>();
@@ -61,7 +62,7 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
                     Motivo = item.Motivo
                 });
             }
-            return listaView;
+            return View(listaView);
 
         }
 

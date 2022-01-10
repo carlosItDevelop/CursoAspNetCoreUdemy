@@ -1,6 +1,4 @@
-﻿using Cooperchip.ITDeveloper.Application.Interfaces;
-using Cooperchip.ITDeveloper.Application.Services;
-using Cooperchip.ITDeveloper.CrossCutting.Auxiliar;
+﻿using Cooperchip.ITDeveloper.CrossCutting.Auxiliar;
 using Cooperchip.ITDeveloper.CrossCutting.Helpers;
 using Cooperchip.ITDeveloper.Data.Repository;
 using Cooperchip.ITDeveloper.Domain.Interfaces;
@@ -21,7 +19,8 @@ namespace Cooperchip.ITDeveloper.Mvc.Configuration
 {
     public static class DependencyInjectConfig
     {
-        public static IServiceCollection AddDependencyInjectConfig(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection AddDependencyInjectConfig(this IServiceCollection services, 
+                                                                        IConfiguration configuration)
         {
 
 
