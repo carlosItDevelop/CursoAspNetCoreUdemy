@@ -1,11 +1,9 @@
-﻿using Cooperchip.ITDeveloper.Application.AutoMapper;
-using Cooperchip.ITDeveloper.Mvc.Configuration;
+﻿using Cooperchip.ITDeveloper.Mvc.Configuration;
 using Cooperchip.ITDeveloper.Mvc.Data;
 using Cooperchip.ITDeveloper.Mvc.Extensions.Identity;
 using Cooperchip.ITDeveloper.Mvc.Extensions.Identity.Services;
 using KissLog.Apis.v1.Listeners;
 using KissLog.AspNetCore;
-
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -39,8 +37,7 @@ namespace Cooperchip.ITDeveloper.Mvc
 
         public void ConfigureServices(IServiceCollection services)
         {
-            // TODO: Apagar o assembly startup (Didático)
-            services.AddAutoMapper(typeof(AutoMapperConfig), typeof(Startup));
+            services.AddAutoMapper(typeof(Startup));
 
             services.AddDbContextConfig(Configuration); // In DbContextConfig
             services.AddIdentityConfig(Configuration); // In IdentityConfig

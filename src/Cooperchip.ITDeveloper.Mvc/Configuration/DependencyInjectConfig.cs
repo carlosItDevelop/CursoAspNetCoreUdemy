@@ -24,8 +24,7 @@ namespace Cooperchip.ITDeveloper.Mvc.Configuration
         public static IServiceCollection AddDependencyInjectConfig(this IServiceCollection services, IConfiguration configuration)
         {
 
-            /* Application */
-            services.AddScoped<IServicoAplicacaoPaciente, ServicoAplicacaoPaciente>();
+
             /* Domain => Service */
             services.AddScoped<IPacienteDomainService, PacienteDomainService>();
             /* Domain => Repository */
