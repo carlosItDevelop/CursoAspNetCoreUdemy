@@ -56,7 +56,7 @@ namespace Cooperchip.ITDeveloper.Application.ViewModels
         [Required(ErrorMessage = "O campo {0} é requerido.")]
         public Sexo Sexo { get; set; }
 
-        [DisplayName(displayName: "Sexo")]
+        [DisplayName(displayName: "RG")]
         [MaxLength(15, ErrorMessage = "O campo {0} não pode ter mais que (1) caracteres.")]
         public string Rg { get; set; }
 

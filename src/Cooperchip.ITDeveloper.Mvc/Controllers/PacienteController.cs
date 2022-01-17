@@ -103,9 +103,11 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
         {
             if (ModelState.IsValid)
             {
-                await _serviceDomain.AdicionarPaciente(_mapper.Map<Paciente>(pacienteVM));
-                return RedirectToAction("Index");
+                    await _serviceDomain.AdicionarPaciente(_mapper.Map<Paciente>(pacienteVM));
+                    return RedirectToAction("Index");
+
             }
+
             ViewBag.EstadoPaciente = new SelectList(await _queryRepo.ListaEstadoPaciente(), "Id", "Descricao", pacienteVM.EstadoPacienteId);
             return View(pacienteVM);
         }
