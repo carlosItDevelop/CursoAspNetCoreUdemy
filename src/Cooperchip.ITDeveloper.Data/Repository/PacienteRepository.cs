@@ -1,4 +1,5 @@
 ﻿using Cooperchip.ITDeveloper.Data.ORM;
+using Cooperchip.ITDeveloper.Data.Repository.Abstractions;
 using Cooperchip.ITDeveloper.Data.Repository.Base;
 using Cooperchip.ITDeveloper.Domain.Entities;
 using Cooperchip.ITDeveloper.Domain.Interfaces.Repository;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Cooperchip.ITDeveloper.Data.Repository
 {
-    public class PacienteRepository : RepositoryGeneric<Paciente, Guid>, IRepositoryPaciente
+    public class PacienteRepository : GenericRepository<Paciente, Guid>, IRepositoryPaciente, IQueryPaciente
     {
 
         public PacienteRepository(ITDeveloperDbContext ctx) : base(ctx)

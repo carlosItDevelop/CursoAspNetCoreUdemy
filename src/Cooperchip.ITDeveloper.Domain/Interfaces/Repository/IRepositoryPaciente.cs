@@ -6,13 +6,8 @@ using System.Threading.Tasks;
 
 namespace Cooperchip.ITDeveloper.Domain.Interfaces.Repository
 {
-    public interface IRepositoryPaciente : IRepository<Paciente, Guid>
+    public interface IRepositoryPaciente : IGerenicRepository<Paciente, Guid>
     {
-        Task<IEnumerable<Paciente>> ListaPacientesComEstado();
-        Task<IEnumerable<Paciente>> ListaPacientes();
-        Task<List<EstadoPaciente>> ListaEstadoPaciente();
-        Task<Paciente> ObterPacienteComEstadoPaciente(Guid pacienteId);
-        bool TemPaciente(Guid pacienteId);
-        Task<IEnumerable<Paciente>> ObterPacientesPorEstadoPaciente(Guid estadoPacienteId);
+
     }
 }

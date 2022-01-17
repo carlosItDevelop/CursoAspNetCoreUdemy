@@ -1,6 +1,5 @@
 ﻿
-@inject Cooperchip.ITDeveloper.Domain.Interfaces.IUserInContext _userInContext
-
+@inject Cooperchip.ITDeveloper.Domain.Interfaces.Helpers.IUserInContext _userInContext
 <!-- .page-navbar -->
 <div id="header" class="page-navbar">
     <!-- .navbar-brand -->
@@ -108,7 +107,9 @@
 
                         <li><a href="#" class="view-all">Visualizar todos <i class="l-arrows-right"></i> </a></li>
                     </ul>
-                } else {
+                }
+                else
+                {
                     <ul class="dropdown-menu right dropdown-notification" role="menu">
                         <li><a href="#" class="dropdown-menu-header">Gerenciamento de Usuário</a></li>
                         <li><a asp-area="Identity" asp-page="/Account/Register"><i class="l-basic-life-buoy"></i> Registre-se</a></li>

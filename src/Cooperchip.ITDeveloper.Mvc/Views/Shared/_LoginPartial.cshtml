@@ -1,5 +1,5 @@
 ﻿
-@inject Cooperchip.ITDeveloper.Domain.Interfaces.IUserInContext _userInContext
+@inject Cooperchip.ITDeveloper.Domain.Interfaces.Helpers.IUserInContext _userInContext
 
 @if (_userInContext.IsAuthenticated())
 {
@@ -22,11 +22,11 @@
 }
 else
 {
-<ul class="nav navbar-nav navbar-right">
-    <li>
-        <img src="/img/avatars/foto-padrao.jpg" alt="Imagem de Perfil" style="clear: both; float: left; margin-right: 10px; border: 2px solid #eeeeee; width: 50px; height: 50px; border-radius: 50%; " />
-    </li>
-    <li><a asp-area="Identity" asp-page="/Account/Register">Register</a></li>
-    <li><a asp-area="Identity" asp-page="/Account/Login">Login</a></li>
-</ul>
+    <ul class="nav navbar-nav navbar-right">
+        <li>
+            <img src="/img/avatars/foto-padrao.jpg" alt="Imagem de Perfil" style="clear: both; float: left; margin-right: 10px; border: 2px solid #eeeeee; width: 50px; height: 50px; border-radius: 50%; " />
+        </li>
+        <li><a asp-area="Identity" asp-page="/Account/Register">Register</a></li>
+        <li><a asp-area="Identity" asp-page="/Account/Login">Login</a></li>
+    </ul>
 }

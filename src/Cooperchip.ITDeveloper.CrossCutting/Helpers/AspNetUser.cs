@@ -1,5 +1,5 @@
 ﻿using Cooperchip.ITDeveloper.CrossCutting.Extensions;
-using Cooperchip.ITDeveloper.Domain.Interfaces;
+using Cooperchip.ITDeveloper.Domain.Interfaces.Helpers;
 using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;

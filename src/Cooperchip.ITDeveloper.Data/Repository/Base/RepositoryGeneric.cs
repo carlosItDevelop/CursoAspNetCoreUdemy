@@ -10,24 +10,24 @@ using System.Threading.Tasks;
 
 namespace Cooperchip.ITDeveloper.Data.Repository.Base
 {
-    public abstract class RepositoryGeneric<TEntity, TKey> : IRepository<TEntity, TKey> where TEntity : EntityBase, new()
+    public abstract class GenericRepository<T, TKey> : IGerenicRepository<T, TKey> where T : EntityBase, new()
     {
 
         protected ITDeveloperDbContext _context;
 
-        public RepositoryGeneric(ITDeveloperDbContext ctx) // Guardem essa info
+        public GenericRepository(ITDeveloperDbContext ctx) // Guardem essa info
         {
             this._context = ctx;
         }
 
-        public virtual async Task Atualizar(TEntity obj)
+        public virtual async Task Atualizar(T obj)
         {
             this._context.Entry(obj).State = EntityState.Modified;
             await SaveAsync();
         }
 
 
-        public virtual async Task Excluir(TEntity obj)
+        public virtual async Task Excluir(T obj)
         {
             this._context.Entry(obj).State = EntityState.Deleted;
             await SaveAsync();
@@ -35,29 +35,29 @@ namespace Cooperchip.ITDeveloper.Data.Repository.Base
 
         public virtual async Task ExcluirPorId(TKey id)
         {
-            TEntity obj = await SelecionarPorId(id);
+            T obj = await SelecionarPorId(id);
             await Excluir(obj);
 
         }
 
-        public virtual async Task Inserir(TEntity obj)
+        public virtual async Task Inserir(T obj)
         {
-            this._context.Set<TEntity>().Add(obj);
+            this._context.Set<T>().Add(obj);
             await SaveAsync();
         }
 
-        public async Task<TEntity> SelecionarPorId(TKey id)
+        public async Task<T> SelecionarPorId(TKey id)
         {
-            return await this._context.Set<TEntity>().FindAsync(id);
+            return await this._context.Set<T>().FindAsync(id);
         }
 
-        public virtual async Task<IEnumerable<TEntity>> SelecionarTodos(Expression<Func<TEntity, bool>> quando = null)
+        public virtual async Task<IEnumerable<T>> SelecionarTodos(Expression<Func<T, bool>> quando = null)
         {
             if(quando == null)
             {
-                return await this._context.Set<TEntity>().AsNoTracking().ToListAsync();
+                return await this._context.Set<T>().AsNoTracking().ToListAsync();
             }
-            return await this._context.Set<TEntity>().AsNoTracking().Where(quando).ToListAsync();
+            return await this._context.Set<T>().AsNoTracking().Where(quando).ToListAsync();
         }
 
 

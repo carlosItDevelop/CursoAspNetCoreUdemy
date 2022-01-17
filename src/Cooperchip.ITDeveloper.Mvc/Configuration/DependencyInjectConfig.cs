@@ -1,8 +1,10 @@
 ﻿using Cooperchip.ITDeveloper.CrossCutting.Auxiliar;
 using Cooperchip.ITDeveloper.CrossCutting.Helpers;
 using Cooperchip.ITDeveloper.Data.Repository;
-using Cooperchip.ITDeveloper.Domain.Interfaces;
+using Cooperchip.ITDeveloper.Data.Repository.Abstractions;
+using Cooperchip.ITDeveloper.Domain.Interfaces.Helpers;
 using Cooperchip.ITDeveloper.Domain.Interfaces.Repository;
+using Cooperchip.ITDeveloper.Domain.Interfaces.ServiceContracts;
 using Cooperchip.ITDeveloper.Domain.Interfaces.Services;
 using Cooperchip.ITDeveloper.Mvc.Extensions.Filters;
 using Cooperchip.ITDeveloper.Mvc.Extensions.Identity;
@@ -28,6 +30,10 @@ namespace Cooperchip.ITDeveloper.Mvc.Configuration
             services.AddScoped<IPacienteDomainService, PacienteDomainService>();
             /* Domain => Repository */
             services.AddScoped<IRepositoryPaciente, PacienteRepository>();
+
+            /* Data => Domain*/
+            services.AddScoped<IQueryPaciente, PacienteRepository>();
+
 
 
 

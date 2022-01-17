@@ -1,5 +1,5 @@
 ﻿
-@inject Cooperchip.ITDeveloper.Domain.Interfaces.IUserInContext _userInContext
+@inject Cooperchip.ITDeveloper.Domain.Interfaces.Helpers.IUserInContext _userInContext
 
 <div class="wrapper">
     <br />
@@ -9,43 +9,43 @@
 
 
         <div class="col-md-3 col-sm-3 col-sx-12" style="padding-bottom: 15px;">
-                <div class="card card-inverse text-md-center text-sm-center text-xs-center">
-                    <img src="~/images/dashboard.png" class="card-img-top" style="width: 100%; height: auto" />
-                    <div class="card-img-overlay">
+            <div class="card card-inverse text-md-center text-sm-center text-xs-center">
+                <img src="~/images/dashboard.png" class="card-img-top" style="width: 100%; height: auto" />
+                <div class="card-img-overlay">
 
-                        @if (_userInContext.IsAuthenticated() && _userInContext.IsInRole("Admin"))
-                        {
+                    @if (_userInContext.IsAuthenticated() && _userInContext.IsInRole("Admin"))
+                    {
 
-                            <div style="text-align: center">
-                                <a asp-controller="Home" asp-action="Dashboard" style="text-decoration: none; color: #ed5353; font-size: 16px;">
-                                    <h4 class="card-title">.:: Entrar-Admin ::.</h4>
-                                </a>
-                            </div>
+                        <div style="text-align: center">
+                            <a asp-controller="Home" asp-action="Dashboard" style="text-decoration: none; color: #ed5353; font-size: 16px;">
+                                <h4 class="card-title">.:: Entrar-Admin ::.</h4>
+                            </a>
+                        </div>
 
-                        }
-                        else
-                        {
-                            <div style="text-align: center">
-                                <a asp-controller="Home" asp-action="BoxInit" style="text-decoration: none; color: #ed5353; font-size: 16px;">
-                                    <h4 class="card-title">.:: Entrar-Comum ::.</h4>
-                                </a>
-                            </div>
-                        }
+                    }
+                    else
+                    {
+                        <div style="text-align: center">
+                            <a asp-controller="Home" asp-action="BoxInit" style="text-decoration: none; color: #ed5353; font-size: 16px;">
+                                <h4 class="card-title">.:: Entrar-Comum ::.</h4>
+                            </a>
+                        </div>
+                    }
 
-                    </div>
                 </div>
             </div>
+        </div>
 
-        @*@{ 
-            if (_userInContext.IsAuthenticated() && _userInContext.IsInRole("Admin"))
-            {
-                <index-home titulo=".:: Entrar-Admin ::." imagem="dashboard.png" controlador="Home" visualizacao="Dashboard"></index-home>
-            }
-            else
-            {
-                <index-home titulo=".:: Entrar-Comum ::." imagem="dashboard.png" controlador="Home" visualizacao="BoxInit"></index-home>
-            }
-        }*@
+        @*@{
+                if (_userInContext.IsAuthenticated() && _userInContext.IsInRole("Admin"))
+                {
+                    <index-home titulo=".:: Entrar-Admin ::." imagem="dashboard.png" controlador="Home" visualizacao="Dashboard"></index-home>
+                }
+                else
+                {
+                    <index-home titulo=".:: Entrar-Comum ::." imagem="dashboard.png" controlador="Home" visualizacao="BoxInit"></index-home>
+                }
+            }*@
 
         <index-home titulo="Registro de Pacientes" imagem="atualizacao_cadastral.png" controlador="Home" visualizacao="Paciente"></index-home>
         <index-home titulo="Agenda" imagem="calendar.png" controlador="AgendaCalendar" visualizacao="Index"></index-home>

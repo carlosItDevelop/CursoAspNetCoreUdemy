@@ -30,6 +30,8 @@ namespace Cooperchip.ITDeveloper.Data.ORM
 
 
             // onde não tiver setado varchar e a propriedade for do tipo string fica valendo varchar(valor)
+
+
             foreach (var property in modelBuilder.Model.GetEntityTypes()
                 .SelectMany(e => e.GetProperties()
                     .Where(p => p.ClrType == typeof(string))))

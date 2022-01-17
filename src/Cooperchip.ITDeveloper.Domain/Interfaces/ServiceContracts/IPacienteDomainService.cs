@@ -2,7 +2,7 @@
 using System;
 using System.Threading.Tasks;
 
-namespace Cooperchip.ITDeveloper.Domain.Interfaces
+namespace Cooperchip.ITDeveloper.Domain.Interfaces.ServiceContracts
 {
     public interface IPacienteDomainService : IDisposable
     {
