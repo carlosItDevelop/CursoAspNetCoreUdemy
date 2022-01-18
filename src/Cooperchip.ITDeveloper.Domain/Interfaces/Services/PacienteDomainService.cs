@@ -22,6 +22,7 @@ namespace Cooperchip.ITDeveloper.Domain.Interfaces.Services
             // Não posso atribuir CPF inválido e nem CPF de outra pessoa
 
             await _repo.Inserir(paciente);
+
         }
 
         public async Task AtualizarPaciente(Paciente paciente)

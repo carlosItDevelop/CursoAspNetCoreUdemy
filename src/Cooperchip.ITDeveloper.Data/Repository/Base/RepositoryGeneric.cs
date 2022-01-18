@@ -23,14 +23,14 @@ namespace Cooperchip.ITDeveloper.Data.Repository.Base
         public virtual async Task Atualizar(T obj)
         {
             this._context.Entry(obj).State = EntityState.Modified;
-            await SaveAsync();
+            //await SaveAsync();
         }
 
 
         public virtual async Task Excluir(T obj)
         {
             this._context.Entry(obj).State = EntityState.Deleted;
-            await SaveAsync();
+            //await SaveAsync();
         }
 
         public virtual async Task ExcluirPorId(TKey id)
@@ -43,7 +43,7 @@ namespace Cooperchip.ITDeveloper.Data.Repository.Base
         public virtual async Task Inserir(T obj)
         {
             this._context.Set<T>().Add(obj);
-            await SaveAsync();
+            //await SaveAsync();
         }
 
         public async Task<T> SelecionarPorId(TKey id)
@@ -67,9 +67,9 @@ namespace Cooperchip.ITDeveloper.Data.Repository.Base
             _context?.DisposeAsync();
         }
 
-        public virtual async Task<int> SaveAsync()
-        {
-            return await _context.SaveChangesAsync();
-        }
+        //public virtual async Task<int> SaveAsync()
+        //{
+        //    return await _context.SaveChangesAsync();
+        //}
     }
 }

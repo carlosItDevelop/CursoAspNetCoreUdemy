@@ -2,7 +2,7 @@
 using Cooperchip.ITDeveloper.Application.ViewModels;
 using Cooperchip.ITDeveloper.Data.Repository.Abstractions;
 using Cooperchip.ITDeveloper.Domain.Entities;
-using Cooperchip.ITDeveloper.Domain.Interfaces.Repository;
+using Cooperchip.ITDeveloper.Domain.Interfaces;
 using Cooperchip.ITDeveloper.Domain.Interfaces.ServiceContracts;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -18,6 +18,9 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
     public class PacienteController : Controller
     {
 
+        // Unit Of Work Pattern Applicated
+        private readonly IUnitOfWork _uow;
+
         // (query) - Get ==> Fala diretamente com a Data Layer
         private readonly IQueryPaciente _queryRepo;
 
@@ -28,13 +31,15 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
         // antes de passar para Repositório ou Seviços de Domain
         private readonly IMapper _mapper;
 
-        public PacienteController(IQueryPaciente queryRepo, 
-                                  IPacienteDomainService serviceDomain, 
-                                  IMapper mapper)
+        public PacienteController(IQueryPaciente queryRepo,
+                                  IPacienteDomainService serviceDomain,
+                                  IMapper mapper,
+                                  IUnitOfWork uow)
         {
             _queryRepo = queryRepo;
             _serviceDomain = serviceDomain;
             _mapper = mapper;
+            _uow = uow;
         }
 
         [HttpGet]
@@ -67,7 +72,7 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
 
         }
 
-
+        [HttpGet]
         public async Task<IActionResult> Details(Guid id)
         {
             var paciente = _mapper.Map<PacienteViewModel>(await _queryRepo.ObterPacienteComEstadoPaciente(id));
@@ -80,6 +85,7 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
             return View(paciente);
         }
 
+        [HttpGet]
         public async Task<IActionResult> ReportForEstadoPaciente(Guid id)
         {
             var pacientePorEstado = _mapper.Map<IEnumerable<PacienteViewModel>>(await _queryRepo.ObterPacientesPorEstadoPaciente(id));
@@ -89,7 +95,7 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
             return View(pacientePorEstado);
         }
 
-
+        [HttpGet]
         public async Task<IActionResult> Create()
         {
             ViewBag.EstadoPaciente = new SelectList(await _queryRepo.ListaEstadoPaciente(), "Id", "Descricao");
@@ -103,8 +109,14 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
         {
             if (ModelState.IsValid)
             {
-                    await _serviceDomain.AdicionarPaciente(_mapper.Map<Paciente>(pacienteVM));
-                    return RedirectToAction("Index");
+                await _serviceDomain.AdicionarPaciente(_mapper.Map<Paciente>(pacienteVM));
+                // Outros processos dentro do mesmo repositório / Agregate Root
+                // ...
+                // ...
+
+                await _uow.Commit();
+
+                return RedirectToAction("Index");
 
             }
 
@@ -112,6 +124,7 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
             return View(pacienteVM);
         }
 
+        [HttpGet]
         public async Task<IActionResult> Edit(Guid id)
         {
             var paciente = _mapper.Map<PacienteViewModel>(await _queryRepo.ObterPacienteComEstadoPaciente(id));
@@ -137,15 +150,24 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
                 try
                 {
                     await _serviceDomain.AtualizarPaciente(_mapper.Map<Paciente>(pacienteVM));
+
+                    // Outros processos dentro do mesmo repositório / Agregate Root
+                    // ...
+                    // ...
+
+                    await _uow.Commit();
+
                 }
                 catch (DbUpdateConcurrencyException)
                 {
                     if (!PacienteExists(pacienteVM.Id))
                     {
+                        await _uow.Rollback();
                         return NotFound();
                     }
                     else
                     {
+                        await _uow.Rollback();
                         throw;
                     }
                 }
@@ -155,6 +177,7 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
             return View(pacienteVM);
         }
 
+        [HttpGet]
         public async Task<IActionResult> Delete(Guid id)
         {
             var paciente = _mapper.Map<PacienteViewModel>(await _queryRepo.ObterPacienteComEstadoPaciente(id));
@@ -174,12 +197,18 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
             var paciente = await _queryRepo.SelecionarPorId(id);
             await _serviceDomain.ExcluirPaciente(paciente);
 
+            // Outros processos dentro do mesmo repositório / Agregate Root
+            // ...
+            // ...
+
+            await _uow.Commit();
+
             return RedirectToAction(nameof(Index));
         }
 
         private bool PacienteExists(Guid id)
         {
-            return _queryRepo.TemPaciente(id); 
+            return _queryRepo.TemPaciente(id);
         }
     }
 }
