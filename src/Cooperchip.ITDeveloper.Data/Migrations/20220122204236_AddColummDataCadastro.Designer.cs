@@ -4,14 +4,16 @@ using Cooperchip.ITDeveloper.Data.ORM;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Cooperchip.ITDeveloper.Data.Migrations
 {
     [DbContext(typeof(ITDeveloperDbContext))]
-    partial class ITDeveloperDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220122204236_AddColummDataCadastro")]
+    partial class AddColummDataCadastro
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -35,6 +37,9 @@ namespace Cooperchip.ITDeveloper.Data.Migrations
                         .HasColumnType("varchar(6)")
                         .HasColumnName("Codigo");
 
+                    b.Property<DateTime?>("DataCadastro")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Diagnostico")
                         .IsRequired()
                         .HasMaxLength(4000)
@@ -51,6 +56,9 @@ namespace Cooperchip.ITDeveloper.Data.Migrations
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime?>("DataCadastro")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Descricao")
                         .IsRequired()
@@ -72,6 +80,9 @@ namespace Cooperchip.ITDeveloper.Data.Migrations
                     b.Property<int>("Codigo")
                         .HasColumnType("int");
 
+                    b.Property<DateTime?>("DataCadastro")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Nome")
                         .HasColumnType("varchar(90)");
 
@@ -91,6 +102,9 @@ namespace Cooperchip.ITDeveloper.Data.Migrations
 
                     b.Property<int>("CodigoGenerico")
                         .HasColumnType("int");
+
+                    b.Property<DateTime?>("DataCadastro")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Descricao")
                         .IsRequired()
@@ -151,16 +165,13 @@ namespace Cooperchip.ITDeveloper.Data.Migrations
                         .HasColumnName("Cpf")
                         .IsFixedLength(true);
 
-                    b.Property<DateTime?>("DataInclusao")
+                    b.Property<DateTime?>("DataCadastro")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime>("DataInternacao")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime>("DataNascimento")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("DataUltimaModificacao")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Email")
@@ -195,12 +206,6 @@ namespace Cooperchip.ITDeveloper.Data.Migrations
 
                     b.Property<int>("TipoPaciente")
                         .HasColumnType("int");
-
-                    b.Property<string>("UsuarioInclusao")
-                        .HasColumnType("varchar(90)");
-
-                    b.Property<string>("UsuarioUltimaModificacao")
-                        .HasColumnType("varchar(90)");
 
                     b.HasKey("Id");
 

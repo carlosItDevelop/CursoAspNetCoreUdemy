@@ -1,9 +1,10 @@
-﻿using Cooperchip.ITDeveloper.Domain.Enums;
+﻿using Cooperchip.ITDeveloper.Domain.Entities.Audit;
+using Cooperchip.ITDeveloper.Domain.Enums;
 using System;
 
 namespace Cooperchip.ITDeveloper.Domain.Entities
 {
-    public class Paciente : EntityBase
+    public class Paciente : EntityAudit
     {
         public Paciente() { Ativo = true; }
 
