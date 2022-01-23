@@ -59,6 +59,7 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
             return View(estadoPaciente);
         }
 
+
         public async Task<IActionResult> Edit(Guid? id)
         {
             if (id == null)

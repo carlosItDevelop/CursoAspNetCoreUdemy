@@ -1,5 +1,4 @@
-﻿
-using Cooperchip.ITDeveloper.Domain.Entities;
+﻿using Cooperchip.ITDeveloper.Domain.Entities.Audit;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 

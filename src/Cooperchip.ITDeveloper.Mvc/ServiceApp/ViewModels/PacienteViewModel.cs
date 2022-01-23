@@ -36,6 +36,21 @@ namespace Cooperchip.ITDeveloper.Application.ViewModels
         public DateTime DataInternacao { get; set; }
 
 
+
+        [DisplayName(displayName: "Data Inclusão")]
+        public DateTime? DataInclusao { get; set; }
+
+        [DisplayName(displayName: "Data Última Modificação")]
+        public DateTime? DataUltimaModificacao { get; set; }
+
+        [DisplayName(displayName: "Usuário Inclusão")]
+        public string UsuarioInclusao { get; set; }
+
+        [DisplayName(displayName: "Usuário Última Modificação")]
+        public string UsuarioUltimaModificacao { get; set; }
+
+
+
         [DisplayName(displayName: "Email")]
         [DataType(DataType.EmailAddress, ErrorMessage = "Email Inválido.")]
         public string Email { get; set; }
