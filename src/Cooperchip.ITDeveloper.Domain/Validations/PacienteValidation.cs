@@ -76,17 +76,6 @@ namespace Cooperchip.ITDeveloper.Domain.Validations
                 .NotEmpty().WithMessage("O campo {PropertyName} precisa ser informado.");
             #endregion
 
-
-
-
-            // Properties
-            // Estado de Paciente
-            // Datas: Não pode nascer no futuro
-            // Datas: RG => Não existir antes do nascimento do paciente
-            // Nascimento != Futuro
-            // Adimissão != Futuro 
-            // Internação != Futuro & != antes de nascer
-            // Cpf Se AutoValida
         }
 
 
