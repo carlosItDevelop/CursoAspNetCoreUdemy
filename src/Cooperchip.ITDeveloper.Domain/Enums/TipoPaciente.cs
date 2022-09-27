@@ -1,9 +1,11 @@
-﻿namespace Cooperchip.ITDeveloper.Domain.Enums
+﻿using System.ComponentModel;
+
+namespace Cooperchip.ITDeveloper.Domain.Enums
 {
     public enum TipoPaciente
     {
-        Emergencia = 1,
-        Conveniado,
-        Transferido
+        [Description("Conveniado")] Conveniado = 1,
+        [Description("Particular")] Particular,
+        [Description("Outros")] Outros
     }
 }
