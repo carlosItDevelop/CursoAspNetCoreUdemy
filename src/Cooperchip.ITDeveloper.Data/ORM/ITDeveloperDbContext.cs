@@ -36,10 +36,7 @@ namespace Cooperchip.ITDeveloper.Data.ORM
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
-
-
             // onde não tiver setado varchar e a propriedade for do tipo string fica valendo varchar(valor)
-
 
             foreach (var property in modelBuilder.Model.GetEntityTypes()
                 .SelectMany(e => e.GetProperties()

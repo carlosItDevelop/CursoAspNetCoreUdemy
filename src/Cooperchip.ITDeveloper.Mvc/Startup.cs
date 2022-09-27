@@ -25,7 +25,7 @@ namespace Cooperchip.ITDeveloper.Mvc
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", true, true)
                 .AddEnvironmentVariables();
 
-            if (env.IsProduction())
+            if (env.IsProduction() || env.IsStaging() || env.IsDevelopment())
             {
                 builer.AddUserSecrets<Startup>();
             }
