@@ -7,6 +7,7 @@ using Cooperchip.ITDeveloper.Domain.Interfaces.Helpers;
 using Cooperchip.ITDeveloper.Domain.Interfaces.Repository;
 using Cooperchip.ITDeveloper.Domain.Interfaces.ServiceContracts;
 using Cooperchip.ITDeveloper.Domain.Interfaces.Services;
+using Cooperchip.ITDeveloper.Domain.Mensageria.Notifications;
 using Cooperchip.ITDeveloper.Mvc.Extensions.Filters;
 using Cooperchip.ITDeveloper.Mvc.Extensions.Identity;
 using Cooperchip.ITDeveloper.Mvc.Extensions.Identity.Services;
@@ -39,6 +40,9 @@ namespace Cooperchip.ITDeveloper.Mvc.Configuration
             services.AddScoped<IQueryPaciente, PacienteRepository>();
 
 
+            #region: Mensageria
+            services.AddScoped<INotificador, Notificador>();
+            #endregion
 
 
             services.AddTransient<IUnitOfUpload, UnitOfUpload>();

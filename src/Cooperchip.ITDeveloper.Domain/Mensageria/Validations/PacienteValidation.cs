@@ -1,9 +1,9 @@
 ﻿using Cooperchip.ITDeveloper.Domain.Entities;
-using Cooperchip.ITDeveloper.Domain.Validations.Helpers;
+using Cooperchip.ITDeveloper.Domain.Mensageria.Validations.Helpers;
 using FluentValidation;
 using System;
 
-namespace Cooperchip.ITDeveloper.Domain.Validations
+namespace Cooperchip.ITDeveloper.Domain.Mensageria.Validations
 {
     public class PacienteValidation : AbstractValidator<Paciente>
     {

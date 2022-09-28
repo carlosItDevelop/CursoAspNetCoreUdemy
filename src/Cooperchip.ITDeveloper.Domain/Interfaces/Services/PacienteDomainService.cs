@@ -1,25 +1,35 @@
 ﻿using Cooperchip.ITDeveloper.Domain.Entities;
 using Cooperchip.ITDeveloper.Domain.Interfaces.Repository;
 using Cooperchip.ITDeveloper.Domain.Interfaces.ServiceContracts;
+using Cooperchip.ITDeveloper.Domain.Mensageria.Notifications;
+using Cooperchip.ITDeveloper.Domain.Mensageria.Validations;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Cooperchip.ITDeveloper.Domain.Interfaces.Services
 {
-    public class PacienteDomainService : IPacienteDomainService
+    public class PacienteDomainService :  BaseService,  IPacienteDomainService
     {
         private readonly IRepositoryPaciente _repo;
 
-        public PacienteDomainService(IRepositoryPaciente repo)
+        public PacienteDomainService(IRepositoryPaciente repo, INotificador notificador) : base(notificador)    
         {
             _repo = repo;
         }
 
         public async Task AdicionarPaciente(Paciente paciente)
         {
+            if (!ExecutarValidacao(new PacienteValidation(), paciente))
+            {
+                return;
+            }
 
-            // Não podemos cadastrar um paciente no futuro
-            // Não podemos cadastrar um paciente, cuja data de nascimento esteja no futro
-            // Não posso atribuir CPF inválido e nem CPF de outra pessoa
+            // Buscar Paciente pra saber se já existe um Cpf cadastrado com o mesmo;
+            if(_repo.Buscar(c=>c.Cpf == paciente.Cpf).Result.Any())
+            {
+                Notificar("Já existe um Paciente com este Cpf informado");
+                return;
+            }
 
             await _repo.Inserir(paciente);
 
@@ -36,8 +46,9 @@ namespace Cooperchip.ITDeveloper.Domain.Interfaces.Services
 
         public async Task ExcluirPaciente(Paciente paciente)
         {
-            // Sair >> Desicupopar o Leito
-            // Dar baixa no prontuario
+            // Sair >> Desocupopar o Leito;
+            // Dar baixa no prontuario;
+            // Excluir os EstadosDePaciente deste Paciente;
 
             await _repo.Excluir(paciente);
         }

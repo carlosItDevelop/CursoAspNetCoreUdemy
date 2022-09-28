@@ -4,6 +4,7 @@ using Cooperchip.ITDeveloper.Data.Repository.Abstractions;
 using Cooperchip.ITDeveloper.Domain.Entities;
 using Cooperchip.ITDeveloper.Domain.Interfaces;
 using Cooperchip.ITDeveloper.Domain.Interfaces.ServiceContracts;
+using Cooperchip.ITDeveloper.Domain.Mensageria.Notifications;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -15,7 +16,7 @@ using System.Threading.Tasks;
 namespace Cooperchip.ITDeveloper.Mvc.Controllers
 {
     [Authorize(Roles = "Admin")]
-    public class PacienteController : Controller
+    public class PacienteController : BaseController
     {
 
         // Unit Of Work Pattern Applicated
@@ -34,7 +35,8 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
         public PacienteController(IQueryPaciente queryRepo,
                                   IPacienteDomainService serviceDomain,
                                   IMapper mapper,
-                                  IUnitOfWork uow)
+                                  IUnitOfWork uow,
+                                  INotificador notificador) : base(notificador)
         {
             _queryRepo = queryRepo;
             _serviceDomain = serviceDomain;
@@ -110,10 +112,12 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
             if (ModelState.IsValid)
             {
                 await _serviceDomain.AdicionarPaciente(_mapper.Map<Paciente>(pacienteVM));
-                // Outros processos dentro do mesmo repositório / Agregate Root
-                // ...
-                // ...
+                // Antes de Gravar, precisamos verificar se a operação é válida.
+                if (!OperacaoValida()) return View(pacienteVM);
 
+                // Outros processos dentro do mesmo repositório / AggregateRoot
+                // ...
+                // ...
                 await _uow.Commit();
 
                 return RedirectToAction("Index");

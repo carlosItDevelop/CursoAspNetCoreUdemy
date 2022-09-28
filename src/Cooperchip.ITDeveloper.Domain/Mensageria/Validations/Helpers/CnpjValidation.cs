@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 
-namespace Cooperchip.ITDeveloper.Domain.Validations.Helpers
+namespace Cooperchip.ITDeveloper.Domain.Mensageria.Validations.Helpers
 {
     public class CnpjValidacao
     {

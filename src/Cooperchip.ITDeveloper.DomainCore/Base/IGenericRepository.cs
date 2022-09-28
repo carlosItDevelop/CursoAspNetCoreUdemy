@@ -14,6 +14,7 @@ namespace Cooperchip.ITDeveloper.DomainCore.Base
         Task Atualizar(T obj);
         Task Excluir(T obj);
         Task ExcluirPorId(TKey id);
+        Task<IEnumerable<T>> Buscar(Expression<Func<T, bool>> predicate);
         //Task<int> SaveAsync();
     }
 }
