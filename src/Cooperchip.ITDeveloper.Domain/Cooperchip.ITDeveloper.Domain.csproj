@@ -14,8 +14,4 @@
     <ProjectReference Include="..\Cooperchip.ITDeveloper.DomainCore\Cooperchip.ITDeveloper.DomainCore.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Mensageria\Mediators\" />
-  </ItemGroup>
-
 </Project>

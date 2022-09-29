@@ -117,8 +117,8 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
                 // ...
                 // ...
                 await _uow.Commit();
-                
-                ViewBag.Sucesso = "Registro cadastrado com sucesso!";
+
+                TempData["Sucesso"] = "Registro cadastrado com sucesso!";
                 return RedirectToAction("Index");
             }
 

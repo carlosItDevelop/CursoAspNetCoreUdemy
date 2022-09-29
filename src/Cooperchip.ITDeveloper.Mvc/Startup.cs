@@ -1,15 +1,18 @@
-﻿using Cooperchip.ITDeveloper.Mvc.Configuration;
+﻿using Cooperchip.ITDeveloper.Domain.Mensageria.Mediators;
+using Cooperchip.ITDeveloper.Mvc.Configuration;
 using Cooperchip.ITDeveloper.Mvc.Data;
 using Cooperchip.ITDeveloper.Mvc.Extensions.Identity;
 using Cooperchip.ITDeveloper.Mvc.Extensions.Identity.Services;
 using KissLog.Apis.v1.Listeners;
 using KissLog.AspNetCore;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System.Reflection;
 
 namespace Cooperchip.ITDeveloper.Mvc
 {
@@ -37,8 +40,11 @@ namespace Cooperchip.ITDeveloper.Mvc
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddAutoMapper(typeof(Startup));
 
+            services.AddMediatR(Assembly.GetExecutingAssembly());
+            services.AddScoped<IMediatorHandler, MediatorHandler>();
+
+            services.AddAutoMapper(typeof(Startup));
             services.AddDbContextConfig(Configuration); // In DbContextConfig
             services.AddIdentityConfig(Configuration); // In IdentityConfig
             services.AddMvcAndRazor(); // In MvcAndRazor
