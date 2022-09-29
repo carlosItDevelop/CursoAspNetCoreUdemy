@@ -112,19 +112,14 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
             if (ModelState.IsValid)
             {
                 await _serviceDomain.AdicionarPaciente(_mapper.Map<Paciente>(pacienteVM));
-                // Antes de Gravar, precisamos verificar se a operação é válida.
                 if (!OperacaoValida()) return View(pacienteVM);
-
                 // Outros processos dentro do mesmo repositório / AggregateRoot
                 // ...
                 // ...
                 await _uow.Commit();
-
-                // Msg de Sucesso
-                //ViewBag.Sucesso = "Registro cadastrado com sucesso!";
-
+                
+                ViewBag.Sucesso = "Registro cadastrado com sucesso!";
                 return RedirectToAction("Index");
-
             }
 
             ViewBag.EstadoPaciente = new SelectList(await _queryRepo.ListaEstadoPaciente(), "Id", "Descricao", pacienteVM.EstadoPacienteId);
