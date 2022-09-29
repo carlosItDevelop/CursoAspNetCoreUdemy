@@ -120,6 +120,9 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
                 // ...
                 await _uow.Commit();
 
+                // Msg de Sucesso
+                //ViewBag.Sucesso = "Registro cadastrado com sucesso!";
+
                 return RedirectToAction("Index");
 
             }

@@ -6,7 +6,11 @@ namespace Cooperchip.ITDeveloper.Domain.Mensageria.Notifications
     public class Notificador : INotificador
     {
         private List<Notificacao> _notificacoes;
-        public Notificador(List<Notificacao> notificacao) => _notificacoes = notificacao;
+
+        public Notificador()
+        {
+            _notificacoes =  new List<Notificacao> ();
+        }
 
         public bool TemNotificacao()
         {

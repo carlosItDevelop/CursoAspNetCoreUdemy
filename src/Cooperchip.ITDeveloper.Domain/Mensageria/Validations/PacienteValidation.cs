@@ -10,19 +10,23 @@ namespace Cooperchip.ITDeveloper.Domain.Mensageria.Validations
         public PacienteValidation()
         {
             RuleFor(x => x.Nome)
-                .NotEmpty().NotNull()
-                .WithMessage("O campo '{PropertyName}' precisa ser informado.")
-                .Length(2, 80).WithMessage("O campo '{PropertyName}' precisa ter entre {MinLength} e {Maxlength} caracteres.");
+                .NotEmpty()
+                    .WithMessage("O campo '{PropertyName}' precisa ser informado.")
+                .NotNull()
+                    .WithMessage("O campo '{PropertyName}' não pode ser Nulo.")
+                .Length(2, 80)
+                    .WithMessage("O campo '{PropertyName}' precisa ter entre '{MinLength}' e '{MaxLength}' caracteres.");
 
             RuleFor(m => m.Motivo)
-                .MaximumLength(30).WithMessage("O campo {PropertyName} não pode ter mais que {MaxLength} caracteres.");
+                .MaximumLength(30).WithMessage("O campo '{PropertyName}' não pode ter mais que {MaxLength} caracteres.");
 
-            RuleFor(tp => tp.TipoPaciente).NotEmpty().NotNull()
-                .WithMessage("O Campo {PropertyName} não pode ser Nulo e nem Vazio.");
+            RuleFor(tp => tp.TipoPaciente)
+                .NotNull()
+                .WithMessage("O Campo '{PropertyName}' não pode ser Nulo e nem Vazio.");
 
             #region: Valida Cpf
             RuleFor(c => c.Cpf.Length).Equal(CpfValidacao.TamanhoCpf)
-                .WithMessage("O campo CPF precisa ter {ComparisonValue} caracteres e foi fornecido {PropertyValue}.");
+                .WithMessage("O campo CPF precisa ter '{ComparisonValue}' caracteres e foi fornecido '{PropertyValue}'.");
 
             RuleFor(v => CpfValidacao.Validar(v.Cpf)).Equal(true)
                 .WithMessage("O CPF fornecido é inválido.");
@@ -30,11 +34,11 @@ namespace Cooperchip.ITDeveloper.Domain.Mensageria.Validations
 
             #region: RG
             RuleFor(rg => rg.Rg)
-                .MaximumLength(15).WithMessage("O campo {PropertyName} não pode ter mais que {MaxLength} caracteres.");
+                .MaximumLength(15).WithMessage("O campo '{PropertyName}' não pode ter mais que {MaxLength} caracteres.");
             RuleFor(rg => rg.RgOrgao)
-                .MaximumLength(10).WithMessage("O campo {PropertyName} não pode ter mais que {MaxLength} caracteres.");
+                .MaximumLength(10).WithMessage("O campo '{PropertyName}' não pode ter mais que {MaxLength} caracteres.");
             RuleFor(rg => rg.Rg)
-                .MaximumLength(15).WithMessage("O campo {PropertyName} não pode ter mais que {MaxLength} caracteres.");
+                .MaximumLength(15).WithMessage("O campo '{PropertyName}' não pode ter mais que {MaxLength} caracteres.");
 
             RuleFor(dt => dt.RgDataEmissao)
                 .GreaterThanOrEqualTo(d => d.DataNascimento).WithMessage("Um paciente não pode ser registrado antes de ter nascido.");
@@ -69,15 +73,10 @@ namespace Cooperchip.ITDeveloper.Domain.Mensageria.Validations
             #endregion
 
             #region: Estado do Paciente
-            RuleFor(n => n.EstadoPaciente.Descricao)
+            RuleFor(n => n.EstadoPacienteId)
                 .NotNull().WithMessage("O campo {PropertyName} não pode ser nulo.");
-
-            RuleFor(n => n.EstadoPaciente.Descricao)
-                .NotEmpty().WithMessage("O campo {PropertyName} precisa ser informado.");
             #endregion
-
         }
-
 
         // Escrever esta função de data ou achar na web;
         private bool BeDateTime(DateTime arg)
@@ -85,7 +84,5 @@ namespace Cooperchip.ITDeveloper.Domain.Mensageria.Validations
             return true;
             //return arg.Equals(default(DateTime));
         }
-
-
     }
 }

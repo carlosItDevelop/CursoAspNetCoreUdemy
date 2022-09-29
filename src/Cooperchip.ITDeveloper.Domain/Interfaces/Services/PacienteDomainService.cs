@@ -19,12 +19,11 @@ namespace Cooperchip.ITDeveloper.Domain.Interfaces.Services
 
         public async Task AdicionarPaciente(Paciente paciente)
         {
-            if (!ExecutarValidacao(new PacienteValidation(), paciente))
+            if (!ExecutarValidacao(new PacienteValidation(), paciente)) 
             {
                 return;
             }
 
-            // Buscar Paciente pra saber se já existe um Cpf cadastrado com o mesmo;
             if(_repo.Buscar(c=>c.Cpf == paciente.Cpf).Result.Any())
             {
                 Notificar("Já existe um Paciente com este Cpf informado");
@@ -38,7 +37,18 @@ namespace Cooperchip.ITDeveloper.Domain.Interfaces.Services
         public async Task AtualizarPaciente(Paciente paciente)
         {
             // Não posso alterar o CPF do paciente
-            
+            // Ao atualizar acrescentar != Id de Paciente Id
+
+            if (!ExecutarValidacao(new PacienteValidation(), paciente))
+            {
+                return;
+            }
+
+            if (_repo.Buscar(c => c.Cpf == paciente.Cpf && c.Id != paciente.Id).Result.Any())
+            {
+                Notificar("Já existe um Paciente com este Cpf informado");
+                return;
+            }
 
             await _repo.Atualizar(paciente);
         }
@@ -48,7 +58,7 @@ namespace Cooperchip.ITDeveloper.Domain.Interfaces.Services
         {
             // Sair >> Desocupopar o Leito;
             // Dar baixa no prontuario;
-            // Excluir os EstadosDePaciente deste Paciente;
+            // Excluir os EstadosDePaciente deste Paciente ou impossibilitar a exclusão por haver Est.Paciente;;
 
             await _repo.Excluir(paciente);
         }
