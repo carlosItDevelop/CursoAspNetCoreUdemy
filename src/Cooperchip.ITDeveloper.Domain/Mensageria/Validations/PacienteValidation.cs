@@ -18,7 +18,7 @@ namespace Cooperchip.ITDeveloper.Domain.Mensageria.Validations
                     .WithMessage("O campo '{PropertyName}' precisa ter entre '{MinLength}' e '{MaxLength}' caracteres.");
 
             RuleFor(m => m.Motivo)
-                .MaximumLength(30).WithMessage("O campo '{PropertyName}' não pode ter mais que {MaxLength} caracteres.");
+                .MaximumLength(90).WithMessage("O campo '{PropertyName}' não pode ter mais que {MaxLength} caracteres.");
 
             RuleFor(tp => tp.TipoPaciente)
                 .NotNull()

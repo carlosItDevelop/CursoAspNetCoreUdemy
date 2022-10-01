@@ -4,6 +4,7 @@ using Cooperchip.ITDeveloper.Data.Repository.Abstractions;
 using Cooperchip.ITDeveloper.Domain.Entities;
 using Cooperchip.ITDeveloper.Domain.Interfaces;
 using Cooperchip.ITDeveloper.Domain.Interfaces.ServiceContracts;
+using Cooperchip.ITDeveloper.Domain.Mensageria.EventPublish;
 using Cooperchip.ITDeveloper.Domain.Mensageria.Notifications;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -114,8 +115,6 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
                 await _serviceDomain.AdicionarPaciente(_mapper.Map<Paciente>(pacienteVM));
                 if (!OperacaoValida()) return View(pacienteVM);
                 // Outros processos dentro do mesmo repositório / AggregateRoot
-                // ...
-                // ...
                 await _uow.Commit();
 
                 TempData["Sucesso"] = "Registro cadastrado com sucesso!";

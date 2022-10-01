@@ -25,6 +25,8 @@ namespace Cooperchip.ITDeveloper.Data.Mapping
             builder.Property(o => o.RgOrgao).HasColumnName("RgOrgao")
                 .HasColumnType("varchar(10)");
 
+            builder.Property(o => o.Motivo).HasColumnName("Motivo").HasColumnType("varchar(90)");
+
 
             // 1:1 => Paciente : EstadoPaciente OU 0:N => EstadoPaciente : Paciente
             builder.HasOne(ep => ep.EstadoPaciente)

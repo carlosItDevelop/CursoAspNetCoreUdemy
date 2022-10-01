@@ -1,4 +1,6 @@
-﻿using Cooperchip.ITDeveloper.Domain.Mensageria.Mediators;
+﻿using Cooperchip.ITDeveloper.Domain.Mensageria.EventHandlers;
+using Cooperchip.ITDeveloper.Domain.Mensageria.EventPublish;
+using Cooperchip.ITDeveloper.Domain.Mensageria.Mediators;
 using Cooperchip.ITDeveloper.Mvc.Configuration;
 using Cooperchip.ITDeveloper.Mvc.Data;
 using Cooperchip.ITDeveloper.Mvc.Extensions.Identity;
@@ -40,9 +42,13 @@ namespace Cooperchip.ITDeveloper.Mvc
 
         public void ConfigureServices(IServiceCollection services)
         {
-
+            #region: Mediator
             services.AddMediatR(Assembly.GetExecutingAssembly());
             services.AddScoped<IMediatorHandler, MediatorHandler>();
+
+            services.AddScoped<INotificationHandler<PacienteCadastradoEvent>, PacienteCadastradoEventHandler>();
+            #endregion
+
 
             services.AddAutoMapper(typeof(Startup));
             services.AddDbContextConfig(Configuration); // In DbContextConfig

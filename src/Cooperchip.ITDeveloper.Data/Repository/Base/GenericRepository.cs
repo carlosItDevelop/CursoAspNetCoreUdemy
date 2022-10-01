@@ -15,7 +15,7 @@ namespace Cooperchip.ITDeveloper.Data.Repository.Base
 
         protected ITDeveloperDbContext _context;
 
-        public GenericRepository(ITDeveloperDbContext ctx) // Guardem essa info
+        public GenericRepository(ITDeveloperDbContext ctx)
         {
             this._context = ctx;
         }
@@ -23,6 +23,7 @@ namespace Cooperchip.ITDeveloper.Data.Repository.Base
         public virtual async Task Atualizar(T obj)
         {
             this._context.Entry(obj).State = EntityState.Modified;
+            await Task.CompletedTask;
             //await SaveAsync();
         }
 
@@ -30,6 +31,7 @@ namespace Cooperchip.ITDeveloper.Data.Repository.Base
         public virtual async Task Excluir(T obj)
         {
             this._context.Entry(obj).State = EntityState.Deleted;
+            await Task.CompletedTask;
             //await SaveAsync();
         }
 
@@ -43,6 +45,7 @@ namespace Cooperchip.ITDeveloper.Data.Repository.Base
         public virtual async Task Inserir(T obj)
         {
             this._context.Set<T>().Add(obj);
+            await Task.CompletedTask;
             //await SaveAsync();
         }
 
