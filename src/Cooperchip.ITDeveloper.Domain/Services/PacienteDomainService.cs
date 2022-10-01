@@ -25,10 +25,7 @@ namespace Cooperchip.ITDeveloper.Domain.Interfaces.Services
 
         public async Task AdicionarPaciente(Paciente paciente)
         {
-            if (!ExecutarValidacao(new PacienteValidation(), paciente)) 
-            {
-                return;
-            }
+            if (!ExecutarValidacao(new PacienteValidation(), paciente)) return;
 
             if(_repo.Buscar(c=>c.Cpf == paciente.Cpf).Result.Any())
             {
@@ -47,11 +44,8 @@ namespace Cooperchip.ITDeveloper.Domain.Interfaces.Services
             // Não posso alterar o CPF do paciente
             // Ao atualizar acrescentar != Id de Paciente Id
 
-            if (!ExecutarValidacao(new PacienteValidation(), paciente))
-            {
-                return;
-            }
-
+            if (!ExecutarValidacao(new PacienteValidation(), paciente)) return;
+          
             if (_repo.Buscar(c => c.Cpf == paciente.Cpf && c.Id != paciente.Id).Result.Any())
             {
                 Notificar("Já existe um Paciente com este Cpf informado");

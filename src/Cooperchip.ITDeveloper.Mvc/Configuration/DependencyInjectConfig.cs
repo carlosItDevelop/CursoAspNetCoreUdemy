@@ -8,6 +8,8 @@ using Cooperchip.ITDeveloper.Domain.Interfaces.Repository;
 using Cooperchip.ITDeveloper.Domain.Interfaces.ServiceContracts;
 using Cooperchip.ITDeveloper.Domain.Interfaces.Services;
 using Cooperchip.ITDeveloper.Domain.Mensageria.Notifications;
+using Cooperchip.ITDeveloper.Domain.ServiceContracts;
+using Cooperchip.ITDeveloper.Domain.Services;
 using Cooperchip.ITDeveloper.Mvc.Extensions.Filters;
 using Cooperchip.ITDeveloper.Mvc.Extensions.Identity;
 using Cooperchip.ITDeveloper.Mvc.Extensions.Identity.Services;
@@ -30,8 +32,10 @@ namespace Cooperchip.ITDeveloper.Mvc.Configuration
 
             /* Domain => Service */
             services.AddScoped<IPacienteDomainService, PacienteDomainService>();
+            services.AddScoped<ITriagemDomainService, TriagemDomainService>();
             /* Domain => Repository */
             services.AddScoped<IRepositoryPaciente, PacienteRepository>();
+            services.AddScoped<IRepositoryTriagem, TriagemRepository>();
 
             //IUnitOfWork
             services.AddScoped<IUnitOfWork, UnitOfWork>();

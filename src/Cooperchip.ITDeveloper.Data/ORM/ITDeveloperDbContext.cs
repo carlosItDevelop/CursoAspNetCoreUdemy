@@ -35,7 +35,6 @@ namespace Cooperchip.ITDeveloper.Data.ORM
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-
             // onde não tiver setado varchar e a propriedade for do tipo string fica valendo varchar(valor)
 
             foreach (var property in modelBuilder.Model.GetEntityTypes()
@@ -45,8 +44,6 @@ namespace Cooperchip.ITDeveloper.Data.ORM
                 //property.Relational().ColumnType = "varchar(100)";
                 property.SetColumnType("varchar(90)");
             }
-
-
 
             //modelBuilder.ApplyConfiguration(new EstadoPacienteMap());
             //modelBuilder.ApplyConfiguration(new PacienteMap());
@@ -91,6 +88,7 @@ namespace Cooperchip.ITDeveloper.Data.ORM
         }
         #endregion
 
+        #region: EditableCall
         private void EditableCall()
         {
             var currentTime = DateTime.Now;
@@ -127,5 +125,6 @@ namespace Cooperchip.ITDeveloper.Data.ORM
             }
 
         }
+        #endregion
     }
 }
