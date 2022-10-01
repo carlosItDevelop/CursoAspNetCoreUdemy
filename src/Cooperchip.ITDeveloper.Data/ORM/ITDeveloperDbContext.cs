@@ -22,21 +22,14 @@ namespace Cooperchip.ITDeveloper.Data.ORM
         }
 
         public DbSet<Mural> Mural { get; set; }
-
         public DbSet<Paciente> Paciente { get; set; }
-
         public DbSet<EstadoPaciente> EstadoPaciente { get; set; }
-
         public DbSet<Generico> Generico { get; set; }
-
         public DbSet<Cid> Cid { get; set; }
         public DbSet<Medicamento> Medicamento { get; set; }
 
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // onde não tiver setado varchar e a propriedade for do tipo string fica valendo varchar(valor)
-
             foreach (var property in modelBuilder.Model.GetEntityTypes()
                 .SelectMany(e => e.GetProperties()
                     .Where(p => p.ClrType == typeof(string))))
@@ -47,7 +40,6 @@ namespace Cooperchip.ITDeveloper.Data.ORM
 
             //modelBuilder.ApplyConfiguration(new EstadoPacienteMap());
             //modelBuilder.ApplyConfiguration(new PacienteMap());
-
             // Impl033: Busca os Mapppings de uma vez só
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(ITDeveloperDbContext).Assembly);
 

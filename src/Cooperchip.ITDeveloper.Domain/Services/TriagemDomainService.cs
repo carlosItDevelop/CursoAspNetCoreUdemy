@@ -2,8 +2,10 @@
 using Cooperchip.ITDeveloper.Domain.Interfaces.Repository;
 using Cooperchip.ITDeveloper.Domain.Mensageria.Mediators;
 using Cooperchip.ITDeveloper.Domain.Mensageria.Notifications;
+using Cooperchip.ITDeveloper.Domain.Mensageria.Validations;
 using Cooperchip.ITDeveloper.Domain.ServiceContracts;
 using System;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Cooperchip.ITDeveloper.Domain.Services
@@ -26,8 +28,15 @@ namespace Cooperchip.ITDeveloper.Domain.Services
 
         public async Task AdicionarTriagem(Triagem triagem)
         {
-            //Notificar("sdhfdsfdfaf");
+            if (!ExecutarValidacao(new TriagemValidation(), triagem)) return;
+
+            if (_reppoTriagem.Buscar(t => t.CodigoPaciente == triagem.CodigoPaciente && t.DataNotificacao == triagem.DataNotificacao && t.Mensagem.Trim() == triagem.Mensagem.Trim()).Result.Any()){
+                Notificar("Este registro está duplicado!");
+                return;
+            }
+
             await _reppoTriagem.Inserir(triagem);
+            // Publicar Evento
         }
 
         public async Task ExcluirTriagem(Triagem triagem)
@@ -37,6 +46,11 @@ namespace Cooperchip.ITDeveloper.Domain.Services
 
         public async Task ExcluirTriagemPorIdPaciente(Guid pacienteId)
         {
+            if (!_reppoTriagem.Buscar(t=>t.CodigoPaciente == pacienteId).Result.Any())
+            {
+                Notificar("Não existe(m) registro(s) correspondente à busca!");
+                return;
+            }
             await _reppoTriagem.ExcluirTriagemPorIdPaciente(pacienteId);
         }
 

@@ -25,10 +25,3 @@ namespace Cooperchip.ITDeveloper.Domain.Mensageria.Validations
         }
     }
 }
-
-/*
-         public Guid CodigoPaciente { get; private set; }
-        public string NomePaciente { get; private set; }
-        public DateTime DataNotificacao { get; private set; }
-        public string Mensagem { get; private set; }
- */
