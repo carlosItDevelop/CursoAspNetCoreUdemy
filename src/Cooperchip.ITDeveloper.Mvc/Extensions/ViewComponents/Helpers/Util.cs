@@ -17,5 +17,15 @@ namespace Cooperchip.ITDeveloper.Mvc.Extensions.ViewComponents.Helpers
                 .Count(x => x.EstadoPaciente.Descricao.Contains(estado));
         }
 
+        public static int TotNotifyEvents(ITDeveloperDbContext ctx)
+        {
+            return (from nf in ctx.Triagem.AsNoTracking() select nf).Count();
+        }
+
+        //public static int TotChamadaMedico(ITDeveloperDbContext ctx)
+        //{
+        //    return (from nf in ctx.ChamadaMedica.AsNoTracking() select nf).Count();
+        //}
+
     }
 }

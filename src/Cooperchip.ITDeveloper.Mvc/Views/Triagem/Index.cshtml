@@ -36,9 +36,7 @@
                     <th>
                         @Html.DisplayNameFor(model => model.Mensagem)
                     </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.CodigoPaciente)
-                    </th>
+
 
                     <th>Ação</th>
 
@@ -58,9 +56,7 @@
                         <td>
                             @Html.DisplayFor(modelItem => item.Mensagem)
                         </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.CodigoPaciente)
-                        </td>
+
 
                         <td class="text-right">
                             <a asp-controller="Triagem" asp-action="Delete" asp-route-id="@item.Id"><span class="fa fa-trash fa-2x" title="Excluir Notificação"></span> </a>

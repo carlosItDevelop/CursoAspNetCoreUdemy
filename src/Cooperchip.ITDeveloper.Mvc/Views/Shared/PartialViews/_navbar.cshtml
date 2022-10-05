@@ -25,37 +25,20 @@
         <!-- / top left nav -->
         <!-- top right nav -->
         <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown">
-                <a href="#" data-toggle="dropdown">
-                    <i class="fa fa-bell-o"></i>
-                    <span class="sr-only">Notifications</span>
-                    <span class="badge badge-danger">6</span>
-                </a>
-                <ul class="dropdown-menu right dropdown-notification" role="menu">
-                    <li>
-                        <a href="#" class="dropdown-menu-header">Notifications</a>
-@*                        <vc:notify-events></vc:notify-events>
-*@                    </li>
-                    <li>
-                        <a href="#"><i class="l-basic-life-buoy"></i> 2 support request</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="l-basic-gear"></i> Settings is changed</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="l-weather-lightning"></i> 5 min server downtime</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="l-basic-server2"></i> Databse backup is complete</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="l-basic-lightbulb"></i> SuggeElson push 1 commit</a>
-                    </li>
-                    <li>
-                        <a href="#" class="view-all">View all <i class="l-arrows-right"></i> </a>
-                    </li>
-                </ul>
+
+            <li>
+                <span style="margin-right: 10px;">@System.Globalization.CultureInfo.CurrentCulture</span>
             </li>
+
+            <li class="dropdown">
+
+                <vc:notify-events></vc:notify-events>
+
+            </li>
+
+            @*<vc:chamada-medicas></vc:chamada-medicas>*@
+
+
             <li class="dropdown">
                 <a href="#" data-toggle="dropdown">
                     <i class="fa fa-cog"></i>
