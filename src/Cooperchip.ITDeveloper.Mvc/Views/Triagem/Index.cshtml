@@ -1,0 +1,94 @@
+﻿@using Cooperchip.ITDeveloper.Mvc.Extensions.ExtensionsMethods
+@using Cooperchip.ITDeveloper.Mvc.ServiceApp.ViewModels
+
+@model IEnumerable<TriagemViewModel>
+
+@{
+    ViewData["Title"] = "Triagem por ordem de chegada";
+}
+
+
+<vc:cabecalho titulo="Medical Management-Sys / Módulo Pacientes"
+              subtitulo="Administração de Pacientes"></vc:cabecalho>
+
+<div class="panel panel-default panel-controls">
+    <div class="panel panel-heading">
+        <h3>Triagem por ordem de chegada</h3>
+    </div>
+
+    <div class="panel panel-body">
+        @*<p>
+                <a asp-controller="Paciente" asp-action="Create" class="btn btn-primary">Novo Notificação</a>
+            </p>*@
+
+        <table class="table table-bordered table-hover myTable" id="ccc">
+            <thead class="dark">
+                <tr>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.DataNotificacao)
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.NomePaciente)
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.Mensagem)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.CodigoPaciente)
+                    </th>
+
+                    <th>Ação</th>
+
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DataNotificacao)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NomePaciente)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Mensagem)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CodigoPaciente)
+                        </td>
+
+                        <td class="text-right">
+                            <a asp-controller="Triagem" asp-action="Delete" asp-route-id="@item.Id"><span class="fa fa-trash fa-2x" title="Excluir Notificação"></span> </a>
+
+                        </td>
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+
+@section Scripts {
+
+    <script src="/bundle/dataTables.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.myTable').DataTable({
+                dom: 'T<"clear">lfrtip',
+                tableTools: {
+                    "sSwfPath": "/myPlugins/copy_csv_xls_pdf.swf"
+                }
+            });
+        });
+    </script>
+    <script src="~/bundle/dashboard.min.js"></script>
+
+}

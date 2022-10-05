@@ -13,17 +13,12 @@
     <None Remove="wwwroot\importFile\**" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Compile Remove="Migrations\20200814022045_AddGenericoAppDbContext-02.cs" />
-    <Compile Remove="Migrations\20200814022045_AddGenericoAppDbContext-02.Designer.cs" />
-  </ItemGroup>
-
 
   <ItemGroup>
 
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
 
-    <PackageReference Include="kisslog.AspNetCore" Version="2.5.6" />
+    <PackageReference Include="kisslog.AspNetCore" Version="5.1.2" />
 
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.6" />
 

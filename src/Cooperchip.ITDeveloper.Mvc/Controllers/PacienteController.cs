@@ -151,7 +151,7 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
                 try
                 {
                     await _serviceDomain.AtualizarPaciente(_mapper.Map<Paciente>(pacienteVM));
-
+                    if (!OperacaoValida()) return View(pacienteVM);
                     // Outros processos dentro do mesmo repositório / Agregate Root
                     // ...
                     // ...

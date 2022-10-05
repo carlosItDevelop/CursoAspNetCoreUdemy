@@ -2,24 +2,28 @@
 using Cooperchip.ITDeveloper.Domain.Entities;
 using Cooperchip.ITDeveloper.Domain.Interfaces;
 using Cooperchip.ITDeveloper.Domain.Interfaces.Repository;
+using Cooperchip.ITDeveloper.Domain.Mensageria.Notifications;
 using Cooperchip.ITDeveloper.Mvc.ServiceApp.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Cooperchip.ITDeveloper.Mvc.Controllers
 {
-    public class TriagemController : Controller
+    public class TriagemController : BaseController
     {
         private readonly IRepositoryTriagem _repoTriagem;
         private readonly IUnitOfWork _uow;
         private readonly IMapper _mapper;
 
-        public TriagemController(IRepositoryTriagem appTriagem,
-                                 IUnitOfWork uow,
-                                 IMapper mapper)
+        public TriagemController(IRepositoryTriagem repoTriagem,
+                                                      IUnitOfWork uow,
+                                                      IMapper mapper,
+                                                      INotificador notificador): base(notificador)
         {
-            _repoTriagem = appTriagem;
+            _repoTriagem = repoTriagem;
             _uow = uow;
             _mapper = mapper;
         }
@@ -27,14 +31,14 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
         [HttpGet("listagem-notificacoes")]
         public async Task<IActionResult> Index()
         {
-            var lista = await _repoTriagem.SelecionarTodos();
+            var lista = _mapper.Map<IEnumerable<TriagemViewModel>>(await _repoTriagem.SelecionarTodos());
             return View(lista);
         }
 
         [HttpGet("triagem-para-prontuario/{id:guid}")]
         public async Task<IActionResult> Triagem(Guid id)
         {
-            var triagem = await _repoTriagem.ObterTriagemPorId(id);
+            var triagem = _mapper.Map<TriagemViewModel>(await _repoTriagem.ObterTriagemPorId(id));
 
             if (triagem == null) return BadRequest();
 
@@ -47,25 +51,27 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
             return View();
         }
 
-        [HttpPost("adicionando-triagem")]
+        [HttpPost("nova-triagem")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(TriagemViewModel model)
+        public async Task<IActionResult> Create(TriagemViewModel viewModel)
         {
             if (ModelState.IsValid)
             {
-                await this._repoTriagem.Inserir(_mapper.Map<Triagem>(model));
+                await this._repoTriagem.Inserir(_mapper.Map<Triagem>(viewModel));
+                if (!OperacaoValida()) return View(viewModel);
+
                 await _uow.Commit();
 
                 return RedirectToAction("Index");
             }
 
-            return View(model);
+            return View(viewModel);
         }
 
         [HttpGet("excluir-triagem/{id:guid}")]
         public async Task<IActionResult> Delete(Guid id)
         {
-            var triagem = await _repoTriagem.ObterTriagemPorId(id);
+            var triagem = _mapper.Map<TriagemViewModel>(await _repoTriagem.ObterTriagemPorId(id));
 
             if (triagem == null)
             {

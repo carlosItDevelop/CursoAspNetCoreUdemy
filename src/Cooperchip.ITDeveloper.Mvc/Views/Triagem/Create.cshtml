@@ -1,0 +1,41 @@
+﻿@using Cooperchip.ITDeveloper.Domain.Enums
+@using Cooperchip.ITDeveloper.Mvc.ServiceApp.ViewModels
+@model TriagemViewModel
+
+@{
+    ViewData["Title"] = "Adicionar Notificação";
+}
+
+    <vc:cabecalho titulo="Medical Management-Sys / Módulo Pacientes" subtitulo="Módulo de Administração de Pacientes">
+
+    </vc:cabecalho>
+
+<div class="row">
+    <div class="panel panel-heading">
+        <h3>Adicionar Notificação</h3>
+    </div>
+
+    <div class="panel panel-body">
+        <div class="col-md-4">
+            <form asp-controller="Triagem" asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <partial name="_edit_create" />
+
+                <div class="form-group">
+                    <input type="submit" value="Adicionar Notificação" class="btn btn-success" />
+                    <a asp-controller="Paciente" asp-action="Index" class="btn btn-info">Voltar à lista</a>
+                </div>
+                
+
+            </form>
+        </div>
+    </div>
+
+
+
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

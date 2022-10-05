@@ -1,0 +1,96 @@
+﻿@using Cooperchip.ITDeveloper.Mvc.Extensions.ExtensionsMethods
+@using Cooperchip.ITDeveloper.Mvc.ServiceApp.ViewModels
+
+@model TriagemViewModel
+
+
+@{
+    ViewData["Title"] = "Controle de Prontuario - Triagem";
+}
+
+
+<vc:cabecalho titulo="Medical Management-Sys / Módulo Pacientes"
+              subtitulo="Administração de Pacientes"></vc:cabecalho>
+
+<div class="panel panel-default panel-controls">
+    <div class="panel panel-heading">
+        <h3>Controle de Prontuario - Triagem</h3>
+    </div>
+
+    <div class="panel panel-body">
+        <p>
+            <a href="javascript:void();" class="btn btn-primary">Encaminhar para Medicação</a>
+            <a href="javascript:void();" class="btn btn-primary">Aguardar Atendimento</a>
+            <a href="javascript:void();" class="btn btn-primary">Saiu à Revelia</a>
+        </p>
+
+        <h4>Recepção: @Model.Mensagem</h4>
+        <hr />
+
+        <table class="table table-bordered table-hover myTable" id="ccc">
+            <thead class="dark">
+                <tr>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.DataNotificacao)
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.NomePaciente)
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.Mensagem)
+                    </th>
+
+                    <th>Ação</th>
+
+                </tr>
+            </thead>
+
+            <tbody>
+                @*var dataNascPtBr = item.DataNascimento.ToBrazilianDate();*@
+                @{var dateTimeNascPtBr = @Model.DataNotificacao.ToBrazianDateTime(); }
+                <tr>
+
+                    <td>
+                        @dateTimeNascPtBr
+                    </td>
+
+                    <td>
+                        @Model.NomePaciente
+                    </td>
+
+                    <td>
+                        @Model.CodigoPaciente
+                    </td>
+
+                    <td class="text-right">
+                        <a asp-controller="Triagem" asp-action="Delete" asp-route-id="@Model.Id"><span class="fa fa-trash fa-2x" title="Excluir Notificação"></span> </a>
+
+                        <a href="#"><span class="fa fa-edit fa-2x" title="Processar Triagem"></span> </a>
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+@section Scripts {
+
+    <script src="/bundle/dataTables.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.myTable').DataTable({
+                dom: 'T<"clear">lfrtip',
+                tableTools: {
+                    "sSwfPath": "/myPlugins/copy_csv_xls_pdf.swf"
+                }
+            });
+        });
+    </script>
+    <script src="~/bundle/dashboard.min.js"></script>
+
+}

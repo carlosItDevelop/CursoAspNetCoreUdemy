@@ -1,0 +1,31 @@
+﻿@using Cooperchip.ITDeveloper.Mvc.ServiceApp.ViewModels
+@model TriagemViewModel
+
+@{
+    ViewData["Title"] = "Exclusão de Notificação";
+}
+
+    <vc:cabecalho titulo="Medical Management-Sys / Módulo Pacientes" subtitulo="Módulo de Administração de Pacientes">
+
+    </vc:cabecalho>
+
+<div class="row">
+    <div class="panel panel-heading">
+        <h3>Tem certeza que deseja excluir este registro ?</h3>
+    </div>
+
+    <div class="panel panel-body">
+        <div>
+            <div>
+                <partial name="_delete_details"/>
+            </div>
+
+            <form asp-controller="Triagem" asp-action="Delete">
+                <input type="hidden" asp-for="Id" />
+                <input type="submit" value="Excluir Triagem" class="btn btn-danger" />
+                <a asp-controller="Triagem" asp-action="Index" class="btn btn-info">Voltar à lista</a>
+            </form>
+        </div>
+
+    </div>
+</div>

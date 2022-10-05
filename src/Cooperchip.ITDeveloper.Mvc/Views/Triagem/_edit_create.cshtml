@@ -1,0 +1,28 @@
+﻿
+@using Cooperchip.ITDeveloper.Domain.Enums
+@using Cooperchip.ITDeveloper.Mvc.ServiceApp.ViewModels
+@model TriagemViewModel
+
+<div class="form-group">
+    <label asp-for="CodigoPaciente" class="control-label"></label>
+    <input asp-for="CodigoPaciente" class="form-control" />
+    <span asp-validation-for="CodigoPaciente" class="text-danger"></span>
+</div>
+
+<div class="form-group">
+    <label asp-for="NomePaciente" class="control-label"></label>
+    <input asp-for="NomePaciente" class="form-control" />
+    <span asp-validation-for="NomePaciente" class="text-danger"></span>
+</div>
+
+<div class="form-group">
+    <label asp-for="DataNotificacao" class="control-label"></label>
+    <input asp-for="DataNotificacao" class="form-control" />
+    <span asp-validation-for="DataNotificacao" class="text-danger"></span>
+</div>
+
+<div class="form-group">
+    <label asp-for="Mensagem" class="control-label"></label>
+    <input asp-for="Mensagem" class="form-control" />
+    <span asp-validation-for="Mensagem" class="text-danger"></span>
+</div>
