@@ -7,9 +7,9 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
 {
     public class LoggerSampleController : Controller
     {
-        private readonly ILogger _logger;
+        private readonly IKLogger _logger;
 
-        public LoggerSampleController(ILogger logger)
+        public LoggerSampleController(IKLogger logger)
         {
             _logger = logger;
         }

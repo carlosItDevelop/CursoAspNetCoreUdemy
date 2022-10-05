@@ -27,6 +27,7 @@ namespace Cooperchip.ITDeveloper.Data.ORM
         public DbSet<Generico> Generico { get; set; }
         public DbSet<Cid> Cid { get; set; }
         public DbSet<Medicamento> Medicamento { get; set; }
+        public DbSet<Triagem> Triagem { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

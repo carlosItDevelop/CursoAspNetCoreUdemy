@@ -1,5 +1,8 @@
-﻿using Cooperchip.ITDeveloper.Domain.Mensageria.EventPublish;
+﻿using Cooperchip.ITDeveloper.Domain.Entities;
+using Cooperchip.ITDeveloper.Domain.Interfaces;
+using Cooperchip.ITDeveloper.Domain.Mensageria.EventPublish;
 using Cooperchip.ITDeveloper.Domain.Mensageria.Mediators;
+using Cooperchip.ITDeveloper.Domain.ServiceContracts;
 using MediatR;
 using System.Diagnostics;
 using System.Threading;
@@ -10,10 +13,16 @@ namespace Cooperchip.ITDeveloper.Domain.Mensageria.EventHandlers
     public class PacienteCadastradoEventHandler : INotificationHandler<PacienteCadastradoEvent>
     {
         private readonly IMediatorHandler _mediator;
+        private readonly ITriagemDomainService _triagemService;
+        private readonly IUnitOfWork _uow;
 
-        public PacienteCadastradoEventHandler(IMediatorHandler mediator)
+        public PacienteCadastradoEventHandler(IMediatorHandler mediator,
+                                                                                 ITriagemDomainService triagemService,
+                                                                                 IUnitOfWork uow)
         {
             _mediator = mediator;
+            _triagemService = triagemService;
+            _uow = uow;
         }
 
         public async Task Handle(PacienteCadastradoEvent notification, CancellationToken cancellationToken)
@@ -22,6 +31,7 @@ namespace Cooperchip.ITDeveloper.Domain.Mensageria.EventHandlers
 
             if (notification.Paciente.EstadoPaciente.Descricao.Equals("Grave"))
             {
+
                 Debug.WriteLine($"ANTES DA TRIAGEM, O Sr(a). {notification.Paciente.Nome} DEVE VERIFICAR SE TEM PRIORIDADE!");
 
             } else if(notification.Paciente.EstadoPaciente.Descricao.Equals("S/Avaliação"))
@@ -30,18 +40,11 @@ namespace Cooperchip.ITDeveloper.Domain.Mensageria.EventHandlers
             }
             else
             {
-                // Todo: new Triagem(..,..,..);
-                Debug.WriteLine($"==================\t================");
-                Debug.WriteLine($"Código do Paciente.:\t{notification.AggregateId}");
-                Debug.WriteLine($"Nome do Paciente ..:\t{notification.Paciente.Nome}");
-                Debug.WriteLine($"Data da Notificação:\t{notification.Timestamp}");
-                Debug.WriteLine($"Menssagem .............:\t{notification.Motivo}");
-                Debug.WriteLine($"==================\t================");
-                Debug.WriteLine($"Estado do Paciente..:\t{notification.Paciente.EstadoPaciente.Descricao}");
-                Debug.WriteLine($"==================\t================");
+                mensagem = $"{notification.Paciente.Nome}: {notification.Motivo}";
+                await _triagemService.AdicionarTriagem(new Triagem(notification.AggregateId, notification.Paciente.Nome, notification.Timestamp, mensagem));
+
+                await _uow.Commit();
             }
-
-
             await Task.CompletedTask;
         }
     }

@@ -18,12 +18,12 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
     public class HomeController : Controller
     {
         private readonly IEmailSender _emailSender;
-        private readonly ILogger _logger;
+        private readonly IKLogger _logger;
         private readonly IUserInContext _user;
         private readonly IUserInAllLayer _userInAllLayer;
 
         public HomeController(IEmailSender emailSender, 
-                              ILogger logger,
+                              IKLogger logger,
                               IUserInContext user,
                               IUserInAllLayer userInAllLayer)
         {

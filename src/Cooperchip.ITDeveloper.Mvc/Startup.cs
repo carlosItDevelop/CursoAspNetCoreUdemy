@@ -5,7 +5,6 @@ using Cooperchip.ITDeveloper.Mvc.Configuration;
 using Cooperchip.ITDeveloper.Mvc.Data;
 using Cooperchip.ITDeveloper.Mvc.Extensions.Identity;
 using Cooperchip.ITDeveloper.Mvc.Extensions.Identity.Services;
-using KissLog.Apis.v1.Listeners;
 using KissLog.AspNetCore;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
@@ -49,6 +48,9 @@ namespace Cooperchip.ITDeveloper.Mvc
             services.AddScoped<INotificationHandler<PacienteCadastradoEvent>, PacienteCadastradoEventHandler>();
             #endregion
 
+            #region: KissLog
+            services.AddLoggerConfig();
+            #endregion
 
             services.AddAutoMapper(typeof(Startup));
             services.AddDbContextConfig(Configuration); // In DbContextConfig
@@ -86,16 +88,7 @@ namespace Cooperchip.ITDeveloper.Mvc
             app.UseAuthentication();
             app.UseAuthorization();
 
-            if (env.IsProduction())
-            {
-                app.UseKissLogMiddleware(options =>
-                {
-                    options.Listeners.Add(new KissLogApiListener(new KissLog.Apis.v1.Auth.Application(
-                        Configuration["KissLog.OrganizationId"],
-                        Configuration["KissLog.ApplicationId"])
-                    ));
-                });
-            }
+
 
 
             var authMsgSenderOpt = new AuthMessageSenderOptions

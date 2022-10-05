@@ -4,7 +4,6 @@ using Cooperchip.ITDeveloper.Data.Repository.Abstractions;
 using Cooperchip.ITDeveloper.Domain.Entities;
 using Cooperchip.ITDeveloper.Domain.Interfaces;
 using Cooperchip.ITDeveloper.Domain.Interfaces.ServiceContracts;
-using Cooperchip.ITDeveloper.Domain.Mensageria.EventPublish;
 using Cooperchip.ITDeveloper.Domain.Mensageria.Notifications;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
