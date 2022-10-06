@@ -3,6 +3,7 @@ using Cooperchip.ITDeveloper.Domain.Mensageria.EventPublish;
 using Cooperchip.ITDeveloper.Domain.Mensageria.Mediators;
 using Cooperchip.ITDeveloper.Mvc.Configuration;
 using Cooperchip.ITDeveloper.Mvc.Data;
+using Cooperchip.ITDeveloper.Mvc.Extensions.Filters;
 using Cooperchip.ITDeveloper.Mvc.Extensions.Identity;
 using Cooperchip.ITDeveloper.Mvc.Extensions.Identity.Services;
 using KissLog;
@@ -54,23 +55,21 @@ namespace Cooperchip.ITDeveloper.Mvc
             #region: KissLog
             services.AddLoggerConfig();
 
-            services.AddScoped<IKLogger>((provider) => Logger.Factory.Get());
+            //services.AddLogging(logging =>
+            //{
+            //    logging.AddKissLog(options =>
+            //    {
+            //        options.Formatter = (FormatterArgs args) =>
+            //        {
+            //            if (args.Exception == null)
+            //                return args.DefaultValue;
 
-            services.AddLogging(logging =>
-            {
-                logging.AddKissLog(options =>
-                {
-                    options.Formatter = (FormatterArgs args) =>
-                    {
-                        if (args.Exception == null)
-                            return args.DefaultValue;
+            //            string exceptionStr = new ExceptionFormatter().Format(args.Exception, args.Logger);
 
-                        string exceptionStr = new ExceptionFormatter().Format(args.Exception, args.Logger);
-
-                        return string.Join(Environment.NewLine, new[] { args.DefaultValue, exceptionStr });
-                    };
-                });
-            });
+            //            return string.Join(Environment.NewLine, new[] { args.DefaultValue, exceptionStr });
+            //        };
+            //    });
+            //});
 
             #endregion
 

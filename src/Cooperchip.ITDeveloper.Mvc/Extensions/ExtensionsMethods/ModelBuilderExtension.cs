@@ -6,7 +6,6 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.IO;
 using System.Reflection;
-using System.Security.Cryptography.Xml;
 
 namespace Cooperchip.ITDeveloper.Mvc.Extensions.ExtensionsMethods
 {

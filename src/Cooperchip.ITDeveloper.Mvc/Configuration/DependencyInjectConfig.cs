@@ -62,9 +62,6 @@ namespace Cooperchip.ITDeveloper.Mvc.Configuration
             services.AddScoped<IUserClaimsPrincipalFactory<ApplicationUser>, UserClaimsService>();
             // ================================================================================ //
 
-            services.AddScoped((context) => Logger.Factory.Get());
-            services.AddScoped<AuditoriaIloggerFilter>();
-
             services.AddTransient<IEmailSender, EmailSender>();
             services.Configure<AuthMessageSenderOptions>(configuration);
 

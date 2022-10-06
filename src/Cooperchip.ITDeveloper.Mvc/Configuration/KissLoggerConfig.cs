@@ -8,6 +8,7 @@ using System;
 using Microsoft.Extensions.Configuration;
 using System.Text;
 using System.Diagnostics;
+using Cooperchip.ITDeveloper.Mvc.Extensions.Filters;
 
 namespace Cooperchip.ITDeveloper.Mvc.Configuration
 {
@@ -16,7 +17,10 @@ namespace Cooperchip.ITDeveloper.Mvc.Configuration
         public static void AddLoggerConfig(this IServiceCollection services)
         {
 
-            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            //services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
+            services.AddScoped<AuditoriaIloggerFilter>();
+
             services.AddScoped<IKLogger>((context) =>
             {
                 return Logger.Factory.Get();
