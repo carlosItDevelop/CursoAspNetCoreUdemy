@@ -5,7 +5,9 @@ using Cooperchip.ITDeveloper.Mvc.Configuration;
 using Cooperchip.ITDeveloper.Mvc.Data;
 using Cooperchip.ITDeveloper.Mvc.Extensions.Identity;
 using Cooperchip.ITDeveloper.Mvc.Extensions.Identity.Services;
+using KissLog;
 using KissLog.AspNetCore;
+using KissLog.Formatters;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -13,6 +15,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System;
 using System.Reflection;
 
 namespace Cooperchip.ITDeveloper.Mvc
@@ -50,6 +53,25 @@ namespace Cooperchip.ITDeveloper.Mvc
 
             #region: KissLog
             services.AddLoggerConfig();
+
+            services.AddScoped<IKLogger>((provider) => Logger.Factory.Get());
+
+            services.AddLogging(logging =>
+            {
+                logging.AddKissLog(options =>
+                {
+                    options.Formatter = (FormatterArgs args) =>
+                    {
+                        if (args.Exception == null)
+                            return args.DefaultValue;
+
+                        string exceptionStr = new ExceptionFormatter().Format(args.Exception, args.Logger);
+
+                        return string.Join(Environment.NewLine, new[] { args.DefaultValue, exceptionStr });
+                    };
+                });
+            });
+
             #endregion
 
             services.AddAutoMapper(typeof(Startup));
