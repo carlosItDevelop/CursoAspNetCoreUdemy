@@ -3,12 +3,9 @@ using Cooperchip.ITDeveloper.Domain.Mensageria.EventPublish;
 using Cooperchip.ITDeveloper.Domain.Mensageria.Mediators;
 using Cooperchip.ITDeveloper.Mvc.Configuration;
 using Cooperchip.ITDeveloper.Mvc.Data;
-using Cooperchip.ITDeveloper.Mvc.Extensions.Filters;
 using Cooperchip.ITDeveloper.Mvc.Extensions.Identity;
 using Cooperchip.ITDeveloper.Mvc.Extensions.Identity.Services;
-using KissLog;
-using KissLog.AspNetCore;
-using KissLog.Formatters;
+using Cooperchip.ITDeveloper.Mvc.ServiceApp.Settings;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -16,7 +13,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
+using Microsoft.Extensions.Options;
 using System.Reflection;
 
 namespace Cooperchip.ITDeveloper.Mvc
@@ -37,19 +34,21 @@ namespace Cooperchip.ITDeveloper.Mvc
             {
                 builer.AddUserSecrets<Startup>();
             }
-
             Configuration = builer.Build();
-
         }
-
 
         public void ConfigureServices(IServiceCollection services)
         {
             #region: Mediator
             services.AddMediatR(Assembly.GetExecutingAssembly());
             services.AddScoped<IMediatorHandler, MediatorHandler>();
-
             services.AddScoped<INotificationHandler<PacienteCadastradoEvent>, PacienteCadastradoEventHandler>();
+            #endregion
+
+            #region: smtpGmail
+            // Todo: Criando minha própria IOptions: EmailCredentialsSettings
+            services.Configure<EmailCredentialsSettings>(Configuration.GetSection(EmailCredentialsSettings.SectionName));
+            services.AddSingleton(s => s.GetRequiredService<IOptions<EmailCredentialsSettings>>().Value);
             #endregion
 
             #region: KissLog
@@ -72,7 +71,6 @@ namespace Cooperchip.ITDeveloper.Mvc
             //});
 
             #endregion
-
             services.AddAutoMapper(typeof(Startup));
             services.AddDbContextConfig(Configuration); // In DbContextConfig
             services.AddIdentityConfig(Configuration); // In IdentityConfig
@@ -92,7 +90,6 @@ namespace Cooperchip.ITDeveloper.Mvc
                 app.UseDeveloperExceptionPage();
                 //app.UseDatabaseErrorPage();  // Obsoleto 3.1
                 app.UseMigrationsEndPoint();
-
             }
             else
             {
@@ -103,13 +100,9 @@ namespace Cooperchip.ITDeveloper.Mvc
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
-
             app.UseRouting();
-
             app.UseAuthentication();
             app.UseAuthorization();
-
-
 
 
             var authMsgSenderOpt = new AuthMessageSenderOptions

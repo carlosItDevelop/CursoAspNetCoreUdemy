@@ -11,6 +11,7 @@ namespace Cooperchip.ITDeveloper.Application.AutoMapper
         {
             CreateMap<Paciente, PacienteViewModel>().ReverseMap();
             CreateMap<Triagem, TriagemViewModel>().ReverseMap();
+            CreateMap<Mural, MuralViewModel>().ReverseMap();
         }
     }
 }

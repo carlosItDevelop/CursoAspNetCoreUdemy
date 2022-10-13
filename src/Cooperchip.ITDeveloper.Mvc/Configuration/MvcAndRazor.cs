@@ -19,6 +19,7 @@ namespace Cooperchip.ITDeveloper.Mvc.Configuration
 
 
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
+
             services.AddRazorPages();
 
             return services;
