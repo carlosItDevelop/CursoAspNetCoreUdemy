@@ -1,0 +1,96 @@
+﻿@using Cooperchip.ITDeveloper.Mvc.ServiceApp.ViewModels
+@model IEnumerable<MuralViewModel>
+
+@{
+    ViewBag.Title = "Mural de Avisos";
+}
+
+
+<vc:cabecalho titulo="Medical Management-Sys / Módulo Notificações"
+              subtitulo="Administração de Avisos"></vc:cabecalho>
+
+<div class="panel panel-default panel-controls">
+    <div class="panel panel-heading">
+        <h3>Quadro de Avisos</h3>
+    </div>
+
+    <div class="row" style="padding-left: 15px; padding-right: 15px;">
+        <div class="container col-lg-12 col-md-12 col-sm-12 col-xl-12">
+            <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+            <div class="row">
+                <div class="col-xs-2 col-md-3">
+                    <button class="btn btn-default create" data-toggle="tooltip" data-placement="bottom" title="Adicionar um novo Aviso no Mural" data-original-title="Adicionar um novo Aviso no Mural"> <i class="glyphicon glyphicon-plus-sign"></i> </button>
+                    @Html.ActionLink("Home", "Index", "Home", null, new { @class = "btn btn-default" })
+                </div>
+                <div class="col-xs-10 col-md-9">
+                    <div class="form-inline" role="form">
+                        @using (Html.BeginForm("Index", "Mural", FormMethod.Get))
+                        {
+                            @Html.DropDownList("filtro", null, "<< Mostar Todos >>", new { @class = "form-control col-lg-3" })
+                            <div class="input-group">
+                                <span class="input-group-btn">
+                                    <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span> Filtrar por Título</button>
+                                </span>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+
+            <div class="animated fadeInRightBig">
+                <h3 class="alert alert-success">Mural de Avisos Gerais do MedicalManagement-Sys.</h3>
+                <hr />
+
+                <div class="wrapper wrapper-content animated fadeInUp">
+                    <ul class="notes">
+                        @foreach (var item in Model)
+                        {
+                            <li>
+                                <div>
+                                    <small>@item.Data</small>
+                                    <h4>@item.Titulo</h4>
+                                    <p>@item.Aviso</p>
+                                    <h6>Por: @item.Autor</h6>
+                                    <a class="delete" data-toggle="tooltip" data-placement="bottom" title="Excluir Aviso" data-original-title="Excluir Aviso" data-id="@item.Id"><i class="fa fa-trash-o "></i></a>
+                                </div>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade modal-style6" id="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+</div>
+
+@section Scripts
+    {
+
+    <script type="text/javascript">
+
+        $(".delete").click(function () {
+            var id = $(this).attr("data-id");
+            $("#modal").load("/Mural/Delete?id=" + id, function () {
+                $("#modal").modal();
+            });
+        });
+
+        $(".edit").click(function () {
+            var id = $(this).attr("data-id");
+            $("#modal").load("/Mural/Edit?id=" + id, function () {
+                $("#modal").modal();
+            });
+        });
+
+
+        $(".create").click(function () {
+            $("#modal").load("/Mural/Create", function () {
+                $("#modal").modal();
+            });
+        });
+
+    </script>
+}

@@ -1,0 +1,42 @@
+﻿@using Cooperchip.ITDeveloper.Mvc.ServiceApp.ViewModels
+@model MuralViewModel
+
+@{
+    ViewBag.Title = "MedicalManagement-Sys - Exclusão de Aviso";
+}
+
+@{ Layout = null;}
+
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title">MedicalManagement-Sys - Exclusão de Aviso</h4>
+        </div>
+        <div class="modal-body">
+            <div class="form-horizontal">
+
+
+                <div class="alert alert-danger">
+
+                    <h3>Confirma a exclusão de:  @Model.Titulo</h3>
+
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+
+                        <div class="form-actions no-color">
+                            <input type="submit" value="Sim" class="btn btn-danger" />
+                        </div>
+                    }
+                </div>
+
+
+            </div>
+        </div>
+        <div class="modal-footer">
+            <input type="button" value="Cancelar" class="btn btn-default" data-dismiss="modal" />
+        </div>
+
+    </div>
+</div>

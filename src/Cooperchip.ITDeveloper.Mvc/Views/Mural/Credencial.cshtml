@@ -1,0 +1,134 @@
+﻿@using Cooperchip.ITDeveloper.Mvc.ServiceApp.ViewModels
+@model MuralViewModel
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("~/bundles/jquery");
+        await Html.RenderPartialAsync("~/bundles/jqueryval");
+    }
+}
+
+@{
+    Layout = null;
+}
+
+@{
+    ViewBag.Title = "MedicalManagement-Sys - Solicitação de Credencial";
+}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title>Login | MedicalManagement-Sys - Management</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1 user-scalable=no">
+
+    <link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href="~/tpl/css/icons.css" rel="stylesheet" />
+    <link href="~/tpl/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/tpl/css/plugins.css" rel="stylesheet" />
+    <link href="~/tpl/css/main.css" rel="stylesheet" />
+    <link href="~/tpl/css/custom.css" rel="stylesheet" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="~/tpl/img/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="~/tpl/img/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="~/tpl/img/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="~/tpl/img/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="icon" href="~/tpl/img/ico/favicon.ico" type="image/png">
+    <meta name="msapplication-TileColor" content="#3399cc" />
+
+</head>
+<body class="login-page">
+
+    <div class="container login-container">
+        <div class="login-panel panel panel-default plain animated bounceIn">
+            <div class="panel-heading">
+                <h4 class="panel-title text-center">
+                    <img id="logo" src="~/tpl/img/logo-dark.png" alt="Dynamic logo">
+                </h4>
+            </div>
+
+            <div class="panel-body">
+                <div class="alert alert-warning">
+                    <h4><i class="glyphicon glyphicon-user"></i>&nbsp;&nbsp;Solicitação de Credencial</h4>
+                </div>
+
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+                    <div class="form-horizontal">
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <p class="alert alert-warning">
+                            @Html.ValidationMessage("error_sendmail")
+                        </p>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Apelido</label>
+                            <div class="col-md-9">
+                                @Html.EditorFor(model => model.Titulo, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Titulo, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Nome Completo</label>
+                            <div class="col-md-9">
+                                @Html.EditorFor(model => model.Autor, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Autor, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Email</label>
+                            <div class="col-md-9">
+                                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="seperator">
+                        <hr>
+                    </div>
+
+                    <div class="panel-footer gray-lighter-bg bt">
+                        <p class="text-center">
+                            <input type="submit" value="Solicitar" class="btn btn-success" />
+                            <a href="/Account/Login" class="btn btn-warning">Voltar</a>
+                        </p>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="footer">
+            <p class="text-center">&copy;2014 / @DateTime.Now.Year - Copyright MedicalManagement-Sys. Todos os direitos reservados!</p>
+        </div>
+    </div>
+
+    <!-- Javascripts -->
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="~/tpl/assets/js/libs/jquery-2.1.1.min.js">\x3C/script>')
+    </script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="~/tpl/assets/js/libs/jquery-ui-1.10.4.min.js">\x3C/script>')
+    </script>
+
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="~/tpl/js/libs/excanvas.min.js"></script>
+      <script type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <script type="text/javascript" src="~/tpl/js/libs/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="~/tpl/js/bootstrap/bootstrap.js"></script>
+     <script src="~/tpl/plugins/forms/validation/jquery.validate.js"></script>
+    <script src="~/tpl/plugins/forms/validation/additional-methods.min.js"></script>
+    <script src="~/tpl/js/pages/login.js"></script>
+</body>
+</html>
+
+
+

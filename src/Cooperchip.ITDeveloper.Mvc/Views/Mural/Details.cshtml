@@ -1,0 +1,41 @@
+﻿@using Cooperchip.ITDeveloper.Mvc.ServiceApp.ViewModels
+@model MuralViewModel
+
+@{
+    ViewBag.Title = "MedicalManagement-Sys - Detalhes do Mural";
+}
+
+@{ Layout = null;}
+
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title">MedicalManagement-Sys - Detalhes do Mural</h4>
+        </div>
+        <div class="modal-body">
+            <div class="form-horizontal">
+                <div>
+                    <dl class="dl-horizontal">
+                        <dt>@Html.DisplayNameFor(model => model.Data)</dt>
+                        <dd>@Html.DisplayFor(model => model.Data)</dd>
+
+                        <dt>@Html.DisplayNameFor(model => model.Titulo)</dt>
+                        <dd>@Html.DisplayFor(model => model.Titulo)</dd>
+
+                        <dt>@Html.DisplayNameFor(model => model.Aviso)</dt>
+                         <dd>@Html.DisplayFor(model => model.Aviso)</dd>
+
+                        <dt>@Html.DisplayNameFor(model => model.Autor)</dt>
+                        <dd>@Html.DisplayFor(model => model.Autor)</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <input type="submit" value="Atualizar" class="btn btn-primary" />
+            <input type="button" value="Cancelar" class="btn btn-default" data-dismiss="modal" />
+        </div>
+
+    </div><!-- /.modal-content -->
+</div><!-- /.modal-dialog -->
