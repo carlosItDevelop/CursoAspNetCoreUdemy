@@ -20,6 +20,7 @@ namespace Cooperchip.ITDeveloper.Data.Repository
             if (!String.IsNullOrEmpty(filtro)) objBusca.Where(x => x.Titulo == filtro);
             return objBusca;
         }
+
         public SelectList MontarSelectList(IQueryable<Mural> iquery)
         {
             var ddList = new List<string>();

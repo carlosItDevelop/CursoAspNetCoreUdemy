@@ -33,15 +33,18 @@ namespace Cooperchip.ITDeveloper.Mvc.Configuration
             /* Domain => Service */
             services.AddScoped<IPacienteDomainService, PacienteDomainService>();
             services.AddScoped<ITriagemDomainService, TriagemDomainService>();
+            services.AddScoped<IMuralService, ServiceDomainMural>();
             /* Domain => Repository */
             services.AddScoped<IRepositoryPaciente, PacienteRepository>();
             services.AddScoped<IRepositoryTriagem, TriagemRepository>();
+            services.AddScoped<IRepositoryMural, MuralRepository>();
 
             //IUnitOfWork
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             /* Data => Domain*/
             services.AddScoped<IQueryPaciente, PacienteRepository>();
+            services.AddScoped<IQueryMural, MuralRepository>();
 
 
             #region: Mensageria
