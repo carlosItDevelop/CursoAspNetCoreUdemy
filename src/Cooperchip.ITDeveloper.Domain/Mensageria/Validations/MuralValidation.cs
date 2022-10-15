@@ -16,7 +16,7 @@ namespace Cooperchip.ITDeveloper.Domain.Mensageria.Validations
 
             RuleFor(n => n.Titulo)
                 .NotEmpty().WithMessage("O campo '{PropertyName}' precisa ser informado.")
-                .Length(5, 30).WithMessage("O campo '{PropertyName}' precisa ter entre {MinLength} e {MaxLength} caracteres");
+                .Length(5, 30).WithMessage("O campo '{PropertyName}' precisa ter entre '{MinLength}' e '{MaxLength}' caracteres");
 
             RuleFor(n => n.Aviso)
                 .NotEmpty().WithMessage("O campo '{PropertyName}' precisa ser informado.")

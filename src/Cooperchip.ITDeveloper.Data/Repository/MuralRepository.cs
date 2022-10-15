@@ -14,17 +14,21 @@ namespace Cooperchip.ITDeveloper.Data.Repository
     {
         public MuralRepository(ITDeveloperDbContext ctx) : base(ctx){}
 
-        public IQueryable<Mural> SelecionarTodosParaMural(string filtro = null)
+        public IQueryable<Mural> SelecionarTodosParaMural(string filtro)
         {
             var objBusca = from b in _context.Mural select b;
-            if (!String.IsNullOrEmpty(filtro)) objBusca.Where(x => x.Titulo == filtro);
+            if (!String.IsNullOrEmpty(filtro)) 
+                objBusca = objBusca.Where(x => x.Titulo == filtro);
+
             return objBusca;
         }
 
         public SelectList MontarSelectList(IQueryable<Mural> iquery)
         {
             var ddList = new List<string>();
-            var ddQuery = from d in _context.Mural.OrderBy(x => x.Titulo) select d.Titulo;
+            var ddQuery = from d in _context.Mural
+                           .OrderBy(x => x.Id)
+                          select d.Titulo;
             ddList.AddRange(ddQuery.Distinct());
             return new SelectList(ddList);
         }

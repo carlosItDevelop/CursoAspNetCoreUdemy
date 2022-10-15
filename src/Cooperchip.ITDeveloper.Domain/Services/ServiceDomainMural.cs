@@ -21,7 +21,7 @@ namespace Cooperchip.ITDeveloper.Domain.Services
 
         public async Task AdicionarMural(Mural model)
         {
-            if(!ExecutarValidacao(new MuralValidation(), model)) return;
+            if (!ExecutarValidacao(new MuralValidation(), model)) return;
 
             if (_repoMural.Buscar(m => m.Id == model.Id).Result.Any())
             {

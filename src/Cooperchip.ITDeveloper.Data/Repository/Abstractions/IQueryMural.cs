@@ -6,10 +6,10 @@ using System.Linq;
 
 namespace Cooperchip.ITDeveloper.Data.Repository.Abstractions
 {
-    public interface IQueryMural : IGerenicRepository<Mural, Guid>
+    public interface IQueryMural : IGenericRepository<Mural, Guid>
     {
         bool TemMural(Guid id);
-        IQueryable<Mural> SelecionarTodosParaMural(string filtro = null);
+        IQueryable<Mural> SelecionarTodosParaMural(string filtro);
         SelectList MontarSelectList(IQueryable<Mural> iquery);
     }
 }

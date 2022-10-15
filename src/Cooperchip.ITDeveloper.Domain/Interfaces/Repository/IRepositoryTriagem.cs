@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Cooperchip.ITDeveloper.Domain.Interfaces.Repository
 {
-    public interface IRepositoryTriagem : IGerenicRepository<Triagem, Guid>
+    public interface IRepositoryTriagem : IGenericRepository<Triagem, Guid>
     {
         Task<Triagem> ObterTriagemPorId(Guid id);
         Task<IEnumerable<Triagem>> ListaTriagemPorData();

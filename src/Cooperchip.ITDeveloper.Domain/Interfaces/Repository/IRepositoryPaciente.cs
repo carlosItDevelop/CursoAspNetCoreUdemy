@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Cooperchip.ITDeveloper.Domain.Interfaces.Repository
 {
-    public interface IRepositoryPaciente : IGerenicRepository<Paciente, Guid>
+    public interface IRepositoryPaciente : IGenericRepository<Paciente, Guid>
     {
         Task InserirPacienteComEstadoPaciente(Paciente paciente);
     }

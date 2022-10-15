@@ -4,7 +4,7 @@ using System;
 
 namespace Cooperchip.ITDeveloper.Domain.Interfaces.Repository
 {
-    public interface IRepositoryMural : IGerenicRepository<Mural, Guid>
+    public interface IRepositoryMural : IGenericRepository<Mural, Guid>
     {        
     }
 }

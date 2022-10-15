@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Cooperchip.ITDeveloper.DomainCore.Base
 {
-    public interface IGerenicRepository<T, TKey> : IDisposable where T : class
+    public interface IGenericRepository<T, TKey> : IDisposable where T : class
     {
         Task<IEnumerable<T>> SelecionarTodos(Expression<Func<T, bool>> quando = null);
         Task<T> SelecionarPorId(TKey id);

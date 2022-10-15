@@ -25,33 +25,32 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
         private readonly IQueryMural _queryMural;
         private readonly IMuralService _serviceMural;
 
-        public MuralController(IOptions<EmailCredentialsSettings> emailCredentialSettings, 
-                               IMapper mapper, 
-                               IUnitOfWork uow, 
-                               IRepositoryMural repoMural, 
-                               IQueryMural queryMural, 
-                               IMuralService serviceMural, 
-                               INotificador notificador): base(notificador)
+        public MuralController(IOptions<EmailCredentialsSettings> emailCredentialSettings,
+                               IRepositoryMural repoMural,
+                               IQueryMural queryMural,
+                               IMuralService serviceMural,
+                               IMapper mapper,
+                               IUnitOfWork uow, INotificador notificador) : base(notificador)
         {
             _emailCredentialSettings = emailCredentialSettings.Value;
-            _mapper = mapper;
-            _uow = uow;
             _repoMural = repoMural;
             _queryMural = queryMural;
             _serviceMural = serviceMural;
+            _mapper = mapper;
+            _uow = uow;
         }
 
         public IActionResult Index(string filtro = null)
         {
             var objBusca = _queryMural.SelecionarTodosParaMural(filtro);
             ViewBag.filtro = _queryMural.MontarSelectList(objBusca);
-
-            return View(objBusca.Select(x=> new MuralViewModel()
+            return View(objBusca.Select(x => new MuralViewModel()
             {
                 Id = x.Id,
                 Data = x.Data,
                 Autor = x.Autor,
                 Aviso = x.Aviso,
+                Email = x.Email,
                 Titulo = x.Titulo
             }).ToList());
         }
@@ -70,20 +69,6 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
             return View();
         }
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(MuralViewModel model)
-        {
-            if (ModelState.IsValid)
-            {
-                await _serviceMural.AdicionarMural(_mapper.Map<Mural>(model));
-                await _uow.Commit();
-                return RedirectToAction("Index");
-            }
-            return View(model);
-        }
-
-
         public ActionResult Credencial()
         {
             ViewBag.DataMural = DateTime.Now;
@@ -100,6 +85,7 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
                 try
                 {
                     await _serviceMural.AdicionarMural(_mapper.Map<Mural>(model));
+                    if (!OperacaoValida()) return View(model);
                     await _uow.Commit();
                     ViewBag.Success = "Credecial requisitada com sucesso!";
                 }
@@ -126,6 +112,20 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
             return View(model);
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create(MuralViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                await _serviceMural.AdicionarMural(_mapper.Map<Mural>(model));
+                if (!OperacaoValida()) return View(model);
+                await _uow.Commit();
+                return RedirectToAction("Index");
+            }
+            return View(model);
+        }
+
         public async Task<IActionResult> Edit(Guid id)
         {
             var mural = _mapper.Map<MuralViewModel>(await _queryMural.SelecionarPorId(id));
@@ -141,7 +141,7 @@ namespace Cooperchip.ITDeveloper.Mvc.Controllers
             if (ModelState.IsValid)
             {
                 await _serviceMural.AtualizarMural(_mapper.Map<Mural>(model));
-
+                if (!OperacaoValida()) return View(model);
                 await _uow.Commit();
                 return RedirectToAction("Index");
             }

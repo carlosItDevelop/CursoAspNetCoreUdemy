@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Cooperchip.ITDeveloper.Data.Repository.Abstractions
 {
-    public interface IQueryPaciente : IGerenicRepository<Paciente, Guid>
+    public interface IQueryPaciente : IGenericRepository<Paciente, Guid>
     {
         Task<IEnumerable<Paciente>> ListaPacientesComEstado();
         Task<IEnumerable<Paciente>> ListaPacientes();

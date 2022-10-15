@@ -46,7 +46,6 @@ namespace Cooperchip.ITDeveloper.Mvc
             #endregion
 
             #region: smtpGmail
-            // Todo: Criando minha própria IOptions: EmailCredentialsSettings
             services.Configure<EmailCredentialsSettings>(Configuration.GetSection(EmailCredentialsSettings.SectionName));
             services.AddSingleton(s => s.GetRequiredService<IOptions<EmailCredentialsSettings>>().Value);
             #endregion
@@ -72,10 +71,10 @@ namespace Cooperchip.ITDeveloper.Mvc
 
             #endregion
             services.AddAutoMapper(typeof(Startup));
-            services.AddDbContextConfig(Configuration); // In DbContextConfig
-            services.AddIdentityConfig(Configuration); // In IdentityConfig
-            services.AddMvcAndRazor(); // In MvcAndRazor
-            services.AddDependencyInjectConfig(Configuration); // In DependencyInjectConfig
+            services.AddDbContextConfig(Configuration);
+            services.AddIdentityConfig(Configuration);
+            services.AddMvcAndRazor();
+            services.AddDependencyInjectConfig(Configuration);
             // Prover Suporte para Code Page (1252) (windows-1252)
             services.AddCodePageProviderNotSupportedInDotNetCoreForAnsi(); 
 

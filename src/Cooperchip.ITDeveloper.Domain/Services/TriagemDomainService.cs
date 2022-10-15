@@ -18,8 +18,8 @@ namespace Cooperchip.ITDeveloper.Domain.Services
 
 
         public TriagemDomainService(IRepositoryTriagem reppoTriagem,
-                                                                INotificador notificador,
-                                                                IMediatorHandler mediatorHandler)
+                                    INotificador notificador,
+                                    IMediatorHandler mediatorHandler)
             : base(notificador)
         {
             _reppoTriagem = reppoTriagem;
@@ -30,7 +30,8 @@ namespace Cooperchip.ITDeveloper.Domain.Services
         {
             if (!ExecutarValidacao(new TriagemValidation(), triagem)) return;
 
-            if (_reppoTriagem.Buscar(t => t.CodigoPaciente == triagem.CodigoPaciente && t.DataNotificacao == triagem.DataNotificacao && t.Mensagem.Trim() == triagem.Mensagem.Trim()).Result.Any()){
+            if (_reppoTriagem.Buscar(t => t.CodigoPaciente == triagem.CodigoPaciente && t.DataNotificacao == triagem.DataNotificacao && t.Mensagem.Trim() == triagem.Mensagem.Trim()).Result.Any())
+            {
                 Notificar("Este registro está duplicado!");
                 return;
             }
@@ -46,7 +47,7 @@ namespace Cooperchip.ITDeveloper.Domain.Services
 
         public async Task ExcluirTriagemPorIdPaciente(Guid pacienteId)
         {
-            if (!_reppoTriagem.Buscar(t=>t.CodigoPaciente == pacienteId).Result.Any())
+            if (!_reppoTriagem.Buscar(t => t.CodigoPaciente == pacienteId).Result.Any())
             {
                 Notificar("Não existe(m) registro(s) correspondente à busca!");
                 return;
